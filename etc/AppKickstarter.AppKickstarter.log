@@ -1,0 +1,1352 @@
+181120-16:58:19 [INFO] -- 
+181120-16:58:19 [INFO] -- 
+181120-16:58:19 [INFO] -- ============================================================
+181120-16:58:19 [INFO] -- AppKickstarter: Application Starting...
+181120-16:58:19 [INFO] -- timer: starting...
+181120-16:58:19 [INFO] -- ThreadA2: starting...
+181120-16:58:19 [INFO] -- ThreadB: starting...
+181120-16:58:19 [INFO] -- ThreadA1: starting...
+181120-16:58:19 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [24103]: Time's up!].
+181120-16:58:19 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [67087]: Time's up!].
+181120-16:58:19 [INFO] -- ThreadA2: receiving timesup at 00:00:06
+181120-16:58:19 [INFO] -- ThreadA1: receiving timesup at 00:00:06
+181120-16:58:19 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:19 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:19 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 1)].
+181120-16:58:19 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:19 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 1)].
+181120-16:58:19 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:19 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:19 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:19 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:19 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:19 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [86192]: Time's up!].
+181120-16:58:19 [INFO] -- ThreadA2: receiving timesup at 00:00:11
+181120-16:58:19 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [80533]: Time's up!].
+181120-16:58:19 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:19 [INFO] -- ThreadA1: receiving timesup at 00:00:11
+181120-16:58:19 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 2)].
+181120-16:58:19 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:19 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:19 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 2)].
+181120-16:58:19 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:19 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:19 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:19 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:19 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:19 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [23198]: Time's up!].
+181120-16:58:19 [INFO] -- ThreadA2: receiving timesup at 00:00:16
+181120-16:58:19 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [89424]: Time's up!].
+181120-16:58:19 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:19 [INFO] -- ThreadA1: receiving timesup at 00:00:16
+181120-16:58:19 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 3)].
+181120-16:58:19 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:19 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:19 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 3)].
+181120-16:58:19 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:19 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:19 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:19 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:19 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:19 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [66789]: Time's up!].
+181120-16:58:19 [INFO] -- ThreadA2: receiving timesup at 00:00:21
+181120-16:58:19 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:19 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [52417]: Time's up!].
+181120-16:58:19 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 4)].
+181120-16:58:19 [INFO] -- ThreadA1: receiving timesup at 00:00:21
+181120-16:58:19 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:19 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:19 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:19 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 4)].
+181120-16:58:19 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:19 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:19 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:19 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:19 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [73379]: Time's up!].
+181120-16:58:19 [INFO] -- ThreadA2: receiving timesup at 00:00:27
+181120-16:58:19 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:19 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [16810]: Time's up!].
+181120-16:58:19 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 5)].
+181120-16:58:19 [INFO] -- ThreadA1: receiving timesup at 00:00:27
+181120-16:58:19 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:19 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:19 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:19 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 5)].
+181120-16:58:19 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:19 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:19 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:19 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:19 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [41111]: Time's up!].
+181120-16:58:19 [INFO] -- ThreadA2: receiving timesup at 00:00:32
+181120-16:58:19 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:19 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 6)].
+181120-16:58:19 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:19 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:19 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [36404]: Time's up!].
+181120-16:58:19 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:19 [INFO] -- ThreadA1: receiving timesup at 00:00:32
+181120-16:58:19 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:19 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 6)].
+181120-16:58:19 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:19 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:19 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:20 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [30914]: Time's up!].
+181120-16:58:20 [INFO] -- ThreadA2: receiving timesup at 00:00:37
+181120-16:58:20 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:20 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 7)].
+181120-16:58:20 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:20 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [68747]: Time's up!].
+181120-16:58:20 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:20 [INFO] -- ThreadA1: receiving timesup at 00:00:37
+181120-16:58:20 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:20 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:20 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 7)].
+181120-16:58:20 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:20 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:20 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:20 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [85526]: Time's up!].
+181120-16:58:20 [INFO] -- ThreadA2: receiving timesup at 00:00:42
+181120-16:58:20 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:20 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 8)].
+181120-16:58:20 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:20 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:20 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [47940]: Time's up!].
+181120-16:58:20 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:20 [INFO] -- ThreadA1: receiving timesup at 00:00:42
+181120-16:58:20 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:20 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 8)].
+181120-16:58:20 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:20 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:20 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:20 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [60229]: Time's up!].
+181120-16:58:20 [INFO] -- ThreadA2: receiving timesup at 00:00:47
+181120-16:58:20 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:20 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 9)].
+181120-16:58:20 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:20 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:20 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [39282]: Time's up!].
+181120-16:58:20 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:20 [INFO] -- ThreadA1: receiving timesup at 00:00:48
+181120-16:58:20 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:20 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 9)].
+181120-16:58:20 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:20 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:20 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:20 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [80443]: Time's up!].
+181120-16:58:20 [INFO] -- ThreadA2: receiving timesup at 00:00:53
+181120-16:58:20 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:20 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 10)].
+181120-16:58:20 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:20 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:20 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:20 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [26619]: Time's up!].
+181120-16:58:20 [INFO] -- ThreadA1: receiving timesup at 00:00:53
+181120-16:58:20 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:20 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 10)].
+181120-16:58:20 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:20 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:20 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:20 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [91313]: Time's up!].
+181120-16:58:20 [INFO] -- ThreadA2: receiving timesup at 00:00:58
+181120-16:58:20 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:20 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 11)].
+181120-16:58:20 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:20 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:20 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:20 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [29645]: Time's up!].
+181120-16:58:20 [INFO] -- ThreadA1: receiving timesup at 00:00:58
+181120-16:58:20 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:20 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 11)].
+181120-16:58:20 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:20 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:20 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:20 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [38976]: Time's up!].
+181120-16:58:20 [INFO] -- ThreadA2: receiving timesup at 00:01:03
+181120-16:58:20 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:20 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 12)].
+181120-16:58:20 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:20 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:20 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [12630]: Time's up!].
+181120-16:58:20 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:20 [INFO] -- ThreadA1: receiving timesup at 00:01:03
+181120-16:58:20 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:20 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 12)].
+181120-16:58:20 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:20 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:20 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:20 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [46185]: Time's up!].
+181120-16:58:20 [INFO] -- ThreadA2: receiving timesup at 00:01:08
+181120-16:58:20 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:20 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 13)].
+181120-16:58:20 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:20 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:20 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:20 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [19069]: Time's up!].
+181120-16:58:20 [INFO] -- ThreadA1: receiving timesup at 00:01:08
+181120-16:58:20 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:20 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 13)].
+181120-16:58:20 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:20 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:20 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:20 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [58139]: Time's up!].
+181120-16:58:20 [INFO] -- ThreadA2: receiving timesup at 00:01:13
+181120-16:58:20 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:20 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 14)].
+181120-16:58:20 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:20 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:20 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:20 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [82080]: Time's up!].
+181120-16:58:20 [INFO] -- ThreadA1: receiving timesup at 00:01:13
+181120-16:58:20 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:20 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 14)].
+181120-16:58:20 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:20 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:20 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:20 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [57533]: Time's up!].
+181120-16:58:20 [INFO] -- ThreadA2: receiving timesup at 00:01:18
+181120-16:58:20 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:20 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 15)].
+181120-16:58:20 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [41212]: Time's up!].
+181120-16:58:20 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:20 [INFO] -- ThreadA1: receiving timesup at 00:01:19
+181120-16:58:20 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:20 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:20 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:20 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 15)].
+181120-16:58:20 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:20 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:20 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:20 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [94366]: Time's up!].
+181120-16:58:20 [INFO] -- ThreadA2: receiving timesup at 00:01:24
+181120-16:58:20 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:20 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 16)].
+181120-16:58:20 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:20 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:20 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [55793]: Time's up!].
+181120-16:58:20 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:20 [INFO] -- ThreadA1: receiving timesup at 00:01:24
+181120-16:58:20 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:20 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 16)].
+181120-16:58:20 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:20 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:20 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:20 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [59173]: Time's up!].
+181120-16:58:20 [INFO] -- ThreadA2: receiving timesup at 00:01:29
+181120-16:58:20 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:20 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 17)].
+181120-16:58:20 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [72768]: Time's up!].
+181120-16:58:20 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:20 [INFO] -- ThreadA1: receiving timesup at 00:01:29
+181120-16:58:20 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:20 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:20 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:20 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 17)].
+181120-16:58:20 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:20 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:20 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:20 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [38214]: Time's up!].
+181120-16:58:20 [INFO] -- ThreadA2: receiving timesup at 00:01:34
+181120-16:58:20 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:20 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 18)].
+181120-16:58:20 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:20 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:20 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:20 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [69287]: Time's up!].
+181120-16:58:20 [INFO] -- ThreadA1: receiving timesup at 00:01:34
+181120-16:58:20 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:20 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 18)].
+181120-16:58:20 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:20 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:20 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:20 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [43300]: Time's up!].
+181120-16:58:20 [INFO] -- ThreadA2: receiving timesup at 00:01:39
+181120-16:58:20 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:20 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 19)].
+181120-16:58:20 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:20 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:20 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:20 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [76168]: Time's up!].
+181120-16:58:20 [INFO] -- ThreadA1: receiving timesup at 00:01:39
+181120-16:58:20 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:20 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 19)].
+181120-16:58:20 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:20 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:20 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:20 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [34544]: Time's up!].
+181120-16:58:20 [INFO] -- ThreadA2: receiving timesup at 00:01:44
+181120-16:58:20 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:20 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 20)].
+181120-16:58:20 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:20 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:20 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:20 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [56240]: Time's up!].
+181120-16:58:20 [INFO] -- ThreadA1: receiving timesup at 00:01:45
+181120-16:58:20 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:20 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 20)].
+181120-16:58:20 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:20 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:20 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:20 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [87335]: Time's up!].
+181120-16:58:20 [INFO] -- ThreadA2: receiving timesup at 00:01:50
+181120-16:58:20 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:20 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 21)].
+181120-16:58:20 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:20 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:20 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:20 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [27568]: Time's up!].
+181120-16:58:20 [INFO] -- ThreadA1: receiving timesup at 00:01:50
+181120-16:58:20 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:20 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 21)].
+181120-16:58:20 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:20 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:20 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:20 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [70187]: Time's up!].
+181120-16:58:20 [INFO] -- ThreadA2: receiving timesup at 00:01:55
+181120-16:58:20 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:20 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 22)].
+181120-16:58:20 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:20 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:20 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:20 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [43281]: Time's up!].
+181120-16:58:20 [INFO] -- ThreadA1: receiving timesup at 00:01:55
+181120-16:58:20 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:20 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 22)].
+181120-16:58:20 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:20 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:20 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:20 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [44892]: Time's up!].
+181120-16:58:20 [INFO] -- ThreadA2: receiving timesup at 00:02:00
+181120-16:58:20 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:20 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 23)].
+181120-16:58:20 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:20 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:20 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:20 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [18788]: Time's up!].
+181120-16:58:20 [INFO] -- ThreadA1: receiving timesup at 00:02:00
+181120-16:58:20 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:20 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 23)].
+181120-16:58:20 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:20 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:20 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:20 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [99199]: Time's up!].
+181120-16:58:20 [INFO] -- ThreadA2: receiving timesup at 00:02:05
+181120-16:58:20 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:20 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [91223]: Time's up!].
+181120-16:58:20 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 24)].
+181120-16:58:20 [INFO] -- ThreadA1: receiving timesup at 00:02:05
+181120-16:58:20 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:20 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:20 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:20 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 24)].
+181120-16:58:20 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:20 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:20 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:20 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:20 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [37785]: Time's up!].
+181120-16:58:20 [INFO] -- ThreadA2: receiving timesup at 00:02:10
+181120-16:58:20 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:20 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 25)].
+181120-16:58:20 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [41864]: Time's up!].
+181120-16:58:20 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:20 [INFO] -- ThreadA1: receiving timesup at 00:02:10
+181120-16:58:20 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:20 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:20 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:20 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 25)].
+181120-16:58:20 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:20 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:20 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:21 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [88280]: Time's up!].
+181120-16:58:21 [INFO] -- ThreadA2: receiving timesup at 00:02:16
+181120-16:58:21 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:21 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 26)].
+181120-16:58:21 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [18367]: Time's up!].
+181120-16:58:21 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:21 [INFO] -- ThreadA1: receiving timesup at 00:02:16
+181120-16:58:21 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:21 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:21 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:21 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 26)].
+181120-16:58:21 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:21 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:21 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:21 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [44609]: Time's up!].
+181120-16:58:21 [INFO] -- ThreadA2: receiving timesup at 00:02:21
+181120-16:58:21 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:21 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 27)].
+181120-16:58:21 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [25398]: Time's up!].
+181120-16:58:21 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:21 [INFO] -- ThreadA1: receiving timesup at 00:02:21
+181120-16:58:21 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:21 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:21 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:21 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 27)].
+181120-16:58:21 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:21 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:21 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:21 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [69404]: Time's up!].
+181120-16:58:21 [INFO] -- ThreadA2: receiving timesup at 00:02:26
+181120-16:58:21 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:21 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 28)].
+181120-16:58:21 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:21 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:21 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:21 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [75666]: Time's up!].
+181120-16:58:21 [INFO] -- ThreadA1: receiving timesup at 00:02:26
+181120-16:58:21 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:21 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 28)].
+181120-16:58:21 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:21 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:21 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:21 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [62634]: Time's up!].
+181120-16:58:21 [INFO] -- ThreadA2: receiving timesup at 00:02:31
+181120-16:58:21 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:21 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [16755]: Time's up!].
+181120-16:58:21 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 29)].
+181120-16:58:21 [INFO] -- ThreadA1: receiving timesup at 00:02:31
+181120-16:58:21 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:21 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:21 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:21 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 29)].
+181120-16:58:21 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:21 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:21 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:21 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:21 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [99040]: Time's up!].
+181120-16:58:21 [INFO] -- ThreadA2: receiving timesup at 00:02:36
+181120-16:58:21 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:21 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [27217]: Time's up!].
+181120-16:58:21 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 30)].
+181120-16:58:21 [INFO] -- ThreadA1: receiving timesup at 00:02:36
+181120-16:58:21 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:21 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:21 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:21 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 30)].
+181120-16:58:21 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:21 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:21 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:21 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:21 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [20786]: Time's up!].
+181120-16:58:21 [INFO] -- ThreadA2: receiving timesup at 00:02:41
+181120-16:58:21 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:21 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 31)].
+181120-16:58:21 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:21 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:21 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:21 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [92050]: Time's up!].
+181120-16:58:21 [INFO] -- ThreadA1: receiving timesup at 00:02:42
+181120-16:58:21 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:21 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 31)].
+181120-16:58:21 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:21 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:21 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:21 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [38632]: Time's up!].
+181120-16:58:21 [INFO] -- ThreadA2: receiving timesup at 00:02:47
+181120-16:58:21 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:21 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 32)].
+181120-16:58:21 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:21 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:21 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:21 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [30594]: Time's up!].
+181120-16:58:21 [INFO] -- ThreadA1: receiving timesup at 00:02:47
+181120-16:58:21 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:21 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 32)].
+181120-16:58:21 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:21 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:21 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:21 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [15447]: Time's up!].
+181120-16:58:21 [INFO] -- ThreadA2: receiving timesup at 00:02:52
+181120-16:58:21 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:21 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 33)].
+181120-16:58:21 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:21 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:21 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:21 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [96019]: Time's up!].
+181120-16:58:21 [INFO] -- ThreadA1: receiving timesup at 00:02:52
+181120-16:58:21 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:21 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 33)].
+181120-16:58:21 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:21 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:21 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:21 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [68657]: Time's up!].
+181120-16:58:21 [INFO] -- ThreadA2: receiving timesup at 00:02:57
+181120-16:58:21 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:21 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 34)].
+181120-16:58:21 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:21 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:21 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [14610]: Time's up!].
+181120-16:58:21 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:21 [INFO] -- ThreadA1: receiving timesup at 00:02:57
+181120-16:58:21 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:21 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 34)].
+181120-16:58:21 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:21 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:21 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:21 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [89912]: Time's up!].
+181120-16:58:21 [INFO] -- ThreadA2: receiving timesup at 00:03:02
+181120-16:58:21 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:21 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 35)].
+181120-16:58:21 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:21 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:21 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:21 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [39163]: Time's up!].
+181120-16:58:21 [INFO] -- ThreadA1: receiving timesup at 00:03:02
+181120-16:58:21 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:21 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 35)].
+181120-16:58:21 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:21 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:21 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:21 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [10194]: Time's up!].
+181120-16:58:21 [INFO] -- ThreadA2: receiving timesup at 00:03:07
+181120-16:58:21 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:21 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 36)].
+181120-16:58:21 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:21 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:21 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [23897]: Time's up!].
+181120-16:58:21 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:21 [INFO] -- ThreadA1: receiving timesup at 00:03:08
+181120-16:58:21 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:21 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 36)].
+181120-16:58:21 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:21 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:21 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:21 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [86947]: Time's up!].
+181120-16:58:21 [INFO] -- ThreadA2: receiving timesup at 00:03:13
+181120-16:58:21 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:21 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 37)].
+181120-16:58:21 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:21 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:21 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:21 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [83956]: Time's up!].
+181120-16:58:21 [INFO] -- ThreadA1: receiving timesup at 00:03:13
+181120-16:58:21 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:21 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 37)].
+181120-16:58:21 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:21 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:21 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:21 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [38770]: Time's up!].
+181120-16:58:21 [INFO] -- ThreadA2: receiving timesup at 00:03:18
+181120-16:58:21 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:21 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 38)].
+181120-16:58:21 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:21 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:21 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:21 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [43623]: Time's up!].
+181120-16:58:21 [INFO] -- ThreadA1: receiving timesup at 00:03:18
+181120-16:58:21 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:21 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 38)].
+181120-16:58:21 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:21 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:21 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:21 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [83231]: Time's up!].
+181120-16:58:21 [INFO] -- ThreadA2: receiving timesup at 00:03:23
+181120-16:58:21 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:21 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 39)].
+181120-16:58:21 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [39175]: Time's up!].
+181120-16:58:21 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:21 [INFO] -- ThreadA1: receiving timesup at 00:03:23
+181120-16:58:21 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:21 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:21 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:21 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 39)].
+181120-16:58:21 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:21 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:21 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:21 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [20664]: Time's up!].
+181120-16:58:21 [INFO] -- ThreadA2: receiving timesup at 00:03:28
+181120-16:58:21 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:21 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 40)].
+181120-16:58:21 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [14771]: Time's up!].
+181120-16:58:21 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:21 [INFO] -- ThreadA1: receiving timesup at 00:03:28
+181120-16:58:21 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:21 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:21 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:21 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 40)].
+181120-16:58:21 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:21 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:21 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:21 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [67540]: Time's up!].
+181120-16:58:21 [INFO] -- ThreadA2: receiving timesup at 00:03:33
+181120-16:58:21 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:21 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 41)].
+181120-16:58:21 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [53404]: Time's up!].
+181120-16:58:21 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:21 [INFO] -- ThreadA1: receiving timesup at 00:03:33
+181120-16:58:21 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:21 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:21 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:21 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 41)].
+181120-16:58:21 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:21 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:21 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:21 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [71754]: Time's up!].
+181120-16:58:21 [INFO] -- ThreadA2: receiving timesup at 00:03:39
+181120-16:58:21 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:21 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 42)].
+181120-16:58:21 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [84814]: Time's up!].
+181120-16:58:21 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:21 [INFO] -- ThreadA1: receiving timesup at 00:03:39
+181120-16:58:21 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:21 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:21 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:21 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 42)].
+181120-16:58:21 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:21 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:21 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:21 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [52219]: Time's up!].
+181120-16:58:21 [INFO] -- ThreadA2: receiving timesup at 00:03:44
+181120-16:58:21 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:21 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [86576]: Time's up!].
+181120-16:58:21 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 43)].
+181120-16:58:21 [INFO] -- ThreadA1: receiving timesup at 00:03:44
+181120-16:58:21 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:21 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:21 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:21 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 43)].
+181120-16:58:21 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:21 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:21 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:21 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:21 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [93358]: Time's up!].
+181120-16:58:21 [INFO] -- ThreadA2: receiving timesup at 00:03:49
+181120-16:58:21 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:21 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [35805]: Time's up!].
+181120-16:58:21 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 44)].
+181120-16:58:21 [INFO] -- ThreadA1: receiving timesup at 00:03:49
+181120-16:58:21 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:21 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:21 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:21 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 44)].
+181120-16:58:21 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:21 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:21 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:21 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:22 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [68343]: Time's up!].
+181120-16:58:22 [INFO] -- ThreadA2: receiving timesup at 00:03:54
+181120-16:58:22 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:22 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [33797]: Time's up!].
+181120-16:58:22 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 45)].
+181120-16:58:22 [INFO] -- ThreadA1: receiving timesup at 00:03:54
+181120-16:58:22 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:22 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:22 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:22 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 45)].
+181120-16:58:22 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:22 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:22 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:22 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:22 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [70166]: Time's up!].
+181120-16:58:22 [INFO] -- ThreadA2: receiving timesup at 00:03:59
+181120-16:58:22 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:22 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [38763]: Time's up!].
+181120-16:58:22 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 46)].
+181120-16:58:22 [INFO] -- ThreadA1: receiving timesup at 00:03:59
+181120-16:58:22 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:22 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:22 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:22 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 46)].
+181120-16:58:22 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:22 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:22 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:22 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:22 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [56222]: Time's up!].
+181120-16:58:22 [INFO] -- ThreadA2: receiving timesup at 00:04:05
+181120-16:58:22 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:22 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 47)].
+181120-16:58:22 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [77024]: Time's up!].
+181120-16:58:22 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:22 [INFO] -- ThreadA1: receiving timesup at 00:04:05
+181120-16:58:22 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:22 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:22 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:22 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 47)].
+181120-16:58:22 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:22 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:22 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:22 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [60867]: Time's up!].
+181120-16:58:22 [INFO] -- ThreadA2: receiving timesup at 00:04:10
+181120-16:58:22 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:22 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 48)].
+181120-16:58:22 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:22 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:22 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:22 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [86174]: Time's up!].
+181120-16:58:22 [INFO] -- ThreadA1: receiving timesup at 00:04:10
+181120-16:58:22 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:22 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 48)].
+181120-16:58:22 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:22 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:22 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:22 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [50116]: Time's up!].
+181120-16:58:22 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [33760]: Time's up!].
+181120-16:58:22 [INFO] -- ThreadA2: receiving timesup at 00:04:15
+181120-16:58:22 [INFO] -- ThreadA1: receiving timesup at 00:04:15
+181120-16:58:22 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:22 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:22 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 49)].
+181120-16:58:22 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:22 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:22 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 49)].
+181120-16:58:22 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:22 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:22 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:22 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:22 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [90933]: Time's up!].
+181120-16:58:22 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [22892]: Time's up!].
+181120-16:58:22 [INFO] -- ThreadA2: receiving timesup at 00:04:21
+181120-16:58:22 [INFO] -- ThreadA1: receiving timesup at 00:04:21
+181120-16:58:22 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:22 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:22 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 50)].
+181120-16:58:22 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:22 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 50)].
+181120-16:58:22 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:22 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:22 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:22 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:22 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:22 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [34976]: Time's up!].
+181120-16:58:22 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [33874]: Time's up!].
+181120-16:58:22 [INFO] -- ThreadA2: receiving timesup at 00:04:26
+181120-16:58:22 [INFO] -- ThreadA1: receiving timesup at 00:04:26
+181120-16:58:22 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:22 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:22 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 51)].
+181120-16:58:22 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:22 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:22 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 51)].
+181120-16:58:22 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:22 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:22 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:22 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:22 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [18402]: Time's up!].
+181120-16:58:22 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [73903]: Time's up!].
+181120-16:58:22 [INFO] -- ThreadA2: receiving timesup at 00:04:31
+181120-16:58:22 [INFO] -- ThreadA1: receiving timesup at 00:04:31
+181120-16:58:22 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:22 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:22 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 52)].
+181120-16:58:22 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:22 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 52)].
+181120-16:58:22 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:22 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:22 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:22 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:22 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:22 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [67889]: Time's up!].
+181120-16:58:22 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [18889]: Time's up!].
+181120-16:58:22 [INFO] -- ThreadA2: receiving timesup at 00:04:36
+181120-16:58:22 [INFO] -- ThreadA1: receiving timesup at 00:04:36
+181120-16:58:22 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:22 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:22 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 53)].
+181120-16:58:22 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:22 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:22 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 53)].
+181120-16:58:22 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:22 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:22 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:22 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:22 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [24404]: Time's up!].
+181120-16:58:22 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [98220]: Time's up!].
+181120-16:58:22 [INFO] -- ThreadA1: receiving timesup at 00:04:41
+181120-16:58:22 [INFO] -- ThreadA2: receiving timesup at 00:04:41
+181120-16:58:22 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:22 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:22 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 54)].
+181120-16:58:22 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:22 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 54)].
+181120-16:58:22 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:22 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:22 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:22 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:22 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:22 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [49054]: Time's up!].
+181120-16:58:22 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [29401]: Time's up!].
+181120-16:58:22 [INFO] -- ThreadA1: receiving timesup at 00:04:47
+181120-16:58:22 [INFO] -- ThreadA2: receiving timesup at 00:04:47
+181120-16:58:22 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:22 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:22 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 55)].
+181120-16:58:22 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:22 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 55)].
+181120-16:58:22 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:22 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:22 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:22 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:22 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:22 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [34103]: Time's up!].
+181120-16:58:22 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [57969]: Time's up!].
+181120-16:58:22 [INFO] -- ThreadA1: receiving timesup at 00:04:52
+181120-16:58:22 [INFO] -- ThreadA2: receiving timesup at 00:04:52
+181120-16:58:22 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:22 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:22 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 56)].
+181120-16:58:22 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:22 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 56)].
+181120-16:58:22 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:22 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:22 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:22 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:22 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:22 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [31773]: Time's up!].
+181120-16:58:22 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [55036]: Time's up!].
+181120-16:58:22 [INFO] -- ThreadA1: receiving timesup at 00:04:57
+181120-16:58:22 [INFO] -- ThreadA2: receiving timesup at 00:04:57
+181120-16:58:22 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:22 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:22 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 57)].
+181120-16:58:22 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:22 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 57)].
+181120-16:58:22 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:22 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:22 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:22 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:22 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:22 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [30393]: Time's up!].
+181120-16:58:22 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [15600]: Time's up!].
+181120-16:58:22 [INFO] -- ThreadA1: receiving timesup at 00:05:02
+181120-16:58:22 [INFO] -- ThreadA2: receiving timesup at 00:05:02
+181120-16:58:22 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:22 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:22 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 58)].
+181120-16:58:22 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:22 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 58)].
+181120-16:58:22 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:22 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:22 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:22 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:22 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:22 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [58860]: Time's up!].
+181120-16:58:22 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [64611]: Time's up!].
+181120-16:58:22 [INFO] -- ThreadA1: receiving timesup at 00:05:07
+181120-16:58:22 [INFO] -- ThreadA2: receiving timesup at 00:05:07
+181120-16:58:22 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:22 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:22 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 59)].
+181120-16:58:22 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:22 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 59)].
+181120-16:58:22 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:22 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:22 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:22 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:22 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:22 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [60440]: Time's up!].
+181120-16:58:22 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [23369]: Time's up!].
+181120-16:58:22 [INFO] -- ThreadA1: receiving timesup at 00:05:13
+181120-16:58:22 [INFO] -- ThreadA2: receiving timesup at 00:05:13
+181120-16:58:22 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:22 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:22 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 60)].
+181120-16:58:22 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:22 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 60)].
+181120-16:58:22 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:22 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:22 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:22 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:22 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:22 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [56146]: Time's up!].
+181120-16:58:22 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [38995]: Time's up!].
+181120-16:58:22 [INFO] -- ThreadA2: receiving timesup at 00:05:18
+181120-16:58:22 [INFO] -- ThreadA1: receiving timesup at 00:05:18
+181120-16:58:22 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:22 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:22 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 61)].
+181120-16:58:22 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:22 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 61)].
+181120-16:58:22 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:22 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:22 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:22 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:22 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:22 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [56776]: Time's up!].
+181120-16:58:22 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [27472]: Time's up!].
+181120-16:58:22 [INFO] -- ThreadA2: receiving timesup at 00:05:23
+181120-16:58:22 [INFO] -- ThreadA1: receiving timesup at 00:05:23
+181120-16:58:22 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:22 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:22 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 62)].
+181120-16:58:22 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:22 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 62)].
+181120-16:58:22 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:22 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:22 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:22 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:22 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:22 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [84133]: Time's up!].
+181120-16:58:22 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [54090]: Time's up!].
+181120-16:58:22 [INFO] -- ThreadA2: receiving timesup at 00:05:28
+181120-16:58:22 [INFO] -- ThreadA1: receiving timesup at 00:05:28
+181120-16:58:22 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:22 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:22 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 63)].
+181120-16:58:22 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:22 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 63)].
+181120-16:58:22 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:22 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:22 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:22 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:22 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [20698]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [83955]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA2: receiving timesup at 00:05:33
+181120-16:58:23 [INFO] -- ThreadA1: receiving timesup at 00:05:33
+181120-16:58:23 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 64)].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 64)].
+181120-16:58:23 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [30861]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [20288]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA2: receiving timesup at 00:05:39
+181120-16:58:23 [INFO] -- ThreadA1: receiving timesup at 00:05:39
+181120-16:58:23 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 65)].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 65)].
+181120-16:58:23 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [15610]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [47214]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA2: receiving timesup at 00:05:44
+181120-16:58:23 [INFO] -- ThreadA1: receiving timesup at 00:05:44
+181120-16:58:23 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 66)].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 66)].
+181120-16:58:23 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [42634]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [71025]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA2: receiving timesup at 00:05:49
+181120-16:58:23 [INFO] -- ThreadA1: receiving timesup at 00:05:49
+181120-16:58:23 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 67)].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 67)].
+181120-16:58:23 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [44450]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [41272]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA1: receiving timesup at 00:05:54
+181120-16:58:23 [INFO] -- ThreadA2: receiving timesup at 00:05:54
+181120-16:58:23 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 68)].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 68)].
+181120-16:58:23 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [75646]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [59382]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA2: receiving timesup at 00:05:59
+181120-16:58:23 [INFO] -- ThreadA1: receiving timesup at 00:05:59
+181120-16:58:23 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 69)].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 69)].
+181120-16:58:23 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [54025]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [29165]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA2: receiving timesup at 00:06:05
+181120-16:58:23 [INFO] -- ThreadA1: receiving timesup at 00:06:05
+181120-16:58:23 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 70)].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 70)].
+181120-16:58:23 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [65678]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [53440]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA2: receiving timesup at 00:06:10
+181120-16:58:23 [INFO] -- ThreadA1: receiving timesup at 00:06:10
+181120-16:58:23 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 71)].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 71)].
+181120-16:58:23 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [93245]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [17699]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA2: receiving timesup at 00:06:15
+181120-16:58:23 [INFO] -- ThreadA1: receiving timesup at 00:06:15
+181120-16:58:23 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 72)].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 72)].
+181120-16:58:23 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [16610]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [90122]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA2: receiving timesup at 00:06:20
+181120-16:58:23 [INFO] -- ThreadA1: receiving timesup at 00:06:20
+181120-16:58:23 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 73)].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 73)].
+181120-16:58:23 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [20496]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [29565]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA2: receiving timesup at 00:06:25
+181120-16:58:23 [INFO] -- ThreadA1: receiving timesup at 00:06:25
+181120-16:58:23 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 74)].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 74)].
+181120-16:58:23 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [46604]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [37314]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA2: receiving timesup at 00:06:31
+181120-16:58:23 [INFO] -- ThreadA1: receiving timesup at 00:06:31
+181120-16:58:23 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 75)].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 75)].
+181120-16:58:23 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [79567]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [62258]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA2: receiving timesup at 00:06:36
+181120-16:58:23 [INFO] -- ThreadA1: receiving timesup at 00:06:36
+181120-16:58:23 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 76)].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 76)].
+181120-16:58:23 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [55588]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [22134]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA1: receiving timesup at 00:06:42
+181120-16:58:23 [INFO] -- ThreadA2: receiving timesup at 00:06:42
+181120-16:58:23 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 77)].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 77)].
+181120-16:58:23 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [59021]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [62786]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA1: receiving timesup at 00:06:47
+181120-16:58:23 [INFO] -- ThreadA2: receiving timesup at 00:06:47
+181120-16:58:23 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 78)].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 78)].
+181120-16:58:23 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [28317]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [75607]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA2: receiving timesup at 00:06:52
+181120-16:58:23 [INFO] -- ThreadA1: receiving timesup at 00:06:52
+181120-16:58:23 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 79)].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 79)].
+181120-16:58:23 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [65445]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [65208]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA2: receiving timesup at 00:06:57
+181120-16:58:23 [INFO] -- ThreadA1: receiving timesup at 00:06:57
+181120-16:58:23 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 80)].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 80)].
+181120-16:58:23 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [38890]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [33879]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA2: receiving timesup at 00:07:02
+181120-16:58:23 [INFO] -- ThreadA1: receiving timesup at 00:07:02
+181120-16:58:23 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 81)].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 81)].
+181120-16:58:23 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [99329]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [66808]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA2: receiving timesup at 00:07:08
+181120-16:58:23 [INFO] -- ThreadA1: receiving timesup at 00:07:08
+181120-16:58:23 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 82)].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 82)].
+181120-16:58:23 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [80130]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [96573]: Time's up!].
+181120-16:58:23 [INFO] -- ThreadA2: receiving timesup at 00:07:13
+181120-16:58:23 [INFO] -- ThreadA1: receiving timesup at 00:07:13
+181120-16:58:23 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 83)].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 83)].
+181120-16:58:23 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:23 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:23 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:23 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:24 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [99015]: Time's up!].
+181120-16:58:24 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [89205]: Time's up!].
+181120-16:58:24 [INFO] -- ThreadA2: receiving timesup at 00:07:18
+181120-16:58:24 [INFO] -- ThreadA1: receiving timesup at 00:07:18
+181120-16:58:24 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:24 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:24 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 84)].
+181120-16:58:24 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:24 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 84)].
+181120-16:58:24 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:24 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:24 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:24 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:24 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:24 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [74052]: Time's up!].
+181120-16:58:24 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [23643]: Time's up!].
+181120-16:58:24 [INFO] -- ThreadA1: receiving timesup at 00:07:23
+181120-16:58:24 [INFO] -- ThreadA2: receiving timesup at 00:07:23
+181120-16:58:24 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:24 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:24 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 85)].
+181120-16:58:24 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:24 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 85)].
+181120-16:58:24 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:24 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:24 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:24 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:24 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:24 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [16223]: Time's up!].
+181120-16:58:24 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [16987]: Time's up!].
+181120-16:58:24 [INFO] -- ThreadA2: receiving timesup at 00:07:28
+181120-16:58:24 [INFO] -- ThreadA1: receiving timesup at 00:07:28
+181120-16:58:24 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:24 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:24 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 86)].
+181120-16:58:24 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:24 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 86)].
+181120-16:58:24 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:24 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:24 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:24 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:24 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:24 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [88115]: Time's up!].
+181120-16:58:24 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [59772]: Time's up!].
+181120-16:58:24 [INFO] -- ThreadA2: receiving timesup at 00:07:34
+181120-16:58:24 [INFO] -- ThreadA1: receiving timesup at 00:07:34
+181120-16:58:24 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:24 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:24 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 87)].
+181120-16:58:24 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:24 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 87)].
+181120-16:58:24 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:24 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:24 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:24 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:24 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:24 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [11746]: Time's up!].
+181120-16:58:24 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [75087]: Time's up!].
+181120-16:58:24 [INFO] -- ThreadA2: receiving timesup at 00:07:39
+181120-16:58:24 [INFO] -- ThreadA1: receiving timesup at 00:07:39
+181120-16:58:24 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:24 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:24 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 88)].
+181120-16:58:24 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:24 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 88)].
+181120-16:58:24 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:24 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:24 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:24 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:24 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:24 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [12567]: Time's up!].
+181120-16:58:24 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [94019]: Time's up!].
+181120-16:58:24 [INFO] -- ThreadA2: receiving timesup at 00:07:44
+181120-16:58:24 [INFO] -- ThreadA1: receiving timesup at 00:07:44
+181120-16:58:24 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:24 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:24 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 89)].
+181120-16:58:24 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:24 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 89)].
+181120-16:58:24 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:24 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:24 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:24 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:24 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:24 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [62727]: Time's up!].
+181120-16:58:24 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [46472]: Time's up!].
+181120-16:58:24 [INFO] -- ThreadA2: receiving timesup at 00:07:49
+181120-16:58:24 [INFO] -- ThreadA1: receiving timesup at 00:07:49
+181120-16:58:24 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:24 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:24 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 90)].
+181120-16:58:24 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:24 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 90)].
+181120-16:58:24 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:24 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:24 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:24 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:24 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:24 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [46733]: Time's up!].
+181120-16:58:24 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [65252]: Time's up!].
+181120-16:58:24 [INFO] -- ThreadA2: receiving timesup at 00:07:54
+181120-16:58:24 [INFO] -- ThreadA1: receiving timesup at 00:07:54
+181120-16:58:24 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:24 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:24 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 91)].
+181120-16:58:24 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:24 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 91)].
+181120-16:58:24 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:24 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:24 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:24 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:24 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:24 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [73014]: Time's up!].
+181120-16:58:24 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [90059]: Time's up!].
+181120-16:58:24 [INFO] -- ThreadA1: receiving timesup at 00:08:00
+181120-16:58:24 [INFO] -- ThreadA2: receiving timesup at 00:08:00
+181120-16:58:24 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:24 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:24 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 92)].
+181120-16:58:24 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:24 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 92)].
+181120-16:58:24 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:24 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:24 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:24 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:24 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:24 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [49536]: Time's up!].
+181120-16:58:24 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [98042]: Time's up!].
+181120-16:58:24 [INFO] -- ThreadA2: receiving timesup at 00:08:05
+181120-16:58:24 [INFO] -- ThreadA1: receiving timesup at 00:08:05
+181120-16:58:24 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:24 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:24 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 93)].
+181120-16:58:24 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:24 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 93)].
+181120-16:58:24 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:24 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:24 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:24 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:24 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:24 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [76011]: Time's up!].
+181120-16:58:24 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [16581]: Time's up!].
+181120-16:58:24 [INFO] -- ThreadA2: receiving timesup at 00:08:10
+181120-16:58:24 [INFO] -- ThreadA1: receiving timesup at 00:08:10
+181120-16:58:24 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:24 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:24 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 94)].
+181120-16:58:24 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:24 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 94)].
+181120-16:58:24 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:24 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:24 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:24 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:24 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:24 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [69573]: Time's up!].
+181120-16:58:24 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [14901]: Time's up!].
+181120-16:58:24 [INFO] -- ThreadA2: receiving timesup at 00:08:15
+181120-16:58:24 [INFO] -- ThreadA1: receiving timesup at 00:08:15
+181120-16:58:24 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:24 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:24 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 95)].
+181120-16:58:24 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:24 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 95)].
+181120-16:58:24 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:24 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:24 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
+181120-16:58:24 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:24 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:24 [INFO] -- ThreadA1: message received: [Timer (TimesUp) -- [55652]: Time's up!].
+181120-16:58:24 [INFO] -- ThreadA2: message received: [Timer (TimesUp) -- [81027]: Time's up!].
+181120-16:58:24 [INFO] -- ThreadA1: receiving timesup at 00:08:20
+181120-16:58:24 [INFO] -- ThreadA2: receiving timesup at 00:08:20
+181120-16:58:24 [INFO] -- ThreadA1: say hello to Thread B...
+181120-16:58:24 [INFO] -- ThreadA2: say hello to Thread B...
+181120-16:58:24 [INFO] -- ThreadB: message received: [ThreadA1 (Hello) -- Hello, this is Thread A!  (mCnt: 96)].
+181120-16:58:24 [INFO] -- ThreadB: ThreadA1 is saying Hello to me!!!
+181120-16:58:24 [INFO] -- ThreadA1: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:24 [INFO] -- ThreadB: message received: [ThreadA2 (Hello) -- Hello, this is Thread A!  (mCnt: 96)].
+181120-16:58:24 [INFO] -- ThreadA1: ThreadB is saying HiHi to me!!!
+181120-16:58:24 [INFO] -- ThreadB: ThreadA2 is saying Hello to me!!!
+181120-16:58:24 [INFO] -- ThreadA2: message received: [ThreadB (HiHi) -- HiHi, this is Thread B!].
+181120-16:58:24 [INFO] -- ThreadA2: ThreadB is saying HiHi to me!!!
