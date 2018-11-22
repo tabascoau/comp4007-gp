@@ -12,11 +12,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MyApp.cfg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/etc/MyApp.cfg">
+      <file leaf-file-name="Timer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppKickstarter/timer/Timer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="352">
+              <caret line="92" column="8" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="112" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -24,30 +27,8 @@
       <file leaf-file-name="AppKickstarter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppKickstarter/AppKickstarter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-510">
-              <caret line="127" column="30" lean-forward="true" selection-start-line="127" selection-start-column="30" selection-end-line="127" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#5088#5089#0" expanded="true" />
-                <element signature="e#5152#5153#0" expanded="true" />
-                <element signature="e#5283#5284#0" expanded="true" />
-                <element signature="e#5302#5303#0" expanded="true" />
-                <element signature="e#5445#5446#0" expanded="true" />
-                <element signature="e#5469#5470#0" expanded="true" />
-                <element signature="e#5617#5618#0" expanded="true" />
-                <element signature="e#5642#5643#0" expanded="true" />
-                <element signature="e#6146#6147#0" expanded="true" />
-                <element signature="e#6187#6188#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GreetingServer.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/AppKickstarter/misc/GreetingServer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="658">
+              <caret line="236" selection-start-line="236" selection-end-line="236" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -55,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ThreadA.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppKickstarter/myThreads/ThreadA.java">
+      <file leaf-file-name="Elevator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppKickstarter/myThreads/Elevator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="34" column="56" selection-start-line="34" selection-start-column="56" selection-end-line="34" selection-end-column="56" />
+            <state relative-caret-position="264">
+              <caret line="51" column="45" selection-start-line="51" selection-end-line="52" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#446#447#0" expanded="true" />
@@ -69,20 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MBox.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppKickstarter/misc/MBox.java">
+      <file leaf-file-name="GreetingServer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/AppKickstarter/misc/GreetingServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="46" column="15" selection-start-line="46" selection-start-column="15" selection-end-line="46" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppThread.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppKickstarter/misc/AppThread.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+            <state relative-caret-position="229">
+              <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -90,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LogFormatter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppKickstarter/misc/LogFormatter.java">
+      <file leaf-file-name="Msg.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppKickstarter/misc/Msg.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state relative-caret-position="902">
+              <caret line="43" column="23" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -110,13 +82,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>54321</find>
-      <find>connected</find>
+      <find>just connect</find>
+      <find>Client side msg:</find>
+      <find>log</find>
+      <find>send</find>
+      <find>start</find>
+      <find>getThread</find>
+      <find>start()</find>
+      <find>appThreads+</find>
+      <find>TimesUp</find>
+      <find>getMBox</find>
+      <find>sleepTime</find>
+      <find>Timer (TimesUp)</find>
+      <find>Time's up</find>
+      <find>ticks</find>
+      <find>setSimulationTimer</find>
+      <find>setTimer</find>
+      <find>set</find>
+      <find>tick</find>
+      <find>Msg.Type.Tick</find>
+      <find>SetTimer</find>
+      <find>chkTimeout</find>
+      <find>Time</find>
+      <find>Tick</find>
+      <find>Msg.Type.Time</find>
+      <find>Msg.Type.Times</find>
+      <find>Waiting for client on port</find>
+      <find>GreetingServer</find>
       <find>startApp</find>
       <find>Just connected to</find>
-      <find>Client side</find>
-      <find>just connect</find>
-      <find>Client side</find>
+      <find>appThreads</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -126,22 +121,23 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/AppKickstarter/myApp/MyApp.java" />
-        <option value="$PROJECT_DIR$/src/AppKickstarter/misc/Msg.java" />
         <option value="$PROJECT_DIR$/src/AppKickstarter/misc/LogFormatter.java" />
         <option value="$PROJECT_DIR$/src/AppKickstarter/misc/AppThread.java" />
         <option value="$PROJECT_DIR$/src/AppKickstarter/misc/MBox.java" />
         <option value="$PROJECT_DIR$/etc/MyApp.cfg" />
         <option value="$PROJECT_DIR$/src/AppKickstarter/myThreads/ThreadB.java" />
         <option value="$PROJECT_DIR$/src/AppKickstarter/misc/HelloMsg.java" />
-        <option value="$PROJECT_DIR$/src/AppKickstarter/timer/Timer.java" />
         <option value="$PROJECT_DIR$/src/AppKickstarter/myThreads/ThreadA.java" />
+        <option value="$PROJECT_DIR$/src/AppKickstarter/misc/Msg.java" />
+        <option value="$PROJECT_DIR$/src/AppKickstarter/timer/Timer.java" />
+        <option value="$PROJECT_DIR$/src/AppKickstarter/myThreads/Elevator.java" />
         <option value="$PROJECT_DIR$/src/AppKickstarter/AppKickstarter.java" />
         <option value="$PROJECT_DIR$/src/AppKickstarter/misc/GreetingServer.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="117" />
     <option name="width" value="814" />
     <option name="height" value="867" />
   </component>
@@ -150,7 +146,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -169,11 +165,32 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="AppKickstarter" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="comp4007-gp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comp4007-gp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="AppKickstarter" type="462c0819:PsiDirectoryNode" />
+              <item name="misc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comp4007-gp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comp4007-gp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="AppKickstarter" type="462c0819:PsiDirectoryNode" />
+              <item name="myThreads" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comp4007-gp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comp4007-gp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="AppKickstarter" type="462c0819:PsiDirectoryNode" />
+              <item name="timer" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -299,33 +316,32 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="814" height="867" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32953367" />
-      <window_info active="true" anchor="bottom" id="Messages" order="7" visible="true" weight="0.33113456" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32984293" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32953367" />
       <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2984293" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.29856583" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32953367" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.38948995" visible="true" weight="0.24686716" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.38948995" visible="true" weight="0.123125" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="1" sideWeight="0.61051005" side_tool="true" weight="0.18550107" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
     </layout>
@@ -335,12 +351,12 @@
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32987553" />
       <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25799572" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info id="Image Layers" order="5" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -350,7 +366,7 @@
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info id="Capture Tool" order="2" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.32987553" />
@@ -367,10 +383,129 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="5" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/AppKickstarter/timer/Timer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4290">
+          <caret line="207" column="35" selection-start-line="207" selection-start-column="35" selection-end-line="207" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppKickstarter/AppKickstarter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="40" column="23" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppKickstarter/myThreads/ThreadA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#446#447#0" expanded="true" />
+            <element signature="e#480#481#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppKickstarter/misc/MBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="33" column="26" lean-forward="true" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppKickstarter/misc/Msg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppKickstarter/misc/GreetingServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="26" column="37" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/etc/MyApp.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppKickstarter/AppKickstarter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2398">
+          <caret line="127" column="30" lean-forward="true" selection-start-line="127" selection-start-column="30" selection-end-line="127" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppKickstarter/myThreads/ThreadA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="34" column="56" selection-start-line="34" selection-start-column="56" selection-end-line="34" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#446#447#0" expanded="true" />
+            <element signature="e#480#481#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppKickstarter/misc/MBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="46" column="15" selection-start-line="46" selection-start-column="15" selection-end-line="46" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppKickstarter/misc/AppThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppKickstarter/misc/LogFormatter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppKickstarter/misc/GreetingServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/etc/MyApp.cfg">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -384,16 +519,6 @@
           <caret line="170" lean-forward="true" selection-start-line="170" selection-end-line="170" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5088#5089#0" expanded="true" />
-            <element signature="e#5152#5153#0" expanded="true" />
-            <element signature="e#5283#5284#0" expanded="true" />
-            <element signature="e#5302#5303#0" expanded="true" />
-            <element signature="e#5445#5446#0" expanded="true" />
-            <element signature="e#5469#5470#0" expanded="true" />
-            <element signature="e#5617#5618#0" expanded="true" />
-            <element signature="e#5642#5643#0" expanded="true" />
-            <element signature="e#6146#6147#0" expanded="true" />
-            <element signature="e#6187#6188#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -457,16 +582,6 @@
           <caret line="26" column="42" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5088#5089#0" expanded="true" />
-            <element signature="e#5152#5153#0" expanded="true" />
-            <element signature="e#5283#5284#0" expanded="true" />
-            <element signature="e#5302#5303#0" expanded="true" />
-            <element signature="e#5445#5446#0" expanded="true" />
-            <element signature="e#5469#5470#0" expanded="true" />
-            <element signature="e#5617#5618#0" expanded="true" />
-            <element signature="e#5642#5643#0" expanded="true" />
-            <element signature="e#6146#6147#0" expanded="true" />
-            <element signature="e#6187#6188#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -515,16 +630,6 @@
           <caret line="54" column="54" selection-start-line="54" selection-start-column="54" selection-end-line="54" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5088#5089#0" expanded="true" />
-            <element signature="e#5152#5153#0" expanded="true" />
-            <element signature="e#5283#5284#0" expanded="true" />
-            <element signature="e#5302#5303#0" expanded="true" />
-            <element signature="e#5445#5446#0" expanded="true" />
-            <element signature="e#5469#5470#0" expanded="true" />
-            <element signature="e#5617#5618#0" expanded="true" />
-            <element signature="e#5642#5643#0" expanded="true" />
-            <element signature="e#6146#6147#0" expanded="true" />
-            <element signature="e#6187#6188#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -573,9 +678,77 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppKickstarter/misc/Lib.java" />
     <entry file="file://$PROJECT_DIR$/src/AppKickstarter/misc/HelloMsg.java" />
+    <entry file="file://$PROJECT_DIR$/src/AppKickstarter/misc/LogFormatter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-193">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppKickstarter/misc/MBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="26" column="27" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppKickstarter/myThreads/ThreadB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="88">
+          <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppKickstarter/myThreads/ThreadA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="42" column="12" lean-forward="true" selection-end-line="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#446#447#0" expanded="true" />
+            <element signature="e#480#481#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppKickstarter/misc/AppThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_131/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="747" selection-start-line="747" selection-end-line="747" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/etc/AppKickstarter.AppKickstarter.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="6" column="56" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/etc/MyApp.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppKickstarter/timer/Timer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="92" column="8" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="112" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -584,56 +757,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppKickstarter/misc/Msg.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="57" lean-forward="true" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="57" />
+        <state relative-caret-position="902">
+          <caret line="43" column="23" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppKickstarter/timer/Timer.java">
+    <entry file="file://$PROJECT_DIR$/src/AppKickstarter/myThreads/Elevator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="207" selection-start-line="207" selection-end-line="207" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppKickstarter/misc/AppThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppKickstarter/misc/LogFormatter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/etc/MyApp.cfg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppKickstarter/misc/MBox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="46" column="15" selection-start-line="46" selection-start-column="15" selection-end-line="46" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppKickstarter/myThreads/ThreadA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="34" column="56" selection-start-line="34" selection-start-column="56" selection-end-line="34" selection-end-column="56" />
+        <state relative-caret-position="264">
+          <caret line="51" column="45" selection-start-line="51" selection-end-line="52" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#446#447#0" expanded="true" />
@@ -644,28 +776,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppKickstarter/AppKickstarter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-510">
-          <caret line="127" column="30" lean-forward="true" selection-start-line="127" selection-start-column="30" selection-end-line="127" selection-end-column="30" />
+        <state relative-caret-position="658">
+          <caret line="236" selection-start-line="236" selection-end-line="236" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5088#5089#0" expanded="true" />
-            <element signature="e#5152#5153#0" expanded="true" />
-            <element signature="e#5283#5284#0" expanded="true" />
-            <element signature="e#5302#5303#0" expanded="true" />
-            <element signature="e#5445#5446#0" expanded="true" />
-            <element signature="e#5469#5470#0" expanded="true" />
-            <element signature="e#5617#5618#0" expanded="true" />
-            <element signature="e#5642#5643#0" expanded="true" />
-            <element signature="e#6146#6147#0" expanded="true" />
-            <element signature="e#6187#6188#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppKickstarter/misc/GreetingServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="229">
+          <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

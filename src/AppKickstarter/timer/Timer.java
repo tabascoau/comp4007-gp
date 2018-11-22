@@ -116,7 +116,7 @@ public class Timer extends AppThread {
 		try {
 		    Thread.sleep(ticks);
 		} catch (Exception e) {};
-		mbox.send(new Msg("Ticker", null, Msg.Type.Tick, "tick"));
+//		mbox.send(new Msg("Ticker", null, Msg.Type.Tick, "tick"));
 	    }
 	} // run
 

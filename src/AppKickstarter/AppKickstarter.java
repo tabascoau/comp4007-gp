@@ -11,6 +11,7 @@ import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.Hashtable;
 
+import AppKickstarter.myThreads.Elevator;
 import AppKickstarter.timer.Timer;
 import AppKickstarter.misc.*;
 import AppKickstarter.myThreads.ThreadA;
@@ -28,8 +29,9 @@ public class AppKickstarter {
     private ConsoleHandler logConHd = null;
     private FileHandler logFileHd = null;
     private Timer timer = null;
-    private ThreadA threadA1, threadA2;
-    private ThreadB threadB;
+    private Elevator elevator1;
+//    private ThreadA threadA1, threadA2;
+//    private ThreadB threadB;
 
 
     //------------------------------------------------------------
@@ -38,7 +40,7 @@ public class AppKickstarter {
 	AppKickstarter appKickstarter = new AppKickstarter("AppKickstarter", "etc/MyApp.cfg");
 	appKickstarter.startApp();
 	try {
-	    Thread.sleep(30 * 1000);
+	    Thread.sleep(1800 * 1000);
 	} catch (Exception e) {}
 	appKickstarter.stopApp();
     } // main
@@ -111,7 +113,7 @@ public class AppKickstarter {
 
 	int port=54321;
 	try{
-		Thread t=new GreetingServer(port);
+		Thread t=new GreetingServer(port, this);
 		t.start();
 	}catch (IOException e){
 		e.printStackTrace();
@@ -120,12 +122,14 @@ public class AppKickstarter {
 
 	// create threads
 	timer = new Timer("timer", this);
-	threadA1 = new ThreadA("ThreadA1", this);
-	threadA2 = new ThreadA("ThreadA2", this);
-	threadB  = new ThreadB("ThreadB",  this);
+	elevator1 = new Elevator("Elevator1", this);
+//	threadA1 = new ThreadA("ThreadA1", this);
+//	threadA2 = new ThreadA("ThreadA2", this);
+//	threadB  = new ThreadB("ThreadB",  this);
 
 	// start threads
-//	new Thread(timer).start();
+	new Thread(timer).start();
+	new Thread(elevator1).start();
 //	new Thread(threadA1).start();
 //	new Thread(threadA2).start();
 //	new Thread(threadB).start();
@@ -139,9 +143,10 @@ public class AppKickstarter {
 	log.info("");
 	log.info("============================================================");
 	log.info(id + ": Application Stopping...");
-	threadA1.getMBox().send(new Msg(id, null, Msg.Type.Terminate, "Terminate now!"));
-	threadA2.getMBox().send(new Msg(id, null, Msg.Type.Terminate, "Terminate now!"));
-	threadB.getMBox().send(new Msg(id, null, Msg.Type.Terminate, "Terminate now!"));
+	elevator1.getMBox().send(new Msg(id, null, Msg.Type.Terminate, "Terminate now!"));
+//	threadA1.getMBox().send(new Msg(id, null, Msg.Type.Terminate, "Terminate now!"));
+//	threadA2.getMBox().send(new Msg(id, null, Msg.Type.Terminate, "Terminate now!"));
+//	threadB.getMBox().send(new Msg(id, null, Msg.Type.Terminate, "Terminate now!"));
 	timer.getMBox().send(new Msg(id, null, Msg.Type.Terminate, "Terminate now!"));
     } // stopApp
 
@@ -220,4 +225,15 @@ public class AppKickstarter {
 
 	return String.format("%02d:%02d:%02d", h, m, s);
     } // getSimulationTimeStr
+
+	public void ActivateElevator(String str)
+	{
+		System.out.println("Retrieve request: " + str);
+
+		// Shortest path
+
+		// Assign free elevator
+		elevator1.getMBox().send(new Msg("Timer", null, Msg.Type.TimesUp, "["+String.format("%05d", 1)+"]: Time's up!"));
+	}
+
 } // AppKickstarter
