@@ -125,10 +125,10 @@ public class AppKickstarter {
 	threadB  = new ThreadB("ThreadB",  this);
 
 	// start threads
-	new Thread(timer).start();
-	new Thread(threadA1).start();
-	new Thread(threadA2).start();
-	new Thread(threadB).start();
+//	new Thread(timer).start();
+//	new Thread(threadA1).start();
+//	new Thread(threadA2).start();
+//	new Thread(threadB).start();
     } // startApp
 
 

@@ -24,11 +24,18 @@ public class GreetingServer extends Thread {
 
                 System.out.println("Just connected to " + server.getLocalSocketAddress());
                 DataInputStream in = new DataInputStream(server.getInputStream());
+                byte[] bs=new byte[26];
 
-                System.out.println(in.readUTF());
+                in.read(bs);
+                String str=new String(bs);
+                System.out.println("Client side msg: "+str);
+
+
+
                 DataOutputStream out = new DataOutputStream(server.getOutputStream());
                 out.writeUTF("Thank you for connecting to " + server.getLocalSocketAddress()
                         + "\nGoodbye!");
+                in.close();
                 server.close();
 
             } catch (SocketTimeoutException s) {
