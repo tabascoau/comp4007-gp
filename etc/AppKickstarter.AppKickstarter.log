@@ -1,15 +1,15 @@
-181122-17:32:02 [INFO] -- 
-181122-17:32:02 [INFO] -- 
-181122-17:32:02 [INFO] -- ============================================================
-181122-17:32:02 [INFO] -- AppKickstarter: Application Starting...
-181122-17:32:02 [INFO] -- timer: starting...
-181122-17:32:02 [INFO] -- Elevator1: starting...
-181122-17:32:06 [INFO] -- Elevator1: message received: [Timer (TimesUp) -- [00001]: Time's up!].
-181122-17:32:06 [INFO] -- Elevator1: receiving timesup at 00:06:33
-181122-17:32:06 [INFO] -- Elevator1: go to source floor...
-181122-17:32:06 [INFO] -- Elevator1: message received: [Elevator1 (GoToSrc) -- Going to source floor!  (mCnt: 1)].
-181122-17:32:06 [INFO] -- Elevator1: Elevator1 is going to source floor!!!
-181122-17:32:06 [INFO] -- Elevator1: message received: [Elevator1 (Waiting) -- Arrive at source floor!  (mCnt: 2)].
-181122-17:32:06 [INFO] -- Elevator1: Elevator1 is arrived at source floor!!!
-181122-17:32:06 [INFO] -- Elevator1: message received: [Elevator1 (GoToDest) -- Going to destination floor!  (mCnt: 3)].
-181122-17:32:06 [INFO] -- Elevator1: Elevator1 is going to destination floor!!!
+181123-13:31:27 [INFO] -- 
+181123-13:31:27 [INFO] -- 
+181123-13:31:27 [INFO] -- ============================================================
+181123-13:31:27 [INFO] -- AppKickstarter: Application Starting...
+181123-13:31:27 [INFO] -- Elevator1: starting...
+181123-13:31:27 [INFO] -- timer: starting...
+181123-13:31:40 [INFO] -- Elevator1: message received: [Timer (TimesUp) -- Svc_Req Passenger-0001 3 2].
+181123-13:31:40 [INFO] -- Elevator1: receiving order at 00:21:19
+181123-13:31:40 [INFO] -- Elevator1: go to source floor...
+181123-13:31:40 [INFO] -- Elevator1: message received: [Elevator1 (GoToSrc) -- Going to source floor!  (mCnt: 1)].
+181123-13:31:40 [INFO] -- Elevator1: Elevator1 is going to source floor!!!
+181123-13:31:45 [INFO] -- Elevator1: message received: [Elevator1 (Waiting) -- Arrive at source floor!  (mCnt: 2)].
+181123-13:31:45 [INFO] -- Elevator1: Elevator1 is arrived at source floor!!!
+181123-13:31:45 [INFO] -- Elevator1: message received: [Elevator1 (GoToDest) -- Going to destination floor!  (mCnt: 3)].
+181123-13:31:45 [INFO] -- Elevator1: Elevator1 is going to destination floor!!!

@@ -9,6 +9,10 @@ import AppKickstarter.timer.Timer;
 // ThreadA
 public class Elevator extends AppThread {
     private final int sleepTime = 5;
+    private int idleFloor = 0;
+
+    private String passengerId;
+    private int src, dest;
 
     //------------------------------------------------------------
     // ThreadA
@@ -31,25 +35,42 @@ public class Elevator extends AppThread {
 
             switch (msg.getType()) {
                 case TimesUp:
-                    log.info(id + ": receiving timesup at " + appKickstarter.getSimulationTimeStr());
+                    // Store data
+                    String[] datas = msg.getDetails().split(" ");
+                    passengerId = datas[1];
+                    src = Integer.parseInt(datas[2]);
+                    dest = Integer.parseInt(datas[3]);
+
+                    // Action
+                    log.info(id + ": receiving order at " + appKickstarter.getSimulationTimeStr());
                     log.info(id + ": go to source floor...");
 
-                    // Waiting
-
+                    // Already at src
+                    if (idleFloor == src)
+                    {
+                        this.getMBox().send(new Msg(id, mbox, Msg.Type.Waiting, "Alreadly at source floor!  (mCnt: " + ++mCnt + ")"));
+                    }
                     // Go to src
-                    this.getMBox().send(new Msg(id, mbox, Msg.Type.GoToSrc, "Going to source floor!  (mCnt: " + ++mCnt + ")"));
+                    else
+                    {
+                        this.getMBox().send(new Msg(id, mbox, Msg.Type.GoToSrc, "Going to source floor!  (mCnt: " + ++mCnt + ")"));
+                    }
 
-                    // sleep again
-//                    Timer.setSimulationTimer(id, mbox, sleepTime);
                     break;
 
                 case GoToSrc:
                     log.info(id + ": " + msg.getSender() + " is going to source floor!!!");
 
-                    // Moving
-
-                    // Arrive at src floor
-                    this.getMBox().send(new Msg(id, mbox, Msg.Type.Waiting, "Arrive at source floor!  (mCnt: " + ++mCnt + ")"));
+                    // Wait for to src time
+                    try {
+                        long time = GetArrivedTime(idleFloor, src);  // calculation
+                        Thread.sleep(time * 1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    } finally {
+                        // Arrive at src floor
+                        this.getMBox().send(new Msg(id, mbox, Msg.Type.Waiting, "Arrive at source floor!  (mCnt: " + ++mCnt + ")"));
+                    }
 
                     break;
 
@@ -84,5 +105,11 @@ public class Elevator extends AppThread {
         appKickstarter.unregThread(this);
         log.info(id + ": terminating...");
     } // run
+
+    private long GetArrivedTime(int from, int to)
+    {
+        return 5;
+    }
+
 } // ThreadA
 

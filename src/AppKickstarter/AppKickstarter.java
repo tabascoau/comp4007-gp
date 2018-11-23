@@ -230,10 +230,25 @@ public class AppKickstarter {
 	{
 		System.out.println("Retrieve request: " + str);
 
-		// Shortest path
+		// Enter current floor checking
+		if (GoToCurrentFloor(str))
+		{
+			System.out.println("Enter same floor");
+			return;
+		}
 
-		// Assign free elevator
-		elevator1.getMBox().send(new Msg("Timer", null, Msg.Type.TimesUp, "["+String.format("%05d", 1)+"]: Time's up!"));
+		// Find shortest path
+
+		// Assign to elevator
+		elevator1.getMBox().send(new Msg("Timer", null, Msg.Type.TimesUp, str));
+	}
+
+	private boolean GoToCurrentFloor(String str)
+	{
+		String[] datas = str.split(" ");
+		int	src = Integer.parseInt(datas[2]);
+		int dest = Integer.parseInt(datas[3]);
+		return src == dest;
 	}
 
 } // AppKickstarter
