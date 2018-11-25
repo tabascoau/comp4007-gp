@@ -48,5 +48,6 @@ public class Msg {
     GoToSrc,
     Waiting,
     GoToDest,
+    ArriveDest,
     } // Type
 } // Msg
