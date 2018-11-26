@@ -37,33 +37,42 @@ public class AppKickstarter {
     //------------------------------------------------------------
     // main
     public static void main(String[] args) {
-        AppKickstarter appKickstarter = new AppKickstarter("AppKickstarter", "etc/MyApp.cfg");
-        appKickstarter.startApp();
-        try {
-            Thread.sleep(1800 * 1000);
-        } catch (Exception e) {
-        }
-        appKickstarter.stopApp();
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                new CentralControlPanel();
+            }
+        });
+
+//        ________  ___  ___  ___          ________  ________  ________  _________
+//|\   ____\|\  \|\  \|\  \        |\   __  \|\   __  \|\   __  \|\___   ___\
+//\ \  \___|\ \  \\\  \ \  \       \ \  \|\  \ \  \|\  \ \  \|\  \|___ \  \_|
+// \ \  \  __\ \  \\\  \ \  \       \ \   ____\ \   __  \ \   _  _\   \ \  \
+//  \ \  \|\  \ \  \\\  \ \  \       \ \  \___|\ \  \ \  \ \  \\  \|   \ \  \
+//   \ \_______\ \_______\ \__\       \ \__\    \ \__\ \__\ \__\\ _\    \ \__\
+//    \|_______|\|_______|\|__|        \|__|     \|__|\|__|\|__|\|__|    \|__|
+
     } // main
+
 
 
     //------------------------------------------------------------
     // AppKickstarter
-    private AppKickstarter(String id) {
+    public AppKickstarter(String id) {
         this(id, "etc/MyApp.cfg");
     } // AppKickstarter
 
 
     //------------------------------------------------------------
     // AppKickstarter
-    private AppKickstarter(String id, String cfgFName) {
+    public AppKickstarter(String id, String cfgFName) {
         this(id, cfgFName, false);
     } // AppKickstarter
 
 
     //------------------------------------------------------------
     // AppKickstarter
-    private AppKickstarter(String id, String cfgFName, boolean append) {
+    public AppKickstarter(String id, String cfgFName, boolean append) {
         this.id = id;
         this.cfgFName = cfgFName;
         logConHd = null;
@@ -105,31 +114,12 @@ public class AppKickstarter {
 
     //------------------------------------------------------------
     // startApp
-    private void startApp(){
+   public void startApp(){
         // start our application
         log.info("");
         log.info("");
         log.info("============================================================");
         log.info(id + ": Application Starting...");
-
-//  #####  #     # ###    ######     #    ######  #######
-// #     # #     #  #     #     #   # #   #     #    #
-// #       #     #  #     #     #  #   #  #     #    #
-// #  #### #     #  #     ######  #     # ######     #
-// #     # #     #  #     #       ####### #   #      #
-// #     # #     #  #     #       #     # #    #     #
-//  #####   #####  ###    #       #     # #     #    #
-
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                CentralControlPanel centralControlPanel = new CentralControlPanel();
-                centralControlPanel.setVisible(true);
-            }
-        });
-
-
-//======================================================================================================
 
 
         int port = 54321;
@@ -144,22 +134,16 @@ public class AppKickstarter {
         // create threads
         timer = new Timer("timer", this);
         elevator1 = new Elevator("Elevator1", this);
-//	threadA1 = new ThreadA("ThreadA1", this);
-//	threadA2 = new ThreadA("ThreadA2", this);
-//	threadB  = new ThreadB("ThreadB",  this);
 
         // start threads
         new Thread(timer).start();
         new Thread(elevator1).start();
-//	new Thread(threadA1).start();
-//	new Thread(threadA2).start();
-//	new Thread(threadB).start();
     } // startApp
 
 
     //------------------------------------------------------------
     // stopApp
-    private void stopApp() {
+    public void stopApp() {
         log.info("");
         log.info("");
         log.info("============================================================");
