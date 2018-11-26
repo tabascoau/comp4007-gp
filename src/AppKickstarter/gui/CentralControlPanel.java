@@ -8,10 +8,12 @@ import java.awt.event.ActionListener;
 
 public class CentralControlPanel extends JFrame{
     public static CentralControlPanel instance;
+
     public static CentralControlPanel getInstance() {
         return CentralControlPanel.instance == null ? CentralControlPanel.instance = new CentralControlPanel() : instance;
     }
     final int defaultFloor=0;
+    final char defaultDir='S';
     private AppKickstarter appKickstarter = new AppKickstarter("AppKickstarter", "etc/MyApp.cfg");
     private JButton startElevatorButton;
     private JButton stopElevatorButton;
@@ -21,6 +23,8 @@ public class CentralControlPanel extends JFrame{
 
 
     public JLabel aCurrent, bCurrent, cCurrent, dCurrent, eCurrent, fCurrent;
+    public JLabel aDirection, bDirection, cDirection, dDirection, eDirection, fDirection;
+
 
 
     private boolean start = false;
@@ -39,6 +43,13 @@ public class CentralControlPanel extends JFrame{
         dCurrent.setText(String.valueOf(defaultFloor));
         eCurrent.setText(String.valueOf(defaultFloor));
         fCurrent.setText(String.valueOf(defaultFloor));
+
+        aDirection.setText(String.valueOf(defaultDir));
+        bDirection.setText(String.valueOf(defaultDir));
+        cDirection.setText(String.valueOf(defaultDir));
+        dDirection.setText(String.valueOf(defaultDir));
+        eDirection.setText(String.valueOf(defaultDir));
+        fDirection.setText(String.valueOf(defaultDir));
         setVisible(true);
 
 
@@ -78,6 +89,10 @@ public class CentralControlPanel extends JFrame{
     public void setaCurrentFloor(int aCurrentFloor){
         aCurrent.setText(String.valueOf(aCurrentFloor));
         this.repaint();
+    }
+
+    public void setaDirection(char direction){
+        aDirection.setText(String.valueOf(direction));
     }
 
 
