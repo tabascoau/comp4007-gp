@@ -1,16 +1,21 @@
 package AppKickstarter.myThreads;
 
+import AppKickstarter.gui.CentralControlPanel;
 import AppKickstarter.misc.*;
 import AppKickstarter.AppKickstarter;
 import AppKickstarter.timer.Timer;
+import sun.rmi.runtime.Log;
+
+import javax.swing.*;
+import java.util.logging.Logger;
 
 
 //======================================================================
 // ThreadA
 public class Elevator extends AppThread {
+
     private final int sleepTime = 5;
     private int idleFloor = 0;
-
     // Speed variable
     private double upOneFloor = 0.6f;
     private double downOneFloor = 0.5f;
@@ -23,9 +28,18 @@ public class Elevator extends AppThread {
     private double doorWait = 5f;
 
     private long doorOpenToClose = (long) ((doorOpen + doorClose + doorWait) * 1000);
+    CentralControlPanel c=CentralControlPanel.getInstance();
 
     private String passengerId;
     private int src, dest;
+
+    //  / ___| | | |_ _| |  _ \ / \  |  _ \_   _|
+    // | |  _| | | || |  | |_) / _ \ | |_) || |
+    // | |_| | |_| || |  |  __/ ___ \|  _ < | |
+    //  \____|\___/|___| |_| /_/   \_\_| \_\|_|
+
+
+
 
     //------------------------------------------------------------
     // ThreadA
@@ -84,6 +98,11 @@ public class Elevator extends AppThread {
                     // Debug data
                     System.out.println("GoToSrc: ");
                     System.out.println("current floor " + idleFloor);
+                    //Tabasco added code
+                    c.setaCurrentFloor(idleFloor);
+                    //
+
+
                     System.out.println("Source floor " + src);
 
                     // Wait for to src time
@@ -107,6 +126,9 @@ public class Elevator extends AppThread {
                     // Debug data
                     System.out.println("Waiting: ");
                     System.out.println("current floor " + src);
+                    //Tabasco added code
+                    c.setaCurrentFloor(src);
+                    //
 
                     // Wait for to src time
                     try {
@@ -127,6 +149,9 @@ public class Elevator extends AppThread {
                     // Debug data
                     System.out.println("GoToDest: ");
                     System.out.println("current floor " + src);
+                    //Tabasco added code
+                    c.setaCurrentFloor(src);
+                    //
                     System.out.println("Destination floor " + dest);
 
                     // Wait for to src time
@@ -151,6 +176,9 @@ public class Elevator extends AppThread {
                     // Debug data
                     System.out.println("ArriveDest: ");
                     System.out.println("current floor " + idleFloor);
+                    //Tabasco added code
+                    c.setaCurrentFloor(idleFloor);
+                    //
                     log.info(id + ": -----------------------------------------------------------");
 
                     break;

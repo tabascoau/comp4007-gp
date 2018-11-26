@@ -37,21 +37,32 @@ public class AppKickstarter {
     //------------------------------------------------------------
     // main
     public static void main(String[] args) {
+
+
+//  / ___| | | |_ _| |  _ \ / \  |  _ \_   _|
+// | |  _| | | || |  | |_) / _ \ | |_) || |
+// | |_| | |_| || |  |  __/ ___ \|  _ < | |
+//  \____|\___/|___| |_| /_/   \_\_| \_\|_|
+
+
+        try{
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        }catch (UnsupportedLookAndFeelException e){
+            e.printStackTrace();
+        }catch (ClassNotFoundException e){
+            e.printStackTrace();
+        }catch (InstantiationException e){
+            e.printStackTrace();
+        }catch (IllegalAccessException e){
+            e.printStackTrace();
+        }
+
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
                 new CentralControlPanel();
             }
         });
-
-//        ________  ___  ___  ___          ________  ________  ________  _________
-//|\   ____\|\  \|\  \|\  \        |\   __  \|\   __  \|\   __  \|\___   ___\
-//\ \  \___|\ \  \\\  \ \  \       \ \  \|\  \ \  \|\  \ \  \|\  \|___ \  \_|
-// \ \  \  __\ \  \\\  \ \  \       \ \   ____\ \   __  \ \   _  _\   \ \  \
-//  \ \  \|\  \ \  \\\  \ \  \       \ \  \___|\ \  \ \  \ \  \\  \|   \ \  \
-//   \ \_______\ \_______\ \__\       \ \__\    \ \__\ \__\ \__\\ _\    \ \__\
-//    \|_______|\|_______|\|__|        \|__|     \|__|\|__|\|__|\|__|    \|__|
-
     } // main
 
 
