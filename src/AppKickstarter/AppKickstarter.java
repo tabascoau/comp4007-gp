@@ -45,15 +45,15 @@ public class AppKickstarter {
 //  \____|\___/|___| |_| /_/   \_\_| \_\|_|
 
 
-        try{
+        try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        }catch (UnsupportedLookAndFeelException e){
+        } catch (UnsupportedLookAndFeelException e) {
             e.printStackTrace();
-        }catch (ClassNotFoundException e){
+        } catch (ClassNotFoundException e) {
             e.printStackTrace();
-        }catch (InstantiationException e){
+        } catch (InstantiationException e) {
             e.printStackTrace();
-        }catch (IllegalAccessException e){
+        } catch (IllegalAccessException e) {
             e.printStackTrace();
         }
 
@@ -64,7 +64,6 @@ public class AppKickstarter {
             }
         });
     } // main
-
 
 
     //------------------------------------------------------------
@@ -125,7 +124,7 @@ public class AppKickstarter {
 
     //------------------------------------------------------------
     // startApp
-   public void startApp(){
+    public void startApp() {
         // start our application
         log.info("");
         log.info("");
@@ -145,11 +144,11 @@ public class AppKickstarter {
         // create threads
         timer = new Timer("timer", this);
         elevatorA = new Elevator("ElevatorA", this);
-        elevatorB= new Elevator("ElevatorB", this);
-        elevatorC= new Elevator("ElevatorC", this);
-        elevatorD= new Elevator("ElevatorD", this);
-        elevatorE= new Elevator("ElevatorE", this);
-        elevatorF= new Elevator("ElevatorF", this);
+        elevatorB = new Elevator("ElevatorB", this);
+        elevatorC = new Elevator("ElevatorC", this);
+        elevatorD = new Elevator("ElevatorD", this);
+        elevatorE = new Elevator("ElevatorE", this);
+        elevatorF = new Elevator("ElevatorF", this);
         // start threads
         new Thread(timer).start();
 
@@ -160,16 +159,6 @@ public class AppKickstarter {
         new Thread(elevatorE).start();
         new Thread(elevatorF).start();
 
-//        try {
-//            new Thread(elevatorA).join();
-//            new Thread(elevatorB).join();
-//            new Thread(elevatorC).join();
-//            new Thread(elevatorD).join();
-//            new Thread(elevatorE).join();
-//            new Thread(elevatorF).join();
-//        }catch (InterruptedException e){
-//            e.printStackTrace();
-//        }
 
     } // startApp
 
@@ -280,17 +269,25 @@ public class AppKickstarter {
         }
 
         // Find shortest path
-        String[] data=str.split(" ");
-        int src=Integer.parseInt(data[2]);
-        int dest= Integer.parseInt(data[3]);
+        String[] data = str.split(" ");
+        int src = Integer.parseInt(data[2]);
+        int dest = Integer.parseInt(data[3]);
 
-        if(src<20&&dest<20){
+        if ((src >=0 &&src<=7) && dest >= 49) {
             System.out.println("Sent to A Lift! ");
             elevatorA.getMBox().send(new Msg("Timer", elevatorA.getMBox(), Msg.Type.TimesUp, str));
-        }else {
+        } else if ((src >= 8 && src <= 15) && (dest >= 41 && dest <= 48)) {
             System.out.println("Sent to B Lift! ");
             elevatorB.getMBox().send(new Msg("Timer", elevatorB.getMBox(), Msg.Type.TimesUp, str));
-        }
+        } else if ((src >= 16 && src <= 23) && (dest >= 33 && dest <= 40)) {
+            elevatorC.getMBox().send(new Msg("Timer", elevatorC.getMBox(), Msg.Type.TimesUp, str));
+        } else if ((src >= 24 && src <= 31) && (dest >= 25 && dest <= 32)) {
+            elevatorD.getMBox().send(new Msg("Timer", elevatorD.getMBox(), Msg.Type.TimesUp, str));
+        }/*else {
+            elevatorE.getMBox().send(new Msg("Timer", elevatorD.getMBox(), Msg.Type.TimesUp, str));
+        }*/
+            //Elevator F is reserved.
+
         // Assign to elevator
 
 

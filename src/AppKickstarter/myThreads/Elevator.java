@@ -93,9 +93,15 @@ public class Elevator extends AppThread {
                 case GoToSrc:
                     if (msg.getSender().equals("ElevatorA")) {
                         elevArrmsg = "Elev_Arr" + " A " + idleFloor + " " + direction + " ";
-                    } else {
+                    } else if (msg.getSender().equals("ElevatorB")) {
                         elevArrmsg = "Elev_Arr" + " B " + idleFloor + " " + direction + " ";
-                    }
+                    } else if (msg.getSender().equals("ElevatorC")) {
+                        elevArrmsg = "Elev_Arr" + " C " + idleFloor + " " + direction + " ";
+                    } else if (msg.getSender().equals("ElevatorD")) {
+                        elevArrmsg = "Elev_Arr" + " D " + idleFloor + " " + direction + " ";
+                    } /*else if (msg.getSender().equals("ElevatorE")) {
+                        elevArrmsg = "Elev_Arr" + " E " + idleFloor + " " + direction + " ";
+                    }*/
                     for (int current = idleFloor + 1; current <= src; current++) {
                         elevArrmsg += " " + current;
                     }
@@ -126,12 +132,21 @@ public class Elevator extends AppThread {
                     if (msg.getSender().equals("ElevatorA")) {
                         centralControlPanel.setaDirection('S');
                         centralControlPanel.setaCurrentFloor(src, "wait");
-                    } else {
+                    } else if (msg.getSender().equals("ElevatorB")) {
                         centralControlPanel.setbDirection('S');
                         centralControlPanel.setbCurrentFloor(src, "wait");
+                    } else if (msg.getSender().equals("ElevatorC")) {
+                        centralControlPanel.setcDirection('S');
+                        centralControlPanel.setcCurrentFloor(src, "wait");
+                    } else if (msg.getSender().equals("ElevatorD")) {
+                        centralControlPanel.setdDirection('S');
+                        centralControlPanel.setdCurrentFloor(src, "wait");
                     }
-//                    centralControlPanel.setaCurrentFloor(src);
-                    //
+                    /* else if (msg.getSender().equals("ElevatorE")) {
+                        centralControlPanel.seteDirection('S');
+                        centralControlPanel.seteCurrentFloor(src, "wait");
+                    }*/
+
 
                     // Wait for to src time
                     try {
@@ -152,12 +167,18 @@ public class Elevator extends AppThread {
                     // Debug data
                     System.out.println("GoToDest: ");
                     System.out.println("current floor " + src);
-                    //Tabasco added code
                     if (msg.getSender().equals("ElevatorA")) {
-                        centralControlPanel.setaCurrentFloor(src);
-                    } else {
-                        centralControlPanel.setbCurrentFloor(src);
-                    }
+                        centralControlPanel.setaCurrentFloor(src, "wait");
+                    } else if (msg.getSender().equals("ElevatorB")) {
+                        centralControlPanel.setbCurrentFloor(src, "wait");
+                    } else if (msg.getSender().equals("ElevatorC")) {
+                        centralControlPanel.setcCurrentFloor(src, "wait");
+                    } else if (msg.getSender().equals("ElevatorD")) {
+                        centralControlPanel.setdCurrentFloor(src, "wait");
+
+                    } /*else if (msg.getSender().equals("ElevatorE")) {
+                        centralControlPanel.seteCurrentFloor(src, "wait");
+                    }*/
 
                     //
                     System.out.println("Destination floor " + dest);
@@ -174,11 +195,25 @@ public class Elevator extends AppThread {
                     System.out.println("ArriveDest: ");
                     System.out.println("current floor " + idleFloor);
                     //Tabasco added code
+//                    if (msg.getSender().equals("ElevatorA")) {
+//                        centralControlPanel.setaDirection('S');
+//                    } else {
+//                        centralControlPanel.setbDirection('S');
+//                    }
+
                     if (msg.getSender().equals("ElevatorA")) {
                         centralControlPanel.setaDirection('S');
-                    } else {
+                    } else if (msg.getSender().equals("ElevatorB")) {
                         centralControlPanel.setbDirection('S');
-                    }
+                    } else if (msg.getSender().equals("ElevatorC")) {
+                        centralControlPanel.setcDirection('S');
+                    } else if (msg.getSender().equals("ElevatorD")) {
+                        centralControlPanel.setdDirection('S');
+
+                    } /*else if (msg.getSender().equals("ElevatorE")) {
+                        centralControlPanel.seteDirection('S');
+                    }*/
+
 //                    centralControlPanel.setaCurrentFloor(idleFloor);
                     //
                     log.info(id + ": -----------------------------------------------------------");
@@ -206,6 +241,9 @@ public class Elevator extends AppThread {
         if (from < to) {
             centralControlPanel.setaDirection('U');
             centralControlPanel.setbDirection('U');
+            centralControlPanel.setcDirection('U');
+            centralControlPanel.setdDirection('U');
+            centralControlPanel.seteDirection('U');
             sleepTime = (to - from == 1) ? accUp : accUp + (to - from - 2) * upOneFloor + decUp;
 
         }
@@ -213,6 +251,9 @@ public class Elevator extends AppThread {
         else {
             centralControlPanel.setaDirection('D');
             centralControlPanel.setbDirection('D');
+            centralControlPanel.setcDirection('D');
+            centralControlPanel.setdDirection('D');
+            centralControlPanel.seteDirection('D');
             sleepTime = (from - to == 1) ? accDown : accDown + (from - to - 2) * downOneFloor + decDown;
         }
 
@@ -223,11 +264,23 @@ public class Elevator extends AppThread {
         try {
             int current = from;
             boolean up = from < to; // Set direction
-            if(whichElevator.equals("ElevatorA")) {
+//            if(whichElevator.equals("ElevatorA")) {
+//                centralControlPanel.setaDirection(up ? 'U' : 'D');
+//            }else {
+//                centralControlPanel.setbDirection(up ? 'U' : 'D');
+//            }
+
+            if (whichElevator.equals("ElevatorA")) {
                 centralControlPanel.setaDirection(up ? 'U' : 'D');
-            }else {
+            } else if (whichElevator.equals("ElevatorB")) {
                 centralControlPanel.setbDirection(up ? 'U' : 'D');
-            }
+            } else if (whichElevator.equals("ElevatorC")) {
+                centralControlPanel.setcDirection(up ? 'U' : 'D');
+            } else if (whichElevator.equals("ElevatorD")) {
+                centralControlPanel.setdDirection(up ? 'U' : 'D');
+            } /*else if (whichElevator.equals("ElevatorE")) {
+                centralControlPanel.seteDirection(up ? 'U' : 'D');
+            }*/
             // One floor
             if (Math.abs(from - to) == 1) {
                 long sleepTime = (long) ((up ? accUp : accDown) * 1000);
@@ -235,11 +288,23 @@ public class Elevator extends AppThread {
                 Thread.sleep(sleepTime);
 
                 current += up ? 1 : -1;
+//                if (whichElevator.equals("ElevatorA")) {
+//                    centralControlPanel.setaCurrentFloor(current);
+//                } else {
+//                    centralControlPanel.setbCurrentFloor(current);
+//                }
+
                 if (whichElevator.equals("ElevatorA")) {
                     centralControlPanel.setaCurrentFloor(current);
-                } else {
+                } else if (whichElevator.equals("ElevatorB")) {
                     centralControlPanel.setbCurrentFloor(current);
-                }
+                } else if (whichElevator.equals("ElevatorC")) {
+                    centralControlPanel.setcCurrentFloor(current);
+                } else if (whichElevator.equals("ElevatorD")) {
+                    centralControlPanel.setdCurrentFloor(current);
+                } /*else if (whichElevator.equals("ElevatorE")) {
+                    centralControlPanel.seteCurrentFloor(current);
+                }*/
                 System.out.println("Reach " + current + " floor");
                 System.out.println("Use " + sleepTime + " millisecond");
             }
@@ -266,9 +331,15 @@ public class Elevator extends AppThread {
                     current += up ? 1 : -1;
                     if (whichElevator.equals("ElevatorA")) {
                         centralControlPanel.setaCurrentFloor(current);
-                    } else {
+                    } else if (whichElevator.equals("ElevatorB")) {
                         centralControlPanel.setbCurrentFloor(current);
-                    }
+                    } else if (whichElevator.equals("ElevatorC")) {
+                        centralControlPanel.setcCurrentFloor(current);
+                    } else if (whichElevator.equals("ElevatorD")) {
+                        centralControlPanel.setdCurrentFloor(current);
+                    } /*else if (whichElevator.equals("ElevatorE")) {
+                        centralControlPanel.seteCurrentFloor(current);
+                    }*/
                     System.out.println("Reach " + current + " floor");
                     System.out.println("Use " + sleepTime + " millisecond");
                 }

@@ -96,6 +96,10 @@ public class CentralControlPanel extends JFrame{
         this.repaint();
     }
 
+    public void setaDirection(char direction){
+        aDirection.setText(String.valueOf(direction));
+    }
+
     public void setbCurrentFloor(int bCurrentFloor){
         bCurrent.setText(String.valueOf(bCurrentFloor));
         this.repaint();
@@ -106,14 +110,66 @@ public class CentralControlPanel extends JFrame{
         this.repaint();
     }
 
-    public void setaDirection(char direction){
-        aDirection.setText(String.valueOf(direction));
-    }
-
     public void setbDirection(char direction){
         bDirection.setText(String.valueOf(direction));
     }
 
+    public void setcCurrentFloor(int cCurrentFloor){
+        cCurrent.setText(String.valueOf(cCurrentFloor));
+        this.repaint();
+    }
+
+    public void setcCurrentFloor(int cCurrentFloor, String status){
+        cCurrent.setText(String.valueOf(cCurrentFloor)+" "+status);
+        this.repaint();
+    }
+
+
+    public void setcDirection(char direction){
+        cDirection.setText(String.valueOf(direction));
+    }
+
+    public void setdCurrentFloor(int dCurrentFloor){
+        dCurrent.setText(String.valueOf(dCurrentFloor));
+        this.repaint();
+    }
+
+    public void setdCurrentFloor(int dCurrentFloor, String status){
+        dCurrent.setText(String.valueOf(dCurrentFloor)+" "+status);
+        this.repaint();
+    }
+
+    public void setdDirection(char direction){
+        dDirection.setText(String.valueOf(direction));
+    }
+
+    public void seteCurrentFloor(int eCurrentFloor){
+        eCurrent.setText(String.valueOf(eCurrentFloor));
+        this.repaint();
+    }
+
+    public void seteCurrentFloor(int eCurrentFloor, String status){
+        eCurrent.setText(String.valueOf(eCurrentFloor)+" "+status);
+        this.repaint();
+    }
+
+    public void seteDirection(char direction){
+        eDirection.setText(String.valueOf(direction));
+    }
+
+    public void setfCurrentFloor(int fCurrentFloor){
+        fCurrent.setText(String.valueOf(fCurrentFloor));
+        this.repaint();
+    }
+
+    public void setfCurrentFloor(int fCurrentFloor, String status){
+        fCurrent.setText(String.valueOf(fCurrentFloor)+" "+status);
+        this.repaint();
+    }
+
+    public void setfDirection(char direction){
+        fDirection.setText(String.valueOf(direction));
+    }
 
 
 
