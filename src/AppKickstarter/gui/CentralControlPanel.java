@@ -91,8 +91,27 @@ public class CentralControlPanel extends JFrame{
         this.repaint();
     }
 
+    public void setaCurrentFloor(int aCurrentFloor, String status){
+        aCurrent.setText(String.valueOf(aCurrentFloor)+" "+status);
+        this.repaint();
+    }
+
+    public void setbCurrentFloor(int bCurrentFloor){
+        bCurrent.setText(String.valueOf(bCurrentFloor));
+        this.repaint();
+    }
+
+    public void setbCurrentFloor(int bCurrentFloor, String status){
+        bCurrent.setText(String.valueOf(bCurrentFloor)+" "+status);
+        this.repaint();
+    }
+
     public void setaDirection(char direction){
         aDirection.setText(String.valueOf(direction));
+    }
+
+    public void setbDirection(char direction){
+        bDirection.setText(String.valueOf(direction));
     }
 
 

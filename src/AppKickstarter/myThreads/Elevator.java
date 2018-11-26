@@ -26,12 +26,14 @@ public class Elevator extends AppThread {
     private double doorOpen = 1f;
     private double doorClose = 1.5f;
     private double doorWait = 5f;
-
     private long doorOpenToClose = (long) ((doorOpen + doorClose + doorWait) * 1000);
     CentralControlPanel centralControlPanel = CentralControlPanel.getInstance();
 
     private String passengerId;
     private int src, dest;
+
+    //new added code
+    String elevArrmsg = "";
 
     //  / ___| | | |_ _| |  _ \ / \  |  _ \_   _|
     // | |  _| | | || |  | |_) / _ \ | |_) || |
@@ -55,7 +57,7 @@ public class Elevator extends AppThread {
 
         for (boolean quit = false; !quit; ) {
             Msg msg = mbox.receive();
-
+            System.out.println("FUCKING MSG MBOX: " + msg.getSender());
             log.info(id + ": message received: [" + msg + "].");
 
             switch (msg.getType()) {
@@ -79,7 +81,7 @@ public class Elevator extends AppThread {
 
                     // Already at src
                     if (idleFloor == src) {
-                        this.getMBox().send(new Msg(id, mbox, Msg.Type.Waiting, "Alreadly at source floor!  (mCnt: " + ++mCnt + ")"));
+                        this.getMBox().send(new Msg(id, mbox, Msg.Type.Waiting, "Already at source floor!  (mCnt: " + ++mCnt + ")"));
                     }
                     // Go to src
                     else {
@@ -89,34 +91,12 @@ public class Elevator extends AppThread {
                     break;
 
                 case GoToSrc:
-                    //Tabasco added code
-                    //Message format: Elev Lno Fno0 Dir FNo1 FNo2 FNo3 .....
-//                    if (src < idleFloor) {
-//                        direction = 'D';
-//                    } else if (src > idleFloor) {
-//                        direction = 'U';
-//                    } else {
-//                        direction = 'S';
-//                    }
-//                    if (Math.abs(src - idleFloor) == 0) {
-//                        int[] queue={idleFloor};
-//                        System.out.println("The Elev_arr : "+queue[0]);
-//                    }else {
-//                        int queue[] = new int[Math.abs(src - idleFloor)+1];
-//                        for(int i=0;i<Math.abs(src-idleFloor)+1;i++) {
-//                            if(src<idleFloor){
-//                                queue[i]=idleFloor--;
-//                                System.out.println("The Elev_arr : "+queue[i]);
-//                            }else {
-//                                queue[i]=idleFloor++;
-//                                System.out.println("The Elev_arr : "+queue[i]);
-//                            }
-//                        }
-//                    }
-
-                    String elevArrmsg = "Elev_Arr" + " A " + idleFloor + " " + direction + " ";
-                    for (int current = idleFloor + 1; current <= src; current++)
-                    {
+                    if (msg.getSender().equals("ElevatorA")) {
+                        elevArrmsg = "Elev_Arr" + " A " + idleFloor + " " + direction + " ";
+                    } else {
+                        elevArrmsg = "Elev_Arr" + " B " + idleFloor + " " + direction + " ";
+                    }
+                    for (int current = idleFloor + 1; current <= src; current++) {
                         elevArrmsg += " " + current;
                     }
                     System.out.println("Elevator_Arr message: " + elevArrmsg);
@@ -128,29 +108,12 @@ public class Elevator extends AppThread {
                     // Debug data
                     System.out.println("GoToSrc: ");
                     System.out.println("current floor " + idleFloor);
-                    //Tabasco added code
-//                    centralControlPanel.setaCurrentFloor(idleFloor);
-                    //
 
 
                     System.out.println("Source floor " + src);
 
-                    sleep(idleFloor, src);
+                    sleep(idleFloor, src, msg.getSender());
                     this.getMBox().send(new Msg(id, mbox, Msg.Type.Waiting, "Arrive at source floor!  (mCnt: " + ++mCnt + ")"));
-
-                    // Wait for to src time
-//                    try {
-//                        long sleepTime = GetArrivedTime(idleFloor, src);  // calculation
-//                        System.out.println("Travelling time: " + sleepTime);
-//
-//                        Thread.sleep(sleepTime);
-//                    } catch (InterruptedException e) {
-//                        e.printStackTrace();
-//                    } finally {
-//                        // Arrive at src floor
-//                        this.getMBox().send(new Msg(id, mbox, Msg.Type.Waiting, "Arrive at source floor!  (mCnt: " + ++mCnt + ")"));
-//                    }
-
                     break;
 
                 case Waiting:
@@ -160,7 +123,13 @@ public class Elevator extends AppThread {
                     System.out.println("Waiting: ");
                     System.out.println("current floor " + src);
                     //Tabasco added code
-                    centralControlPanel.setaDirection('S');
+                    if (msg.getSender().equals("ElevatorA")) {
+                        centralControlPanel.setaDirection('S');
+                        centralControlPanel.setaCurrentFloor(src, "wait");
+                    } else {
+                        centralControlPanel.setbDirection('S');
+                        centralControlPanel.setbCurrentFloor(src, "wait");
+                    }
 //                    centralControlPanel.setaCurrentFloor(src);
                     //
 
@@ -184,26 +153,17 @@ public class Elevator extends AppThread {
                     System.out.println("GoToDest: ");
                     System.out.println("current floor " + src);
                     //Tabasco added code
-                    centralControlPanel.setaCurrentFloor(src);
+                    if (msg.getSender().equals("ElevatorA")) {
+                        centralControlPanel.setaCurrentFloor(src);
+                    } else {
+                        centralControlPanel.setbCurrentFloor(src);
+                    }
+
                     //
                     System.out.println("Destination floor " + dest);
 
-                    sleep(src, dest);
+                    sleep(src, dest, msg.getSender());
                     this.getMBox().send(new Msg(id, mbox, Msg.Type.ArriveDest, "Arrive at source floor!  (mCnt: " + ++mCnt + ")"));
-
-                    // Wait for to src time
-//                    try {
-//                        long sleepTime = GetArrivedTime(src, dest);  // calculation
-//                        System.out.println("Travelling time: " + sleepTime);
-//
-//                        Thread.sleep(sleepTime);
-//                    } catch (InterruptedException e) {
-//                        e.printStackTrace();
-//                    } finally {
-//                        // Arrive at src floor
-//                        this.getMBox().send(new Msg(id, mbox, Msg.Type.ArriveDest, "Arrive at source floor!  (mCnt: " + ++mCnt + ")"));
-//                    }
-
                     break;
 
                 case ArriveDest:
@@ -214,7 +174,11 @@ public class Elevator extends AppThread {
                     System.out.println("ArriveDest: ");
                     System.out.println("current floor " + idleFloor);
                     //Tabasco added code
-                    centralControlPanel.setaDirection('S');
+                    if (msg.getSender().equals("ElevatorA")) {
+                        centralControlPanel.setaDirection('S');
+                    } else {
+                        centralControlPanel.setbDirection('S');
+                    }
 //                    centralControlPanel.setaCurrentFloor(idleFloor);
                     //
                     log.info(id + ": -----------------------------------------------------------");
@@ -241,65 +205,70 @@ public class Elevator extends AppThread {
         // Up
         if (from < to) {
             centralControlPanel.setaDirection('U');
+            centralControlPanel.setbDirection('U');
             sleepTime = (to - from == 1) ? accUp : accUp + (to - from - 2) * upOneFloor + decUp;
 
         }
         // Down
         else {
             centralControlPanel.setaDirection('D');
+            centralControlPanel.setbDirection('D');
             sleepTime = (from - to == 1) ? accDown : accDown + (from - to - 2) * downOneFloor + decDown;
         }
 
         return (long) (sleepTime * 1000);
     }
 
-    private void sleep(int from, int to)
-    {
+    private void sleep(int from, int to, String whichElevator) {
         try {
             int current = from;
             boolean up = from < to; // Set direction
-            centralControlPanel.setaDirection(up ? 'U' : 'D');
+            if(whichElevator.equals("ElevatorA")) {
+                centralControlPanel.setaDirection(up ? 'U' : 'D');
+            }else {
+                centralControlPanel.setbDirection(up ? 'U' : 'D');
+            }
             // One floor
-            if (Math.abs(from - to) == 1)
-            {
+            if (Math.abs(from - to) == 1) {
                 long sleepTime = (long) ((up ? accUp : accDown) * 1000);
 
                 Thread.sleep(sleepTime);
 
                 current += up ? 1 : -1;
-                centralControlPanel.setaCurrentFloor(current);
-
+                if (whichElevator.equals("ElevatorA")) {
+                    centralControlPanel.setaCurrentFloor(current);
+                } else {
+                    centralControlPanel.setbCurrentFloor(current);
+                }
                 System.out.println("Reach " + current + " floor");
                 System.out.println("Use " + sleepTime + " millisecond");
             }
             // More than one floor
-            else
-            {
-                while(current != to)
-                {
+            else {
+                while (current != to) {
                     long sleepTime = 0;
 
                     // Acceleration
-                    if (current == from)
-                    {
+                    if (current == from) {
                         sleepTime = (long) ((up ? accUp : accDown) * 1000);
                     }
                     // Deceleration
-                    else if (Math.abs(current - to) == 1)
-                    {
+                    else if (Math.abs(current - to) == 1) {
                         sleepTime = (long) ((up ? decUp : decDown) * 1000);
                     }
                     // Constant speed
-                    else
-                    {
+                    else {
                         sleepTime = (long) ((up ? upOneFloor : downOneFloor) * 1000);
                     }
 
                     Thread.sleep(sleepTime);
 
                     current += up ? 1 : -1;
-                    centralControlPanel.setaCurrentFloor(current);
-
+                    if (whichElevator.equals("ElevatorA")) {
+                        centralControlPanel.setaCurrentFloor(current);
+                    } else {
+                        centralControlPanel.setbCurrentFloor(current);
+                    }
                     System.out.println("Reach " + current + " floor");
                     System.out.println("Use " + sleepTime + " millisecond");
                 }
@@ -308,10 +277,5 @@ public class Elevator extends AppThread {
             e.printStackTrace();
         }
     }
-
-    private void showCurrentFloor(int from, int to){
-
-    }
-
 } // ThreadA
 

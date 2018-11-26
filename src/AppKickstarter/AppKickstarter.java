@@ -29,7 +29,7 @@ public class AppKickstarter {
     private ConsoleHandler logConHd = null;
     private FileHandler logFileHd = null;
     private Timer timer = null;
-    private Elevator elevator1;
+    private Elevator elevatorA, elevatorB, elevatorC, elevatorD, elevatorE, elevatorF;
 //    private ThreadA threadA1, threadA2;
 //    private ThreadB threadB;
 
@@ -144,11 +144,33 @@ public class AppKickstarter {
 
         // create threads
         timer = new Timer("timer", this);
-        elevator1 = new Elevator("Elevator1", this);
-
+        elevatorA = new Elevator("ElevatorA", this);
+        elevatorB= new Elevator("ElevatorB", this);
+        elevatorC= new Elevator("ElevatorC", this);
+        elevatorD= new Elevator("ElevatorD", this);
+        elevatorE= new Elevator("ElevatorE", this);
+        elevatorF= new Elevator("ElevatorF", this);
         // start threads
         new Thread(timer).start();
-        new Thread(elevator1).start();
+
+        new Thread(elevatorA).start();
+        new Thread(elevatorB).start();
+        new Thread(elevatorC).start();
+        new Thread(elevatorD).start();
+        new Thread(elevatorE).start();
+        new Thread(elevatorF).start();
+
+//        try {
+//            new Thread(elevatorA).join();
+//            new Thread(elevatorB).join();
+//            new Thread(elevatorC).join();
+//            new Thread(elevatorD).join();
+//            new Thread(elevatorE).join();
+//            new Thread(elevatorF).join();
+//        }catch (InterruptedException e){
+//            e.printStackTrace();
+//        }
+
     } // startApp
 
 
@@ -159,7 +181,7 @@ public class AppKickstarter {
         log.info("");
         log.info("============================================================");
         log.info(id + ": Application Stopping...");
-        elevator1.getMBox().send(new Msg(id, null, Msg.Type.Terminate, "Terminate now!"));
+        elevatorA.getMBox().send(new Msg(id, null, Msg.Type.Terminate, "Terminate now!"));
 //	threadA1.getMBox().send(new Msg(id, null, Msg.Type.Terminate, "Terminate now!"));
 //	threadA2.getMBox().send(new Msg(id, null, Msg.Type.Terminate, "Terminate now!"));
 //	threadB.getMBox().send(new Msg(id, null, Msg.Type.Terminate, "Terminate now!"));
@@ -258,9 +280,20 @@ public class AppKickstarter {
         }
 
         // Find shortest path
+        String[] data=str.split(" ");
+        int src=Integer.parseInt(data[2]);
+        int dest= Integer.parseInt(data[3]);
 
+        if(src<20&&dest<20){
+            System.out.println("Sent to A Lift! ");
+            elevatorA.getMBox().send(new Msg("Timer", elevatorA.getMBox(), Msg.Type.TimesUp, str));
+        }else {
+            System.out.println("Sent to B Lift! ");
+            elevatorB.getMBox().send(new Msg("Timer", elevatorB.getMBox(), Msg.Type.TimesUp, str));
+        }
         // Assign to elevator
-        elevator1.getMBox().send(new Msg("Timer", null, Msg.Type.TimesUp, str));
+
+
     }
 
     private boolean GoToCurrentFloor(String str) {
