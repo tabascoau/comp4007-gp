@@ -83,9 +83,39 @@ public class Elevator extends AppThread {
                     // Already at src
                     if (idleFloor == src) {
                         this.getMBox().send(new Msg(id, mbox, Msg.Type.Waiting, "Already at source floor!  (mCnt: " + ++mCnt + ")"));
+                        if (msg.getSender().equals("ElevatorA")) {
+                            centralControlPanel.setAPassenger(1);
+                            centralControlPanel.aNoPeople=false;
+
+                        } else if (msg.getSender().equals("ElevatorB")) {
+                            centralControlPanel.setBPassenger(1);
+                            centralControlPanel.bNoPeople=false;
+                            centralControlPanel.addTotalPassenger(1);
+                        } else if (msg.getSender().equals("ElevatorC")) {
+                            centralControlPanel.setCPassenger(1);
+                            centralControlPanel.cNoPeople=false;
+                        } else if (msg.getSender().equals("ElevatorD")) {
+                            centralControlPanel.setDPassenger(1);
+                            centralControlPanel.dNoPeople=false;
+                        } else if (msg.getSender().equals("ElevatorE")) {
+                            centralControlPanel.setEPassenger(1);
+                            centralControlPanel.eNoPeople=false;
+                        }
+
                     }
                     // Go to src
                     else {
+                        if (msg.getSender().equals("ElevatorA")) {
+                            centralControlPanel.aNoPeople=false;
+                        } else if (msg.getSender().equals("ElevatorB")) {
+                            centralControlPanel.bNoPeople=false;
+                        } else if (msg.getSender().equals("ElevatorC")) {
+                            centralControlPanel.cNoPeople=false;
+                        } else if (msg.getSender().equals("ElevatorD")) {
+                            centralControlPanel.dNoPeople=false;
+                        } else if (msg.getSender().equals("ElevatorE")) {
+                            centralControlPanel.eNoPeople=false;
+                        }
                         this.getMBox().send(new Msg(id, mbox, Msg.Type.GoToSrc, "Going to source floor!  (mCnt: " + ++mCnt + ")"));
                     }
 
@@ -100,20 +130,31 @@ public class Elevator extends AppThread {
                         direction = 'S';
                     }
                     if (msg.getSender().equals("ElevatorA")) {
+                        centralControlPanel.aNoPeople=false;
+                        System.out.println("*********************************************** : "+centralControlPanel.getAFreeElevator());
                         elevArrmsg = "Elev_Arr" + " A " + idleFloor + " " + direction + " ";
                         centralControlPanel.setAPassenger(1);
+                        centralControlPanel.addTotalPassenger(1);
                     } else if (msg.getSender().equals("ElevatorB")) {
+                        centralControlPanel.bNoPeople=false;
                         centralControlPanel.setBPassenger(1);
                         elevArrmsg = "Elev_Arr" + " B " + idleFloor + " " + direction + " ";
+                        centralControlPanel.addTotalPassenger(1);
                     } else if (msg.getSender().equals("ElevatorC")) {
+                        centralControlPanel.cNoPeople=false;
                         centralControlPanel.setCPassenger(1);
                         elevArrmsg = "Elev_Arr" + " C " + idleFloor + " " + direction + " ";
+                        centralControlPanel.addTotalPassenger(1);
                     } else if (msg.getSender().equals("ElevatorD")) {
+                        centralControlPanel.dNoPeople=false;
                         centralControlPanel.setDPassenger(1);
                         elevArrmsg = "Elev_Arr" + " D " + idleFloor + " " + direction + " ";
+                        centralControlPanel.addTotalPassenger(1);
                     } else if (msg.getSender().equals("ElevatorE")) {
+                        centralControlPanel.eNoPeople=false;
                         centralControlPanel.setEPassenger(1);
                         elevArrmsg = "Elev_Arr" + " E " + idleFloor + " " + direction + " ";
+                        centralControlPanel.addTotalPassenger(1);
                     }
                     if (idleFloor < src) {
                         for (int current = idleFloor + 1; current <= src; current++) {
@@ -145,24 +186,28 @@ public class Elevator extends AppThread {
 
                 case Waiting:
                     log.info(id + ": " + msg.getSender() + " is arrived at source floor!!!");
-
                     // Debug data
                     System.out.println("Waiting: ");
                     System.out.println("current floor " + src);
                     //Tabasco added code
                     if (msg.getSender().equals("ElevatorA")) {
+                        centralControlPanel.aNoPeople=false;
                         centralControlPanel.setaDirection('S');
                         centralControlPanel.setaCurrentFloor(src, "wait");
                     } else if (msg.getSender().equals("ElevatorB")) {
+                        centralControlPanel.bNoPeople=false;
                         centralControlPanel.setbDirection('S');
                         centralControlPanel.setbCurrentFloor(src, "wait");
                     } else if (msg.getSender().equals("ElevatorC")) {
+                        centralControlPanel.cNoPeople=false;
                         centralControlPanel.setcDirection('S');
                         centralControlPanel.setcCurrentFloor(src, "wait");
                     } else if (msg.getSender().equals("ElevatorD")) {
+                        centralControlPanel.dNoPeople=false;
                         centralControlPanel.setdDirection('S');
                         centralControlPanel.setdCurrentFloor(src, "wait");
                     } else if (msg.getSender().equals("ElevatorE")) {
+                        centralControlPanel.eNoPeople=false;
                         centralControlPanel.seteDirection('S');
                         centralControlPanel.seteCurrentFloor(src, "wait");
                     }
@@ -246,19 +291,24 @@ public class Elevator extends AppThread {
                     System.out.println("current floor " + idleFloor);
 
                     if (msg.getSender().equals("ElevatorA")) {
+                        centralControlPanel.aNoPeople=true;
                         centralControlPanel.setAPassenger(-1);
                         centralControlPanel.setaDirection('S');
                     } else if (msg.getSender().equals("ElevatorB")) {
+                        centralControlPanel.bNoPeople=true;
                         centralControlPanel.setBPassenger(-1);
                         centralControlPanel.setbDirection('S');
                     } else if (msg.getSender().equals("ElevatorC")) {
+                        centralControlPanel.cNoPeople=true;
                         centralControlPanel.setCPassenger(-1);
                         centralControlPanel.setcDirection('S');
                     } else if (msg.getSender().equals("ElevatorD")) {
+                        centralControlPanel.dNoPeople=true;
                         centralControlPanel.setDPassenger(-1);
                         centralControlPanel.setdDirection('S');
 
                     } else if (msg.getSender().equals("ElevatorE")) {
+                        centralControlPanel.eNoPeople=true;
                         centralControlPanel.setEPassenger(-1);
                         centralControlPanel.seteDirection('S');
                     }

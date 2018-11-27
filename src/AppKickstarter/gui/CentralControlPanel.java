@@ -22,9 +22,17 @@ public class CentralControlPanel extends JFrame{
 
 
     public final int maxPassenger=10;
+    public int totalProcessedPassenger=0;
     public JLabel aCurrent, bCurrent, cCurrent, dCurrent, eCurrent, fCurrent;
     public JLabel aDirection, bDirection, cDirection, dDirection, eDirection, fDirection;
     public JLabel aPassenger, bPassenger, cPassenger, dPassenger, ePassenger, fPassenger;
+    private JLabel processedPassenger;
+    public boolean aNoPeople=true;
+    public boolean bNoPeople=true;
+    public boolean cNoPeople=true;
+    public boolean dNoPeople=true;
+    public boolean eNoPeople=true;
+    public boolean fNoPeople=true;
     public int aNoOfPassenger=0;
     public int bNoOfPassenger=0;
     public int cNoOfPassenger=0;
@@ -43,6 +51,8 @@ public class CentralControlPanel extends JFrame{
         add(rootPanel);
         setTitle("Central Control Panel");
         setSize(800, 600);
+        processedPassenger.setText(String.valueOf(totalProcessedPassenger));
+
         aCurrent.setText(String.valueOf(defaultFloor));
         bCurrent.setText(String.valueOf(defaultFloor));
         cCurrent.setText(String.valueOf(defaultFloor));
@@ -215,5 +225,33 @@ public class CentralControlPanel extends JFrame{
         fPassenger.setText(String.valueOf(fNoOfPassenger));
     }
 
+    public void addTotalPassenger(int number){
+        totalProcessedPassenger+=number;
+        processedPassenger.setText(String.valueOf(totalProcessedPassenger));
+    }
+
+    public boolean getAFreeElevator(){
+        return this.aNoPeople;
+    }
+
+    public boolean getBFreeElevator(){
+        return this.bNoPeople;
+    }
+
+    public boolean getCFreeElevator(){
+        return this.cNoPeople;
+    }
+
+    public boolean getDFreeElevator(){
+        return this.dNoPeople;
+    }
+
+    public boolean getEFreeElevator(){
+        return this.eNoPeople;
+    }
+
+    public boolean getFFreeElevator(){
+        return fNoPeople;
+    }
 
 }

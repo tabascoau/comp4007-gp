@@ -1,6 +1,7 @@
 package AppKickstarter.misc;
 
 import AppKickstarter.AppKickstarter;
+import AppKickstarter.gui.CentralControlPanel;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -12,11 +13,13 @@ import java.net.SocketTimeoutException;
 public class GreetingServer extends Thread {
     private ServerSocket serverSocket;
     private AppKickstarter appKickstarter;
+    CentralControlPanel centralControlPanel;
 
     public GreetingServer(int port, AppKickstarter appKickstarter) throws IOException {
         serverSocket = new ServerSocket(port);
         serverSocket.setSoTimeout(10000);
         this.appKickstarter = appKickstarter;
+
     }
 
     public void run() {

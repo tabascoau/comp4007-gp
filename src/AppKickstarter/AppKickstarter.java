@@ -32,6 +32,8 @@ public class AppKickstarter {
     private FileHandler logFileHd = null;
     private Timer timer = null;
     private Elevator elevatorA, elevatorB, elevatorC, elevatorD, elevatorE, elevatorF;
+    CentralControlPanel centralControlPanel;
+
 //    private ThreadA threadA1, threadA2;
 //    private ThreadB threadB;
 
@@ -104,6 +106,8 @@ public class AppKickstarter {
     // AppKickstarter
     public AppKickstarter(String id) {
         this(id, "etc/MyApp.cfg");
+
+
     } // AppKickstarter
 
 
@@ -117,6 +121,7 @@ public class AppKickstarter {
     //------------------------------------------------------------
     // AppKickstarter
     public AppKickstarter(String id, String cfgFName, boolean append) {
+
         this.id = id;
         this.cfgFName = cfgFName;
         logConHd = null;
@@ -125,6 +130,7 @@ public class AppKickstarter {
 
         // set my thread name
         Thread.currentThread().setName(this.id);
+
 
         // read system config from property file
         try {
@@ -159,11 +165,14 @@ public class AppKickstarter {
     //------------------------------------------------------------
     // startApp
     public void startApp() {
+        centralControlPanel=CentralControlPanel.getInstance();
         // start our application
         log.info("");
         log.info("");
         log.info("============================================================");
         log.info(id + ": Application Starting...");
+
+
 
 
         int port = 54321;
@@ -296,6 +305,7 @@ public class AppKickstarter {
     public void ActivateElevator(String str) {
         System.out.println("Retrieve request: " + str);
 
+
         // Enter current floor checking
         if (GoToCurrentFloor(str)) {
             System.out.println("Enter same floor");
@@ -307,31 +317,19 @@ public class AppKickstarter {
         int src = Integer.parseInt(data[2]);
         int dest = Integer.parseInt(data[3]);
 
-        if ((src >= 0 && src <= 6) && (dest >= 49 && dest <= 55) || (src >= 49 && src <= 55) && (dest >= 0 && dest <= 6)) {
+        System.out.println("=============================**********************A: "+ centralControlPanel.getAFreeElevator()+" B: "+centralControlPanel.getBFreeElevator()+" C: "+centralControlPanel.getCFreeElevator()+" D: "+centralControlPanel.getDFreeElevator());
+
+        if(centralControlPanel.getAFreeElevator()){
             elevatorA.getMBox().send(new Msg("Timer", elevatorA.getMBox(), Msg.Type.TimesUp, str));
-        } else if ((src >= 0 && src <= 13) && (dest >= 43 && dest <= 55) || (src >= 43 && src <= 55) && (dest >= 0 && dest <= 13)) {
+        } else if (centralControlPanel.getBFreeElevator()) {
             elevatorB.getMBox().send(new Msg("Timer", elevatorB.getMBox(), Msg.Type.TimesUp, str));
-        } else if ((src >= 0 && src <= 20) && (dest >= 37 && dest <= 55) || (src >= 37 && src <= 55) && (dest >= 0 && src <= 20)) {
+        } else if(centralControlPanel.getCFreeElevator()){
             elevatorC.getMBox().send(new Msg("Timer", elevatorC.getMBox(), Msg.Type.TimesUp, str));
-        } else if ((src >= 0 && src <= 27) && (dest >= 31 && dest <= 55) || (src >= 31 && src <= 55) && (dest >= 0 && dest <= 27)) {
+        } else if(centralControlPanel.getDFreeElevator()){
             elevatorD.getMBox().send(new Msg("Timer", elevatorD.getMBox(), Msg.Type.TimesUp, str));
-        } else if ((src >= 0 && src <= 29) && (dest >= 30 && dest <= 55) || (src >= 30 && src <= 55) && (dest >= 0 && dest <= 29)) {
+        } else if(centralControlPanel.getEFreeElevator()){
             elevatorE.getMBox().send(new Msg("Timer", elevatorE.getMBox(), Msg.Type.TimesUp, str));
         }
-        //IF ELEVATOR IN RANGE CASE
-        if(src>=0&&dest<=6||src>=49&&dest<=55){
-            elevatorA.getMBox().send(new Msg("Timer", elevatorA.getMBox(), Msg.Type.TimesUp, str));
-        } else if(src>=0 && dest<=13|| src>=43&&dest<=55){
-            elevatorB.getMBox().send(new Msg("Timer", elevatorA.getMBox(), Msg.Type.TimesUp, str));
-        } else if(src>=0 &&dest<=20|| src>=37&&dest<=55){
-            elevatorC.getMBox().send(new Msg("Timer", elevatorA.getMBox(), Msg.Type.TimesUp, str));
-        } else if(src>=0&& dest<=27||src>=31 && dest<=55){
-            elevatorD.getMBox().send(new Msg("Timer", elevatorA.getMBox(), Msg.Type.TimesUp, str));
-        } else if(src>=0 && dest<=29|| src>=30&& dest<=55){
-            elevatorE.getMBox().send(new Msg("Timer", elevatorA.getMBox(), Msg.Type.TimesUp, str));
-        }
-
-
 
         /*else {
             elevatorE.getMBox().send(new Msg("Timer", elevatorD.getMBox(), Msg.Type.TimesUp, str));
