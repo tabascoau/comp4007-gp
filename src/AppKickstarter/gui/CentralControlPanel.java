@@ -21,10 +21,16 @@ public class CentralControlPanel extends JFrame{
 
 
 
-
+    public final int maxPassenger=10;
     public JLabel aCurrent, bCurrent, cCurrent, dCurrent, eCurrent, fCurrent;
     public JLabel aDirection, bDirection, cDirection, dDirection, eDirection, fDirection;
-
+    public JLabel aPassenger, bPassenger, cPassenger, dPassenger, ePassenger, fPassenger;
+    public int aNoOfPassenger=0;
+    public int bNoOfPassenger=0;
+    public int cNoOfPassenger=0;
+    public int dNoOfPassenger=0;
+    public int eNoOfPassenger=0;
+    public int fNoOfPassenger=0;
 
 
     private boolean start = false;
@@ -50,6 +56,13 @@ public class CentralControlPanel extends JFrame{
         dDirection.setText(String.valueOf(defaultDir));
         eDirection.setText(String.valueOf(defaultDir));
         fDirection.setText(String.valueOf(defaultDir));
+
+        aPassenger.setText(String.valueOf(aNoOfPassenger));
+        bPassenger.setText(String.valueOf(bNoOfPassenger));
+        cPassenger.setText(String.valueOf(cNoOfPassenger));
+        dPassenger.setText(String.valueOf(dNoOfPassenger));
+        ePassenger.setText(String.valueOf(eNoOfPassenger));
+        fPassenger.setText(String.valueOf(fNoOfPassenger));
         setVisible(true);
 
 
@@ -171,7 +184,36 @@ public class CentralControlPanel extends JFrame{
         fDirection.setText(String.valueOf(direction));
     }
 
+    public void setAPassenger(int number){
+        aNoOfPassenger+=number;
+        aPassenger.setText(String.valueOf(aNoOfPassenger));
+    }
 
+    public void setBPassenger(int number){
+        bNoOfPassenger+=number;
+        bPassenger.setText(String.valueOf(bNoOfPassenger));
+    }
+
+    public void setCPassenger(int number){
+        cNoOfPassenger+=number;
+        cPassenger.setText(String.valueOf(cNoOfPassenger));
+    }
+
+    public void setDPassenger(int number){
+
+        dNoOfPassenger+=number;
+        dPassenger.setText(String.valueOf(dNoOfPassenger));
+    }
+
+    public void setEPassenger(int number){
+        eNoOfPassenger+=number;
+        ePassenger.setText(String.valueOf(eNoOfPassenger));
+    }
+
+    public void setFPassenger(int number){
+        fNoOfPassenger+=number;
+        fPassenger.setText(String.valueOf(fNoOfPassenger));
+    }
 
 
 }

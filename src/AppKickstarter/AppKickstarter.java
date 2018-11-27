@@ -307,17 +307,32 @@ public class AppKickstarter {
         int src = Integer.parseInt(data[2]);
         int dest = Integer.parseInt(data[3]);
 
-        if ((src >= 0 && src <= 6) && (dest >= 7 && dest <= 55) || (src >= 7 && src <= 55) && (dest >= 0 && dest <= 6)) {
+        if ((src >= 0 && src <= 6) && (dest >= 49 && dest <= 55) || (src >= 49 && src <= 55) && (dest >= 0 && dest <= 6)) {
             elevatorA.getMBox().send(new Msg("Timer", elevatorA.getMBox(), Msg.Type.TimesUp, str));
-        } else if ((src >= 7 && src <= 13) && (dest >= 14 && dest <= 55) || (src >= 14 && src <= 55) && (dest >= 7 && dest <= 13)) {
+        } else if ((src >= 0 && src <= 13) && (dest >= 43 && dest <= 55) || (src >= 43 && src <= 55) && (dest >= 0 && dest <= 13)) {
             elevatorB.getMBox().send(new Msg("Timer", elevatorB.getMBox(), Msg.Type.TimesUp, str));
-        } else if ((src >= 14 && src <= 20) && (dest >= 21 && dest <= 55) || (src >= 21 && src <= 55) && (dest >= 14 && src <= 20)) {
+        } else if ((src >= 0 && src <= 20) && (dest >= 37 && dest <= 55) || (src >= 37 && src <= 55) && (dest >= 0 && src <= 20)) {
             elevatorC.getMBox().send(new Msg("Timer", elevatorC.getMBox(), Msg.Type.TimesUp, str));
-        } else if ((src >= 21 && src <= 27) && (dest >= 28 && dest <= 55) || (src >= 28 && src <= 55) && (dest >= 21 && dest <= 27)) {
+        } else if ((src >= 0 && src <= 27) && (dest >= 31 && dest <= 55) || (src >= 31 && src <= 55) && (dest >= 0 && dest <= 27)) {
             elevatorD.getMBox().send(new Msg("Timer", elevatorD.getMBox(), Msg.Type.TimesUp, str));
-        } else if ((src >= 28 && src <= 34) && (dest >= 35 && dest <= 55) || (src >= 35 && src <= 55) && (dest >= 28 && dest <= 34)) {
+        } else if ((src >= 0 && src <= 29) && (dest >= 30 && dest <= 55) || (src >= 30 && src <= 55) && (dest >= 0 && dest <= 29)) {
             elevatorE.getMBox().send(new Msg("Timer", elevatorE.getMBox(), Msg.Type.TimesUp, str));
         }
+        //IF ELEVATOR IN RANGE CASE
+        if(src>=0&&dest<=6||src>=49&&dest<=55){
+            elevatorA.getMBox().send(new Msg("Timer", elevatorA.getMBox(), Msg.Type.TimesUp, str));
+        } else if(src>=0 && dest<=13|| src>=43&&dest<=55){
+            elevatorB.getMBox().send(new Msg("Timer", elevatorA.getMBox(), Msg.Type.TimesUp, str));
+        } else if(src>=0 &&dest<=20|| src>=37&&dest<=55){
+            elevatorC.getMBox().send(new Msg("Timer", elevatorA.getMBox(), Msg.Type.TimesUp, str));
+        } else if(src>=0&& dest<=27||src>=31 && dest<=55){
+            elevatorD.getMBox().send(new Msg("Timer", elevatorA.getMBox(), Msg.Type.TimesUp, str));
+        } else if(src>=0 && dest<=29|| src>=30&& dest<=55){
+            elevatorE.getMBox().send(new Msg("Timer", elevatorA.getMBox(), Msg.Type.TimesUp, str));
+        }
+
+
+
         /*else {
             elevatorE.getMBox().send(new Msg("Timer", elevatorD.getMBox(), Msg.Type.TimesUp, str));
         }*/

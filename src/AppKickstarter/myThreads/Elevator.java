@@ -15,6 +15,7 @@ import java.util.logging.Logger;
 public class Elevator extends AppThread {
 
     private final int sleepTime = 5;
+    private final int maxPassenger=10;
     private int idleFloor = 0;
     // Speed variable
     private double upOneFloor = 0.6f;
@@ -100,13 +101,18 @@ public class Elevator extends AppThread {
                     }
                     if (msg.getSender().equals("ElevatorA")) {
                         elevArrmsg = "Elev_Arr" + " A " + idleFloor + " " + direction + " ";
+                        centralControlPanel.setAPassenger(1);
                     } else if (msg.getSender().equals("ElevatorB")) {
+                        centralControlPanel.setBPassenger(1);
                         elevArrmsg = "Elev_Arr" + " B " + idleFloor + " " + direction + " ";
                     } else if (msg.getSender().equals("ElevatorC")) {
+                        centralControlPanel.setCPassenger(1);
                         elevArrmsg = "Elev_Arr" + " C " + idleFloor + " " + direction + " ";
                     } else if (msg.getSender().equals("ElevatorD")) {
+                        centralControlPanel.setDPassenger(1);
                         elevArrmsg = "Elev_Arr" + " D " + idleFloor + " " + direction + " ";
                     } else if (msg.getSender().equals("ElevatorE")) {
+                        centralControlPanel.setEPassenger(1);
                         elevArrmsg = "Elev_Arr" + " E " + idleFloor + " " + direction + " ";
                     }
                     if (idleFloor < src) {
@@ -160,11 +166,6 @@ public class Elevator extends AppThread {
                         centralControlPanel.seteDirection('S');
                         centralControlPanel.seteCurrentFloor(src, "wait");
                     }
-                    /* else if (msg.getSender().equals("ElevatorE")) {
-                        centralControlPanel.seteDirection('S');
-                        centralControlPanel.seteCurrentFloor(src, "wait");
-                    }*/
-
 
                     // Wait for to src time
                     try {
@@ -245,15 +246,20 @@ public class Elevator extends AppThread {
                     System.out.println("current floor " + idleFloor);
 
                     if (msg.getSender().equals("ElevatorA")) {
+                        centralControlPanel.setAPassenger(-1);
                         centralControlPanel.setaDirection('S');
                     } else if (msg.getSender().equals("ElevatorB")) {
+                        centralControlPanel.setBPassenger(-1);
                         centralControlPanel.setbDirection('S');
                     } else if (msg.getSender().equals("ElevatorC")) {
+                        centralControlPanel.setCPassenger(-1);
                         centralControlPanel.setcDirection('S');
                     } else if (msg.getSender().equals("ElevatorD")) {
+                        centralControlPanel.setDPassenger(-1);
                         centralControlPanel.setdDirection('S');
 
                     } else if (msg.getSender().equals("ElevatorE")) {
+                        centralControlPanel.setEPassenger(-1);
                         centralControlPanel.seteDirection('S');
                     }
 
