@@ -3,6 +3,8 @@ package AppKickstarter;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 import java.util.logging.Logger;
 import java.util.logging.ConsoleHandler;
@@ -32,6 +34,38 @@ public class AppKickstarter {
     private Elevator elevatorA, elevatorB, elevatorC, elevatorD, elevatorE, elevatorF;
 //    private ThreadA threadA1, threadA2;
 //    private ThreadB threadB;
+
+    private boolean[] elevatorBusy = new boolean[6];
+    public void SetElevatorAvailable(String id) // Set available when elevator arrive destination
+    {
+        int elevatorBusyId = -1;
+
+        switch (id)
+        {
+            case "ElevatorA":
+                elevatorBusyId = 0;
+                break;
+            case "ElevatorB":
+                elevatorBusyId = 1;
+                break;
+            case "ElevatorC":
+                elevatorBusyId = 2;
+                break;
+            case "ElevatorD":
+                elevatorBusyId = 3;
+                break;
+            case "ElevatorE":
+                elevatorBusyId = 4;
+                break;
+            case "ElevatorF":
+                elevatorBusyId = 5;
+                break;
+        }
+
+        elevatorBusy[elevatorBusyId] = false;
+    }
+
+    private ArrayList<String> queue = new ArrayList<String>();
 
 
     //------------------------------------------------------------
@@ -273,17 +307,18 @@ public class AppKickstarter {
         int src = Integer.parseInt(data[2]);
         int dest = Integer.parseInt(data[3]);
 
-        if ((src >=0 &&src<=7) && dest >= 49) {
-            System.out.println("Sent to A Lift! ");
+        if ((src >=0 &&src<=6) && (dest >= 7&&dest<=55)) {
             elevatorA.getMBox().send(new Msg("Timer", elevatorA.getMBox(), Msg.Type.TimesUp, str));
-        } else if ((src >= 8 && src <= 15) && (dest >= 41 && dest <= 48)) {
-            System.out.println("Sent to B Lift! ");
+        } else if ((src >= 7 && src <= 13) && (dest >= 14 && dest <= 55)) {
             elevatorB.getMBox().send(new Msg("Timer", elevatorB.getMBox(), Msg.Type.TimesUp, str));
-        } else if ((src >= 16 && src <= 23) && (dest >= 33 && dest <= 40)) {
+        } else if ((src >= 14 && src <= 20) && (dest >= 21 && dest <= 55)) {
             elevatorC.getMBox().send(new Msg("Timer", elevatorC.getMBox(), Msg.Type.TimesUp, str));
-        } else if ((src >= 24 && src <= 31) && (dest >= 25 && dest <= 32)) {
+        } else if ((src >= 21 && src <= 27) && (dest >= 28 && dest <= 55)) {
             elevatorD.getMBox().send(new Msg("Timer", elevatorD.getMBox(), Msg.Type.TimesUp, str));
-        }/*else {
+        } else if((src>=28&&src<=34)&&(dest>=35&&dest<=55)){
+            elevatorE.getMBox().send(new Msg("Timer", elevatorE.getMBox(), Msg.Type.TimesUp, str));
+        }
+        /*else {
             elevatorE.getMBox().send(new Msg("Timer", elevatorD.getMBox(), Msg.Type.TimesUp, str));
         }*/
             //Elevator F is reserved.
