@@ -6,39 +6,48 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class CentralControlPanel extends JFrame{
+public class CentralControlPanel extends JFrame {
     public static CentralControlPanel instance;
 
     public static CentralControlPanel getInstance() {
         return CentralControlPanel.instance == null ? CentralControlPanel.instance = new CentralControlPanel() : instance;
     }
-    final int defaultFloor=0;
-    final char defaultDir='S';
+
+    final int defaultFloor = 0;
+    final char defaultDir = 'S';
     private AppKickstarter appKickstarter = new AppKickstarter("AppKickstarter", "etc/MyApp.cfg");
     private JButton startElevatorButton;
     private JButton stopElevatorButton;
     private JPanel rootPanel;
 
 
-
-    public final int maxPassenger=10;
-    public int totalProcessedPassenger=0;
+    public final int maxPassenger = 10;
+    public int totalProcessedPassenger = 0;
     public JLabel aCurrent, bCurrent, cCurrent, dCurrent, eCurrent, fCurrent;
     public JLabel aDirection, bDirection, cDirection, dDirection, eDirection, fDirection;
     public JLabel aPassenger, bPassenger, cPassenger, dPassenger, ePassenger, fPassenger;
     private JLabel processedPassenger;
-    public boolean aNoPeople=true;
-    public boolean bNoPeople=true;
-    public boolean cNoPeople=true;
-    public boolean dNoPeople=true;
-    public boolean eNoPeople=true;
-    public boolean fNoPeople=true;
-    public int aNoOfPassenger=0;
-    public int bNoOfPassenger=0;
-    public int cNoOfPassenger=0;
-    public int dNoOfPassenger=0;
-    public int eNoOfPassenger=0;
-    public int fNoOfPassenger=0;
+
+    public boolean aNoPeople = true;
+    public boolean bNoPeople = true;
+    public boolean cNoPeople = true;
+    public boolean dNoPeople = true;
+    public boolean eNoPeople = true;
+    public boolean fNoPeople = true;
+
+    public int aNoOfPassenger = 0;
+    public int bNoOfPassenger = 0;
+    public int cNoOfPassenger = 0;
+    public int dNoOfPassenger = 0;
+    public int eNoOfPassenger = 0;
+    public int fNoOfPassenger = 0;
+
+    public int aCurrentFloor = 0;
+    public int bCurrentFloor = 0;
+    public int cCurrentFloor = 0;
+    public int dCurrentFloor = 0;
+    public int eCurrentFloor = 0;
+    public int fCurrentFloor = 0;
 
 
     private boolean start = false;
@@ -89,7 +98,6 @@ public class CentralControlPanel extends JFrame{
         });
 
 
-
         stopElevatorButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -109,149 +117,161 @@ public class CentralControlPanel extends JFrame{
 
     }
 
-    public void setaCurrentFloor(int aCurrentFloor){
+    public void setaCurrentFloor(int aCurrentFloor) {
+        this.aCurrentFloor = aCurrentFloor;
         aCurrent.setText(String.valueOf(aCurrentFloor));
         this.repaint();
     }
 
-    public void setaCurrentFloor(int aCurrentFloor, String status){
-        aCurrent.setText(String.valueOf(aCurrentFloor)+" "+status);
+    public void setaCurrentFloor(int aCurrentFloor, String status) {
+        this.aCurrentFloor = aCurrentFloor;
+        aCurrent.setText(String.valueOf(aCurrentFloor) + " " + status);
         this.repaint();
     }
 
-    public void setaDirection(char direction){
+    public void setaDirection(char direction) {
         aDirection.setText(String.valueOf(direction));
     }
 
-    public void setbCurrentFloor(int bCurrentFloor){
+    public void setbCurrentFloor(int bCurrentFloor) {
+        this.bCurrentFloor = bCurrentFloor;
         bCurrent.setText(String.valueOf(bCurrentFloor));
         this.repaint();
     }
 
-    public void setbCurrentFloor(int bCurrentFloor, String status){
-        bCurrent.setText(String.valueOf(bCurrentFloor)+" "+status);
+    public void setbCurrentFloor(int bCurrentFloor, String status) {
+        this.bCurrentFloor = bCurrentFloor;
+        bCurrent.setText(String.valueOf(bCurrentFloor) + " " + status);
         this.repaint();
     }
 
-    public void setbDirection(char direction){
+    public void setbDirection(char direction) {
         bDirection.setText(String.valueOf(direction));
     }
 
-    public void setcCurrentFloor(int cCurrentFloor){
+    public void setcCurrentFloor(int cCurrentFloor) {
+        this.cCurrentFloor = cCurrentFloor;
         cCurrent.setText(String.valueOf(cCurrentFloor));
         this.repaint();
     }
 
-    public void setcCurrentFloor(int cCurrentFloor, String status){
-        cCurrent.setText(String.valueOf(cCurrentFloor)+" "+status);
+    public void setcCurrentFloor(int cCurrentFloor, String status) {
+        this.cCurrentFloor = cCurrentFloor;
+        cCurrent.setText(String.valueOf(cCurrentFloor) + " " + status);
         this.repaint();
     }
 
 
-    public void setcDirection(char direction){
+    public void setcDirection(char direction) {
         cDirection.setText(String.valueOf(direction));
     }
 
-    public void setdCurrentFloor(int dCurrentFloor){
+    public void setdCurrentFloor(int dCurrentFloor) {
+        this.dCurrentFloor = dCurrentFloor;
         dCurrent.setText(String.valueOf(dCurrentFloor));
         this.repaint();
     }
 
-    public void setdCurrentFloor(int dCurrentFloor, String status){
-        dCurrent.setText(String.valueOf(dCurrentFloor)+" "+status);
+    public void setdCurrentFloor(int dCurrentFloor, String status) {
+        this.dCurrentFloor = dCurrentFloor;
+        dCurrent.setText(String.valueOf(dCurrentFloor) + " " + status);
         this.repaint();
     }
 
-    public void setdDirection(char direction){
+    public void setdDirection(char direction) {
         dDirection.setText(String.valueOf(direction));
     }
 
-    public void seteCurrentFloor(int eCurrentFloor){
+    public void seteCurrentFloor(int eCurrentFloor) {
+        this.eCurrentFloor=eCurrentFloor;
         eCurrent.setText(String.valueOf(eCurrentFloor));
         this.repaint();
     }
 
-    public void seteCurrentFloor(int eCurrentFloor, String status){
-        eCurrent.setText(String.valueOf(eCurrentFloor)+" "+status);
+    public void seteCurrentFloor(int eCurrentFloor, String status) {
+        this.eCurrentFloor=eCurrentFloor;
+        eCurrent.setText(String.valueOf(eCurrentFloor) + " " + status);
         this.repaint();
     }
 
-    public void seteDirection(char direction){
+    public void seteDirection(char direction) {
         eDirection.setText(String.valueOf(direction));
     }
 
-    public void setfCurrentFloor(int fCurrentFloor){
-        fCurrent.setText(String.valueOf(fCurrentFloor));
-        this.repaint();
-    }
+//    public void setfCurrentFloor(int fCurrentFloor) {
+//        this.fCurrentFloor=fCurrentFloor;
+//        fCurrent.setText(String.valueOf(fCurrentFloor));
+//        this.repaint();
 
-    public void setfCurrentFloor(int fCurrentFloor, String status){
-        fCurrent.setText(String.valueOf(fCurrentFloor)+" "+status);
-        this.repaint();
-    }
 
-    public void setfDirection(char direction){
-        fDirection.setText(String.valueOf(direction));
-    }
+//    public void setfCurrentFloor(int fCurrentFloor, String status) {
+//        this.fCurrentFloor=fCurrentFloor;
+//        fCurrent.setText(String.valueOf(fCurrentFloor) + " " + status);
+//        this.repaint();
+//    }
+//
+//    public void setfDirection(char direction) {
+//        fDirection.setText(String.valueOf(direction));
+//    }
 
-    public void setAPassenger(int number){
-        aNoOfPassenger+=number;
+    public void setAPassenger(int number) {
+        aNoOfPassenger += number;
         aPassenger.setText(String.valueOf(aNoOfPassenger));
     }
 
-    public void setBPassenger(int number){
-        bNoOfPassenger+=number;
+    public void setBPassenger(int number) {
+        bNoOfPassenger += number;
         bPassenger.setText(String.valueOf(bNoOfPassenger));
     }
 
-    public void setCPassenger(int number){
-        cNoOfPassenger+=number;
+    public void setCPassenger(int number) {
+        cNoOfPassenger += number;
         cPassenger.setText(String.valueOf(cNoOfPassenger));
     }
 
-    public void setDPassenger(int number){
+    public void setDPassenger(int number) {
 
-        dNoOfPassenger+=number;
+        dNoOfPassenger += number;
         dPassenger.setText(String.valueOf(dNoOfPassenger));
     }
 
-    public void setEPassenger(int number){
-        eNoOfPassenger+=number;
+    public void setEPassenger(int number) {
+        eNoOfPassenger += number;
         ePassenger.setText(String.valueOf(eNoOfPassenger));
     }
 
-    public void setFPassenger(int number){
-        fNoOfPassenger+=number;
-        fPassenger.setText(String.valueOf(fNoOfPassenger));
-    }
+//    public void setFPassenger(int number) {
+//        fNoOfPassenger += number;
+//        fPassenger.setText(String.valueOf(fNoOfPassenger));
+//    }
 
-    public void addTotalPassenger(int number){
-        totalProcessedPassenger+=number;
+    public void addTotalPassenger(int number) {
+        totalProcessedPassenger += number;
         processedPassenger.setText(String.valueOf(totalProcessedPassenger));
     }
 
-    public boolean getAFreeElevator(){
-        return this.aNoPeople;
+    public boolean getAFreeElevator() {
+        return aNoPeople;
     }
 
-    public boolean getBFreeElevator(){
-        return this.bNoPeople;
+    public boolean getBFreeElevator() {
+        return bNoPeople;
     }
 
-    public boolean getCFreeElevator(){
-        return this.cNoPeople;
+    public boolean getCFreeElevator() {
+        return cNoPeople;
     }
 
-    public boolean getDFreeElevator(){
-        return this.dNoPeople;
+    public boolean getDFreeElevator() {
+        return dNoPeople;
     }
 
-    public boolean getEFreeElevator(){
-        return this.eNoPeople;
+    public boolean getEFreeElevator() {
+        return eNoPeople;
     }
 
-    public boolean getFFreeElevator(){
-        return fNoPeople;
-    }
+//    public boolean getFFreeElevator() {
+//        return fNoPeople;
+//    }
 
 }

@@ -23,18 +23,20 @@ public class GreetingServer extends Thread {
     }
 
     public void run() {
-        while (true) {
+        while(true) {
             try {
                 System.out.println("Waiting for client on port " +
                         serverSocket.getLocalPort() + "...");
                 Socket server = serverSocket.accept();
 
                 System.out.println("Just connected to " + server.getLocalSocketAddress());
+
+
                 DataInputStream in = new DataInputStream(server.getInputStream());
-                byte[] bs=new byte[1024];
+                byte[] bs = new byte[1024];
 
                 in.read(bs);
-                String str=new String(bs);
+                String str = new String(bs);
                 str = str.trim();
 
                 // Send to appkickstarter
@@ -43,6 +45,7 @@ public class GreetingServer extends Thread {
                 DataOutputStream out = new DataOutputStream(server.getOutputStream());
                 out.writeUTF("Thank you for connecting to " + server.getLocalSocketAddress()
                         + "\nGoodbye!");
+
                 in.close();
                 server.close();
 
@@ -54,5 +57,6 @@ public class GreetingServer extends Thread {
                 break;
             }
         }
+
     }
 }

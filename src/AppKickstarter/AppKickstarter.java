@@ -3,14 +3,11 @@ package AppKickstarter;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Properties;
+import java.util.*;
 import java.util.logging.Logger;
 import java.util.logging.ConsoleHandler;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
-import java.util.Hashtable;
 
 import AppKickstarter.gui.CentralControlPanel;
 import AppKickstarter.myThreads.Elevator;
@@ -31,41 +28,15 @@ public class AppKickstarter {
     private ConsoleHandler logConHd = null;
     private FileHandler logFileHd = null;
     private Timer timer = null;
-    private Elevator elevatorA, elevatorB, elevatorC, elevatorD, elevatorE, elevatorF;
+    private Elevator elevatorA, elevatorB, elevatorC, elevatorD, elevatorE;//, elevatorF;
     CentralControlPanel centralControlPanel;
+    Queue<String> requestQueue = new LinkedList<String>();
 
 //    private ThreadA threadA1, threadA2;
 //    private ThreadB threadB;
 
     private boolean[] elevatorBusy = new boolean[6];
 
-    public void SetElevatorAvailable(String id) // Set available when elevator arrive destination
-    {
-        int elevatorBusyId = -1;
-
-        switch (id) {
-            case "ElevatorA":
-                elevatorBusyId = 0;
-                break;
-            case "ElevatorB":
-                elevatorBusyId = 1;
-                break;
-            case "ElevatorC":
-                elevatorBusyId = 2;
-                break;
-            case "ElevatorD":
-                elevatorBusyId = 3;
-                break;
-            case "ElevatorE":
-                elevatorBusyId = 4;
-                break;
-            case "ElevatorF":
-                elevatorBusyId = 5;
-                break;
-        }
-
-        elevatorBusy[elevatorBusyId] = false;
-    }
 
     private ArrayList<String> queue = new ArrayList<String>();
 
@@ -165,14 +136,12 @@ public class AppKickstarter {
     //------------------------------------------------------------
     // startApp
     public void startApp() {
-        centralControlPanel=CentralControlPanel.getInstance();
+        centralControlPanel = CentralControlPanel.getInstance();
         // start our application
         log.info("");
         log.info("");
         log.info("============================================================");
         log.info(id + ": Application Starting...");
-
-
 
 
         int port = 54321;
@@ -191,7 +160,8 @@ public class AppKickstarter {
         elevatorC = new Elevator("ElevatorC", this);
         elevatorD = new Elevator("ElevatorD", this);
         elevatorE = new Elevator("ElevatorE", this);
-        elevatorF = new Elevator("ElevatorF", this);
+        //elevator F is for Joe use
+        // elevatorF = new Elevator("ElevatorF", this);
         // start threads
         new Thread(timer).start();
 
@@ -200,7 +170,8 @@ public class AppKickstarter {
         new Thread(elevatorC).start();
         new Thread(elevatorD).start();
         new Thread(elevatorE).start();
-        new Thread(elevatorF).start();
+        //elevator F is for Joe use
+        //new Thread(elevatorF).start();
 
 
     } // startApp
@@ -317,19 +288,45 @@ public class AppKickstarter {
         int src = Integer.parseInt(data[2]);
         int dest = Integer.parseInt(data[3]);
 
-        System.out.println("=============================**********************A: "+ centralControlPanel.getAFreeElevator()+" B: "+centralControlPanel.getBFreeElevator()+" C: "+centralControlPanel.getCFreeElevator()+" D: "+centralControlPanel.getDFreeElevator());
 
-        if(centralControlPanel.getAFreeElevator()){
+
+
+        if (centralControlPanel.getAFreeElevator()) {
             elevatorA.getMBox().send(new Msg("Timer", elevatorA.getMBox(), Msg.Type.TimesUp, str));
         } else if (centralControlPanel.getBFreeElevator()) {
             elevatorB.getMBox().send(new Msg("Timer", elevatorB.getMBox(), Msg.Type.TimesUp, str));
-        } else if(centralControlPanel.getCFreeElevator()){
+        } else if (centralControlPanel.getCFreeElevator()) {
             elevatorC.getMBox().send(new Msg("Timer", elevatorC.getMBox(), Msg.Type.TimesUp, str));
-        } else if(centralControlPanel.getDFreeElevator()){
+        } else if (centralControlPanel.getDFreeElevator()) {
             elevatorD.getMBox().send(new Msg("Timer", elevatorD.getMBox(), Msg.Type.TimesUp, str));
-        } else if(centralControlPanel.getEFreeElevator()){
+        } else if (centralControlPanel.getEFreeElevator()) {
             elevatorE.getMBox().send(new Msg("Timer", elevatorE.getMBox(), Msg.Type.TimesUp, str));
+        } else {
+            requestQueue.add(str);
+            while (!requestQueue.isEmpty()) {
+//                System.out.println("PEEK: " + requestQueue.peek() + " AVAILABLE? : " + centralControlPanel.getAFreeElevator());
+//                System.out.println("");
+                if (centralControlPanel.getAFreeElevator()) {
+                    elevatorA.getMBox().send(new Msg("Timer", elevatorA.getMBox(), Msg.Type.TimesUp, requestQueue.poll()));
+                    break;
+                } else if (centralControlPanel.getBFreeElevator()) {
+                    elevatorB.getMBox().send(new Msg("Timer", elevatorB.getMBox(), Msg.Type.TimesUp, requestQueue.poll()));
+                    break;
+                } else if (centralControlPanel.getCFreeElevator()) {
+                    elevatorC.getMBox().send(new Msg("Timer", elevatorC.getMBox(), Msg.Type.TimesUp, requestQueue.poll()));
+                    break;
+                } else if (centralControlPanel.getDFreeElevator()) {
+                    elevatorD.getMBox().send(new Msg("Timer", elevatorD.getMBox(), Msg.Type.TimesUp, requestQueue.poll()));
+                    break;
+                } else if (centralControlPanel.getEFreeElevator()) {
+                    elevatorE.getMBox().send(new Msg("Timer", elevatorE.getMBox(), Msg.Type.TimesUp, requestQueue.poll()));
+                    break;
+                }
+            }
         }
+
+
+
 
         /*else {
             elevatorE.getMBox().send(new Msg("Timer", elevatorD.getMBox(), Msg.Type.TimesUp, str));
