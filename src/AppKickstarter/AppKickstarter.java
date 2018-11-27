@@ -36,12 +36,12 @@ public class AppKickstarter {
 //    private ThreadB threadB;
 
     private boolean[] elevatorBusy = new boolean[6];
+
     public void SetElevatorAvailable(String id) // Set available when elevator arrive destination
     {
         int elevatorBusyId = -1;
 
-        switch (id)
-        {
+        switch (id) {
             case "ElevatorA":
                 elevatorBusyId = 0;
                 break;
@@ -307,21 +307,21 @@ public class AppKickstarter {
         int src = Integer.parseInt(data[2]);
         int dest = Integer.parseInt(data[3]);
 
-        if ((src >=0 &&src<=6) && (dest >= 7&&dest<=55)) {
+        if ((src >= 0 && src <= 6) && (dest >= 7 && dest <= 55) || (src >= 7 && src <= 55) && (dest >= 0 && dest <= 6)) {
             elevatorA.getMBox().send(new Msg("Timer", elevatorA.getMBox(), Msg.Type.TimesUp, str));
-        } else if ((src >= 7 && src <= 13) && (dest >= 14 && dest <= 55)) {
+        } else if ((src >= 7 && src <= 13) && (dest >= 14 && dest <= 55) || (src >= 14 && src <= 55) && (dest >= 7 && dest <= 13)) {
             elevatorB.getMBox().send(new Msg("Timer", elevatorB.getMBox(), Msg.Type.TimesUp, str));
-        } else if ((src >= 14 && src <= 20) && (dest >= 21 && dest <= 55)) {
+        } else if ((src >= 14 && src <= 20) && (dest >= 21 && dest <= 55) || (src >= 21 && src <= 55) && (dest >= 14 && src <= 20)) {
             elevatorC.getMBox().send(new Msg("Timer", elevatorC.getMBox(), Msg.Type.TimesUp, str));
-        } else if ((src >= 21 && src <= 27) && (dest >= 28 && dest <= 55)) {
+        } else if ((src >= 21 && src <= 27) && (dest >= 28 && dest <= 55) || (src >= 28 && src <= 55) && (dest >= 21 && dest <= 27)) {
             elevatorD.getMBox().send(new Msg("Timer", elevatorD.getMBox(), Msg.Type.TimesUp, str));
-        } else if((src>=28&&src<=34)&&(dest>=35&&dest<=55)){
+        } else if ((src >= 28 && src <= 34) && (dest >= 35 && dest <= 55) || (src >= 35 && src <= 55) && (dest >= 28 && dest <= 34)) {
             elevatorE.getMBox().send(new Msg("Timer", elevatorE.getMBox(), Msg.Type.TimesUp, str));
         }
         /*else {
             elevatorE.getMBox().send(new Msg("Timer", elevatorD.getMBox(), Msg.Type.TimesUp, str));
         }*/
-            //Elevator F is reserved.
+        //Elevator F is reserved.
 
         // Assign to elevator
 

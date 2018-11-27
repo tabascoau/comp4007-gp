@@ -4,15 +4,10 @@
     <list default="true" id="f0946589-a7c0-41d5-ab94-ff2dc65725ef" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/etc/AppKickstarter.AppKickstarter.log" beforeDir="false" afterPath="$PROJECT_DIR$/etc/AppKickstarter.AppKickstarter.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppKickstarter/AppKickstarter/AppKickstarter$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AppKickstarter/AppKickstarter/AppKickstarter$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AppKickstarter/AppKickstarter/AppKickstarter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AppKickstarter/AppKickstarter/AppKickstarter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppKickstarter/AppKickstarter/gui/CentralControlPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AppKickstarter/AppKickstarter/gui/CentralControlPanel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AppKickstarter/AppKickstarter/myThreads/Elevator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AppKickstarter/AppKickstarter/myThreads/Elevator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppKickstarter/com/intellij/uiDesigner/core/HorizontalInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AppKickstarter/com/intellij/uiDesigner/core/HorizontalInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppKickstarter/com/intellij/uiDesigner/core/LayoutState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AppKickstarter/com/intellij/uiDesigner/core/LayoutState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppKickstarter/com/intellij/uiDesigner/core/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AppKickstarter/com/intellij/uiDesigner/core/Util.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppKickstarter/com/intellij/uiDesigner/core/VerticalInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AppKickstarter/com/intellij/uiDesigner/core/VerticalInfo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppKickstarter/AppKickstarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppKickstarter/AppKickstarter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppKickstarter/gui/CentralControlPanel.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppKickstarter/gui/CentralControlPanel.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppKickstarter/myThreads/Elevator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppKickstarter/myThreads/Elevator.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -38,7 +33,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AppKickstarter/gui/CentralControlPanel.form">
           <provider selected="true" editor-type-id="ui-designer" />
         </entry>
@@ -46,7 +41,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppKickstarter/gui/CentralControlPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
+            <state relative-caret-position="1003">
               <caret line="107" column="32" selection-start-line="107" selection-start-column="28" selection-end-line="107" selection-end-column="32" />
             </state>
           </provider>
@@ -64,16 +59,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppKickstarter/AppKickstarter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4861">
-              <caret line="318" column="99" selection-start-line="318" selection-start-column="99" selection-end-line="318" selection-end-column="99" />
+            <state relative-caret-position="294">
+              <caret line="312" column="58" selection-start-line="312" selection-start-column="58" selection-end-line="312" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1227#1235#0" expanded="true" />
+                <element signature="e#3086#3087#0" expanded="true" />
                 <element signature="e#3127#3128#0" expanded="true" />
+                <element signature="e#3292#3293#0" expanded="true" />
                 <element signature="e#3333#3334#0" expanded="true" />
+                <element signature="e#7828#7829#0" expanded="true" />
                 <element signature="e#7854#7855#0" expanded="true" />
+                <element signature="e#7997#7998#0" expanded="true" />
                 <element signature="e#8028#8029#0" expanded="true" />
+                <element signature="e#8176#8177#0" expanded="true" />
                 <element signature="e#8208#8209#0" expanded="true" />
+                <element signature="e#8747#8748#0" expanded="true" />
                 <element signature="e#8795#8796#0" expanded="true" />
               </folding>
             </state>
@@ -105,7 +105,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppKickstarter/misc/AppThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
+            <state relative-caret-position="187">
               <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -114,11 +114,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppKickstarter/myThreads/Elevator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-396">
-              <caret line="282" column="66" selection-start-line="282" selection-start-column="66" selection-end-line="282" selection-end-column="66" />
+            <state relative-caret-position="-987">
+              <caret line="211" column="56" selection-start-line="211" selection-start-column="56" selection-end-line="211" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -134,8 +134,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>time</find>
-      <find>1000</find>
       <find>public static void ma</find>
       <find>public static void main</find>
       <find>c.set</find>
@@ -164,6 +162,8 @@
       <find>ElevatorE</find>
       <find>activu</find>
       <find>id</find>
+      <find>elevarrmsg</find>
+      <find>elev_arr</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -184,18 +184,18 @@
         <option value="$PROJECT_DIR$/PassengerStream_v3/etc/SmartElevator.cfg" />
         <option value="$PROJECT_DIR$/src/AppKickstarter/CentralControlPanel.java" />
         <option value="$PROJECT_DIR$/src/AppKickstarter/CentralControlPanel.form" />
-        <option value="$PROJECT_DIR$/src/AppKickstarter/gui/CentralControlPanel.form" />
         <option value="$PROJECT_DIR$/src/AppKickstarter/misc/AppThread.java" />
         <option value="$PROJECT_DIR$/src/AppKickstarter/misc/Msg.java" />
         <option value="$PROJECT_DIR$/src/AppKickstarter/gui/CentralControlPanel.java" />
         <option value="$PROJECT_DIR$/src/AppKickstarter/AppKickstarter.java" />
         <option value="$PROJECT_DIR$/src/AppKickstarter/myThreads/Elevator.java" />
+        <option value="$PROJECT_DIR$/src/AppKickstarter/gui/CentralControlPanel.form" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-12" />
-    <option name="width" value="2258" />
+    <option name="width" value="2268" />
     <option name="height" value="2236" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -280,7 +280,7 @@
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="289" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543303793504" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543306729463" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -394,10 +394,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="0" width="1129" height="1118" extended-state="0" />
+    <frame x="-6" y="-6" width="2061" height="1125" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.38948995" visible="true" weight="0.26143792" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.38948995" visible="true" weight="0.14228657" />
       <window_info id="Structure" order="1" sideWeight="0.61051005" side_tool="true" weight="0.18550107" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -406,7 +406,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.35728744" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.35477388" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -547,16 +547,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppKickstarter/misc/AppThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppKickstarter/misc/Msg.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -568,23 +558,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppKickstarter/gui/CentralControlPanel.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppKickstarter/AppKickstarter.java">
+    <entry file="file://$PROJECT_DIR$/src/AppKickstarter/misc/AppThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4861">
-          <caret line="318" column="99" selection-start-line="318" selection-start-column="99" selection-end-line="318" selection-end-column="99" />
+        <state relative-caret-position="187">
+          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1227#1235#0" expanded="true" />
-            <element signature="e#3127#3128#0" expanded="true" />
-            <element signature="e#3333#3334#0" expanded="true" />
-            <element signature="e#7854#7855#0" expanded="true" />
-            <element signature="e#8028#8029#0" expanded="true" />
-            <element signature="e#8208#8209#0" expanded="true" />
-            <element signature="e#8795#8796#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppKickstarter/myThreads/Elevator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-987">
+          <caret line="211" column="56" selection-start-line="211" selection-start-column="56" selection-end-line="211" selection-end-column="56" />
         </state>
       </provider>
     </entry>
@@ -602,19 +589,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppKickstarter/AppKickstarter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="312" column="58" selection-start-line="312" selection-start-column="58" selection-end-line="312" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3086#3087#0" expanded="true" />
+            <element signature="e#3127#3128#0" expanded="true" />
+            <element signature="e#3292#3293#0" expanded="true" />
+            <element signature="e#3333#3334#0" expanded="true" />
+            <element signature="e#7828#7829#0" expanded="true" />
+            <element signature="e#7854#7855#0" expanded="true" />
+            <element signature="e#7997#7998#0" expanded="true" />
+            <element signature="e#8028#8029#0" expanded="true" />
+            <element signature="e#8176#8177#0" expanded="true" />
+            <element signature="e#8208#8209#0" expanded="true" />
+            <element signature="e#8747#8748#0" expanded="true" />
+            <element signature="e#8795#8796#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppKickstarter/gui/CentralControlPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
+        <state relative-caret-position="1003">
           <caret line="107" column="32" selection-start-line="107" selection-start-column="28" selection-end-line="107" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppKickstarter/myThreads/Elevator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-396">
-          <caret line="282" column="66" selection-start-line="282" selection-start-column="66" selection-end-line="282" selection-end-column="66" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/AppKickstarter/gui/CentralControlPanel.form">
+      <provider selected="true" editor-type-id="ui-designer" />
     </entry>
   </component>
   <component name="masterDetails">
