@@ -30,15 +30,19 @@ public class AppKickstarter {
     private Timer timer = null;
     private Elevator elevatorA, elevatorB, elevatorC, elevatorD, elevatorE;//, elevatorF;
     CentralControlPanel centralControlPanel;
-    Queue<String> requestQueue = new LinkedList<String>();
+
+    private Queue<String> requestQueue = new LinkedList<String>();
+
+    public void AddRequestQueue(String str)
+    {
+        requestQueue.add(str);
+    }
 
 //    private ThreadA threadA1, threadA2;
 //    private ThreadB threadB;
 
     private boolean[] elevatorBusy = new boolean[6];
 
-
-    private ArrayList<String> queue = new ArrayList<String>();
 
 
     //------------------------------------------------------------
@@ -173,6 +177,7 @@ public class AppKickstarter {
         //elevator F is for Joe use
         //new Thread(elevatorF).start();
 
+        new Thread(this::AssignElevator).start();
 
     } // startApp
 
@@ -290,7 +295,6 @@ public class AppKickstarter {
 
 
 
-
         if (centralControlPanel.getAFreeElevator()) {
             elevatorA.getMBox().send(new Msg("Timer", elevatorA.getMBox(), Msg.Type.TimesUp, str));
         } else if (centralControlPanel.getBFreeElevator()) {
@@ -301,40 +305,51 @@ public class AppKickstarter {
             elevatorD.getMBox().send(new Msg("Timer", elevatorD.getMBox(), Msg.Type.TimesUp, str));
         } else if (centralControlPanel.getEFreeElevator()) {
             elevatorE.getMBox().send(new Msg("Timer", elevatorE.getMBox(), Msg.Type.TimesUp, str));
-        } else {
-            requestQueue.add(str);
-            while (!requestQueue.isEmpty()) {
-//                System.out.println("PEEK: " + requestQueue.peek() + " AVAILABLE? : " + centralControlPanel.getAFreeElevator());
-//                System.out.println("");
+        }
+
+    }
+
+    public void AssignElevator()
+    {
+        while (true) {
+            if (requestQueue.size() > 0)
+            {
                 if (centralControlPanel.getAFreeElevator()) {
-                    elevatorA.getMBox().send(new Msg("Timer", elevatorA.getMBox(), Msg.Type.TimesUp, requestQueue.poll()));
-                    break;
+                    elevatorA.getMBox().send(new Msg("Timer", elevatorA.getMBox(), Msg.Type.TimesUp, requestQueue.peek()));
+                    requestQueue.poll();
                 } else if (centralControlPanel.getBFreeElevator()) {
-                    elevatorB.getMBox().send(new Msg("Timer", elevatorB.getMBox(), Msg.Type.TimesUp, requestQueue.poll()));
-                    break;
+                    elevatorB.getMBox().send(new Msg("Timer", elevatorB.getMBox(), Msg.Type.TimesUp, requestQueue.peek()));
+                    requestQueue.poll();
                 } else if (centralControlPanel.getCFreeElevator()) {
-                    elevatorC.getMBox().send(new Msg("Timer", elevatorC.getMBox(), Msg.Type.TimesUp, requestQueue.poll()));
-                    break;
+                    elevatorC.getMBox().send(new Msg("Timer", elevatorC.getMBox(), Msg.Type.TimesUp, requestQueue.peek()));
+                    requestQueue.poll();
                 } else if (centralControlPanel.getDFreeElevator()) {
-                    elevatorD.getMBox().send(new Msg("Timer", elevatorD.getMBox(), Msg.Type.TimesUp, requestQueue.poll()));
-                    break;
+                    elevatorD.getMBox().send(new Msg("Timer", elevatorD.getMBox(), Msg.Type.TimesUp, requestQueue.peek()));
+                    requestQueue.poll();
                 } else if (centralControlPanel.getEFreeElevator()) {
-                    elevatorE.getMBox().send(new Msg("Timer", elevatorE.getMBox(), Msg.Type.TimesUp, requestQueue.poll()));
-                    break;
+                    elevatorE.getMBox().send(new Msg("Timer", elevatorE.getMBox(), Msg.Type.TimesUp, requestQueue.peek()));
+                    requestQueue.poll();
+                }
+                else {
+                    try {
+                        Thread.sleep(1000);
+                    } catch (Exception e) {
+                        e.getStackTrace();
+                    }
+                }
+            }
+            else
+            {
+                try {
+                    Thread.sleep(1000);
+                } catch (Exception e) {
+                    e.getStackTrace();
                 }
             }
         }
+    }
 
-
-
-
-        /*else {
-            elevatorE.getMBox().send(new Msg("Timer", elevatorD.getMBox(), Msg.Type.TimesUp, str));
-        }*/
-        //Elevator F is reserved.
-
-        // Assign to elevator
-
+    public void bufferToQueue(String str){
 
     }
 
