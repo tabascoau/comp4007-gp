@@ -1,0 +1,1 @@
+java -jar PSKickstarter.jar PassengerStream.ejb

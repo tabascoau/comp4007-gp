@@ -1,0 +1,1 @@
+java -jar SESTesterKickstarter.jar SESTester.ejb
