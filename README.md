@@ -15,7 +15,6 @@ For AppKickStarter, open it with IntelliJ IDEA and execute AppKickStarter.java
 - [x] Handle SESTester Request
 - [ ] Response to SESTester
 
-## Todo List 
 **Final Phase**
 - [ ] Handle PassengerStream Request
 - [ ] Response to PassengerStream
