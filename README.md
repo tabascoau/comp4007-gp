@@ -12,6 +12,7 @@ For AppKickStarter, open it with IntelliJ IDEA and execute AppKickStarter.java
 - [x] Basic Algorithm (Nearest)
 - [x] Muti-threading of Elevators
 - [x] Basic Elevator Function
+- [x] Cut in Elevator List
 - [x] Handle SESTester Request
 - [ ] Response to SESTester
 
