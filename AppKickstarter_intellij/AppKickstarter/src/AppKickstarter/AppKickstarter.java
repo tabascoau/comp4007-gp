@@ -3,6 +3,8 @@ package AppKickstarter;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
 import java.util.Properties;
 import java.util.logging.Logger;
 import java.util.logging.ConsoleHandler;
@@ -27,8 +29,7 @@ public class AppKickstarter {
     private ConsoleHandler logConHd = null;
     private FileHandler logFileHd = null;
     private Timer timer = null;
-    private ThreadA threadA1, threadA2;
-    private ThreadB threadB;
+    private static ElevatorController elevatorController;
 
 
     //------------------------------------------------------------
@@ -36,11 +37,11 @@ public class AppKickstarter {
     public static void main(String[] args) throws IOException {
         AppKickstarter appKickstarter = new AppKickstarter("AppKickstarter", "etc/MyApp.cfg");
         appKickstarter.startApp();
-        try {
-            Thread.sleep(30 * 1000);
-        } catch (Exception e) {
-        }
-        appKickstarter.stopApp();
+//        try {
+//            Thread.sleep(30 * 1000);
+//        } catch (Exception e) {
+//        }
+//        appKickstarter.stopApp();
     } // main
 
 
@@ -99,6 +100,9 @@ public class AppKickstarter {
         appThreads = new Hashtable<String, AppThread>();
     } // AppKickstarter
 
+    public static ElevatorController getElevatorController() {
+        return elevatorController;
+    }
 
     //------------------------------------------------------------
     // startApp
@@ -109,42 +113,26 @@ public class AppKickstarter {
         log.info("============================================================");
         log.info(id + ": Application Starting...");
 
+
+
         // create threads
         timer = new Timer("timer", this);
-//        threadA1 = new ThreadA("ThreadA1", this);
-//        threadA2 = new ThreadA("ThreadA2", this);
-//        threadB = new ThreadB("ThreadB", this);
-        Elevator liftA = new Elevator("A", this);
-        Elevator liftB = new Elevator("B", this);
-        Elevator liftC = new Elevator("C", this);
-        Elevator liftD = new Elevator("D", this);
-        Elevator liftE = new Elevator("E", this);
-        Elevator liftF = new Elevator("F", this);
 
-        // start threads
-        new Thread(timer).start();
-        new Thread(liftA).start();
-        new Thread(liftB).start();
-        new Thread(liftC).start();
-        new Thread(liftD).start();
-        new Thread(liftE).start();
-        new Thread(liftF).start();
-        new Thread(threadA2).start();
-        new Thread(threadB).start();
+        elevatorController = new ElevatorController(this);
     } // startApp
 
 
     //------------------------------------------------------------
-    // stopApp
+    // stopAppe
     private void stopApp() {
         log.info("");
         log.info("");
         log.info("============================================================");
         log.info(id + ": Application Stopping...");
-        threadA1.getMBox().send(new Msg(id, null, Msg.Type.Terminate, "Terminate now!"));
-        threadA2.getMBox().send(new Msg(id, null, Msg.Type.Terminate, "Terminate now!"));
-        threadB.getMBox().send(new Msg(id, null, Msg.Type.Terminate, "Terminate now!"));
-        timer.getMBox().send(new Msg(id, null, Msg.Type.Terminate, "Terminate now!"));
+//        threadA1.getMBox().send(new Msg(id, null, Msg.Type.Terminate, "Terminate now!"));
+//        threadA2.getMBox().send(new Msg(id, null, Msg.Type.Terminate, "Terminate now!"));
+//        threadB.getMBox().send(new Msg(id, null, Msg.Type.Terminate, "Terminate now!"));
+//        timer.getMBox().send(new Msg(id, null, Msg.Type.Terminate, "Terminate now!"));
     } // stopApp
 
 
