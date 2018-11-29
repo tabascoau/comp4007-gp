@@ -29,7 +29,7 @@ public class AppKickstarter {
     private ConsoleHandler logConHd = null;
     private FileHandler logFileHd = null;
     private Timer timer = null;
-    private static ElevatorController elevatorController;
+    private ElevatorController elevatorController = null;
 
 
     //------------------------------------------------------------
@@ -37,11 +37,11 @@ public class AppKickstarter {
     public static void main(String[] args) throws IOException {
         AppKickstarter appKickstarter = new AppKickstarter("AppKickstarter", "etc/MyApp.cfg");
         appKickstarter.startApp();
-//        try {
-//            Thread.sleep(30 * 1000);
-//        } catch (Exception e) {
-//        }
-//        appKickstarter.stopApp();
+        try {
+            Thread.sleep(30 * 1000);
+        } catch (Exception e) {
+        }
+        appKickstarter.stopApp();
     } // main
 
 
@@ -100,8 +100,12 @@ public class AppKickstarter {
         appThreads = new Hashtable<String, AppThread>();
     } // AppKickstarter
 
-    public static ElevatorController getElevatorController() {
+    public ElevatorController getElevatorController() {
         return elevatorController;
+    }
+
+    public Logger getLog() {
+        return log;
     }
 
     //------------------------------------------------------------
@@ -119,6 +123,9 @@ public class AppKickstarter {
         timer = new Timer("timer", this);
 
         elevatorController = new ElevatorController(this);
+        elevatorController.createElevator();
+        elevatorController.startElevator();
+
     } // startApp
 
 

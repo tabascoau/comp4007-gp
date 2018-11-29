@@ -10,26 +10,23 @@ public class ElevatorController {
 
     private ArrayList<Elevator> elevators = new ArrayList<Elevator>();
     private AppKickstarter appKickstarter;
+    private char [] elevatorIDs = new char[]{'A', 'B', 'C', 'D', 'E', 'F'};
 
     public ElevatorController(AppKickstarter appKickstarter) throws IOException {
         this.appKickstarter = appKickstarter;
-        char [] elevatorIDs = new char[]{'A', 'B', 'C', 'D', 'E', 'F'};
+    }
 
+    public void createElevator() throws IOException {
         for (int i = 0; i < elevatorIDs.length; i++) {
-            createElevator(elevatorIDs[i], appKickstarter);
-            startElevator(elevators.get(i));
+            elevators.add(new Elevator("" + elevatorIDs[i], appKickstarter));
         }
+    }
 
+    public void startElevator() throws IOException {
+        for (int i = 0; i < elevatorIDs.length; i++) {
+            new Thread(elevators.get(i)).start();
+        }
         new SystemServer(appKickstarter);
-    }
-
-    private void createElevator(char elevatorID, AppKickstarter appKickstarter) throws IOException {
-        elevators.add(new Elevator("" + elevatorID, appKickstarter));
-    }
-
-    private void startElevator(Elevator elevator) {
-        new Thread(elevator).start();
-        appKickstarter.regThread(elevator);
     }
 
     public ArrayList<Elevator> getElevators() {

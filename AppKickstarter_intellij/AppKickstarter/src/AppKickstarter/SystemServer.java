@@ -13,11 +13,11 @@ public class SystemServer {
         this.appKickstarter = appKickstarter;
         ServerSocket sSocket = new ServerSocket(Integer.parseInt(appKickstarter.getProperty("Server.Port")));
         Socket cSocket = sSocket.accept();
-        System.out.println("From SystemServer: Connected");
+        appKickstarter.getLog().info("Client Connected :)");
         serve(cSocket);
     }
 
     void serve(Socket cSocket) throws IOException {
-        new ElevatorRequestHandler(cSocket);
+        new ElevatorRequestHandler(cSocket, appKickstarter);
     }
 }

@@ -21,4 +21,11 @@ class ElevatorRequest {
     public String getPid() {
         return pid;
     }
+
+    public char getDirection() {
+        if (srcFloor > destFloor) {
+            return 'D';
+        }
+        return 'U';
+    }
 }

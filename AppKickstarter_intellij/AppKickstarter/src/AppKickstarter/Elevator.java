@@ -7,45 +7,61 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Properties;
 
-class Elevator extends AppThread{
+class Elevator extends AppThread {
 
     private final int sleepTime = 5;
     private final String id;
-    private int currentFloor;
+    private volatile int currentFloor;
     private final int maxFloor;
-    private char state;
+    private char state, direction;
     private boolean quit = false;
+    private boolean addingRequest = false;
 
-    private Properties configFile;
+    private String cfgFName;
+    private Properties cfgConfig;
 
     private ArrayList<ElevatorRequest> requestList = new ArrayList<ElevatorRequest>();
-    private ArrayList<Integer> floorQueue = new ArrayList<Integer>();
+    private volatile List<Integer> floorQueue = Collections.synchronizedList(new ArrayList<Integer>());
 
     public Elevator(String id, AppKickstarter appKickstarter) throws IOException {
         super(id, appKickstarter);
         this.currentFloor = 0;
         this.maxFloor = 50;
         this.state = 'S';
+        this.direction = 'U';
         this.id = id;
+        this.cfgFName = "etc/SmartElevator.cfg";
 
-//        Read Config File
-        configFile = new Properties();
-        FileInputStream in = new FileInputStream("etc/SmartElevator.cfg");
-        configFile.load(in);
+        //Read Config File
+        cfgConfig = new Properties();
+        FileInputStream in = new FileInputStream(cfgFName);
+        cfgConfig.load(in);
         in.close();
-
     }
 
     @Override
     public void run() {
         log.info("Elevator " + id + ": starting...");
-        Timer.setSimulationTimer(id, mbox,sleepTime);
+        Timer.setSimulationTimer(id, mbox, sleepTime);
 
         while (quit == false) {
-            if (!requestList.isEmpty()) {
+            if (floorQueue.size() > 0 && state == 'S' && !addingRequest) {
+//                System.out.println(floorQueue);
                 int destFloor = floorQueue.get(0);
+                log.info("Elevator " + id + ": is going to " + (destFloor) + "/F");
+                if (destFloor > currentFloor) {
+                    state = 'M';
+                    direction = 'U';
+                } else if (destFloor < currentFloor) {
+                    state = 'M';
+                    direction = 'D';
+                }
+
+                floorQueue.remove(0);
+
                 try {
                     move(destFloor);
                 } catch (InterruptedException e) {
@@ -59,61 +75,97 @@ class Elevator extends AppThread{
         int floorDifference = Math.abs(currentFloor - destFloor);
 
         for (int floor = 1; floor <= floorDifference; floor++) {
-            if (state == 'U') {
-                log.info("Elevator " + id + ": is moving up to " + (currentFloor + 1) + "/F");
+            if (direction == 'U') {
+                currentFloor++;
+                log.info("Elevator " + id + ": is moving up to " + (currentFloor) + "/F");
                 if (floor == 1) {
-                    sleep(Long.parseLong(configFile.getProperty("Elev.Time.AccUp")));
-                } else if (floor == floorDifference){
-                    sleep(Long.parseLong(configFile.getProperty("Elev.Time.DecUp")));
-                } else {
-                    sleep(Long.parseLong(configFile.getProperty("Elev.Time.UpOneFloor")));
+                    sleep(getProperty("Elev.Time.AccUp"));
                 }
-                currentFloor ++;
-            } else if (state == 'D') {
+                if (floor == floorDifference) {
+                    sleep(getProperty("Elev.Time.DecUp"));
+                    arrive();
+                } else {
+                    sleep(getProperty("Elev.Time.UpOneFloor"));
+                }
+
+            } else if (direction == 'D') {
+                currentFloor--;
                 log.info("Elevator " + id + ": is moving down to " + (currentFloor - 1) + "/F");
                 if (floor == 1) {
-                    sleep(Long.parseLong(configFile.getProperty("Elev.Time.AccDown")));
-                } else if (floor == floorDifference){
-                    sleep(Long.parseLong(configFile.getProperty("Elev.Time.DecDown")));
-                } else {
-                    sleep(Long.parseLong(configFile.getProperty("Elev.Time.DownOneFloor")));
+                    sleep(getProperty("Elev.Time.AccDown"));
                 }
-                currentFloor --;
+                if (floor == floorDifference) {
+                    sleep(getProperty("Elev.Time.DecDown"));
+                    arrive();
+                } else {
+                    sleep(getProperty("Elev.Time.DownOneFloor"));
+                }
             }
-            log.info("Elevator " + id + ": Opening the door ");
-            sleep(Long.parseLong("Elev.Time.DoorOpen"));
-            log.info("Elevator " + id + ": Door opened ");
-            sleep(Long.parseLong("Elev.Time.DoorWait"));
-            log.info("Elevator " + id + ": Closing the door ");
-            sleep(Long.parseLong("Elev.Time.DoorClose"));
-            log.info("Elevator " + id + ": has arrived to " + currentFloor + "/F");
         }
-
     }
 
-    public void sleep(float sleepTime) throws InterruptedException {
-        Thread.sleep((long)sleepTime);
+    private void arrive() throws InterruptedException {
+        log.info("Elevator " + id + ": has arrived to " + currentFloor + "/F");
+        log.info("Elevator " + id + ": opening the door ");
+        sleep(getProperty("Elev.Time.DoorOpen"));
+        log.info("Elevator " + id + ": door opened ");
+        sleep(getProperty("Elev.Time.DoorWait"));
+        log.info("Elevator " + id + ": closing the door ");
+        sleep(getProperty("Elev.Time.DoorClose"));
+        log.info("Elevator " + id + ": door closed ");
+
+        state = 'S';
+    }
+
+    public void sleep(double sleepTime) throws InterruptedException {
+        Thread.sleep((long) (sleepTime * 1000));
     }
 
     private void sortFloorQueue() {
-        if (state == 'U') {
+        if (direction == 'D') {
             Collections.sort(floorQueue, Collections.reverseOrder());
-        } else if (state == 'D') {
+        } else {
             Collections.sort(floorQueue);
         }
+        addingRequest = false;
     }
 
     public void addRequest(ElevatorRequest erh) {
+        addingRequest = true;
         requestList.add(erh);
 
-        if (!floorQueue.contains(erh.getDestFloor()))
+        if (!floorQueue.contains(erh.getDestFloor())) {
             floorQueue.add(erh.getDestFloor());
-        if (!floorQueue.contains(erh.getSrcFloor()))
+            log.info("Elevator " + id + ": Assigned " + erh.getDestFloor() + "/F");
+        } else {
+            log.info("Elevator " + id + ": Dest Floor " + erh.getDestFloor() + "/F assign failed (REASON: IS EXIST)");
+        }
+
+        if (!floorQueue.contains(erh.getSrcFloor())) {
+
             floorQueue.add(erh.getSrcFloor());
-
+            log.info("Elevator " + id + ": Assigned " + erh.getSrcFloor() + "/F");
+        } else {
+            log.info("Elevator " + id + ": Src Floor " + erh.getSrcFloor() + "/F assign failed - (REASON: IS EXIST)");
+        }
         sortFloorQueue();
+    }
 
-        log.info("Elevator " + id + ": Assigned " + id + "/F");
+    public Double getProperty(String property) {
+        String s = cfgConfig.getProperty(property);
+
+        if (s == null) {
+            log.severe(id + ": getProperty(" + property + ") failed.  Check the config file (" + cfgFName + ")!");
+        }
+        return Double.parseDouble(s);
+    } // getProperty
+
+    public char getDirection() {
+        return direction;
+    }
+
+    public char getState() {
+        return state;
     }
 
     public int getCurrentFloor() {
