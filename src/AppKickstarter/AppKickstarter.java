@@ -128,10 +128,10 @@ public class AppKickstarter {
         log.info(id + ": Application Starting...");
 
         int port = 54321;
-        Thread t = null;
+        Thread connectionThread = null;
         try {
-            t = new GreetingServer(port, this);
-            t.start();
+            connectionThread = new GreetingServer(port, this);
+            connectionThread.start();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -142,18 +142,15 @@ public class AppKickstarter {
         elevatorC = new Elevator("ElevatorC", this);
         elevatorD = new Elevator("ElevatorD", this);
         elevatorE = new Elevator("ElevatorE", this);
-        //elevator F is for Joe use
-        // elevatorF = new Elevator("ElevatorF", this);
-        // start threads
-        new Thread(timer).start();
+        elevatorF=new Elevator("ElevatorF", this);
 
+        new Thread(timer).start();
         new Thread(elevatorA).start();
         new Thread(elevatorB).start();
         new Thread(elevatorC).start();
         new Thread(elevatorD).start();
         new Thread(elevatorE).start();
-        //elevator F is for Joe use
-        //new Thread(elevatorF).start();
+        new Thread(elevatorF).start();
 
         //system.add(
         centralControlPanel.setElevatorArray(new Elevator[]{elevatorA, elevatorB, elevatorC, elevatorD, elevatorE, elevatorF});
@@ -258,82 +255,3 @@ public class AppKickstarter {
     } // getSimulationTimeString
 }
 
-//public class queueHandler extends Thread{
-//    @Override
-//    public void run(){
-//        while ()
-//    }
-//}
-
-//    public void ActivateElevator(String str) {
-//        System.out.println("Retrieve request: " + str);
-//
-//
-//        // Enter current floor checking
-//        if (GoToCurrentFloor(str)) {
-//            System.out.println("Enter same floor");
-//            return;
-//        }
-//
-//        // Find shortest path
-//        String[] data = str.split(" ");
-//        int src = Integer.parseInt(data[2]);
-//        int dest = Integer.parseInt(data[3]);
-//
-//        requestQueue.add(str);
-//
-//
-//        if (centralControlPanel.getAFreeElevator()) {
-//            elevatorA.getMBox().send(new Msg("Timer", elevatorA.getMBox(), Msg.Type.TimesUp, requestQueue.peek()));
-//            requestQueue.poll();
-//        } else if (centralControlPanel.getBFreeElevator()) {
-//            elevatorB.getMBox().send(new Msg("Timer", elevatorB.getMBox(), Msg.Type.TimesUp, requestQueue.peek()));
-//            requestQueue.poll();
-//        } else if (centralControlPanel.getCFreeElevator()) {
-//            elevatorC.getMBox().send(new Msg("Timer", elevatorC.getMBox(), Msg.Type.TimesUp, requestQueue.peek()));
-//            requestQueue.poll();
-//        } else if (centralControlPanel.getDFreeElevator()) {
-//            elevatorD.getMBox().send(new Msg("Timer", elevatorD.getMBox(), Msg.Type.TimesUp, requestQueue.peek()));
-//            requestQueue.poll();
-//        } else if (centralControlPanel.getEFreeElevator()) {
-//            elevatorE.getMBox().send(new Msg("Timer", elevatorE.getMBox(), Msg.Type.TimesUp, requestQueue.peek()));
-//            requestQueue.poll();
-//        }else{
-//            handler.start();
-//        }
-
-//        if(!requestQueue.isEmpty()){
-//
-//        }
-
-
-//    private boolean GoToCurrentFloor(String str) {
-//        String[] datas = str.split(" ");
-//        int src = Integer.parseInt(datas[2]);
-//        int dest = Integer.parseInt(datas[3]);
-//        return src == dest;
-//    }
-//
-//class QueueHandlerThread extends Thread {
-//    @Override
-//    public void run() {
-//        if (centralControlPanel.getAFreeElevator()) {
-//            elevatorA.getMBox().send(new Msg("Timer", elevatorA.getMBox(), Msg.Type.TimesUp, requestQueue.peek()));
-//            requestQueue.poll();
-//        } else if (centralControlPanel.getBFreeElevator()) {
-//            elevatorB.getMBox().send(new Msg("Timer", elevatorB.getMBox(), Msg.Type.TimesUp, requestQueue.peek()));
-//            requestQueue.poll();
-//        } else if (centralControlPanel.getCFreeElevator()) {
-//            elevatorC.getMBox().send(new Msg("Timer", elevatorC.getMBox(), Msg.Type.TimesUp, requestQueue.peek()));
-//            requestQueue.poll();
-//        } else if (centralControlPanel.getDFreeElevator()) {
-//            elevatorD.getMBox().send(new Msg("Timer", elevatorD.getMBox(), Msg.Type.TimesUp, requestQueue.peek()));
-//            requestQueue.poll();
-//        } else if (centralControlPanel.getEFreeElevator()) {
-//            elevatorE.getMBox().send(new Msg("Timer", elevatorE.getMBox(), Msg.Type.TimesUp, requestQueue.peek()));
-//            requestQueue.poll();
-//        }
-//    }
-//}
-//
-//} // AppKicksta

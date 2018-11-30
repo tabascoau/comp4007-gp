@@ -131,10 +131,6 @@ public class CentralControlPanel extends JFrame {
         this.repaint();
     }
 
-    public boolean getAvailableElevator(int index) {
-        return liftAvailable[index];
-    }   //get available elevator
-
     public void addTotalPassenger(int number) { //how many passenger processed
         totalProcessedPassenger += number;
         processedPassenger.setText(String.valueOf(totalProcessedPassenger));

@@ -25,7 +25,6 @@ public class Elevator extends AppThread {
     }
 
     private int idleFloor = 0;
-    // Speed variable
     private double upOneFloor = 0.6f;
     private double downOneFloor = 0.5f;
     private double accUp = 1.2f;
@@ -107,11 +106,6 @@ public class Elevator extends AppThread {
                     }
                     // Go to src
                     else {
-//                        for (int i = 0; i < 6; i++) {
-//                            if (msg.getSender().equals(Elevator[i])) {
-//                                centralControlPanel.liftAvailable[i] = false;
-//                            }
-//                        }
                         this.getMBox().send(new Msg(id, mbox, Msg.Type.GoToSrc, "Going to source floor!  (mCnt: " + ++mCnt + ")"));
                     }
                     break;
