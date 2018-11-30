@@ -44,17 +44,6 @@ public class GreetingServer extends Thread {
                     CentralControlPanel.requestQueue.add(str);
                 }
             }
-
-
-//                DataOutputStream out = new DataOutputStream(server.getOutputStream());
-//                out.writeUTF("Thank you for connecting to " + server.getLocalSocketAddress()
-//                        + "\nGoodbye!");
-//                out.flush();
-//                in.close();
-//                out.close();
-//                server.close();
-//            }
-
         } catch (SocketTimeoutException s) {
             System.out.println("Socket timed out!");
         } catch (IOException e) {

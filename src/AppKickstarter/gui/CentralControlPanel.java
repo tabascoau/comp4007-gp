@@ -144,12 +144,8 @@ public class CentralControlPanel extends JFrame {
     //handle the request in queue
     public static void handlerQueue() {
         //handle the msg queue
-//        String[] data = requestQueue.peek().split(" ");
         System.out.println("T:" + requestQueue.size());
 
-//        String passengerID=data[1];
-//            int src = Integer.parseInt(data[2]);
-//            int dest = Integer.parseInt(data[3]);
 
         synchronized (requestQueue) {
             // Find shortest path
