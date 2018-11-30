@@ -19,7 +19,6 @@ public class GreetingServer extends Thread {
     private ServerSocket serverSocket;
     private AppKickstarter appKickstarter;
 
-
     CentralControlPanel c;
 
 //    private Queue<String> requestQueue = new LinkedList<String>();
@@ -38,16 +37,15 @@ public class GreetingServer extends Thread {
                 System.out.println("Waiting for client on port " +
                         serverSocket.getLocalPort() + "...");
                 Socket server = serverSocket.accept();
-
                 System.out.println("Just connected to " + server.getLocalSocketAddress());
 
                 DataInputStream in = new DataInputStream(server.getInputStream());
                 byte[] bs = new byte[1024];
 
+                //str is the request from client side
                 in.read(bs);
                 String str = new String(bs);
                 str = str.trim();
-                System.out.println("STRING RECEIVED FROM GREETING SERVER: " + str);
 
                 synchronized (CentralControlPanel.requestQueue) {
                     CentralControlPanel.requestQueue.add(str);
