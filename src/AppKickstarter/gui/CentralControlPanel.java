@@ -22,8 +22,8 @@ public class CentralControlPanel extends JFrame {
     final int defaultFloor = 0;
     final char defaultDirection = 'S';
     final int maxNumberOfPassenger = 10;
-    final int defaultPassenger = 0;
-    final int totalNumberOfElevator = 6;
+    final int defaultNumberOfPassenger = 0;
+    public final int totalNumberOfElevator = 6;
     final int screenWidth=800;
     final int screenHeight=600;
     int totalProcessedPassenger = 0;
@@ -65,11 +65,11 @@ public class CentralControlPanel extends JFrame {
         //Initial GUI JLabel text
         for (int i = 0; i < totalNumberOfElevator; i++) {
             liftAvailable[i] = true;
-            liftTotalPassenger[i] = 0;
+            liftTotalPassenger[i] = defaultNumberOfPassenger;
             currentFloor[i] = 0;
             currentDirection[i] = "S";
             currentFloorJLabel[i].setText(String.valueOf(defaultFloor));
-            currentNoOfPassengerJLabel[i].setText(String.valueOf(defaultPassenger));
+            currentNoOfPassengerJLabel[i].setText(String.valueOf(defaultNumberOfPassenger));
             currentDirectionJLabel[i].setText(String.valueOf(defaultDirection));
         }
 
@@ -127,7 +127,7 @@ public class CentralControlPanel extends JFrame {
 
     public void setCurrentPassenger(int index, int number) { //set how many passenger in the elevator
         liftTotalPassenger[index] += number;
-        currentNoOfPassengerJLabel[index].setText(String.valueOf(number));
+        currentNoOfPassengerJLabel[index].setText(String.valueOf(liftTotalPassenger[index]));
         this.repaint();
     }
 

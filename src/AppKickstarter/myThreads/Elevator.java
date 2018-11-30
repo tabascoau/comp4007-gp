@@ -38,6 +38,7 @@ public class Elevator extends AppThread {
     CentralControlPanel centralControlPanel = CentralControlPanel.getInstance();
     private String[] Elevator = {"ElevatorA", "ElevatorB", "ElevatorC", "ElevatorD", "ElevatorE", "ElevatorF"};
     private String passengerId;
+    private int totalNumberOfElevator = centralControlPanel.totalNumberOfElevator;
     private int src, dest;
 
     //new added code
@@ -93,7 +94,7 @@ public class Elevator extends AppThread {
                         this.getMBox().send(new Msg(id, mbox, Msg.Type.Waiting, "Already at source floor!  (mCnt: " + ++mCnt + ")"));
 
                         //Svc_Req Passenger-0001 0 10
-                        for (int i = 0; i < 6; i++) {
+                        for (int i = 0; i < totalNumberOfElevator; i++) {
                             if (msg.getSender().equals(Elevator[i])) {
                                 centralControlPanel.setCurrentPassenger(i, 1);
                                 centralControlPanel.liftAvailable[i] = false;
@@ -118,12 +119,12 @@ public class Elevator extends AppThread {
                     } else {
                         direction = "S";
                     }
-                    for (int i = 0; i < 6; i++) {
+                    for (int i = 0; i < totalNumberOfElevator; i++) {
                         if (msg.getSender().equals(Elevator[i])) {
                             centralControlPanel.liftAvailable[i] = false;
                             centralControlPanel.setCurrentFloor(i, idleFloor);
                             centralControlPanel.setCurrentDirection(i, direction);
-                            centralControlPanel.setCurrentPassenger(i,1);
+                            centralControlPanel.setCurrentPassenger(i, 1);
                             elevArrmsg = "Elev_Arr " + this.id + " " + idleFloor + " " + direction + " ";
                             break;
                         }
@@ -161,7 +162,7 @@ public class Elevator extends AppThread {
                     System.out.println("Waiting: ");
                     System.out.println("current floor " + src);
                     //Tabasco added code
-                    for (int i = 0; i < 6; i++) {
+                    for (int i = 0; i < totalNumberOfElevator; i++) {
                         if (msg.getSender().equals(Elevator[i])) {
                             centralControlPanel.liftAvailable[i] = false;
                             centralControlPanel.setCurrentDirection(i, "S (Wait)");
@@ -186,7 +187,6 @@ public class Elevator extends AppThread {
 
                 case GoToDest:
                     log.info(id + ": " + msg.getSender() + " is going to destination floor!!!");
-
                     if (src > dest) {
                         direction = "D";
                     } else if (src < dest) {
@@ -195,7 +195,7 @@ public class Elevator extends AppThread {
                         direction = "S";
                     }
 
-                    for (int i = 0; i < 6; i++) {
+                    for (int i = 0; i < totalNumberOfElevator; i++) {
                         if (msg.getSender().equals(Elevator[i])) {
                             elevDepmsg = "Elev_Dep " + this.id + " " + src + " " + direction + " ";
                             break;
@@ -204,14 +204,12 @@ public class Elevator extends AppThread {
                     if (src < dest) {
                         for (int current = src + 1; current <= dest; current++) {
                             elevDepmsg += current + " ";
-                            break;
                         }
                     }
 
                     if (src > dest) {
                         for (int current = src - 1; current >= dest; current--) {
                             elevDepmsg += current + " ";
-                            break;
                         }
                     }
                     System.out.println("Elevator_Dep message: " + elevDepmsg);
@@ -219,7 +217,7 @@ public class Elevator extends AppThread {
                     // Debug data
                     System.out.println("GoToDest: ");
                     System.out.println("current floor " + src);
-                    for (int i = 0; i < 6; i++) {
+                    for (int i = 0; i < totalNumberOfElevator; i++) {
                         if (msg.getSender().equals(Elevator[i])) {
                             centralControlPanel.setCurrentFloor(i, src);
                             break;
@@ -237,7 +235,7 @@ public class Elevator extends AppThread {
                     System.out.println("ArriveDest: ");
                     System.out.println("current floor " + idleFloor);
 
-                    for (int i = 0; i < 6; i++) {
+                    for (int i = 0; i < totalNumberOfElevator; i++) {
                         if (msg.getSender().equals(Elevator[i])) {
                             centralControlPanel.liftAvailable[i] = true;
                             centralControlPanel.setCurrentPassenger(i, -1);
@@ -269,7 +267,7 @@ public class Elevator extends AppThread {
         // Up
 
         if (from < to) {
-            for (int i = 0; i < 6; i++) {
+            for (int i = 0; i < totalNumberOfElevator; i++) {
                 centralControlPanel.setCurrentDirection(i, "U");
                 break;
             }
@@ -278,7 +276,7 @@ public class Elevator extends AppThread {
         }
         // Down
         else {
-            for (int i = 0; i < 6; i++) {
+            for (int i = 0; i < totalNumberOfElevator; i++) {
                 centralControlPanel.setCurrentDirection(i, "D");
                 break;
             }
@@ -293,9 +291,9 @@ public class Elevator extends AppThread {
             int current = from;
             boolean up = from < to; // Set direction
 
-            for(int i=0;i<6;i++){
-                if(whichElevator.equals(Elevator[i])){
-                    centralControlPanel.setCurrentDirection(i, up? "U":"D");
+            for (int i = 0; i < totalNumberOfElevator; i++) {
+                if (whichElevator.equals(Elevator[i])) {
+                    centralControlPanel.setCurrentDirection(i, up ? "U" : "D");
                 }
             }
             // One floor
@@ -305,7 +303,7 @@ public class Elevator extends AppThread {
                 Thread.sleep(sleepTime);
 
                 current += up ? 1 : -1;
-                for (int i = 0; i < 6; i++) {
+                for (int i = 0; i < totalNumberOfElevator; i++) {
                     if (whichElevator.equals(Elevator[i])) {
                         centralControlPanel.setCurrentFloor(i, current);
                         break;
@@ -335,7 +333,7 @@ public class Elevator extends AppThread {
                     Thread.sleep(sleepTime);
 
                     current += up ? 1 : -1;
-                    for (int i = 0; i < 6; i++) {
+                    for (int i = 0; i < totalNumberOfElevator; i++) {
                         if (whichElevator.equals(Elevator[i])) {
                             centralControlPanel.setCurrentFloor(i, current);
                             break;
