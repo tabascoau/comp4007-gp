@@ -1,20 +1,26 @@
 package AppKickstarter.gui;
 
 import AppKickstarter.AppKickstarter;
+import AppKickstarter.misc.GreetingServer;
+import AppKickstarter.misc.Msg;
+import AppKickstarter.myThreads.Elevator;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class CentralControlPanel extends JFrame {
     public static CentralControlPanel instance;
-
     public static CentralControlPanel getInstance() {
         return CentralControlPanel.instance == null ? CentralControlPanel.instance = new CentralControlPanel() : instance;
     }
 
     final int defaultFloor = 0;
-    final char defaultDir = 'S';
+    final char defaultDirection = 'S';
+
     private AppKickstarter appKickstarter = new AppKickstarter("AppKickstarter", "etc/MyApp.cfg");
     private JButton startElevatorButton;
     private JButton stopElevatorButton;
@@ -22,86 +28,74 @@ public class CentralControlPanel extends JFrame {
 
 
     public final int maxPassenger = 10;
+    public final int defaultPassenger=0;
     public int totalProcessedPassenger = 0;
-    public JLabel aCurrent, bCurrent, cCurrent, dCurrent, eCurrent, fCurrent;
+
     public JLabel aDirection, bDirection, cDirection, dDirection, eDirection, fDirection;
     public JLabel aPassenger, bPassenger, cPassenger, dPassenger, ePassenger, fPassenger;
+    public JLabel aCurrent, bCurrent, cCurrent, dCurrent, eCurrent, fCurrent;
     private JLabel processedPassenger;
 
-    public boolean aNoPeople = true;
-    public boolean bNoPeople = true;
-    public boolean cNoPeople = true;
-    public boolean dNoPeople = true;
-    public boolean eNoPeople = true;
-    public boolean fNoPeople = true;
+    public boolean[] liftAvailable=new boolean[6];
+    public int[] liftTotalPassenger=new int[6];
+    public int[] currentFloor=new int[6];
+    public String[] currentDirection=new String[6];
 
-    public int aNoOfPassenger = 0;
-    public int bNoOfPassenger = 0;
-    public int cNoOfPassenger = 0;
-    public int dNoOfPassenger = 0;
-    public int eNoOfPassenger = 0;
-    public int fNoOfPassenger = 0;
-
-    public int aCurrentFloor = 0;
-    public int bCurrentFloor = 0;
-    public int cCurrentFloor = 0;
-    public int dCurrentFloor = 0;
-    public int eCurrentFloor = 0;
-    public int fCurrentFloor = 0;
-
+    public JLabel[] currentDirectionJLabel;
+    public JLabel[] currentFloorJLabel;
+    public JLabel[] currentNoOfPassengerJLabel;
 
     private boolean start = false;
 
+    private static Elevator[] elevatorArray = {};
+    public void setElevatorArray(Elevator[] elevatorArray) {
+        this.elevatorArray = elevatorArray;
+    }
+    public static Queue<String> requestQueue = new LinkedList<>();
+
 
     public CentralControlPanel() {
+        //GUI
+        currentDirectionJLabel= new JLabel[]{aDirection, bDirection, cDirection, dDirection, eDirection, fDirection};
+        currentFloorJLabel=new JLabel[]{aCurrent, bCurrent, cCurrent, dCurrent, eCurrent, fCurrent};
+        currentNoOfPassengerJLabel=new JLabel[]{aPassenger, bPassenger, cPassenger, dPassenger, ePassenger, fPassenger};
         CentralControlPanel.instance = this;
 
-        //This uses the designer form
+        for(int i=0;i<6;i++){
+            //Initial GUI JLabel text
+            liftAvailable[i]=true;
+            liftTotalPassenger[i]=0;
+            currentFloor[i]=0;
+            currentDirection[i]="S";
+            currentFloorJLabel[i].setText(String.valueOf(defaultFloor));
+            currentNoOfPassengerJLabel[i].setText(String.valueOf(defaultPassenger));
+            currentDirectionJLabel[i].setText(String.valueOf(defaultDirection));
+        }
+
+        processedPassenger.setText(String.valueOf(totalProcessedPassenger));
         add(rootPanel);
         setTitle("Central Control Panel");
         setSize(800, 600);
-        processedPassenger.setText(String.valueOf(totalProcessedPassenger));
-
-        aCurrent.setText(String.valueOf(defaultFloor));
-        bCurrent.setText(String.valueOf(defaultFloor));
-        cCurrent.setText(String.valueOf(defaultFloor));
-        dCurrent.setText(String.valueOf(defaultFloor));
-        eCurrent.setText(String.valueOf(defaultFloor));
-        fCurrent.setText(String.valueOf(defaultFloor));
-
-        aDirection.setText(String.valueOf(defaultDir));
-        bDirection.setText(String.valueOf(defaultDir));
-        cDirection.setText(String.valueOf(defaultDir));
-        dDirection.setText(String.valueOf(defaultDir));
-        eDirection.setText(String.valueOf(defaultDir));
-        fDirection.setText(String.valueOf(defaultDir));
-
-        aPassenger.setText(String.valueOf(aNoOfPassenger));
-        bPassenger.setText(String.valueOf(bNoOfPassenger));
-        cPassenger.setText(String.valueOf(cNoOfPassenger));
-        dPassenger.setText(String.valueOf(dNoOfPassenger));
-        ePassenger.setText(String.valueOf(eNoOfPassenger));
-        fPassenger.setText(String.valueOf(fNoOfPassenger));
         setVisible(true);
 
-
+        //Check whether the elevator started when user click start button
         startElevatorButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (start == true) {
+                if (start == true) {    //When elevator already started, show alert.
                     JOptionPane.showMessageDialog(rootPanel, "Elevator already started! ");
                 } else {
-                    appKickstarter.startApp();
+                    appKickstarter.startApp();  //else start app
                     start = true;
                 }
             }
         });
 
-
+        //Stop the elevator when user click stop button
         stopElevatorButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (start == true) {
+                if (start == true) {    //prompt the user whether stop the elevator
                     int input = JOptionPane.showConfirmDialog(rootPanel, "Are you sure to stop? ");
                     if (input == 0) {
                         appKickstarter.stopApp();
@@ -110,168 +104,79 @@ public class CentralControlPanel extends JFrame {
                 } else {
                     JOptionPane.showMessageDialog(rootPanel, "Elevator have not start yet!");
                 }
-
             }
         });
+        //END GUI
 
-
+        Thread queueThread = new QueueHandler();
+        queueThread.start();
     }
 
-    public void setaCurrentFloor(int aCurrentFloor) {
-        this.aCurrentFloor = aCurrentFloor;
-        aCurrent.setText(String.valueOf(aCurrentFloor));
+    public void setCurrentFloor(int index, int currentFloor){   //set the elevator current floor
+        this.currentFloor[index]=currentFloor;
+        this.currentFloorJLabel[index].setText(String.valueOf(currentFloor));
         this.repaint();
     }
 
-    public void setaCurrentFloor(int aCurrentFloor, String status) {
-        this.aCurrentFloor = aCurrentFloor;
-        aCurrent.setText(String.valueOf(aCurrentFloor) + " " + status);
+    public void setCurrentDirection(int index, String direction){ //set the elevator current direction
+        this.currentDirection[index]=direction;
+        this.currentDirectionJLabel[index].setText(String.valueOf(direction));
         this.repaint();
     }
 
-    public void setaDirection(char direction) {
-        aDirection.setText(String.valueOf(direction));
-    }
-
-    public void setbCurrentFloor(int bCurrentFloor) {
-        this.bCurrentFloor = bCurrentFloor;
-        bCurrent.setText(String.valueOf(bCurrentFloor));
+    public void setCurrentPassenger(int index, int number){ //set how many passenger in the elevator
+        liftTotalPassenger[index]+=number;
+        currentNoOfPassengerJLabel[index].setText(String.valueOf(number));
         this.repaint();
     }
 
-    public void setbCurrentFloor(int bCurrentFloor, String status) {
-        this.bCurrentFloor = bCurrentFloor;
-        bCurrent.setText(String.valueOf(bCurrentFloor) + " " + status);
-        this.repaint();
-    }
+    public boolean getAvailableElevator(int index){
+        return liftAvailable[index];
+    }   //get available elevator
 
-    public void setbDirection(char direction) {
-        bDirection.setText(String.valueOf(direction));
-    }
-
-    public void setcCurrentFloor(int cCurrentFloor) {
-        this.cCurrentFloor = cCurrentFloor;
-        cCurrent.setText(String.valueOf(cCurrentFloor));
-        this.repaint();
-    }
-
-    public void setcCurrentFloor(int cCurrentFloor, String status) {
-        this.cCurrentFloor = cCurrentFloor;
-        cCurrent.setText(String.valueOf(cCurrentFloor) + " " + status);
-        this.repaint();
-    }
-
-
-    public void setcDirection(char direction) {
-        cDirection.setText(String.valueOf(direction));
-    }
-
-    public void setdCurrentFloor(int dCurrentFloor) {
-        this.dCurrentFloor = dCurrentFloor;
-        dCurrent.setText(String.valueOf(dCurrentFloor));
-        this.repaint();
-    }
-
-    public void setdCurrentFloor(int dCurrentFloor, String status) {
-        this.dCurrentFloor = dCurrentFloor;
-        dCurrent.setText(String.valueOf(dCurrentFloor) + " " + status);
-        this.repaint();
-    }
-
-    public void setdDirection(char direction) {
-        dDirection.setText(String.valueOf(direction));
-    }
-
-    public void seteCurrentFloor(int eCurrentFloor) {
-        this.eCurrentFloor=eCurrentFloor;
-        eCurrent.setText(String.valueOf(eCurrentFloor));
-        this.repaint();
-    }
-
-    public void seteCurrentFloor(int eCurrentFloor, String status) {
-        this.eCurrentFloor=eCurrentFloor;
-        eCurrent.setText(String.valueOf(eCurrentFloor) + " " + status);
-        this.repaint();
-    }
-
-    public void seteDirection(char direction) {
-        eDirection.setText(String.valueOf(direction));
-    }
-
-//    public void setfCurrentFloor(int fCurrentFloor) {
-//        this.fCurrentFloor=fCurrentFloor;
-//        fCurrent.setText(String.valueOf(fCurrentFloor));
-//        this.repaint();
-
-
-//    public void setfCurrentFloor(int fCurrentFloor, String status) {
-//        this.fCurrentFloor=fCurrentFloor;
-//        fCurrent.setText(String.valueOf(fCurrentFloor) + " " + status);
-//        this.repaint();
-//    }
-//
-//    public void setfDirection(char direction) {
-//        fDirection.setText(String.valueOf(direction));
-//    }
-
-    public void setAPassenger(int number) {
-        aNoOfPassenger += number;
-        aPassenger.setText(String.valueOf(aNoOfPassenger));
-    }
-
-    public void setBPassenger(int number) {
-        bNoOfPassenger += number;
-        bPassenger.setText(String.valueOf(bNoOfPassenger));
-    }
-
-    public void setCPassenger(int number) {
-        cNoOfPassenger += number;
-        cPassenger.setText(String.valueOf(cNoOfPassenger));
-    }
-
-    public void setDPassenger(int number) {
-
-        dNoOfPassenger += number;
-        dPassenger.setText(String.valueOf(dNoOfPassenger));
-    }
-
-    public void setEPassenger(int number) {
-        eNoOfPassenger += number;
-        ePassenger.setText(String.valueOf(eNoOfPassenger));
-    }
-
-//    public void setFPassenger(int number) {
-//        fNoOfPassenger += number;
-//        fPassenger.setText(String.valueOf(fNoOfPassenger));
-//    }
-
-    public void addTotalPassenger(int number) {
+    public void addTotalPassenger(int number) { //how many passenger processed
         totalProcessedPassenger += number;
         processedPassenger.setText(String.valueOf(totalProcessedPassenger));
+        this.repaint();
     }
 
-    public boolean getAFreeElevator() {
-        return aNoPeople;
+    public boolean isElevatorAvailable(int index){
+        return elevatorArray[index].IsEmpty();  //return which elevator is empty
     }
 
-    public boolean getBFreeElevator() {
-        return bNoPeople;
+    static void handlerQueue() {
+        //handle the msg queue
+        System.out.println("T:" + requestQueue.size());
+
+        synchronized (requestQueue) {
+            // Find shortest path
+            String[] data = requestQueue.peek().split(" ");
+
+            int src = Integer.parseInt(data[2]);
+            int dest = Integer.parseInt(data[3]);
+
+            //action
+            for(int i=0;i<6;i++){
+                //if(CentralControlPanel.getInstance().isElevatorAvailable(i)){
+                if(CentralControlPanel.getInstance().liftAvailable[i]){
+                    elevatorArray[i].getMBox().send(new Msg("Timer", elevatorArray[i].getMBox(), Msg.Type.TimesUp, requestQueue.peek()));
+                    requestQueue.poll();
+                    CentralControlPanel.getInstance().liftAvailable[i]=false;
+                    break;
+                }
+            }
+        }
     }
 
-    public boolean getCFreeElevator() {
-        return cNoPeople;
+    //thread to handle queue
+    class QueueHandler extends Thread {
+        @Override
+        public void run() {
+            while (true) {
+                if (!requestQueue.isEmpty()) {
+                    CentralControlPanel.handlerQueue();
+                }
+            }
+        }
     }
-
-    public boolean getDFreeElevator() {
-        return dNoPeople;
-    }
-
-    public boolean getEFreeElevator() {
-        return eNoPeople;
-    }
-
-//    public boolean getFFreeElevator() {
-//        return fNoPeople;
-//    }
-
 }
