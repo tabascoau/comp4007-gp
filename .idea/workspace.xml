@@ -4,16 +4,8 @@
     <list default="true" id="f0946589-a7c0-41d5-ab94-ff2dc65725ef" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/etc/AppKickstarter.AppKickstarter.log" beforeDir="false" afterPath="$PROJECT_DIR$/etc/AppKickstarter.AppKickstarter.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppKickstarter/AppKickstarter/gui/CentralControlPanel$QueueHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AppKickstarter/AppKickstarter/gui/CentralControlPanel$QueueHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AppKickstarter/AppKickstarter/gui/CentralControlPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AppKickstarter/AppKickstarter/gui/CentralControlPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppKickstarter/AppKickstarter/misc/GreetingServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AppKickstarter/AppKickstarter/misc/GreetingServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppKickstarter/META-INF/AppKickstarter.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppKickstarter/com/intellij/uiDesigner/core/HorizontalInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AppKickstarter/com/intellij/uiDesigner/core/HorizontalInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppKickstarter/com/intellij/uiDesigner/core/LayoutState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AppKickstarter/com/intellij/uiDesigner/core/LayoutState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppKickstarter/com/intellij/uiDesigner/core/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AppKickstarter/com/intellij/uiDesigner/core/Util.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppKickstarter/com/intellij/uiDesigner/core/VerticalInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AppKickstarter/com/intellij/uiDesigner/core/VerticalInfo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppKickstarter/gui/CentralControlPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppKickstarter/gui/CentralControlPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppKickstarter/misc/GreetingServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppKickstarter/misc/GreetingServer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,12 +46,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="548" />
+          <entry key="java" value="567" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="548" />
+          <entry key="JAVA" value="567" />
         </counts>
       </usages-collector>
     </session>
@@ -79,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AppKickstarter/misc/GreetingServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+            <state relative-caret-position="231">
+              <caret line="39" column="26" lean-forward="true" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -102,11 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppKickstarter/gui/CentralControlPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="167" column="56" lean-forward="true" selection-start-line="167" selection-start-column="56" selection-end-line="167" selection-end-column="56" />
+            <state relative-caret-position="306">
+              <caret line="165" column="78" selection-start-line="165" selection-start-column="78" selection-end-line="165" selection-end-column="78" />
             </state>
           </provider>
         </entry>
@@ -280,7 +272,7 @@
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="289" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543586604474" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543588504294" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -416,7 +408,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3275488" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.20173536" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32953367" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.329718" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.4" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
@@ -550,13 +542,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppKickstarter/timer/QueueHandler.java" />
     <entry file="file://$PROJECT_DIR$/src/AppKickstarter/QueueHandler.java" />
-    <entry file="file://$PROJECT_DIR$/src/AppKickstarter/misc/GreetingServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppKickstarter/myThreads/Elevator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="343">
@@ -582,8 +567,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppKickstarter/gui/CentralControlPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="167" column="56" lean-forward="true" selection-start-line="167" selection-start-column="56" selection-end-line="167" selection-end-column="56" />
+        <state relative-caret-position="306">
+          <caret line="165" column="78" selection-start-line="165" selection-start-column="78" selection-end-line="165" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppKickstarter/misc/GreetingServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="39" column="26" lean-forward="true" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
         </state>
       </provider>
     </entry>

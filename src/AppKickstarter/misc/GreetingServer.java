@@ -31,20 +31,12 @@ public class GreetingServer extends Thread {
     @Override
     public void run() {
         try {
-//            while (true) {
             System.out.println("Waiting for client on port " +
                     serverSocket.getLocalPort() + "...");
             clientSocket = serverSocket.accept();
             System.out.println("Just connected to " + clientSocket.getLocalSocketAddress());
 
             while (true) {
-//                DataInputStream in = new DataInputStream(clientSocket.getInputStream());
-//                byte[] bs = new byte[1024];
-//
-//                //str is the request from client side
-//                in.read(bs);
-//                String str = new String(bs);
-//                str = str.trim();
                 BufferedReader in=new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
                 String str=in.readLine();
 

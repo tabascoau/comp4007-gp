@@ -1,84 +1,22 @@
-181130-22:03:26 [INFO] -- 
-181130-22:03:26 [INFO] -- 
-181130-22:03:26 [INFO] -- ============================================================
-181130-22:03:26 [INFO] -- AppKickstarter: Application Starting...
-181130-22:03:26 [INFO] -- timer: starting...
-181130-22:03:26 [INFO] -- ElevatorE: starting...
-181130-22:03:26 [INFO] -- ElevatorD: starting...
-181130-22:03:26 [INFO] -- ElevatorC: starting...
-181130-22:03:26 [INFO] -- ElevatorA: starting...
-181130-22:03:26 [INFO] -- ElevatorB: starting...
-181130-22:03:26 [INFO] -- ElevatorF: starting...
-181130-22:03:28 [INFO] -- ElevatorA: message received: [Timer (TimesUp) -- Svc_Req Passenger-0001 36 23].
-181130-22:03:28 [INFO] -- ElevatorA: -----------------------------------------------------------
-181130-22:03:28 [INFO] -- ElevatorA: receiving order at 00:03:58
-181130-22:03:28 [INFO] -- ElevatorA: go to source floor...
-181130-22:03:28 [INFO] -- THIS_ID: ElevatorA
-181130-22:03:28 [INFO] -- ElevatorA: message received: [ElevatorA (GoToSrc) -- Going to source floor!  (mCnt: 1)].
-181130-22:03:28 [INFO] -- ElevatorA: ElevatorA is going to source floor!!!
-181130-22:03:29 [INFO] -- ElevatorB: message received: [Timer (TimesUp) -- Svc_Req Passenger-0002 39 33].
-181130-22:03:29 [INFO] -- ElevatorB: -----------------------------------------------------------
-181130-22:03:29 [INFO] -- ElevatorB: receiving order at 00:04:48
-181130-22:03:29 [INFO] -- ElevatorB: go to source floor...
-181130-22:03:29 [INFO] -- THIS_ID: ElevatorB
-181130-22:03:29 [INFO] -- ElevatorB: message received: [ElevatorB (GoToSrc) -- Going to source floor!  (mCnt: 1)].
-181130-22:03:29 [INFO] -- ElevatorB: ElevatorB is going to source floor!!!
-181130-22:03:29 [INFO] -- ElevatorC: message received: [Timer (TimesUp) -- Svc_Req Passenger-0003 13 2].
-181130-22:03:29 [INFO] -- ElevatorC: -----------------------------------------------------------
-181130-22:03:29 [INFO] -- ElevatorC: receiving order at 00:04:48
-181130-22:03:29 [INFO] -- ElevatorC: go to source floor...
-181130-22:03:29 [INFO] -- THIS_ID: ElevatorC
-181130-22:03:29 [INFO] -- ElevatorC: message received: [ElevatorC (GoToSrc) -- Going to source floor!  (mCnt: 1)].
-181130-22:03:29 [INFO] -- ElevatorC: ElevatorC is going to source floor!!!
-181130-22:03:30 [INFO] -- ElevatorD: message received: [Timer (TimesUp) -- Svc_Req Passenger-0004 22 42].
-181130-22:03:30 [INFO] -- ElevatorD: -----------------------------------------------------------
-181130-22:03:30 [INFO] -- ElevatorD: receiving order at 00:06:39
-181130-22:03:30 [INFO] -- ElevatorD: go to source floor...
-181130-22:03:30 [INFO] -- THIS_ID: ElevatorD
-181130-22:03:30 [INFO] -- ElevatorD: message received: [ElevatorD (GoToSrc) -- Going to source floor!  (mCnt: 1)].
-181130-22:03:30 [INFO] -- ElevatorD: ElevatorD is going to source floor!!!
-181130-22:03:30 [INFO] -- ElevatorE: message received: [Timer (TimesUp) -- Svc_Req Passenger-0005 24 6].
-181130-22:03:30 [INFO] -- ElevatorE: -----------------------------------------------------------
-181130-22:03:30 [INFO] -- ElevatorE: receiving order at 00:06:49
-181130-22:03:30 [INFO] -- ElevatorE: go to source floor...
-181130-22:03:30 [INFO] -- THIS_ID: ElevatorE
-181130-22:03:30 [INFO] -- ElevatorE: message received: [ElevatorE (GoToSrc) -- Going to source floor!  (mCnt: 1)].
-181130-22:03:30 [INFO] -- ElevatorE: ElevatorE is going to source floor!!!
-181130-22:03:30 [INFO] -- ElevatorF: message received: [Timer (TimesUp) -- Svc_Req Passenger-0006 30 9].
-181130-22:03:30 [INFO] -- ElevatorF: -----------------------------------------------------------
-181130-22:03:30 [INFO] -- ElevatorF: receiving order at 00:07:09
-181130-22:03:30 [INFO] -- ElevatorF: go to source floor...
-181130-22:03:30 [INFO] -- THIS_ID: ElevatorF
-181130-22:03:30 [INFO] -- ElevatorF: message received: [ElevatorF (GoToSrc) -- Going to source floor!  (mCnt: 1)].
-181130-22:03:30 [INFO] -- ElevatorF: ElevatorF is going to source floor!!!
-181130-22:03:38 [INFO] -- ElevatorC: message received: [ElevatorC (Waiting) -- Arrive at source floor!  (mCnt: 2)].
-181130-22:03:38 [INFO] -- ElevatorC: ElevatorC is arrived at source floor!!!
-181130-22:03:44 [INFO] -- ElevatorD: message received: [ElevatorD (Waiting) -- Arrive at source floor!  (mCnt: 2)].
-181130-22:03:44 [INFO] -- ElevatorD: ElevatorD is arrived at source floor!!!
-181130-22:03:45 [INFO] -- ElevatorC: message received: [ElevatorC (GoToDest) -- Going to destination floor!  (mCnt: 3)].
-181130-22:03:45 [INFO] -- ElevatorC: ElevatorC is going to destination floor!!!
-181130-22:03:46 [INFO] -- ElevatorE: message received: [ElevatorE (Waiting) -- Arrive at source floor!  (mCnt: 2)].
-181130-22:03:46 [INFO] -- ElevatorE: ElevatorE is arrived at source floor!!!
-181130-22:03:49 [INFO] -- ElevatorF: message received: [ElevatorF (Waiting) -- Arrive at source floor!  (mCnt: 2)].
-181130-22:03:49 [INFO] -- ElevatorF: ElevatorF is arrived at source floor!!!
-181130-22:03:51 [INFO] -- ElevatorA: message received: [ElevatorA (Waiting) -- Arrive at source floor!  (mCnt: 2)].
-181130-22:03:51 [INFO] -- ElevatorA: ElevatorA is arrived at source floor!!!
-181130-22:03:52 [INFO] -- ElevatorC: message received: [ElevatorC (ArriveDest) -- Arrive at source floor!  (mCnt: 4)].
-181130-22:03:52 [INFO] -- ElevatorC: -----------------------------------------------------------
-181130-22:03:52 [INFO] -- ElevatorC: message received: [Timer (TimesUp) -- Svc_Req Passenger-0007 49 38].
-181130-22:03:52 [INFO] -- ElevatorC: -----------------------------------------------------------
-181130-22:03:52 [INFO] -- ElevatorC: receiving order at 00:43:12
-181130-22:03:52 [INFO] -- ElevatorC: go to source floor...
-181130-22:03:52 [INFO] -- THIS_ID: ElevatorC
-181130-22:03:52 [INFO] -- ElevatorC: message received: [ElevatorC (GoToSrc) -- Going to source floor!  (mCnt: 5)].
-181130-22:03:52 [INFO] -- ElevatorC: ElevatorC is going to source floor!!!
-181130-22:03:52 [INFO] -- ElevatorD: message received: [ElevatorD (GoToDest) -- Going to destination floor!  (mCnt: 3)].
-181130-22:03:52 [INFO] -- ElevatorD: ElevatorD is going to destination floor!!!
-181130-22:03:53 [INFO] -- ElevatorE: message received: [ElevatorE (GoToDest) -- Going to destination floor!  (mCnt: 3)].
-181130-22:03:53 [INFO] -- ElevatorE: ElevatorE is going to destination floor!!!
-181130-22:03:53 [INFO] -- ElevatorB: message received: [ElevatorB (Waiting) -- Arrive at source floor!  (mCnt: 2)].
-181130-22:03:53 [INFO] -- ElevatorB: ElevatorB is arrived at source floor!!!
-181130-22:03:57 [INFO] -- ElevatorF: message received: [ElevatorF (GoToDest) -- Going to destination floor!  (mCnt: 3)].
-181130-22:03:57 [INFO] -- ElevatorF: ElevatorF is going to destination floor!!!
-181130-22:03:59 [INFO] -- ElevatorA: message received: [ElevatorA (GoToDest) -- Going to destination floor!  (mCnt: 3)].
-181130-22:03:59 [INFO] -- ElevatorA: ElevatorA is going to destination floor!!!
+181130-22:35:27 [INFO] -- 
+181130-22:35:27 [INFO] -- 
+181130-22:35:27 [INFO] -- ============================================================
+181130-22:35:27 [INFO] -- AppKickstarter: Application Starting...
+181130-22:35:27 [INFO] -- timer: starting...
+181130-22:35:27 [INFO] -- ElevatorD: starting...
+181130-22:35:27 [INFO] -- ElevatorC: starting...
+181130-22:35:27 [INFO] -- ElevatorA: starting...
+181130-22:35:27 [INFO] -- ElevatorB: starting...
+181130-22:35:27 [INFO] -- ElevatorF: starting...
+181130-22:35:27 [INFO] -- ElevatorE: starting...
+181130-22:35:29 [INFO] -- ElevatorA: message received: [Timer (TimesUp) -- Svc_Req Passenger-0001 0 10].
+181130-22:35:29 [INFO] -- ElevatorA: -----------------------------------------------------------
+181130-22:35:29 [INFO] -- ElevatorA: receiving order at 00:04:46
+181130-22:35:29 [INFO] -- ElevatorA: go to source floor...
+181130-22:35:29 [INFO] -- THIS_ID: ElevatorA
+181130-22:35:29 [INFO] -- ElevatorA: message received: [ElevatorA (Waiting) -- Already at source floor!  (mCnt: 1)].
+181130-22:35:29 [INFO] -- ElevatorA: ElevatorA is arrived at source floor!!!
+181130-22:35:37 [INFO] -- ElevatorA: message received: [ElevatorA (GoToDest) -- Going to destination floor!  (mCnt: 2)].
+181130-22:35:37 [INFO] -- ElevatorA: ElevatorA is going to destination floor!!!
+181130-22:35:44 [INFO] -- ElevatorA: message received: [ElevatorA (ArriveDest) -- Arrive at source floor!  (mCnt: 3)].
+181130-22:35:44 [INFO] -- ElevatorA: -----------------------------------------------------------
