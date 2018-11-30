@@ -20,17 +20,13 @@ public class CentralControlPanel extends JFrame {
 
     final int defaultFloor = 0;
     final char defaultDirection = 'S';
+    final int maxNumberOfPassenger = 10;
+    final int defaultPassenger=0;
+    int totalProcessedPassenger = 0;
 
     private AppKickstarter appKickstarter = new AppKickstarter("AppKickstarter", "etc/MyApp.cfg");
-    private JButton startElevatorButton;
-    private JButton stopElevatorButton;
+    private JButton startElevatorButton, stopElevatorButton;
     private JPanel rootPanel;
-
-
-    public final int maxPassenger = 10;
-    public final int defaultPassenger=0;
-    public int totalProcessedPassenger = 0;
-
     public JLabel aDirection, bDirection, cDirection, dDirection, eDirection, fDirection;
     public JLabel aPassenger, bPassenger, cPassenger, dPassenger, ePassenger, fPassenger;
     public JLabel aCurrent, bCurrent, cCurrent, dCurrent, eCurrent, fCurrent;
@@ -53,7 +49,6 @@ public class CentralControlPanel extends JFrame {
     }
     public static Queue<String> requestQueue = new LinkedList<>();
 
-
     public CentralControlPanel() {
         //GUI
         currentDirectionJLabel= new JLabel[]{aDirection, bDirection, cDirection, dDirection, eDirection, fDirection};
@@ -61,8 +56,8 @@ public class CentralControlPanel extends JFrame {
         currentNoOfPassengerJLabel=new JLabel[]{aPassenger, bPassenger, cPassenger, dPassenger, ePassenger, fPassenger};
         CentralControlPanel.instance = this;
 
+        //Initial GUI JLabel text
         for(int i=0;i<6;i++){
-            //Initial GUI JLabel text
             liftAvailable[i]=true;
             liftTotalPassenger[i]=0;
             currentFloor[i]=0;
@@ -144,6 +139,7 @@ public class CentralControlPanel extends JFrame {
         return elevatorArray[index].IsEmpty();  //return which elevator is empty
     }
 
+    //handle the request in queue
     static void handlerQueue() {
         //handle the msg queue
         System.out.println("T:" + requestQueue.size());
@@ -152,28 +148,33 @@ public class CentralControlPanel extends JFrame {
             // Find shortest path
             String[] data = requestQueue.peek().split(" ");
 
-            int src = Integer.parseInt(data[2]);
-            int dest = Integer.parseInt(data[3]);
+//            int src = Integer.parseInt(data[2]);
+//            int dest = Integer.parseInt(data[3]);
 
-            //action
             for(int i=0;i<6;i++){
-                //if(CentralControlPanel.getInstance().isElevatorAvailable(i)){
-                if(CentralControlPanel.getInstance().liftAvailable[i]){
-                    elevatorArray[i].getMBox().send(new Msg("Timer", elevatorArray[i].getMBox(), Msg.Type.TimesUp, requestQueue.peek()));
-                    requestQueue.poll();
-                    CentralControlPanel.getInstance().liftAvailable[i]=false;
-                    break;
+                try {
+                    if (CentralControlPanel.getInstance().liftAvailable[i]) {
+                        elevatorArray[i].getMBox().send(new Msg("Timer", elevatorArray[i].getMBox(), Msg.Type.TimesUp, requestQueue.peek()));
+                        requestQueue.poll();
+                        CentralControlPanel.getInstance().liftAvailable[i] = false;
+                        break;
+                    }
+                }catch (NullPointerException e){
+                    e.printStackTrace();
+                    System.exit(444);
                 }
             }
+            System.out.println("Queue size after processed: "+requestQueue.size());
         }
     }
 
     //thread to handle queue
-    class QueueHandler extends Thread {
+    class QueueHandler extends Thread{
         @Override
         public void run() {
             while (true) {
-                if (!requestQueue.isEmpty()) {
+                System.out.print("");
+                if(!requestQueue.isEmpty()) {
                     CentralControlPanel.handlerQueue();
                 }
             }

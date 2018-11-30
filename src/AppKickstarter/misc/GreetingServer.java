@@ -47,14 +47,11 @@ public class GreetingServer extends Thread {
                 in.read(bs);
                 String str = new String(bs);
                 str = str.trim();
-                System.out.println("STRING RECEIVED FROM GREETING SERVER: "+str);
+                System.out.println("STRING RECEIVED FROM GREETING SERVER: " + str);
 
-//                synchronized (CentralControlPanel.requestQueue) {
-//                    CentralControlPanel.requestQueue.add(str);
-//                    System.out.println("==T SIZE IN GREETING SERVER: "+CentralControlPanel.requestQueue.size());
-//                }
-                CentralControlPanel.requestQueue.add(str);
-                System.out.println("==T SIZE IN GREETING SERVER: "+CentralControlPanel.requestQueue.size());
+                synchronized (CentralControlPanel.requestQueue) {
+                    CentralControlPanel.requestQueue.add(str);
+                }
 
                 DataOutputStream out = new DataOutputStream(server.getOutputStream());
                 out.writeUTF("Thank you for connecting to " + server.getLocalSocketAddress()
@@ -63,7 +60,6 @@ public class GreetingServer extends Thread {
                 in.close();
                 out.close();
                 server.close();
-
             }
 
         } catch (SocketTimeoutException s) {

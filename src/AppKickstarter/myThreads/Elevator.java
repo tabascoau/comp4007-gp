@@ -299,13 +299,6 @@ public class Elevator extends AppThread {
             int current = from;
             boolean up = from < to; // Set direction
 
-//            if (whichElevator.equals(Elevator[i]) {
-//                for (int i = 0; i < 6; i++) {
-//                    centralControlPanel.setCurrentDirection(i, up ? 'U' : 'D');
-//                    break;
-//                }
-//            }
-
             for(int i=0;i<6;i++){
                 if(whichElevator.equals(Elevator[i])){
                     centralControlPanel.setCurrentDirection(i, up? "U":"D");

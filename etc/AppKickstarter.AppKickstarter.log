@@ -1,0 +1,51 @@
+181130-16:26:35 [INFO] -- 
+181130-16:26:35 [INFO] -- 
+181130-16:26:35 [INFO] -- ============================================================
+181130-16:26:35 [INFO] -- AppKickstarter: Application Starting...
+181130-16:26:35 [INFO] -- ElevatorC: starting...
+181130-16:26:35 [INFO] -- ElevatorD: starting...
+181130-16:26:35 [INFO] -- ElevatorE: starting...
+181130-16:26:35 [INFO] -- timer: starting...
+181130-16:26:35 [INFO] -- ElevatorA: starting...
+181130-16:26:35 [INFO] -- ElevatorB: starting...
+181130-16:26:37 [INFO] -- ElevatorA: message received: [Timer (TimesUp) -- Svc_Req Passenger-0001 0 4].
+181130-16:26:37 [INFO] -- ElevatorA: -----------------------------------------------------------
+181130-16:26:37 [INFO] -- ElevatorA: receiving order at 00:04:18
+181130-16:26:37 [INFO] -- ElevatorA: go to source floor...
+181130-16:26:37 [INFO] -- THIS_ID: ElevatorA
+181130-16:26:37 [INFO] -- ElevatorA: message received: [ElevatorA (Waiting) -- Already at source floor!  (mCnt: 1)].
+181130-16:26:37 [INFO] -- ElevatorA: ElevatorA is arrived at source floor!!!
+181130-16:26:38 [INFO] -- ElevatorB: message received: [Timer (TimesUp) -- Svc_Req Passenger-0001 0 4].
+181130-16:26:38 [INFO] -- ElevatorB: -----------------------------------------------------------
+181130-16:26:38 [INFO] -- ElevatorB: receiving order at 00:04:38
+181130-16:26:38 [INFO] -- ElevatorB: go to source floor...
+181130-16:26:38 [INFO] -- THIS_ID: ElevatorB
+181130-16:26:38 [INFO] -- ElevatorB: message received: [ElevatorB (Waiting) -- Already at source floor!  (mCnt: 1)].
+181130-16:26:38 [INFO] -- ElevatorB: ElevatorB is arrived at source floor!!!
+181130-16:26:38 [INFO] -- ElevatorC: message received: [Timer (TimesUp) -- Svc_Req Passenger-0001 0 4].
+181130-16:26:38 [INFO] -- ElevatorC: -----------------------------------------------------------
+181130-16:26:38 [INFO] -- ElevatorC: receiving order at 00:04:55
+181130-16:26:38 [INFO] -- ElevatorC: go to source floor...
+181130-16:26:38 [INFO] -- THIS_ID: ElevatorC
+181130-16:26:38 [INFO] -- ElevatorC: message received: [ElevatorC (Waiting) -- Already at source floor!  (mCnt: 1)].
+181130-16:26:38 [INFO] -- ElevatorC: ElevatorC is arrived at source floor!!!
+181130-16:26:38 [INFO] -- ElevatorD: message received: [Timer (TimesUp) -- Svc_Req Passenger-0001 0 4].
+181130-16:26:38 [INFO] -- ElevatorD: -----------------------------------------------------------
+181130-16:26:38 [INFO] -- ElevatorD: receiving order at 00:05:13
+181130-16:26:38 [INFO] -- ElevatorD: go to source floor...
+181130-16:26:38 [INFO] -- THIS_ID: ElevatorD
+181130-16:26:38 [INFO] -- ElevatorD: message received: [ElevatorD (Waiting) -- Already at source floor!  (mCnt: 1)].
+181130-16:26:38 [INFO] -- ElevatorD: ElevatorD is arrived at source floor!!!
+181130-16:26:38 [INFO] -- ElevatorE: message received: [Timer (TimesUp) -- Svc_Req Passenger-0001 0 4].
+181130-16:26:38 [INFO] -- ElevatorE: -----------------------------------------------------------
+181130-16:26:38 [INFO] -- ElevatorE: receiving order at 00:05:46
+181130-16:26:38 [INFO] -- ElevatorE: go to source floor...
+181130-16:26:38 [INFO] -- THIS_ID: ElevatorE
+181130-16:26:38 [INFO] -- ElevatorE: message received: [ElevatorE (Waiting) -- Already at source floor!  (mCnt: 1)].
+181130-16:26:38 [INFO] -- ElevatorE: ElevatorE is arrived at source floor!!!
+181130-16:26:45 [INFO] -- 
+181130-16:26:45 [INFO] -- 
+181130-16:26:45 [INFO] -- ============================================================
+181130-16:26:45 [INFO] -- AppKickstarter: Application Stopping...
+181130-16:26:45 [INFO] -- timer: received terminate!
+181130-16:26:45 [INFO] -- timer: terminating...
