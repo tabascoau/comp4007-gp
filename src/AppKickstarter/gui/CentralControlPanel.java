@@ -144,17 +144,28 @@ public class CentralControlPanel extends JFrame {
     //handle the request in queue
     public static void handlerQueue() {
         //handle the msg queue
+//        String[] data = requestQueue.peek().split(" ");
         System.out.println("T:" + requestQueue.size());
+
+//        String passengerID=data[1];
+//            int src = Integer.parseInt(data[2]);
+//            int dest = Integer.parseInt(data[3]);
 
         synchronized (requestQueue) {
             // Find shortest path
             String[] data = requestQueue.peek().split(" ");
+            int src = Integer.parseInt(data[2]);
+            int dest = Integer.parseInt(data[3]);
 
+            String passengerID=data[1];
             for (int i = 0; i <CentralControlPanel.getInstance().totalNumberOfElevator; i++) {
                 if (CentralControlPanel.getInstance().liftAvailable[i]) {
                     elevatorArray[i].getMBox().send(new Msg("Timer", elevatorArray[i].getMBox(), Msg.Type.TimesUp, requestQueue.peek()));
                     requestQueue.poll();
                     CentralControlPanel.getInstance().liftAvailable[i] = false;
+                    String msg="Svc_Reply "+passengerID+" "+src+" "+dest+" "+"A";
+                    System.out.println(msg);
+                    GreetingServer.sendMsgToClient(msg);
                     //When the queue is handled queue size is 0
                     break;
                 }

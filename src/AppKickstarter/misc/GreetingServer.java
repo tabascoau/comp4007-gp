@@ -4,9 +4,7 @@ import AppKickstarter.AppKickstarter;
 import AppKickstarter.gui.CentralControlPanel;
 import AppKickstarter.myThreads.Elevator;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketTimeoutException;
@@ -16,9 +14,9 @@ import java.util.Queue;
 
 
 public class GreetingServer extends Thread {
-    private ServerSocket serverSocket;
+    public static ServerSocket serverSocket;
     private AppKickstarter appKickstarter;
-
+    public static Socket clientSocket;
     CentralControlPanel c;
 
 //    private Queue<String> requestQueue = new LinkedList<String>();
@@ -33,38 +31,58 @@ public class GreetingServer extends Thread {
     @Override
     public void run() {
         try {
+//            while (true) {
+            System.out.println("Waiting for client on port " +
+                    serverSocket.getLocalPort() + "...");
+            clientSocket = serverSocket.accept();
+            System.out.println("Just connected to " + clientSocket.getLocalSocketAddress());
+
             while (true) {
-                System.out.println("Waiting for client on port " +
-                        serverSocket.getLocalPort() + "...");
-                Socket server = serverSocket.accept();
-                System.out.println("Just connected to " + server.getLocalSocketAddress());
-
-                DataInputStream in = new DataInputStream(server.getInputStream());
-                byte[] bs = new byte[1024];
-
-                //str is the request from client side
-                in.read(bs);
-                String str = new String(bs);
-                str = str.trim();
+//                DataInputStream in = new DataInputStream(clientSocket.getInputStream());
+//                byte[] bs = new byte[1024];
+//
+//                //str is the request from client side
+//                in.read(bs);
+//                String str = new String(bs);
+//                str = str.trim();
+                BufferedReader in=new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+                String str=in.readLine();
 
                 synchronized (CentralControlPanel.requestQueue) {
                     CentralControlPanel.requestQueue.add(str);
                 }
-
-                DataOutputStream out = new DataOutputStream(server.getOutputStream());
-                out.writeUTF("Thank you for connecting to " + server.getLocalSocketAddress()
-                        + "\nGoodbye!");
-                out.flush();
-                in.close();
-                out.close();
-                server.close();
             }
+
+
+//                DataOutputStream out = new DataOutputStream(server.getOutputStream());
+//                out.writeUTF("Thank you for connecting to " + server.getLocalSocketAddress()
+//                        + "\nGoodbye!");
+//                out.flush();
+//                in.close();
+//                out.close();
+//                server.close();
+//            }
 
         } catch (SocketTimeoutException s) {
             System.out.println("Socket timed out!");
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static void sendMsgToClient(String str) {
+        try {
+            PrintWriter out = new PrintWriter(clientSocket.getOutputStream(),true);
+            out.println(str);
+
+
+        }catch (IOException e){
+            e.printStackTrace();
+            System.exit(444444);
+        }
+
+
+
     }
 
 
