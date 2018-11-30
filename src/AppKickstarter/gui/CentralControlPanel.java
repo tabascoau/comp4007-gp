@@ -23,6 +23,9 @@ public class CentralControlPanel extends JFrame {
     final char defaultDirection = 'S';
     final int maxNumberOfPassenger = 10;
     final int defaultPassenger = 0;
+    final int totalNumberOfElevator = 6;
+    final int screenWidth=800;
+    final int screenHeight=600;
     int totalProcessedPassenger = 0;
 
     private AppKickstarter appKickstarter = new AppKickstarter("AppKickstarter", "etc/MyApp.cfg");
@@ -33,10 +36,10 @@ public class CentralControlPanel extends JFrame {
     public JLabel aCurrent, bCurrent, cCurrent, dCurrent, eCurrent, fCurrent;
     private JLabel processedPassenger;
 
-    public boolean[] liftAvailable = new boolean[6];
-    public int[] liftTotalPassenger = new int[6];
-    public int[] currentFloor = new int[6];
-    public String[] currentDirection = new String[6];
+    public boolean[] liftAvailable = new boolean[totalNumberOfElevator];
+    public int[] liftTotalPassenger = new int[totalNumberOfElevator];
+    public int[] currentFloor = new int[totalNumberOfElevator];
+    public String[] currentDirection = new String[totalNumberOfElevator];
 
     public JLabel[] currentDirectionJLabel;
     public JLabel[] currentFloorJLabel;
@@ -60,7 +63,7 @@ public class CentralControlPanel extends JFrame {
         CentralControlPanel.instance = this;
 
         //Initial GUI JLabel text
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < totalNumberOfElevator; i++) {
             liftAvailable[i] = true;
             liftTotalPassenger[i] = 0;
             currentFloor[i] = 0;
@@ -73,7 +76,7 @@ public class CentralControlPanel extends JFrame {
         processedPassenger.setText(String.valueOf(totalProcessedPassenger));
         add(rootPanel);
         setTitle("Central Control Panel");
-        setSize(800, 600);
+        setSize(screenWidth, screenHeight);
         setVisible(true);
 
         //Check whether the elevator started when user click start button
@@ -143,7 +146,7 @@ public class CentralControlPanel extends JFrame {
     }
 
     //handle the request in queue
-    public static void handlerQueue(){
+    public static void handlerQueue() {
         //handle the msg queue
         System.out.println("T:" + requestQueue.size());
 
@@ -151,24 +154,15 @@ public class CentralControlPanel extends JFrame {
             // Find shortest path
             String[] data = requestQueue.peek().split(" ");
 
-//            int src = Integer.parseInt(data[2]);
-//            int dest = Integer.parseInt(data[3]);
-
-            for (int i = 0; i < 6; i++) {
-
+            for (int i = 0; i <CentralControlPanel.getInstance().totalNumberOfElevator; i++) {
                 if (CentralControlPanel.getInstance().liftAvailable[i]) {
                     elevatorArray[i].getMBox().send(new Msg("Timer", elevatorArray[i].getMBox(), Msg.Type.TimesUp, requestQueue.peek()));
                     requestQueue.poll();
                     CentralControlPanel.getInstance().liftAvailable[i] = false;
                     //When the queue is handled queue size is 0
                     break;
-                } else {
-
                 }
             }
-
-
-
         }
     }
 
@@ -178,7 +172,7 @@ public class CentralControlPanel extends JFrame {
         public void run() {
             while (true) {
                 System.out.print("");
-                if (requestQueue.size()==1) {
+                if (!requestQueue.isEmpty()) {
                     CentralControlPanel.handlerQueue();
                 }
             }
