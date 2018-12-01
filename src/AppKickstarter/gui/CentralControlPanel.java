@@ -166,11 +166,17 @@ public class CentralControlPanel extends JFrame {
 
     }
 
-//    public static void sendIdleMsg() {
-//        for (int i = 0; i < CentralControlPanel.getInstance().totalNumberOfElevator; i++) {
-//            elevatorArray[i].getMBox().send(new Msg("Timer", elevatorArray[i].getMBox(), Msg.Type.Idle, "IDLE"));
-//        }
-//    }
+    public static boolean moreThanOneElevator(boolean[] array){
+        int index=0;
+        for(int i=0;i<array.length;i++){
+            if(array[i]==true){
+                ++index;
+            }
+            if(index==2)
+                return true;
+        }
+        return false;
+    }
 
     //Thread to handle queue
     class QueueHandler extends Thread {
@@ -181,10 +187,7 @@ public class CentralControlPanel extends JFrame {
                 System.out.print("");
                 if (!requestQueue.isEmpty()) {
                     CentralControlPanel.handlerQueue();
-                } /*else {
-                    elevatorArray[0].getMBox().send(new Msg("Timer", elevatorArray[0].getMBox(), Msg.Type.Idle, "IDLE"));
-                }*/
-
+                }
             }
         }
     }
