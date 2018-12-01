@@ -104,6 +104,15 @@ public class Elevator extends AppThread {
                                 break;
                             }
                         }
+                        if(idleFloor<dest){
+                            direction="U";
+                        }else {
+                            direction="D";
+                        }
+                        elevDepmsg="Elev_Dep "+msg.getSender()+" "+idleFloor+" "+direction+" "+idleFloor+" "+dest;
+                        elevArrmsg="Elev_Arr "+msg.getSender()+" "+idleFloor+" "+direction+" "+dest;
+                        GreetingServer.sendMsgToClient(elevDepmsg);
+                        GreetingServer.sendMsgToClient(elevArrmsg);
                     }
                     // Go to src
                     else {
@@ -258,13 +267,18 @@ public class Elevator extends AppThread {
                         if (msg.getSender().equals(Elevator[i])) {
                             centralControlPanel.liftAvailable[i] = true;
                             centralControlPanel.setCurrentPassenger(i, -1);
-                            centralControlPanel.setCurrentDirection(i, "S Arrived");
+                            centralControlPanel.setCurrentDirection(i, "S Arr(wait)");
                             elevArrmsg = "Elev_Arr " + msg.getSender() + " " + dest + " S " + Integer.MIN_VALUE;
                             break;
                         }
                     }
 
                     GreetingServer.sendMsgToClient(elevArrmsg);
+                    try{
+                        Thread.sleep(doorOpenToClose);
+                    }catch (InterruptedException e){
+                        e.printStackTrace();
+                    }
                     log.info(id + ": -----------------------------------------------------------");
 
                     break;

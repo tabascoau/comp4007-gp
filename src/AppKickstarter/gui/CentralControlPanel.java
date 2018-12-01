@@ -24,8 +24,8 @@ public class CentralControlPanel extends JFrame {
     final int maxNumberOfPassenger = 10;
     final int defaultNumberOfPassenger = 0;
     public final int totalNumberOfElevator = 6;
-    final int screenWidth=800;
-    final int screenHeight=600;
+    final int screenWidth = 800;
+    final int screenHeight = 600;
     int totalProcessedPassenger = 0;
 
     private AppKickstarter appKickstarter = new AppKickstarter("AppKickstarter", "etc/MyApp.cfg");
@@ -143,38 +143,50 @@ public class CentralControlPanel extends JFrame {
         System.out.println("T:" + requestQueue.size());
 
 
-        synchronized (requestQueue) {
-            // Find shortest path
-            String[] data = requestQueue.peek().split(" ");
-            int src = Integer.parseInt(data[2]);
-            int dest = Integer.parseInt(data[3]);
+        // Find shortest path
+        String[] data = requestQueue.peek().split(" ");
+        int src = Integer.parseInt(data[2]);
+        int dest = Integer.parseInt(data[3]);
 
-            String passengerID=data[1];
-            for (int i = 0; i <CentralControlPanel.getInstance().totalNumberOfElevator; i++) {
-                if (CentralControlPanel.getInstance().liftAvailable[i]) {
-                    elevatorArray[i].getMBox().send(new Msg("Timer", elevatorArray[i].getMBox(), Msg.Type.TimesUp, requestQueue.peek()));
-                    requestQueue.poll();
-                    CentralControlPanel.getInstance().liftAvailable[i] = false;
-                    String msg="Svc_Reply "+passengerID+" "+src+" "+dest+" "+elevatorArray[i].getID();
-                    System.out.println(msg);
-                    GreetingServer.sendMsgToClient(msg);
-                    //When the queue is handled queue size is 0
-                    break;
-                }
+        String passengerID = data[1];
+        for (int i = 0; i < CentralControlPanel.getInstance().totalNumberOfElevator; i++) {
+            if (CentralControlPanel.getInstance().liftAvailable[i]) {
+                elevatorArray[i].getMBox().send(new Msg(elevatorArray[i].getID(), elevatorArray[i].getMBox(), Msg.Type.TimesUp, requestQueue.peek()));
+                requestQueue.poll();
+                CentralControlPanel.getInstance().liftAvailable[i] = false;
+                String msg = "Svc_Reply " + passengerID + " " + src + " " + dest + " " + elevatorArray[i].getID();
+                System.out.println(msg);
+                GreetingServer.sendMsgToClient(msg);
+                //When the queue is handled queue size is 0
+                break;
             }
+
         }
+
+
     }
+
+//    public static void sendIdleMsg() {
+//        for (int i = 0; i < CentralControlPanel.getInstance().totalNumberOfElevator; i++) {
+//            elevatorArray[i].getMBox().send(new Msg("Timer", elevatorArray[i].getMBox(), Msg.Type.Idle, "IDLE"));
+//        }
+//    }
 
     //Thread to handle queue
     class QueueHandler extends Thread {
+
         @Override
         public void run() {
             while (true) {
                 System.out.print("");
                 if (!requestQueue.isEmpty()) {
                     CentralControlPanel.handlerQueue();
-                }
+                } /*else {
+                    elevatorArray[0].getMBox().send(new Msg("Timer", elevatorArray[0].getMBox(), Msg.Type.Idle, "IDLE"));
+                }*/
+
             }
         }
     }
 }
+
