@@ -137,10 +137,6 @@ public class CentralControlPanel extends JFrame {
         this.repaint();
     }
 
-    public boolean isElevatorAvailable(int index) {
-        return elevatorArray[index].IsEmpty();  //return which elevator is empty
-    }
-
     //handle the request in queue
     public static void handlerQueue() {
         //handle the msg queue
@@ -159,7 +155,7 @@ public class CentralControlPanel extends JFrame {
                     elevatorArray[i].getMBox().send(new Msg("Timer", elevatorArray[i].getMBox(), Msg.Type.TimesUp, requestQueue.peek()));
                     requestQueue.poll();
                     CentralControlPanel.getInstance().liftAvailable[i] = false;
-                    String msg="Svc_Reply "+passengerID+" "+src+" "+dest+" "+'A';
+                    String msg="Svc_Reply "+passengerID+" "+src+" "+dest+" "+elevatorArray[i].getID();
                     System.out.println(msg);
                     GreetingServer.sendMsgToClient(msg);
                     //When the queue is handled queue size is 0

@@ -36,7 +36,7 @@ public class Elevator extends AppThread {
     private double doorWait = 5f;
     private long doorOpenToClose = (long) ((doorOpen + doorClose + doorWait) * 1000);
     CentralControlPanel centralControlPanel = CentralControlPanel.getInstance();
-    private String[] Elevator = {"ElevatorA", "ElevatorB", "ElevatorC", "ElevatorD", "ElevatorE", "ElevatorF"};
+    private String[] Elevator = {"A", "B", "C", "D", "E", "F"};
     private String passengerId;
     private int totalNumberOfElevator = centralControlPanel.totalNumberOfElevator;
     private int src, dest;

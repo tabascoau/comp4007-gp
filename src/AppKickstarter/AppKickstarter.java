@@ -137,12 +137,12 @@ public class AppKickstarter {
         }
         // create threads
         timer = new Timer("timer", this);
-        elevatorA = new Elevator("ElevatorA", this);
-        elevatorB = new Elevator("ElevatorB", this);
-        elevatorC = new Elevator("ElevatorC", this);
-        elevatorD = new Elevator("ElevatorD", this);
-        elevatorE = new Elevator("ElevatorE", this);
-        elevatorF=new Elevator("ElevatorF", this);
+        elevatorA = new Elevator("A", this);
+        elevatorB = new Elevator("B", this);
+        elevatorC = new Elevator("C", this);
+        elevatorD = new Elevator("D", this);
+        elevatorE = new Elevator("E", this);
+        elevatorF=new Elevator("F", this);
 
         new Thread(timer).start();
         new Thread(elevatorA).start();
