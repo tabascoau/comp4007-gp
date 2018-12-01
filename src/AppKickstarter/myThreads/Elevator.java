@@ -119,6 +119,7 @@ public class Elevator extends AppThread {
                     } else {
                         direction = "S";
                     }
+                    String tmp = (src > dest) ? "D" : "U";
                     for (int i = 0; i < totalNumberOfElevator; i++) {
                         if (msg.getSender().equals(Elevator[i])) {
                             centralControlPanel.liftAvailable[i] = false;
@@ -126,7 +127,7 @@ public class Elevator extends AppThread {
                             centralControlPanel.setCurrentDirection(i, direction);
                             centralControlPanel.setCurrentPassenger(i, 1);
                             elevDepmsg = "Elev_Dep " + msg.getSender() + " " + idleFloor + " " + direction + " " + src + " " + dest;
-                            elevArrmsg = "Elev_Arr " + msg.getSender() + " " + src + " " + direction + " " + dest;
+                            elevArrmsg = "Elev_Arr " + msg.getSender() + " " + src + " " + tmp + " " + dest;
                             break;
                         }
                     }
@@ -163,6 +164,11 @@ public class Elevator extends AppThread {
                 case Waiting:
                     log.info(id + ": " + msg.getSender() + " is arrived at source floor!!!");
                     // Debug data
+                    if(src<dest){
+                        direction="U";
+                    }else{
+                        direction="D";
+                    }
                     System.out.println("Waiting: ");
                     System.out.println("current floor " + src);
                     //Tabasco added code
@@ -184,6 +190,7 @@ public class Elevator extends AppThread {
                         e.printStackTrace();
                     } finally {
                         // Go to destination
+                        elevDepmsg="Elev_Dep "+msg.getSender()+" "+src+" "+direction+" "+dest;
                         this.getMBox().send(new Msg(id, mbox, Msg.Type.GoToDest, "Going to destination floor!  (mCnt: " + ++mCnt + ")"));
                     }
 
@@ -252,7 +259,7 @@ public class Elevator extends AppThread {
                             centralControlPanel.liftAvailable[i] = true;
                             centralControlPanel.setCurrentPassenger(i, -1);
                             centralControlPanel.setCurrentDirection(i, "S Arrived");
-                            elevArrmsg="Elev_Arr "+msg.getSender()+" "+dest+" S " +Integer.MIN_VALUE;
+                            elevArrmsg = "Elev_Arr " + msg.getSender() + " " + dest + " S " + Integer.MIN_VALUE;
                             break;
                         }
                     }
