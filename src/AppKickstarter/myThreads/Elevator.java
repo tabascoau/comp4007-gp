@@ -125,21 +125,25 @@ public class Elevator extends AppThread {
                             centralControlPanel.setCurrentFloor(i, idleFloor);
                             centralControlPanel.setCurrentDirection(i, direction);
                             centralControlPanel.setCurrentPassenger(i, 1);
-                            elevArrmsg = "Elev_Arr " + this.id + " " + idleFloor + " " + direction + " ";
+                            elevDepmsg = "Elev_Dep " + msg.getSender() + " " + idleFloor + " " + direction + " " + src + " " + dest;
+                            elevArrmsg = "Elev_Arr " + msg.getSender() + " " + src + " " + direction + " " + dest;
                             break;
                         }
                     }
-                    if (idleFloor < src) {
-                        for (int current = idleFloor + 1; current <= src; current++) {
-                            elevArrmsg += current + " ";
-                        }
-                    }
-                    if (idleFloor > src) {
-                        for (int current = idleFloor - 1; current >= src; current--) {
-                            elevArrmsg += current + " ";
-                        }
-                    }
+//                    if (idleFloor < src) {
+//                        for (int current = idleFloor + 1; current <= src; current++) {
+//                            elevArrmsg += current + " ";
+//                        }
+//                    }
+//                    if (idleFloor > src) {
+//                        for (int current = idleFloor - 1; current >= src; current--) {
+//                            elevArrmsg += current + " ";
+//                        }
+//                    }
+                    System.out.println("Elevator_Dep message: " + elevDepmsg);
                     System.out.println("Elevator_Arr message: " + elevArrmsg);
+                    GreetingServer.sendMsgToClient(elevDepmsg);
+                    GreetingServer.sendMsgToClient(elevArrmsg);
 
 
                     //==========================================================================
@@ -197,22 +201,23 @@ public class Elevator extends AppThread {
 
                     for (int i = 0; i < totalNumberOfElevator; i++) {
                         if (msg.getSender().equals(Elevator[i])) {
-                            elevDepmsg = "Elev_Dep " + this.id + " " + src + " " + direction + " ";
+                            elevDepmsg = "Elev_Dep " + msg.getSender() + " " + src + " " + direction + " " + dest;
                             break;
                         }
                     }
-                    if (src < dest) {
-                        for (int current = src + 1; current <= dest; current++) {
-                            elevDepmsg += current + " ";
-                        }
-                    }
-
-                    if (src > dest) {
-                        for (int current = src - 1; current >= dest; current--) {
-                            elevDepmsg += current + " ";
-                        }
-                    }
+//                    if (src < dest) {
+//                        for (int current = src + 1; current <= dest; current++) {
+//                            elevDepmsg += current + " ";
+//                        }
+//                    }
+//
+//                    if (src > dest) {
+//                        for (int current = src - 1; current >= dest; current--) {
+//                            elevDepmsg += current + " ";
+//                        }
+//                    }
                     System.out.println("Elevator_Dep message: " + elevDepmsg);
+                    GreetingServer.sendMsgToClient(elevDepmsg);
 
                     // Debug data
                     System.out.println("GoToDest: ");
@@ -235,14 +240,24 @@ public class Elevator extends AppThread {
                     System.out.println("ArriveDest: ");
                     System.out.println("current floor " + idleFloor);
 
+//                    for (int i = 0; i < totalNumberOfElevator; i++) {
+//                        if (msg.getSender().equals(Elevator[i])) {
+//                            elevDepmsg = "Elev_Dep " + msg.getSender() + " " + src + " " + direction + " " + dest;
+//                            break;
+//                        }
+//                    }
+
                     for (int i = 0; i < totalNumberOfElevator; i++) {
                         if (msg.getSender().equals(Elevator[i])) {
                             centralControlPanel.liftAvailable[i] = true;
                             centralControlPanel.setCurrentPassenger(i, -1);
                             centralControlPanel.setCurrentDirection(i, "S Arrived");
+                            elevArrmsg="Elev_Arr "+msg.getSender()+" "+dest+" S " +Integer.MIN_VALUE;
                             break;
                         }
                     }
+
+                    GreetingServer.sendMsgToClient(elevArrmsg);
                     log.info(id + ": -----------------------------------------------------------");
 
                     break;

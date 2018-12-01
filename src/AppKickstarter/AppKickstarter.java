@@ -28,7 +28,9 @@ public class AppKickstarter {
     private ConsoleHandler logConHd = null;
     private FileHandler logFileHd = null;
     private Timer timer = null;
-    private Elevator elevatorA, elevatorB, elevatorC, elevatorD, elevatorE, elevatorF;//, elevatorF;
+    private Elevator elevatorA, elevatorB, elevatorC, elevatorD, elevatorE, elevatorF;
+    private Elevator[] elevatorArray;
+    private String[] elevatorIDArray;
     CentralControlPanel centralControlPanel;
     public static Queue<String> requestQueue = new LinkedList<String>();
     private boolean[] elevatorBusy = new boolean[6];
@@ -120,6 +122,8 @@ public class AppKickstarter {
     //------------------------------------------------------------
     // startApp
     public void startApp() {
+        elevatorArray = new Elevator[]{elevatorA, elevatorB, elevatorC, elevatorD, elevatorE, elevatorF};
+        elevatorIDArray=new String[]{"A","B","C","D","E","F"};
         centralControlPanel = CentralControlPanel.getInstance();
         // start our application
         log.info("");
@@ -135,25 +139,17 @@ public class AppKickstarter {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
         // create threads
         timer = new Timer("timer", this);
-        elevatorA = new Elevator("A", this);
-        elevatorB = new Elevator("B", this);
-        elevatorC = new Elevator("C", this);
-        elevatorD = new Elevator("D", this);
-        elevatorE = new Elevator("E", this);
-        elevatorF=new Elevator("F", this);
-
         new Thread(timer).start();
-        new Thread(elevatorA).start();
-        new Thread(elevatorB).start();
-        new Thread(elevatorC).start();
-        new Thread(elevatorD).start();
-        new Thread(elevatorE).start();
-        new Thread(elevatorF).start();
 
-        //system.add(
-        centralControlPanel.setElevatorArray(new Elevator[]{elevatorA, elevatorB, elevatorC, elevatorD, elevatorE, elevatorF});
+        for(int i=0;i<elevatorArray.length;i++){
+            elevatorArray[i]=new Elevator(elevatorIDArray[i],this);
+            new Thread(elevatorArray[i]).start();
+        }
+        centralControlPanel.setElevatorArray(elevatorArray);
 
     } // startApp
 
