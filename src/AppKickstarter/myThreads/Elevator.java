@@ -7,6 +7,8 @@ import AppKickstarter.timer.Timer;
 import sun.rmi.runtime.Log;
 
 import javax.swing.*;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.logging.Logger;
 
 
@@ -15,15 +17,8 @@ import java.util.logging.Logger;
 public class Elevator extends AppThread {
     private static int totalElevatorCount = 0;
     private int _id;
-
+    private String passengerId;
     private final int sleepTime = 5;
-    private final int maxPassenger = 10;
-    private int passengers = 0;
-
-    public boolean IsEmpty() {
-        return passengers == 0;
-    }
-
     private int idleFloor = 0;
     private double upOneFloor = 0.6f;
     private double downOneFloor = 0.5f;
@@ -37,10 +32,16 @@ public class Elevator extends AppThread {
     private long doorOpenToClose = (long) ((doorOpen + doorClose + doorWait) * 1000);
     CentralControlPanel centralControlPanel = CentralControlPanel.getInstance();
     private String[] Elevator = {"A", "B", "C", "D", "E", "F"};
-    private String passengerId;
     private int totalNumberOfElevator = centralControlPanel.totalNumberOfElevator;
     private int src, dest;
+    private Queue<String> aQueue=new LinkedList<>();
+    private Queue<String> bQueue=new LinkedList<>();
+    private Queue<String> cQueue=new LinkedList<>();
+    private Queue<String> dQueue=new LinkedList<>();
+    private Queue<String> eQueue=new LinkedList<>();
+    private Queue<String> fQueue=new LinkedList<>();
 
+    private Queue<String>[] elevatorPendingRequest;
     //new added code
     String elevArrmsg = "";
     String elevDepmsg = "";
@@ -55,6 +56,8 @@ public class Elevator extends AppThread {
     public Elevator(String id, AppKickstarter appKickstarter) {
         super(id, appKickstarter);
         _id = totalElevatorCount++;
+        elevatorPendingRequest= new Queue[]{aQueue, bQueue, cQueue, dQueue, eQueue, fQueue};
+
     } // ThreadA
 
 
@@ -73,7 +76,13 @@ public class Elevator extends AppThread {
             switch (msg.getType()) {
                 case TimesUp:
                     // Store data
-                    String[] datas = msg.getDetails().split(" ");
+                    String[] datas = null;
+                    for (int i = 0; i < totalNumberOfElevator; i++) {
+                        if (msg.getSender().equals(Elevator[i])) {
+                            datas = getElevatorQueue(i).split(" ");
+                        }
+                    }
+
                     passengerId = datas[1];
                     src = Integer.parseInt(datas[2]);
                     dest = Integer.parseInt(datas[3]);
@@ -97,20 +106,19 @@ public class Elevator extends AppThread {
                         for (int i = 0; i < totalNumberOfElevator; i++) {
                             if (msg.getSender().equals(Elevator[i])) {
                                 centralControlPanel.setCurrentPassenger(i, 1);
-                                centralControlPanel.liftAvailable[i] = false;
                                 centralControlPanel.addTotalPassenger(1);
                                 centralControlPanel.setCurrentFloor(i, idleFloor);
                                 centralControlPanel.setCurrentDirection(i, "S (Wait)");
                                 break;
                             }
                         }
-                        if(idleFloor<dest){
-                            direction="U";
-                        }else {
-                            direction="D";
+                        if (idleFloor < dest) {
+                            direction = "U";
+                        } else {
+                            direction = "D";
                         }
-                        elevDepmsg="Elev_Dep "+msg.getSender()+" "+idleFloor+" "+direction+" "+idleFloor+" "+dest;
-                        elevArrmsg="Elev_Arr "+msg.getSender()+" "+idleFloor+" "+direction+" "+dest;
+                        elevDepmsg = "Elev_Dep " + msg.getSender() + " " + idleFloor + " " + direction + " " + idleFloor + " " + dest;
+                        elevArrmsg = "Elev_Arr " + msg.getSender() + " " + idleFloor + " " + direction + " " + dest;
                         GreetingServer.sendMsgToClient(elevDepmsg);
                         GreetingServer.sendMsgToClient(elevArrmsg);
                     }
@@ -131,7 +139,6 @@ public class Elevator extends AppThread {
                     String tmp = (src > dest) ? "D" : "U";
                     for (int i = 0; i < totalNumberOfElevator; i++) {
                         if (msg.getSender().equals(Elevator[i])) {
-                            centralControlPanel.liftAvailable[i] = false;
                             centralControlPanel.setCurrentFloor(i, idleFloor);
                             centralControlPanel.setCurrentDirection(i, direction);
                             centralControlPanel.setCurrentPassenger(i, 1);
@@ -140,16 +147,6 @@ public class Elevator extends AppThread {
                             break;
                         }
                     }
-//                    if (idleFloor < src) {
-//                        for (int current = idleFloor + 1; current <= src; current++) {
-//                            elevArrmsg += current + " ";
-//                        }
-//                    }
-//                    if (idleFloor > src) {
-//                        for (int current = idleFloor - 1; current >= src; current--) {
-//                            elevArrmsg += current + " ";
-//                        }
-//                    }
                     System.out.println("Elevator_Dep message: " + elevDepmsg);
                     System.out.println("Elevator_Arr message: " + elevArrmsg);
                     GreetingServer.sendMsgToClient(elevDepmsg);
@@ -173,17 +170,16 @@ public class Elevator extends AppThread {
                 case Waiting:
                     log.info(id + ": " + msg.getSender() + " is arrived at source floor!!!");
                     // Debug data
-                    if(src<dest){
-                        direction="U";
-                    }else{
-                        direction="D";
+                    if (src < dest) {
+                        direction = "U";
+                    } else {
+                        direction = "D";
                     }
                     System.out.println("Waiting: ");
                     System.out.println("current floor " + src);
                     //Tabasco added code
                     for (int i = 0; i < totalNumberOfElevator; i++) {
                         if (msg.getSender().equals(Elevator[i])) {
-                            centralControlPanel.liftAvailable[i] = false;
                             centralControlPanel.setCurrentDirection(i, "S (Wait)");
                             centralControlPanel.setCurrentFloor(i, src);
                             centralControlPanel.setCurrentPassenger(i, 1);
@@ -199,7 +195,7 @@ public class Elevator extends AppThread {
                         e.printStackTrace();
                     } finally {
                         // Go to destination
-                        elevDepmsg="Elev_Dep "+msg.getSender()+" "+src+" "+direction+" "+dest;
+                        elevDepmsg = "Elev_Dep " + msg.getSender() + " " + src + " " + direction + " " + dest;
                         this.getMBox().send(new Msg(id, mbox, Msg.Type.GoToDest, "Going to destination floor!  (mCnt: " + ++mCnt + ")"));
                     }
 
@@ -265,7 +261,6 @@ public class Elevator extends AppThread {
 
                     for (int i = 0; i < totalNumberOfElevator; i++) {
                         if (msg.getSender().equals(Elevator[i])) {
-                            centralControlPanel.liftAvailable[i] = true;
                             centralControlPanel.setCurrentPassenger(i, -1);
                             centralControlPanel.setCurrentDirection(i, "S Arr(wait)");
                             elevArrmsg = "Elev_Arr " + msg.getSender() + " " + dest + " S " + Integer.MIN_VALUE;
@@ -274,9 +269,9 @@ public class Elevator extends AppThread {
                     }
 
                     GreetingServer.sendMsgToClient(elevArrmsg);
-                    try{
+                    try {
                         Thread.sleep(doorOpenToClose);
-                    }catch (InterruptedException e){
+                    } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
                     log.info(id + ": -----------------------------------------------------------");
@@ -382,6 +377,16 @@ public class Elevator extends AppThread {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    public void addToElevatorQueue(int index, String str) {
+        elevatorPendingRequest[index].add(str);
+    }
+
+    public String getElevatorQueue(int index) {
+        String tmp = elevatorPendingRequest[index].peek();
+        elevatorPendingRequest[index].poll();
+        return tmp;
     }
 } // ThreadA
 

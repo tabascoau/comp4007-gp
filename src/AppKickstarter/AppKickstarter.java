@@ -162,9 +162,6 @@ public class AppKickstarter {
         log.info("============================================================");
         log.info(id + ": Application Stopping...");
         elevatorA.getMBox().send(new Msg(id, null, Msg.Type.Terminate, "Terminate now!"));
-//	threadA1.getMBox().send(new Msg(id, null, Msg.Type.Terminate, "Terminate now!"));
-//	threadA2.getMBox().send(new Msg(id, null, Msg.Type.Terminate, "Terminate now!"));
-//	threadB.getMBox().send(new Msg(id, null, Msg.Type.Terminate, "Terminate now!"));
         timer.getMBox().send(new Msg(id, null, Msg.Type.Terminate, "Terminate now!"));
     } // stopApp
 

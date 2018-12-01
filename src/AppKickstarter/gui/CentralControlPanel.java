@@ -36,7 +36,6 @@ public class CentralControlPanel extends JFrame {
     public JLabel aCurrent, bCurrent, cCurrent, dCurrent, eCurrent, fCurrent;
     private JLabel processedPassenger;
 
-    public boolean[] liftAvailable = new boolean[totalNumberOfElevator];
     public int[] liftTotalPassenger = new int[totalNumberOfElevator];
     public int[] currentFloor = new int[totalNumberOfElevator];
     public String[] currentDirection = new String[totalNumberOfElevator];
@@ -64,7 +63,6 @@ public class CentralControlPanel extends JFrame {
 
         //Initial GUI JLabel text
         for (int i = 0; i < totalNumberOfElevator; i++) {
-            liftAvailable[i] = true;
             liftTotalPassenger[i] = defaultNumberOfPassenger;
             currentFloor[i] = 0;
             currentDirection[i] = "S";
@@ -147,32 +145,34 @@ public class CentralControlPanel extends JFrame {
         String[] data = requestQueue.peek().split(" ");
         int src = Integer.parseInt(data[2]);
         int dest = Integer.parseInt(data[3]);
-
         String passengerID = data[1];
+
         for (int i = 0; i < CentralControlPanel.getInstance().totalNumberOfElevator; i++) {
-            if (CentralControlPanel.getInstance().liftAvailable[i]) {
-                elevatorArray[i].getMBox().send(new Msg(elevatorArray[i].getID(), elevatorArray[i].getMBox(), Msg.Type.TimesUp, requestQueue.peek()));
-                requestQueue.poll();
-                CentralControlPanel.getInstance().liftAvailable[i] = false;
-                String msg = "Svc_Reply " + passengerID + " " + src + " " + dest + " " + elevatorArray[i].getID();
-                System.out.println(msg);
-                GreetingServer.sendMsgToClient(msg);
-                //When the queue is handled queue size is 0
-                break;
-            }
+            elevatorArray[i].getMBox().send(new Msg(elevatorArray[i].getID(), elevatorArray[i].getMBox(), Msg.Type.TimesUp, requestQueue.peek()));
+            System.out.println("I: "+i+ "RequestQueue: "+requestQueue.peek());
+            elevatorArray[i].addToElevatorQueue(i, requestQueue.peek());
+
+            String msg = "Svc_Reply " + passengerID + " " + src + " " + dest + " " + elevatorArray[i].getID();
+            System.out.println(msg);
+            GreetingServer.sendMsgToClient(msg);
+
+            requestQueue.poll();
+            //When the queue is handled queue size is 0
+            break;
+
 
         }
 
 
     }
 
-    public static boolean moreThanOneElevator(boolean[] array){
-        int index=0;
-        for(int i=0;i<array.length;i++){
-            if(array[i]==true){
+    public static boolean moreThanOneElevator(boolean[] array) {
+        int index = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == true) {
                 ++index;
             }
-            if(index==2)
+            if (index == 2)
                 return true;
         }
         return false;
