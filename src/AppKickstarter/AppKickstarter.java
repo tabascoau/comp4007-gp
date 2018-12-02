@@ -3,19 +3,19 @@ package AppKickstarter;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.*;
+import java.util.Properties;
 import java.util.logging.Logger;
 import java.util.logging.ConsoleHandler;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
+import java.util.Hashtable;
 
 import AppKickstarter.gui.CentralControlPanel;
 import AppKickstarter.myThreads.Elevator;
 import AppKickstarter.timer.Timer;
 import AppKickstarter.misc.*;
-
-import javax.swing.*;
-
+import AppKickstarter.myThreads.ThreadA;
+import AppKickstarter.myThreads.ThreadB;
 
 //======================================================================
 // AppKickstarter
@@ -28,57 +28,51 @@ public class AppKickstarter {
     private ConsoleHandler logConHd = null;
     private FileHandler logFileHd = null;
     private Timer timer = null;
-    private Elevator elevatorA, elevatorB, elevatorC, elevatorD, elevatorE, elevatorF;
-    private Elevator[] elevatorArray;
-    private String[] elevatorIDArray;
-    CentralControlPanel centralControlPanel;
-    public static Queue<String> requestQueue = new LinkedList<String>();
-    private boolean[] elevatorBusy = new boolean[6];
+//    private ThreadA threadA1, threadA2;
+//    private ThreadB threadB;
+
+    private CentralControlPanel centralControlPanel;
+    private GreetingServer greetingServer;
+    private Elevator[] elevators;
+    private char[] elevatorId = {'A', 'B', 'C', 'D', 'E', 'F'};
+
+    public CentralControlPanel GetCentralControlPanel()
+    {
+        return centralControlPanel;
+    }
 
     //------------------------------------------------------------
     // main
     public static void main(String[] args) {
-//  / ___| | | |_ _| |  _ \ / \  |  _ \_   _|
-// | |  _| | | || |  | |_) / _ \ | |_) || |
-// | |_| | |_| || |  |  __/ ___ \|  _ < | |
-//  \____|\___/|___| |_| /_/   \_\_| \_\|_|
+//	AppKickstarter appKickstarter = new AppKickstarter("AppKickstarter", "etc/MyApp.cfg");
+        AppKickstarter appKickstarter = new AppKickstarter("AppKickstarter", "etc/SmartElevator.cfg");
+        appKickstarter.startApp();
         try {
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        } catch (UnsupportedLookAndFeelException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
+            Thread.sleep(1800 * 1000);
+        } catch (Exception e) {
         }
-
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new CentralControlPanel();
-            }
-        });
+        appKickstarter.stopApp();
     } // main
 
 
     //------------------------------------------------------------
     // AppKickstarter
-    public AppKickstarter(String id) {
-        this(id, "etc/MyApp.cfg");
+    private AppKickstarter(String id) {
+//	this(id, "etc/MyApp.cfg");
+        this(id, "etc/SmartElevator.cfg");
     } // AppKickstarter
+
 
     //------------------------------------------------------------
     // AppKickstarter
-    public AppKickstarter(String id, String cfgFName) {
+    private AppKickstarter(String id, String cfgFName) {
         this(id, cfgFName, false);
     } // AppKickstarter
 
+
     //------------------------------------------------------------
     // AppKickstarter
-    public AppKickstarter(String id, String cfgFName, boolean append) {
-
+    private AppKickstarter(String id, String cfgFName, boolean append) {
         this.id = id;
         this.cfgFName = cfgFName;
         logConHd = null;
@@ -87,7 +81,6 @@ public class AppKickstarter {
 
         // set my thread name
         Thread.currentThread().setName(this.id);
-
 
         // read system config from property file
         try {
@@ -121,50 +114,58 @@ public class AppKickstarter {
 
     //------------------------------------------------------------
     // startApp
-    public void startApp() {
-        elevatorArray = new Elevator[]{elevatorA, elevatorB, elevatorC, elevatorD, elevatorE, elevatorF};
-        elevatorIDArray=new String[]{"A","B","C","D","E","F"};
-        centralControlPanel = CentralControlPanel.getInstance();
+    private void startApp() {
+        centralControlPanel = new CentralControlPanel();
+
         // start our application
         log.info("");
         log.info("");
         log.info("============================================================");
         log.info(id + ": Application Starting...");
 
-        int port = 54321;
-        Thread connectionThread = null;
-        try {
-            connectionThread = new GreetingServer(port, this);
-            connectionThread.start();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-
         // create threads
         timer = new Timer("timer", this);
+        // Create elevartor
+        int numberOfElevator = Integer.parseInt(getProperty("Bldg.NElevators"));
+        elevators = new Elevator[numberOfElevator];
+        for (int index = 0; index < elevators.length; index++) {
+            char id = elevatorId[index];
+            Elevator elevator = new Elevator("Elevator" + id, this);
+            elevators[index] = elevator;
+        }
+
+        // Greeting server
+        int port = Integer.parseInt(getProperty("SESvr.Port"));
+        try {
+            greetingServer = new GreetingServer(port, this);
+            new Thread(greetingServer).start();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
+        // start timer
         new Thread(timer).start();
 
-        for(int i=0;i<elevatorArray.length;i++){
-            elevatorArray[i]=new Elevator(elevatorIDArray[i],this);
-            new Thread(elevatorArray[i]).start();
+        // start elevator
+        for (int index = 1; index <= elevators.length; index++) {
+            Elevator elevator = elevators[index - 1];
+            new Thread(elevator).start();
         }
-        centralControlPanel.setElevatorArray(elevatorArray);
-
     } // startApp
 
 
     //------------------------------------------------------------
     // stopApp
-    public void stopApp() {
+    private void stopApp() {
         log.info("");
         log.info("");
         log.info("============================================================");
         log.info(id + ": Application Stopping...");
-        elevatorA.getMBox().send(new Msg(id, null, Msg.Type.Terminate, "Terminate now!"));
-//	threadA1.getMBox().send(new Msg(id, null, Msg.Type.Terminate, "Terminate now!"));
-//	threadA2.getMBox().send(new Msg(id, null, Msg.Type.Terminate, "Terminate now!"));
-//	threadB.getMBox().send(new Msg(id, null, Msg.Type.Terminate, "Terminate now!"));
+
+        for (int index = 1; index <= elevators.length; index++) {
+            Elevator elevator = elevators[index - 1];
+            elevator.getMBox().send(new Msg(id, null, Msg.Type.Terminate, "Terminate now!"));
+        }
         timer.getMBox().send(new Msg(id, null, Msg.Type.Terminate, "Terminate now!"));
     } // stopApp
 
@@ -248,6 +249,42 @@ public class AppKickstarter {
         int h = (int) (t / 3600) % 60;
 
         return String.format("%02d:%02d:%02d", h, m, s);
-    } // getSimulationTimeString
-}
+    } // getSimulationTimeStr
 
+    public void ReceiveRequest(String str) {
+        log.info("String: " + str);
+
+        String message[] = str.split(" ");
+
+        // Get message
+        int src = Integer.parseInt(message[2]);
+        int dest = Integer.parseInt(message[3]);
+
+        if (src == dest)
+        {
+            log.info("Current floor is " + dest);
+            return;
+        }
+
+        // Shortest path
+        long shortestTime = 0;
+        int shortestTimeElevatorIndex = 0;
+
+        for (int index = 0; index < elevators.length; index++)
+        {
+            long simulationTime = elevators[index].GetSimulationTime(str);
+            if (shortestTime == 0 || simulationTime < shortestTime)
+            {
+                shortestTime = simulationTime;
+                shortestTimeElevatorIndex = index;
+            }
+        }
+
+        log.info("Shortest time for " + elevators[shortestTimeElevatorIndex].getID() + " is " + shortestTime);
+
+        // Send to elevator
+        elevators[shortestTimeElevatorIndex].AddRequest(str);
+//	    elevators[0].getMBox().send(new Msg(id, null, Msg.Type.Waiting, str));
+    }
+
+} // AppKickstarter

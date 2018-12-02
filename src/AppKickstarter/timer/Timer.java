@@ -90,7 +90,8 @@ public class Timer extends AppThread {
 	    int timerID = timer.getTimerID();
 	    String caller = timer.getCaller();
 	    MBox mbox = timer.getMBox();
-	    mbox.send(new Msg("Timer", null, Msg.Type.TimesUp, "["+String.format("%05d", timerID)+"]: Time's up!"));
+//	    mbox.send(new Msg("Timer", null, Msg.Type.TimesUp, "["+String.format("%05d", timerID)+"]: Time's up!"));
+	    mbox.send(new Msg("Timer", null, Msg.Type.Waiting, "Start Up"));
 	    timerList.remove(timer);
 	}
     } // chkTimeout
@@ -116,7 +117,7 @@ public class Timer extends AppThread {
 		try {
 		    Thread.sleep(ticks);
 		} catch (Exception e) {};
-//		mbox.send(new Msg("Ticker", null, Msg.Type.Tick, "tick"));
+		mbox.send(new Msg("Ticker", null, Msg.Type.Tick, "tick"));
 	    }
 	} // run
 

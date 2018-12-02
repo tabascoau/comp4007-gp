@@ -1,170 +1,29 @@
-181201-15:52:01 [INFO] -- 
-181201-15:52:01 [INFO] -- 
-181201-15:52:01 [INFO] -- ============================================================
-181201-15:52:01 [INFO] -- AppKickstarter: Application Starting...
-181201-15:52:01 [INFO] -- timer: starting...
-181201-15:52:01 [INFO] -- F: starting...
-181201-15:52:01 [INFO] -- A: starting...
-181201-15:52:01 [INFO] -- E: starting...
-181201-15:52:01 [INFO] -- C: starting...
-181201-15:52:01 [INFO] -- D: starting...
-181201-15:52:01 [INFO] -- B: starting...
-181201-15:52:01 [INFO] -- A: message received: [Timer (TimesUp) -- Svc_Req Passenger-0001 33 50].
-181201-15:52:01 [INFO] -- A: -----------------------------------------------------------
-181201-15:52:01 [INFO] -- A: receiving order at 00:00:56
-181201-15:52:01 [INFO] -- A: go to source floor...
-181201-15:52:01 [INFO] -- THIS_ID: A
-181201-15:52:01 [INFO] -- A: message received: [A (GoToSrc) -- Going to source floor!  (mCnt: 1)].
-181201-15:52:01 [INFO] -- A: A is going to source floor!!!
-181201-15:52:02 [INFO] -- B: message received: [Timer (TimesUp) -- Svc_Req Passenger-0002 7 48].
-181201-15:52:02 [INFO] -- B: -----------------------------------------------------------
-181201-15:52:02 [INFO] -- B: receiving order at 00:01:26
-181201-15:52:02 [INFO] -- B: go to source floor...
-181201-15:52:02 [INFO] -- THIS_ID: B
-181201-15:52:02 [INFO] -- B: message received: [B (GoToSrc) -- Going to source floor!  (mCnt: 1)].
-181201-15:52:02 [INFO] -- B: B is going to source floor!!!
-181201-15:52:03 [INFO] -- C: message received: [Timer (TimesUp) -- Svc_Req Passenger-0003 15 51].
-181201-15:52:03 [INFO] -- C: -----------------------------------------------------------
-181201-15:52:03 [INFO] -- C: receiving order at 00:04:16
-181201-15:52:03 [INFO] -- C: go to source floor...
-181201-15:52:03 [INFO] -- THIS_ID: C
-181201-15:52:03 [INFO] -- C: message received: [C (GoToSrc) -- Going to source floor!  (mCnt: 1)].
-181201-15:52:03 [INFO] -- C: C is going to source floor!!!
-181201-15:52:03 [INFO] -- D: message received: [Timer (TimesUp) -- Svc_Req Passenger-0004 8 19].
-181201-15:52:03 [INFO] -- D: -----------------------------------------------------------
-181201-15:52:03 [INFO] -- D: receiving order at 00:04:17
-181201-15:52:03 [INFO] -- D: go to source floor...
-181201-15:52:03 [INFO] -- THIS_ID: D
-181201-15:52:03 [INFO] -- D: message received: [D (GoToSrc) -- Going to source floor!  (mCnt: 1)].
-181201-15:52:03 [INFO] -- D: D is going to source floor!!!
-181201-15:52:04 [INFO] -- E: message received: [Timer (TimesUp) -- Svc_Req Passenger-0005 34 10].
-181201-15:52:04 [INFO] -- E: -----------------------------------------------------------
-181201-15:52:04 [INFO] -- E: receiving order at 00:04:57
-181201-15:52:04 [INFO] -- E: go to source floor...
-181201-15:52:04 [INFO] -- THIS_ID: E
-181201-15:52:04 [INFO] -- E: message received: [E (GoToSrc) -- Going to source floor!  (mCnt: 1)].
-181201-15:52:04 [INFO] -- E: E is going to source floor!!!
-181201-15:52:04 [INFO] -- F: message received: [Timer (TimesUp) -- Svc_Req Passenger-0006 51 18].
-181201-15:52:04 [INFO] -- F: -----------------------------------------------------------
-181201-15:52:04 [INFO] -- F: receiving order at 00:06:07
-181201-15:52:04 [INFO] -- F: go to source floor...
-181201-15:52:04 [INFO] -- THIS_ID: F
-181201-15:52:04 [INFO] -- F: message received: [F (GoToSrc) -- Going to source floor!  (mCnt: 1)].
-181201-15:52:04 [INFO] -- F: F is going to source floor!!!
-181201-15:52:07 [INFO] -- B: message received: [B (Waiting) -- Arrive at source floor!  (mCnt: 2)].
-181201-15:52:07 [INFO] -- B: B is arrived at source floor!!!
-181201-15:52:09 [INFO] -- D: message received: [D (Waiting) -- Arrive at source floor!  (mCnt: 2)].
-181201-15:52:09 [INFO] -- D: D is arrived at source floor!!!
-181201-15:52:13 [INFO] -- C: message received: [C (Waiting) -- Arrive at source floor!  (mCnt: 2)].
-181201-15:52:13 [INFO] -- C: C is arrived at source floor!!!
-181201-15:52:14 [INFO] -- B: message received: [B (GoToDest) -- Going to destination floor!  (mCnt: 3)].
-181201-15:52:14 [INFO] -- B: B is going to destination floor!!!
-181201-15:52:17 [INFO] -- D: message received: [D (GoToDest) -- Going to destination floor!  (mCnt: 3)].
-181201-15:52:17 [INFO] -- D: D is going to destination floor!!!
-181201-15:52:21 [INFO] -- C: message received: [C (GoToDest) -- Going to destination floor!  (mCnt: 3)].
-181201-15:52:21 [INFO] -- C: C is going to destination floor!!!
-181201-15:52:22 [INFO] -- A: message received: [A (Waiting) -- Arrive at source floor!  (mCnt: 2)].
-181201-15:52:22 [INFO] -- A: A is arrived at source floor!!!
-181201-15:52:25 [INFO] -- D: message received: [D (ArriveDest) -- Arrive at source floor!  (mCnt: 4)].
-181201-15:52:25 [INFO] -- D: -----------------------------------------------------------
-181201-15:52:25 [INFO] -- D: message received: [Timer (TimesUp) -- Svc_Req Passenger-0007 51 53].
-181201-15:52:25 [INFO] -- D: -----------------------------------------------------------
-181201-15:52:25 [INFO] -- D: receiving order at 00:39:51
-181201-15:52:25 [INFO] -- D: go to source floor...
-181201-15:52:25 [INFO] -- THIS_ID: D
-181201-15:52:25 [INFO] -- D: message received: [D (GoToSrc) -- Going to source floor!  (mCnt: 5)].
-181201-15:52:25 [INFO] -- D: D is going to source floor!!!
-181201-15:52:25 [INFO] -- E: message received: [E (Waiting) -- Arrive at source floor!  (mCnt: 2)].
-181201-15:52:25 [INFO] -- E: E is arrived at source floor!!!
-181201-15:52:30 [INFO] -- A: message received: [A (GoToDest) -- Going to destination floor!  (mCnt: 3)].
-181201-15:52:30 [INFO] -- A: A is going to destination floor!!!
-181201-15:52:33 [INFO] -- E: message received: [E (GoToDest) -- Going to destination floor!  (mCnt: 3)].
-181201-15:52:33 [INFO] -- E: E is going to destination floor!!!
-181201-15:52:36 [INFO] -- F: message received: [F (Waiting) -- Arrive at source floor!  (mCnt: 2)].
-181201-15:52:36 [INFO] -- F: F is arrived at source floor!!!
-181201-15:52:40 [INFO] -- B: message received: [B (ArriveDest) -- Arrive at source floor!  (mCnt: 4)].
-181201-15:52:40 [INFO] -- B: -----------------------------------------------------------
-181201-15:52:40 [INFO] -- B: message received: [Timer (TimesUp) -- Svc_Req Passenger-0008 20 28].
-181201-15:52:40 [INFO] -- B: -----------------------------------------------------------
-181201-15:52:40 [INFO] -- B: receiving order at 01:06:03
-181201-15:52:40 [INFO] -- B: go to source floor...
-181201-15:52:40 [INFO] -- THIS_ID: B
-181201-15:52:40 [INFO] -- B: message received: [B (GoToSrc) -- Going to source floor!  (mCnt: 5)].
-181201-15:52:40 [INFO] -- B: B is going to source floor!!!
-181201-15:52:41 [INFO] -- A: message received: [A (ArriveDest) -- Arrive at source floor!  (mCnt: 4)].
-181201-15:52:41 [INFO] -- A: -----------------------------------------------------------
-181201-15:52:41 [INFO] -- A: message received: [Timer (TimesUp) -- Svc_Req Passenger-0009 16 5].
-181201-15:52:41 [INFO] -- A: -----------------------------------------------------------
-181201-15:52:41 [INFO] -- A: receiving order at 01:07:34
-181201-15:52:41 [INFO] -- A: go to source floor...
-181201-15:52:41 [INFO] -- THIS_ID: A
-181201-15:52:41 [INFO] -- A: message received: [A (GoToSrc) -- Going to source floor!  (mCnt: 5)].
-181201-15:52:41 [INFO] -- A: A is going to source floor!!!
-181201-15:52:44 [INFO] -- F: message received: [F (GoToDest) -- Going to destination floor!  (mCnt: 3)].
-181201-15:52:44 [INFO] -- F: F is going to destination floor!!!
-181201-15:52:44 [INFO] -- C: message received: [C (ArriveDest) -- Arrive at source floor!  (mCnt: 4)].
-181201-15:52:44 [INFO] -- C: -----------------------------------------------------------
-181201-15:52:44 [INFO] -- C: message received: [Timer (TimesUp) -- Svc_Req Passenger-0010 32 17].
-181201-15:52:44 [INFO] -- C: -----------------------------------------------------------
-181201-15:52:44 [INFO] -- C: receiving order at 01:11:55
-181201-15:52:44 [INFO] -- C: go to source floor...
-181201-15:52:44 [INFO] -- THIS_ID: C
-181201-15:52:44 [INFO] -- C: message received: [C (GoToSrc) -- Going to source floor!  (mCnt: 5)].
-181201-15:52:44 [INFO] -- C: C is going to source floor!!!
-181201-15:52:45 [INFO] -- D: message received: [D (Waiting) -- Arrive at source floor!  (mCnt: 6)].
-181201-15:52:45 [INFO] -- D: D is arrived at source floor!!!
-181201-15:52:46 [INFO] -- E: message received: [E (ArriveDest) -- Arrive at source floor!  (mCnt: 4)].
-181201-15:52:46 [INFO] -- E: -----------------------------------------------------------
-181201-15:52:46 [INFO] -- E: message received: [Timer (TimesUp) -- Svc_Req Passenger-0011 41 6].
-181201-15:52:46 [INFO] -- E: -----------------------------------------------------------
-181201-15:52:46 [INFO] -- E: receiving order at 01:15:19
-181201-15:52:46 [INFO] -- E: go to source floor...
-181201-15:52:46 [INFO] -- THIS_ID: E
-181201-15:52:46 [INFO] -- E: message received: [E (GoToSrc) -- Going to source floor!  (mCnt: 5)].
-181201-15:52:46 [INFO] -- E: E is going to source floor!!!
-181201-15:52:50 [INFO] -- 
-181201-15:52:50 [INFO] -- 
-181201-15:52:50 [INFO] -- ============================================================
-181201-15:52:50 [INFO] -- AppKickstarter: Application Stopping...
-181201-15:52:53 [INFO] -- D: message received: [D (GoToDest) -- Going to destination floor!  (mCnt: 7)].
-181201-15:52:53 [INFO] -- D: D is going to destination floor!!!
-181201-15:52:54 [INFO] -- C: message received: [C (Waiting) -- Arrive at source floor!  (mCnt: 6)].
-181201-15:52:54 [INFO] -- C: C is arrived at source floor!!!
-181201-15:52:55 [INFO] -- D: message received: [D (ArriveDest) -- Arrive at source floor!  (mCnt: 8)].
-181201-15:52:55 [INFO] -- D: -----------------------------------------------------------
-181201-15:52:55 [INFO] -- D: message received: [Timer (TimesUp) -- Svc_Req Passenger-0012 8 32].
-181201-15:52:55 [INFO] -- D: -----------------------------------------------------------
-181201-15:52:55 [INFO] -- D: receiving order at 01:30:26
-181201-15:52:55 [INFO] -- D: go to source floor...
-181201-15:52:55 [INFO] -- THIS_ID: D
-181201-15:52:55 [INFO] -- D: message received: [D (GoToSrc) -- Going to source floor!  (mCnt: 9)].
-181201-15:52:55 [INFO] -- D: D is going to source floor!!!
-181201-15:52:55 [INFO] -- B: message received: [B (Waiting) -- Arrive at source floor!  (mCnt: 6)].
-181201-15:52:55 [INFO] -- B: B is arrived at source floor!!!
-181201-15:52:59 [INFO] -- A: message received: [A (Waiting) -- Arrive at source floor!  (mCnt: 6)].
-181201-15:52:59 [INFO] -- A: A is arrived at source floor!!!
-181201-15:53:01 [INFO] -- F: message received: [F (ArriveDest) -- Arrive at source floor!  (mCnt: 4)].
-181201-15:53:01 [INFO] -- F: -----------------------------------------------------------
-181201-15:53:01 [INFO] -- F: message received: [Timer (TimesUp) -- Svc_Req Passenger-0013 43 0].
-181201-15:53:01 [INFO] -- F: -----------------------------------------------------------
-181201-15:53:01 [INFO] -- F: receiving order at 01:41:01
-181201-15:53:01 [INFO] -- F: go to source floor...
-181201-15:53:01 [INFO] -- THIS_ID: F
-181201-15:53:01 [INFO] -- F: message received: [F (GoToSrc) -- Going to source floor!  (mCnt: 5)].
-181201-15:53:01 [INFO] -- F: F is going to source floor!!!
-181201-15:53:02 [INFO] -- C: message received: [C (GoToDest) -- Going to destination floor!  (mCnt: 7)].
-181201-15:53:02 [INFO] -- C: C is going to destination floor!!!
-181201-15:53:03 [INFO] -- B: message received: [B (GoToDest) -- Going to destination floor!  (mCnt: 7)].
-181201-15:53:03 [INFO] -- B: B is going to destination floor!!!
-181201-15:53:04 [INFO] -- 
-181201-15:53:04 [INFO] -- 
-181201-15:53:04 [INFO] -- ============================================================
-181201-15:53:04 [INFO] -- AppKickstarter: Application Stopping...
-181201-15:53:06 [INFO] -- E: message received: [E (Waiting) -- Arrive at source floor!  (mCnt: 6)].
-181201-15:53:06 [INFO] -- E: E is arrived at source floor!!!
-181201-15:53:07 [INFO] -- A: message received: [A (GoToDest) -- Going to destination floor!  (mCnt: 7)].
-181201-15:53:07 [INFO] -- A: A is going to destination floor!!!
-181201-15:53:07 [INFO] -- 
-181201-15:53:07 [INFO] -- 
-181201-15:53:07 [INFO] -- ============================================================
-181201-15:53:07 [INFO] -- AppKickstarter: Application Stopping...
+181202-18:06:14 [INFO] -- 
+181202-18:06:14 [INFO] -- 
+181202-18:06:14 [INFO] -- ============================================================
+181202-18:06:14 [INFO] -- AppKickstarter: Application Starting...
+181202-18:06:14 [INFO] -- ElevatorB: starting...
+181202-18:06:14 [INFO] -- ElevatorF: starting...
+181202-18:06:14 [INFO] -- ElevatorA: starting...
+181202-18:06:14 [INFO] -- timer: starting...
+181202-18:06:14 [INFO] -- ElevatorE: starting...
+181202-18:06:14 [INFO] -- ElevatorD: starting...
+181202-18:06:14 [INFO] -- ElevatorC: starting...
+181202-18:06:19 [INFO] -- String: Svc_Req Passenger-0001 0 30
+181202-18:06:19 [INFO] -- Shortest time for ElevatorA is 26700
+181202-18:06:21 [INFO] -- String: Svc_Req Passenger-0001 0 12
+181202-18:06:21 [INFO] -- Shortest time for ElevatorB is 15900
+181202-18:06:22 [INFO] -- String: Svc_Req Passenger-0001 0 24
+181202-18:06:22 [INFO] -- Shortest time for ElevatorC is 23100
+181202-18:06:25 [INFO] -- String: Svc_Req Passenger-0001 0 5
+181202-18:06:25 [INFO] -- Shortest time for ElevatorD is 11700
+181202-18:06:28 [INFO] -- String: Svc_Req Passenger-0001 0 16
+181202-18:06:28 [INFO] -- Shortest time for ElevatorE is 18300
+181202-18:06:32 [INFO] -- String: Svc_Req Passenger-0001 0 2
+181202-18:06:32 [INFO] -- Shortest time for ElevatorF is 9900
+181202-18:06:37 [INFO] -- String: Svc_Req Passenger-0001 20 5
+181202-18:06:37 [INFO] -- Shortest time for ElevatorA is 30700
+181202-18:06:43 [INFO] -- String: Svc_Req Passenger-0001 20 30
+181202-18:06:43 [INFO] -- Shortest time for ElevatorB is 20700
+181202-18:06:46 [INFO] -- String: Svc_Req Passenger-0001 20 9
+181202-18:06:46 [INFO] -- Shortest time for ElevatorD is 24200

@@ -1,62 +1,97 @@
 package AppKickstarter.myThreads;
 
-import AppKickstarter.gui.CentralControlPanel;
-import AppKickstarter.misc.*;
 import AppKickstarter.AppKickstarter;
+import AppKickstarter.gui.CentralControlPanel;
+import AppKickstarter.misc.AppThread;
+import AppKickstarter.misc.MBox;
+import AppKickstarter.misc.Msg;
 import AppKickstarter.timer.Timer;
-import sun.rmi.runtime.Log;
-
-import javax.swing.*;
-import java.util.logging.Logger;
 
 
 //======================================================================
 // ThreadA
 public class Elevator extends AppThread {
-    private static int totalElevatorCount = 0;
-    private int _id;
-
-    private final int sleepTime = 5;
-    private final int maxPassenger = 10;
-    private int passengers = 0;
-
-    public boolean IsEmpty() {
-        return passengers == 0;
+    enum Direction {
+        Stop,
+        Up,
+        Down
     }
 
-    private int idleFloor = 0;
-    private double upOneFloor = 0.6f;
-    private double downOneFloor = 0.5f;
-    private double accUp = 1.2f;
-    private double accDown = 1f;
-    private double decUp = 1.2f;
-    private double decDown = 1f;
-    private double doorOpen = 1f;
-    private double doorClose = 1.5f;
-    private double doorWait = 5f;
-    private long doorOpenToClose = (long) ((doorOpen + doorClose + doorWait) * 1000);
-    CentralControlPanel centralControlPanel = CentralControlPanel.getInstance();
-    private String[] Elevator = {"A", "B", "C", "D", "E", "F"};
-    private String passengerId;
-    private int totalNumberOfElevator = centralControlPanel.totalNumberOfElevator;
-    private int src, dest;
+    private final int sleepTime = 5;
 
-    //new added code
-    String elevArrmsg = "";
-    String elevDepmsg = "";
-    //  / ___| | | |_ _| |  _ \ / \  |  _ \_   _|
-    // | |  _| | | || |  | |_) / _ \ | |_) || |
-    // | |_| | |_| || |  |  __/ ___ \|  _ < | |
-    //  \____|\___/|___| |_| /_/   \_\_| \_\|_|
-    private String direction;
+    private int current = 0;
+    private Direction status = Direction.Stop;
+    private Direction direction = Direction.Stop;
+
+    private int minFloor;
+    private int maxFloor;
+    private Floor[] floors;
+
+    private float upOneFloor;
+    private float downOneFloor;
+    private float accUp;
+    private float accDown;
+    private float decUp;
+    private float decDown;
+    private float doorOpen;
+    private float doorClose;
+    private float doorWait;
+
+    private CentralControlPanel centralControlPanel;
+
+    public Floor[] GetFloorsClone()
+    {
+        Floor[] floors = new Floor[this.floors.length];
+        for (int index = 0; index < this.floors.length; index++)
+        {
+            floors[index] = new Floor(this.floors[index]);
+        }
+        return floors;
+    }
 
     //------------------------------------------------------------
     // ThreadA
     public Elevator(String id, AppKickstarter appKickstarter) {
         super(id, appKickstarter);
-        _id = totalElevatorCount++;
+
+        // Floors
+        minFloor = Integer.parseInt(appKickstarter.getProperty("Bldg.MinFloorNumber"));
+        maxFloor = Integer.parseInt(appKickstarter.getProperty("Bldg.MaxFloorNumber"));
+        floors = new Floor[maxFloor + 1];
+        for (int floor = 0; floor <= maxFloor; floor++) {
+            floors[floor] = new Floor(floor);
+        }
+
+        // Variables
+        upOneFloor = Float.parseFloat(appKickstarter.getProperty("Elev.Time.UpOneFloor"));
+        downOneFloor = Float.parseFloat(appKickstarter.getProperty("Elev.Time.DownOneFloor"));
+        accUp = Float.parseFloat(appKickstarter.getProperty("Elev.Time.AccUp"));
+        accDown = Float.parseFloat(appKickstarter.getProperty("Elev.Time.AccDown"));
+        decUp = Float.parseFloat(appKickstarter.getProperty("Elev.Time.DecUp"));
+        decDown = Float.parseFloat(appKickstarter.getProperty("Elev.Time.DecDown"));
+        doorOpen = Float.parseFloat(appKickstarter.getProperty("Elev.Time.DoorOpen"));
+        doorClose = Float.parseFloat(appKickstarter.getProperty("Elev.Time.DoorClose"));
+        doorWait = Float.parseFloat(appKickstarter.getProperty("Elev.Time.DoorWait"));
+
+        // Update central control panel
+        centralControlPanel = appKickstarter.GetCentralControlPanel();
+        centralControlPanel.setFloorA(id, current);
+        centralControlPanel.setDirectionA(id, GetDirectionString(status));
     } // ThreadA
 
+    private String GetDirectionString(Direction status) {
+        switch (status) {
+            case Stop:
+                return "Stop";
+            case Up:
+                return "Up";
+            case Down:
+                return "Down";
+            default:
+                return "null";
+        }
+//        return "null";
+    }
 
     //------------------------------------------------------------
     // run
@@ -67,206 +102,112 @@ public class Elevator extends AppThread {
 
         for (boolean quit = false; !quit; ) {
             Msg msg = mbox.receive();
-            System.out.println("MSG MBOX: " + msg.getSender());
-            log.info(id + ": message received: [" + msg + "].");
+
+//            log.info(id + ": message received: [" + msg + "].");
+//            System.out.println(id + ": " + msg.getType());
 
             switch (msg.getType()) {
-                case TimesUp:
-                    // Store data
-                    String[] datas = msg.getDetails().split(" ");
-                    passengerId = datas[1];
-                    src = Integer.parseInt(datas[2]);
-                    dest = Integer.parseInt(datas[3]);
+                case Waiting:
+                    try {
+                        // Not initial
+                        if (msg.getDetails().split(" ")[0].equals("Waiting")) {
+                            Thread.sleep((long) ((doorOpen + doorWait + doorClose) * 1000));
+                        }
 
-                    // Action
-                    log.info(id + ": -----------------------------------------------------------");
-                    log.info(id + ": receiving order at " + appKickstarter.getSimulationTimeStr());
-                    log.info(id + ": go to source floor...");
-                    log.info("THIS_ID: " + this.id);
-                    // Debug data
-                    System.out.println("Order: ");
-                    System.out.println("Passenger id: " + passengerId);
-                    System.out.println("Source floor " + src);
-                    System.out.println("Destination floor: " + dest);
+                        boolean idle = false;
+                        boolean hasRequest = false;
 
-                    // Already at src
-                    if (idleFloor == src) {
-                        this.getMBox().send(new Msg(id, mbox, Msg.Type.Waiting, "Already at source floor!  (mCnt: " + ++mCnt + ")"));
+                        while (!hasRequest) {
+                            Direction requestDirection = GetRequestDirection(floors, current, direction);
+                            if (requestDirection != Direction.Stop) {
+                                hasRequest = true;
+                                // Update status
+                                status = requestDirection;
+                                direction = status;
+                                // Idle
+                                if (idle)
+                                {
+                                    if (direction == Direction.Up && floors[current].up)
+                                    {
+                                        Thread.sleep((long) ((doorOpen + doorWait + doorClose) * 1000));
+                                        floors[current].up = false;
+                                    }
+                                    else if (direction == Direction.Down && floors[current].down)
+                                    {
+                                        Thread.sleep((long) ((doorOpen + doorWait + doorClose) * 1000));
+                                        floors[current].up = false;
+                                    }
+                                }
+                                // To moving state
+                                centralControlPanel.setDirectionA(id, GetDirectionString(status));
+                                mbox.send(new Msg(id, mbox, Msg.Type.Moving, "Moving"));
+                            } else {
+                                // wait
+                                idle = true;
+                                Thread.sleep(1000);
+//                                System.out.println(id + " Waiting");
+                            }
+                        }
+                    } catch (Exception e) {
+                        System.out.println(e.getMessage());
+                    }
 
-                        //Svc_Req Passenger-0001 0 10
-                        for (int i = 0; i < totalNumberOfElevator; i++) {
-                            if (msg.getSender().equals(Elevator[i])) {
-                                centralControlPanel.setCurrentPassenger(i, 1);
-                                centralControlPanel.liftAvailable[i] = false;
-                                centralControlPanel.addTotalPassenger(1);
-                                centralControlPanel.setCurrentFloor(i, idleFloor);
-                                centralControlPanel.setCurrentDirection(i, "S (Wait)");
+                    break;
+
+                case Moving:
+//                    log.info(id + ": " + msg.getSender() + " is saying HiHi to me!!!");
+                    boolean firstRun = true;
+
+                    boolean up = status == Direction.Up;
+
+                    long dccelerationSpeed = up ? (long) (decUp * 1000) : (long) (decDown * 1000);
+                    int floorChange = up ? 1 : -1;
+                    long accelerationSpeed = up ? (long) (accUp * 1000) : (long) (accDown * 1000);
+                    long constantSpeed = up ? (long) (upOneFloor * 1000) : (long) (downOneFloor * 1000);
+
+
+                    while (true) {
+                        boolean nextFloorStop = up ? floors[current + floorChange].up : floors[current + floorChange].down;
+                        if (nextFloorStop) {
+                            try {
+                                // Decelerate
+                                Thread.sleep(dccelerationSpeed);
+                                // Update floor
+                                if (up)
+                                    floors[current + floorChange].up = false;
+                                else
+                                    floors[current + floorChange].down = false;
+                                current += floorChange;
+                                centralControlPanel.setFloorA(id, current);
+                                // Update status
+                                Direction requestDirection = GetRequestDirection(floors, current, direction);
+                                direction = requestDirection;
+                                status = Direction.Stop;
+                                // To waiting state
+                                centralControlPanel.setDirectionA(id, GetDirectionString(status));
+                                mbox.send(new Msg(id, mbox, Msg.Type.Waiting, "Waiting"));
                                 break;
+                            } catch (Exception e) {
+                                System.out.println(e.getMessage());
+                            }
+                        } else {
+                            try {
+                                if (firstRun) {
+                                    // acceleration speed
+                                    Thread.sleep(accelerationSpeed);
+                                    firstRun = false;
+                                } else {
+                                    // Constant speed
+                                    Thread.sleep(constantSpeed);
+                                }
+                                // Update floor
+                                current += floorChange;
+                                centralControlPanel.setFloorA(id, current);
+                            } catch (Exception e) {
+                                System.out.println(e.getMessage());
                             }
                         }
                     }
-                    // Go to src
-                    else {
-                        this.getMBox().send(new Msg(id, mbox, Msg.Type.GoToSrc, "Going to source floor!  (mCnt: " + ++mCnt + ")"));
-                    }
-                    break;
-
-                case GoToSrc:
-                    if (idleFloor > src) {
-                        direction = "D";
-                    } else if (idleFloor < src) {
-                        direction = "U";
-                    } else {
-                        direction = "S";
-                    }
-                    String tmp = (src > dest) ? "D" : "U";
-                    for (int i = 0; i < totalNumberOfElevator; i++) {
-                        if (msg.getSender().equals(Elevator[i])) {
-                            centralControlPanel.liftAvailable[i] = false;
-                            centralControlPanel.setCurrentFloor(i, idleFloor);
-                            centralControlPanel.setCurrentDirection(i, direction);
-                            centralControlPanel.setCurrentPassenger(i, 1);
-                            elevDepmsg = "Elev_Dep " + msg.getSender() + " " + idleFloor + " " + direction + " " + src + " " + dest;
-                            elevArrmsg = "Elev_Arr " + msg.getSender() + " " + src + " " + tmp + " " + dest;
-                            break;
-                        }
-                    }
-//                    if (idleFloor < src) {
-//                        for (int current = idleFloor + 1; current <= src; current++) {
-//                            elevArrmsg += current + " ";
-//                        }
-//                    }
-//                    if (idleFloor > src) {
-//                        for (int current = idleFloor - 1; current >= src; current--) {
-//                            elevArrmsg += current + " ";
-//                        }
-//                    }
-                    System.out.println("Elevator_Dep message: " + elevDepmsg);
-                    System.out.println("Elevator_Arr message: " + elevArrmsg);
-                    GreetingServer.sendMsgToClient(elevDepmsg);
-                    GreetingServer.sendMsgToClient(elevArrmsg);
-
-
-                    //==========================================================================
-                    log.info(id + ": " + msg.getSender() + " is going to source floor!!!");
-
-                    // Debug data
-                    System.out.println("GoToSrc: ");
-                    System.out.println("current floor " + idleFloor);
-
-
-                    System.out.println("Source floor " + src);
-
-                    sleep(idleFloor, src, msg.getSender());
-                    this.getMBox().send(new Msg(id, mbox, Msg.Type.Waiting, "Arrive at source floor!  (mCnt: " + ++mCnt + ")"));
-                    break;
-
-                case Waiting:
-                    log.info(id + ": " + msg.getSender() + " is arrived at source floor!!!");
-                    // Debug data
-                    if(src<dest){
-                        direction="U";
-                    }else{
-                        direction="D";
-                    }
-                    System.out.println("Waiting: ");
-                    System.out.println("current floor " + src);
-                    //Tabasco added code
-                    for (int i = 0; i < totalNumberOfElevator; i++) {
-                        if (msg.getSender().equals(Elevator[i])) {
-                            centralControlPanel.liftAvailable[i] = false;
-                            centralControlPanel.setCurrentDirection(i, "S (Wait)");
-                            centralControlPanel.setCurrentFloor(i, src);
-                            centralControlPanel.setCurrentPassenger(i, 1);
-                            centralControlPanel.addTotalPassenger(1);
-                            break;
-                        }
-                    }
-                    // Wait for to src time
-                    try {
-                        System.out.println("Waiting time: " + doorOpenToClose);
-                        Thread.sleep(doorOpenToClose);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    } finally {
-                        // Go to destination
-                        elevDepmsg="Elev_Dep "+msg.getSender()+" "+src+" "+direction+" "+dest;
-                        this.getMBox().send(new Msg(id, mbox, Msg.Type.GoToDest, "Going to destination floor!  (mCnt: " + ++mCnt + ")"));
-                    }
-
-                    break;
-
-                case GoToDest:
-                    log.info(id + ": " + msg.getSender() + " is going to destination floor!!!");
-                    if (src > dest) {
-                        direction = "D";
-                    } else if (src < dest) {
-                        direction = "U";
-                    } else {
-                        direction = "S";
-                    }
-
-                    for (int i = 0; i < totalNumberOfElevator; i++) {
-                        if (msg.getSender().equals(Elevator[i])) {
-                            elevDepmsg = "Elev_Dep " + msg.getSender() + " " + src + " " + direction + " " + dest;
-                            break;
-                        }
-                    }
-//                    if (src < dest) {
-//                        for (int current = src + 1; current <= dest; current++) {
-//                            elevDepmsg += current + " ";
-//                        }
-//                    }
-//
-//                    if (src > dest) {
-//                        for (int current = src - 1; current >= dest; current--) {
-//                            elevDepmsg += current + " ";
-//                        }
-//                    }
-                    System.out.println("Elevator_Dep message: " + elevDepmsg);
-                    GreetingServer.sendMsgToClient(elevDepmsg);
-
-                    // Debug data
-                    System.out.println("GoToDest: ");
-                    System.out.println("current floor " + src);
-                    for (int i = 0; i < totalNumberOfElevator; i++) {
-                        if (msg.getSender().equals(Elevator[i])) {
-                            centralControlPanel.setCurrentFloor(i, src);
-                            break;
-                        }
-                    }
-                    //
-                    System.out.println("Destination floor " + dest);
-
-                    sleep(src, dest, msg.getSender());
-                    this.getMBox().send(new Msg(id, mbox, Msg.Type.ArriveDest, "Arrive at source floor!  (mCnt: " + ++mCnt + ")"));
-                    break;
-
-                case ArriveDest:
-                    idleFloor = dest;
-                    System.out.println("ArriveDest: ");
-                    System.out.println("current floor " + idleFloor);
-
-//                    for (int i = 0; i < totalNumberOfElevator; i++) {
-//                        if (msg.getSender().equals(Elevator[i])) {
-//                            elevDepmsg = "Elev_Dep " + msg.getSender() + " " + src + " " + direction + " " + dest;
-//                            break;
-//                        }
-//                    }
-
-                    for (int i = 0; i < totalNumberOfElevator; i++) {
-                        if (msg.getSender().equals(Elevator[i])) {
-                            centralControlPanel.liftAvailable[i] = true;
-                            centralControlPanel.setCurrentPassenger(i, -1);
-                            centralControlPanel.setCurrentDirection(i, "S Arrived");
-                            elevArrmsg = "Elev_Arr " + msg.getSender() + " " + dest + " S " + Integer.MIN_VALUE;
-                            break;
-                        }
-                    }
-
-                    GreetingServer.sendMsgToClient(elevArrmsg);
-                    log.info(id + ": -----------------------------------------------------------");
-
                     break;
 
                 case Terminate:
@@ -284,90 +225,244 @@ public class Elevator extends AppThread {
         log.info(id + ": terminating...");
     } // run
 
-    private long GetArrivedTime(int from, int to) {
-        double sleepTime;
-        // Up
-
-        if (from < to) {
-            for (int i = 0; i < totalNumberOfElevator; i++) {
-                centralControlPanel.setCurrentDirection(i, "U");
-                break;
+    private boolean HasUpperRequest(Floor[] floors, int current) {
+        // Up to upper
+        for (int upperFloor = current + 1; upperFloor <= maxFloor; upperFloor++) {
+            if (floors[upperFloor].up) {
+                return true;
             }
-            sleepTime = (to - from == 1) ? accUp : accUp + (to - from - 2) * upOneFloor + decUp;
-
         }
-        // Down
-        else {
-            for (int i = 0; i < totalNumberOfElevator; i++) {
-                centralControlPanel.setCurrentDirection(i, "D");
-                break;
-            }
-            sleepTime = (from - to == 1) ? accDown : accDown + (from - to - 2) * downOneFloor + decDown;
-        }
-
-        return (long) (sleepTime * 1000);
+        return false;
     }
 
-    private void sleep(int from, int to, String whichElevator) {
-        try {
-            int current = from;
-            boolean up = from < to; // Set direction
+    private boolean HasLowerRequest(Floor[] floors, int current) {
+        // Down to lower
+        for (int lowerFloor = current - 1; lowerFloor >= minFloor; lowerFloor--) {
+            if (floors[lowerFloor].down) {
+                return true;
+            }
+        }
+        return false;
+    }
 
-            for (int i = 0; i < totalNumberOfElevator; i++) {
-                if (whichElevator.equals(Elevator[i])) {
-                    centralControlPanel.setCurrentDirection(i, up ? "U" : "D");
+    private int UppestRequest(Floor[] floors, int current) {
+        int uppest = current;
+        // Up to upper
+        for (int upperFloor = current + 1; upperFloor <= maxFloor; upperFloor++) {
+            if (floors[upperFloor].up) {
+                uppest = upperFloor;
+            }
+        }
+        return uppest;
+    }
+
+    private int LowestRequest(Floor[] floors, int current) {
+        int lowest = current;
+        // Down to lower
+        for (int lowerFloor = current - 1; lowerFloor >= minFloor; lowerFloor--) {
+            if (floors[lowerFloor].down) {
+                lowest = lowerFloor;
+            }
+        }
+        return lowest;
+    }
+
+    private Direction GetRequestDirection(Floor[] floors, int current, Direction direction) {
+        if (direction == Direction.Up || direction == Direction.Stop) {
+            if (HasUpperRequest(floors, current)) {
+                return Direction.Up;
+            } else if (HasLowerRequest(floors, current)) {
+                return Direction.Down;
+            }
+        } else if (direction == Direction.Down) {
+            if (HasLowerRequest(floors, current)) {
+                return Direction.Down;
+            } else if (HasUpperRequest(floors, current)) {
+                return Direction.Up;
+            }
+        }
+
+        return Direction.Stop;
+    }
+
+    public void AddRequest(String str) {
+        AddRequest(floors, current, direction, str);
+    }
+
+    public void AddRequest(Floor[] floors, int current, Direction direction, String str) {
+        // Get message
+        String message[] = str.split(" ");
+
+        // Get message
+        String passengerId = message[1];
+        int src = Integer.parseInt(message[2]);
+        int dest = Integer.parseInt(message[3]);
+
+        // Set data
+        boolean srcLargerThanCurrent = (src - current) > 0;
+        boolean destLargerThanSrc = (dest - src) > 0;
+
+        if (destLargerThanSrc)
+        {
+            floors[dest].up = true;
+        }
+        else
+        {
+            floors[dest].down = true;
+        }
+
+        // User status
+        if (direction == Direction.Stop) {
+            if ((src - current) > 0) {
+                floors[src].up = true;
+            } else if ((src - current) < 0) {
+                floors[src].down = true;
+            } else {
+                if (destLargerThanSrc)
+                {
+                    floors[src].up = true;
+                }
+                else
+                {
+                    floors[src].down = true;
                 }
             }
-            // One floor
-            if (Math.abs(from - to) == 1) {
-                long sleepTime = (long) ((up ? accUp : accDown) * 1000);
-
-                Thread.sleep(sleepTime);
-
-                current += up ? 1 : -1;
-                for (int i = 0; i < totalNumberOfElevator; i++) {
-                    if (whichElevator.equals(Elevator[i])) {
-                        centralControlPanel.setCurrentFloor(i, current);
-                        break;
+        } else if (direction == Direction.Up) {
+            if (srcLargerThanCurrent) {
+                if (destLargerThanSrc)
+                {
+                    floors[src].up = true;
+                }
+                else
+                {
+                    if (src > UppestRequest(floors, current))
+                    {
+                        floors[src].up = true;
+                    }
+                    else
+                    {
+                        floors[src].down = true;
                     }
                 }
-                System.out.println("Reach " + current + " floor");
-                System.out.println("Use " + sleepTime + " millisecond");
+            } else {
+                floors[src].down = true;
             }
-            // More than one floor
-            else {
-                while (current != to) {
-                    long sleepTime = 0;
-
-                    // Acceleration
-                    if (current == from) {
-                        sleepTime = (long) ((up ? accUp : accDown) * 1000);
+        } else {
+            if (srcLargerThanCurrent) {
+                floors[src].up = true;
+            } else {
+                if (destLargerThanSrc)
+                {
+                    if (src < LowestRequest(floors, current))
+                    {
+                        floors[src].down = true;
                     }
-                    // Deceleration
-                    else if (Math.abs(current - to) == 1) {
-                        sleepTime = (long) ((up ? decUp : decDown) * 1000);
+                    else
+                    {
+                        floors[src].up = true;
                     }
-                    // Constant speed
-                    else {
-                        sleepTime = (long) ((up ? upOneFloor : downOneFloor) * 1000);
+                    floors[src].up = true;
+                }
+                else
+                {
+                    floors[src].down = true;
+                }
+            }
+        }
+    }
+
+    public long GetSimulationTime(String str)
+    {
+        long time = 0;
+
+        Floor[] floors = GetFloorsClone();
+        int current = this.current;
+        Direction status = this.status;
+        Direction direction = this.direction;
+
+        boolean idle = true;
+        boolean finish = false;
+
+        AddRequest(floors, current, direction, str);
+
+        while (!finish) {
+            if (status == Direction.Stop)
+            {
+                Direction requestDirection = GetRequestDirection(floors, current, direction);
+                if (requestDirection != Direction.Stop) {
+                    // Not initial
+                    if (!idle) {
+                        time += (long) ((doorOpen + doorWait + doorClose) * 1000);
                     }
+                    // Update status
+                    status = requestDirection;
+                    direction = status;
 
-                    Thread.sleep(sleepTime);
-
-                    current += up ? 1 : -1;
-                    for (int i = 0; i < totalNumberOfElevator; i++) {
-                        if (whichElevator.equals(Elevator[i])) {
-                            centralControlPanel.setCurrentFloor(i, current);
-                            break;
+                    // Idle
+                    if (idle)
+                    {
+                        if (direction == Direction.Up && floors[current].up)
+                        {
+                            time += (long) ((doorOpen + doorWait + doorClose) * 1000);
+                            floors[current].up = false;
+                        }
+                        else if (direction == Direction.Down && floors[current].down)
+                        {
+                            time += (long) ((doorOpen + doorWait + doorClose) * 1000);
+                            floors[current].up = false;
                         }
                     }
-                    System.out.println("Reach " + current + " floor");
-                    System.out.println("Use " + sleepTime + " millisecond");
+                } else {
+                    // wait
+                    finish = true;
                 }
             }
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+            else
+            {
+                idle = false;
+
+                boolean firstRun = true;
+
+                boolean up = status == Direction.Up;
+
+                long dccelerationSpeed = up ? (long) (decUp * 1000) : (long) (decDown * 1000);
+                int floorChange = up ? 1 : -1;
+                long accelerationSpeed = up ? (long) (accUp * 1000) : (long) (accDown * 1000);
+                long constantSpeed = up ? (long) (upOneFloor * 1000) : (long) (downOneFloor * 1000);
+
+                while (status != Direction.Stop) {
+                    boolean nextFloorStop = up ? floors[current + floorChange].up : floors[current + floorChange].down;
+                    if (nextFloorStop) {
+                        // Decelerate
+                        time += dccelerationSpeed;
+                        // Update floor
+                        if (up)
+                            floors[current + floorChange].up = false;
+                        else
+                            floors[current + floorChange].down = false;
+                        current += floorChange;
+                        // Update status
+                        Direction requestDirection = GetRequestDirection(floors, current, direction);
+                        direction = requestDirection;
+                        status = Direction.Stop;
+                    } else {
+                        if (firstRun) {
+                            // acceleration speed
+                            time += accelerationSpeed;
+                            firstRun = false;
+                        } else {
+                            // Constant speed
+                            time += constantSpeed;
+                        }
+                        // Update floor
+                        current += floorChange;
+                    }
+                }
+            }
         }
+
+        return time;
     }
+
 } // ThreadA
 
