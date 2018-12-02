@@ -38,10 +38,10 @@ public class AppKickstarter {
     //------------------------------------------------------------
     // main
     public static void main(String[] args) {
-//  / ___| | | |_ _| |  _ \ / \  |  _ \_   _|
-// | |  _| | | || |  | |_) / _ \ | |_) || |
-// | |_| | |_| || |  |  __/ ___ \|  _ < | |
-//  \____|\___/|___| |_| /_/   \_\_| \_\|_|
+    //  / ___| | | |_ _| |  _ \ / \  |  _ \_   _|
+    // | |  _| | | || |  | |_) / _ \ | |_) || |
+    // | |_| | |_| || |  |  __/ ___ \|  _ < | |
+    //  \____|\___/|___| |_| /_/   \_\_| \_\|_|
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (UnsupportedLookAndFeelException e) {
@@ -131,7 +131,7 @@ public class AppKickstarter {
         log.info("============================================================");
         log.info(id + ": Application Starting...");
 
-        int port = 54321;
+        int port = 54321;   //Port is hardcoded
         Thread connectionThread = null;
         try {
             connectionThread = new GreetingServer(port, this);
@@ -145,6 +145,7 @@ public class AppKickstarter {
         timer = new Timer("timer", this);
         new Thread(timer).start();
 
+        //Initialize elevator array thread
         for(int i=0;i<elevatorArray.length;i++){
             elevatorArray[i]=new Elevator(elevatorIDArray[i],this);
             new Thread(elevatorArray[i]).start();

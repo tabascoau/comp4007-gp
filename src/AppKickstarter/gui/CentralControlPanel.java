@@ -142,7 +142,6 @@ public class CentralControlPanel extends JFrame {
         //handle the msg queue
         System.out.println("T:" + requestQueue.size());
 
-
         // Find shortest path
         String[] data = requestQueue.peek().split(" ");
         int src = Integer.parseInt(data[2]);
@@ -163,25 +162,22 @@ public class CentralControlPanel extends JFrame {
 
         for (int i = 0; i < CentralControlPanel.getInstance().totalNumberOfElevator; i++) {
             if (CentralControlPanel.getInstance().isLiftInitial[i]) {
-                liftAssignment(i, passengerID, src, dest);
+                liftOrderAssignment(i, passengerID, src, dest);
+                break;
             }
         }
 
         //The queue have something now, we need algorithm
         if (requestQueue.size() > 0) {
-            for (int i = 0; i < CentralControlPanel.getInstance().totalNumberOfElevator; i++) {
-                //IF DIRECTION IS SAME, ASSIGN IT.
-                if (direction == CentralControlPanel.getInstance().currentDirection[i]) {
-                    liftAssignment(i, passengerID, src, dest);
-                }
-            }
+
+
         }
 
         System.out.println("REQUEST QUEUE: " + requestQueue.size());
 
     }
 
-    public static void liftAssignment(int index, String passengerID, int src, int dest) {
+    public static void liftOrderAssignment(int index, String passengerID, int src, int dest) {
         elevatorArray[index].getMBox().send(new Msg(elevatorArray[index].getID(), elevatorArray[index].getMBox(), Msg.Type.TimesUp, requestQueue.peek()));
         elevatorArray[index].addToElevatorQueue(index, requestQueue.peek());
         requestQueue.poll();
@@ -192,22 +188,14 @@ public class CentralControlPanel extends JFrame {
         //When the queue is handled queue size is 0
     }
 
-    public static int findSmallest(int[] arr) {
-        int index = 0;
-        int min = arr[index];
-        for (int i = 1; i < arr.length; i++) {
-            if (arr[i] < min) {
-                min = arr[i];
-                index = i;
-            }
-        }
-        return index;
+    public static void liftOrderInsertion(int index, String passengerID, int src, int dest){
+
     }
+
 
 
     //Thread to handle queue
     class QueueHandler extends Thread {
-
         @Override
         public void run() {
             while (true) {
