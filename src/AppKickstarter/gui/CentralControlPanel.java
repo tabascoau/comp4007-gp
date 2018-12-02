@@ -27,6 +27,7 @@ public class CentralControlPanel extends JFrame {
     final int screenWidth = 800;
     final int screenHeight = 600;
     int totalProcessedPassenger = 0;
+    private boolean[] isLiftInitial = new boolean[totalNumberOfElevator];
 
     private AppKickstarter appKickstarter = new AppKickstarter("AppKickstarter", "etc/MyApp.cfg");
     private JButton startElevatorButton, stopElevatorButton;
@@ -69,6 +70,7 @@ public class CentralControlPanel extends JFrame {
             currentFloorJLabel[i].setText(String.valueOf(defaultFloor));
             currentNoOfPassengerJLabel[i].setText(String.valueOf(defaultNumberOfPassenger));
             currentDirectionJLabel[i].setText(String.valueOf(defaultDirection));
+            isLiftInitial[i] = true;
         }
 
         processedPassenger.setText(String.valueOf(totalProcessedPassenger));
@@ -145,38 +147,63 @@ public class CentralControlPanel extends JFrame {
         String[] data = requestQueue.peek().split(" ");
         int src = Integer.parseInt(data[2]);
         int dest = Integer.parseInt(data[3]);
+        String direction;
         String passengerID = data[1];
 
+
+        if (src < dest) {
+            direction = "U";
+        } else {
+            direction = "D";
+        }
+
+        System.out.println("Src: " + src);
+        System.out.println("currentFloor[i]: " + CentralControlPanel.getInstance().currentFloor[0]);
+
+
         for (int i = 0; i < CentralControlPanel.getInstance().totalNumberOfElevator; i++) {
-            elevatorArray[i].getMBox().send(new Msg(elevatorArray[i].getID(), elevatorArray[i].getMBox(), Msg.Type.TimesUp, requestQueue.peek()));
-            System.out.println("I: "+i+ "RequestQueue: "+requestQueue.peek());
-            elevatorArray[i].addToElevatorQueue(i, requestQueue.peek());
-
-            String msg = "Svc_Reply " + passengerID + " " + src + " " + dest + " " + elevatorArray[i].getID();
-            System.out.println(msg);
-            GreetingServer.sendMsgToClient(msg);
-
-            requestQueue.poll();
-            //When the queue is handled queue size is 0
-            break;
-
-
-        }
-
-
-    }
-
-    public static boolean moreThanOneElevator(boolean[] array) {
-        int index = 0;
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] == true) {
-                ++index;
+            if (CentralControlPanel.getInstance().isLiftInitial[i]) {
+                liftAssignment(i, passengerID, src, dest);
             }
-            if (index == 2)
-                return true;
         }
-        return false;
+
+        //The queue have something now, we need algorithm
+        if (requestQueue.size() > 0) {
+            for (int i = 0; i < CentralControlPanel.getInstance().totalNumberOfElevator; i++) {
+                //IF DIRECTION IS SAME, ASSIGN IT.
+                if (direction == CentralControlPanel.getInstance().currentDirection[i]) {
+                    liftAssignment(i, passengerID, src, dest);
+                }
+            }
+        }
+
+        System.out.println("REQUEST QUEUE: " + requestQueue.size());
+
     }
+
+    public static void liftAssignment(int index, String passengerID, int src, int dest) {
+        elevatorArray[index].getMBox().send(new Msg(elevatorArray[index].getID(), elevatorArray[index].getMBox(), Msg.Type.TimesUp, requestQueue.peek()));
+        elevatorArray[index].addToElevatorQueue(index, requestQueue.peek());
+        requestQueue.poll();
+        CentralControlPanel.getInstance().isLiftInitial[index] = false;
+        String msg = "Svc_Reply " + passengerID + " " + src + " " + dest + " " + elevatorArray[index].getID();
+        System.out.println(msg);
+        GreetingServer.sendMsgToClient(msg);
+        //When the queue is handled queue size is 0
+    }
+
+    public static int findSmallest(int[] arr) {
+        int index = 0;
+        int min = arr[index];
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+                index = i;
+            }
+        }
+        return index;
+    }
+
 
     //Thread to handle queue
     class QueueHandler extends Thread {
@@ -192,4 +219,40 @@ public class CentralControlPanel extends JFrame {
         }
     }
 }
+
+//if current floor=source, assign to it.
+//            if (CentralControlPanel.getInstance().currentFloor[i] == src) {
+//                elevatorArray[i].getMBox().send(new Msg(elevatorArray[i].getID(), elevatorArray[i].getMBox(), Msg.Type.TimesUp, requestQueue.peek()));
+//                elevatorArray[i].addToElevatorQueue(i, requestQueue.peek());
+//                String msg = "Svc_Reply " + passengerID + " " + src + " " + dest + " " + elevatorArray[i].getID();
+//                System.out.println(msg);
+//                GreetingServer.sendMsgToClient(msg);
+//                requestQueue.poll();
+//                break;
+//            }else{
+//                System.out.println("COME TO ELSE STATEMENT NOW!");
+//                floorDifference[i]=Math.abs(CentralControlPanel.getInstance().currentFloor[i]-src);
+//                int tmp=findSmallest(floorDifference);
+//                elevatorArray[tmp].getMBox().send(new Msg(elevatorArray[tmp].getID(), elevatorArray[tmp].getMBox(), Msg.Type.TimesUp, requestQueue.peek()));
+//                elevatorArray[tmp].addToElevatorQueue(i, requestQueue.peek());
+//                String msg = "Svc_Reply " + passengerID + " " + src + " " + dest + " " + elevatorArray[tmp].getID();
+//                System.out.println(msg);
+//                GreetingServer.sendMsgToClient(msg);
+//                requestQueue.poll();
+//                break;
+//            }
+
+
+//else assign nearest elevator to it.
+//            else if(number<Math.abs(CentralControlPanel.getInstance().currentFloor[i]-src)){
+//
+//            }
+//            elevatorArray[i].getMBox().send(new Msg(elevatorArray[i].getID(), elevatorArray[i].getMBox(), Msg.Type.TimesUp, requestQueue.peek()));
+//            elevatorArray[i].addToElevatorQueue(i, requestQueue.peek());
+//            String msg = "Svc_Reply " + passengerID + " " + src + " " + dest + " " + elevatorArray[i].getID();
+//            System.out.println(msg);
+//            GreetingServer.sendMsgToClient(msg);
+//            requestQueue.poll();
+//When the queue is handled queue size is 0
+
 
