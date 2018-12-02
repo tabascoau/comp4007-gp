@@ -17,9 +17,6 @@ public class GreetingServer extends Thread {
     public static ServerSocket serverSocket;
     private AppKickstarter appKickstarter;
     public static Socket clientSocket;
-    CentralControlPanel c;
-
-//    private Queue<String> requestQueue = new LinkedList<String>();
 
 
     public GreetingServer(int port, AppKickstarter appKickstarter) throws IOException {
@@ -55,17 +52,10 @@ public class GreetingServer extends Thread {
         try {
             PrintWriter out = new PrintWriter(clientSocket.getOutputStream(),true);
             out.println(str);
-
-
         }catch (IOException e){
             e.printStackTrace();
             System.exit(444444);
         }
-
-
-
     }
-
-
 }
 

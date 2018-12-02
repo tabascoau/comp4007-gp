@@ -21,8 +21,6 @@ public class CentralControlPanel extends JFrame {
 
     final int defaultFloor = 0;
     final char defaultDirection = 'S';
-    final int maxNumberOfPassenger = 10;
-    final int defaultNumberOfPassenger = 0;
     public final int totalNumberOfElevator = 6;
     final int screenWidth = 800;
     final int screenHeight = 600;
@@ -33,7 +31,6 @@ public class CentralControlPanel extends JFrame {
     private JButton startElevatorButton, stopElevatorButton;
     private JPanel rootPanel;
     public JLabel aDirection, bDirection, cDirection, dDirection, eDirection, fDirection;
-    public JLabel aPassenger, bPassenger, cPassenger, dPassenger, ePassenger, fPassenger;
     public JLabel aCurrent, bCurrent, cCurrent, dCurrent, eCurrent, fCurrent;
     private JLabel processedPassenger;
 
@@ -44,6 +41,7 @@ public class CentralControlPanel extends JFrame {
     public JLabel[] currentDirectionJLabel;
     public JLabel[] currentFloorJLabel;
     public JLabel[] currentNoOfPassengerJLabel;
+    public static CentralControlPanel panel;
 
     private boolean start = false;
 
@@ -59,16 +57,14 @@ public class CentralControlPanel extends JFrame {
         //GUI
         currentDirectionJLabel = new JLabel[]{aDirection, bDirection, cDirection, dDirection, eDirection, fDirection};
         currentFloorJLabel = new JLabel[]{aCurrent, bCurrent, cCurrent, dCurrent, eCurrent, fCurrent};
-        currentNoOfPassengerJLabel = new JLabel[]{aPassenger, bPassenger, cPassenger, dPassenger, ePassenger, fPassenger};
-        CentralControlPanel.instance = this;
+        panel=CentralControlPanel.instance = this;
+
 
         //Initial GUI JLabel text
         for (int i = 0; i < totalNumberOfElevator; i++) {
-            liftTotalPassenger[i] = defaultNumberOfPassenger;
             currentFloor[i] = 0;
             currentDirection[i] = "S";
             currentFloorJLabel[i].setText(String.valueOf(defaultFloor));
-            currentNoOfPassengerJLabel[i].setText(String.valueOf(defaultNumberOfPassenger));
             currentDirectionJLabel[i].setText(String.valueOf(defaultDirection));
             isLiftInitial[i] = true;
         }
@@ -125,12 +121,6 @@ public class CentralControlPanel extends JFrame {
         this.repaint();
     }
 
-    public void setCurrentPassenger(int index, int number) { //set how many passenger in the elevator
-        liftTotalPassenger[index] += number;
-        currentNoOfPassengerJLabel[index].setText(String.valueOf(liftTotalPassenger[index]));
-        this.repaint();
-    }
-
     public void addTotalPassenger(int number) { //how many passenger processed
         totalProcessedPassenger += number;
         processedPassenger.setText(String.valueOf(totalProcessedPassenger));
@@ -148,20 +138,17 @@ public class CentralControlPanel extends JFrame {
         int dest = Integer.parseInt(data[3]);
         String direction;
         String passengerID = data[1];
-
-
         if (src < dest) {
             direction = "U";
         } else {
             direction = "D";
         }
-
         System.out.println("Src: " + src);
-        System.out.println("currentFloor[i]: " + CentralControlPanel.getInstance().currentFloor[0]);
+        System.out.println("currentFloor[i]: " + panel.currentFloor[0]);
 
-
-        for (int i = 0; i < CentralControlPanel.getInstance().totalNumberOfElevator; i++) {
-            if (CentralControlPanel.getInstance().isLiftInitial[i]) {
+        //default 6 lift available, 6 elevators are ready
+        for (int i = 0; i < panel.totalNumberOfElevator; i++) {
+            if (panel.getInstance().isLiftInitial[i]) {
                 liftOrderAssignment(i, passengerID, src, dest);
                 break;
             }
@@ -169,29 +156,32 @@ public class CentralControlPanel extends JFrame {
 
         //The queue have something now, we need algorithm
         if (requestQueue.size() > 0) {
-
-
+            for (int i = 0; i < panel.getInstance().totalNumberOfElevator; i++) {
+                if (panel.getInstance().currentDirection[i] == direction) {
+                    elevatorArray[i].getMBox().send(new Msg(elevatorArray[i].getID(), elevatorArray[i].getMBox(), Msg.Type.GoToSrc, requestQueue.peek()));
+                    requestQueue.poll();
+                    break;
+                }
+            }
         }
 
         System.out.println("REQUEST QUEUE: " + requestQueue.size());
-
     }
 
     public static void liftOrderAssignment(int index, String passengerID, int src, int dest) {
-        elevatorArray[index].getMBox().send(new Msg(elevatorArray[index].getID(), elevatorArray[index].getMBox(), Msg.Type.TimesUp, requestQueue.peek()));
+        elevatorArray[index].getMBox().send(new Msg(elevatorArray[index].getID(), elevatorArray[index].getMBox(), Msg.Type.ReceiveOrder, requestQueue.peek()));
         elevatorArray[index].addToElevatorQueue(index, requestQueue.peek());
         requestQueue.poll();
-        CentralControlPanel.getInstance().isLiftInitial[index] = false;
+        panel.getInstance().isLiftInitial[index] = false;
         String msg = "Svc_Reply " + passengerID + " " + src + " " + dest + " " + elevatorArray[index].getID();
         System.out.println(msg);
         GreetingServer.sendMsgToClient(msg);
         //When the queue is handled queue size is 0
     }
 
-    public static void liftOrderInsertion(int index, String passengerID, int src, int dest){
+    public static void liftOrderInsertion(int index, String passengerID, int src, int dest) {
 
     }
-
 
 
     //Thread to handle queue
@@ -201,7 +191,7 @@ public class CentralControlPanel extends JFrame {
             while (true) {
                 System.out.print("");
                 if (!requestQueue.isEmpty()) {
-                    CentralControlPanel.handlerQueue();
+                    panel.handlerQueue();
                 }
             }
         }

@@ -90,7 +90,7 @@ public class Timer extends AppThread {
 	    int timerID = timer.getTimerID();
 	    String caller = timer.getCaller();
 	    MBox mbox = timer.getMBox();
-	    mbox.send(new Msg("Timer", null, Msg.Type.TimesUp, "["+String.format("%05d", timerID)+"]: Time's up!"));
+	    mbox.send(new Msg("Timer", null, Msg.Type.ReceiveOrder, "["+String.format("%05d", timerID)+"]: Received order!"));
 	    timerList.remove(timer);
 	}
     } // chkTimeout
@@ -194,7 +194,7 @@ public class Timer extends AppThread {
     // getTimesUpMsgTimerId: returns timerId of a timeout msg (returns -1 on error)
     public static int getTimesUpMsgTimerId(Msg msg) {
 	// chk msg sender
-	if (!msg.getSender().equals("Timer") || msg.getType() != Msg.Type.TimesUp || !msg.getDetails().endsWith("]: Time's up!")) {
+	if (!msg.getSender().equals("Timer") || msg.getType() != Msg.Type.ReceiveOrder || !msg.getDetails().endsWith("]: Received Order!")) {
 	    return -1;
 	}
 	String msgDetails = msg.getDetails();

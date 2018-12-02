@@ -57,9 +57,7 @@ public class Elevator extends AppThread {
         super(id, appKickstarter);
         _id = totalElevatorCount++;
         elevatorPendingRequest= new Queue[]{aQueue, bQueue, cQueue, dQueue, eQueue, fQueue};
-
     } // ThreadA
-
 
     //------------------------------------------------------------
     // run
@@ -72,9 +70,10 @@ public class Elevator extends AppThread {
             Msg msg = mbox.receive();
             System.out.println("MSG MBOX: " + msg.getSender());
             log.info(id + ": message received: [" + msg + "].");
-
+            System.out.println("Elevator_Dep message: " + elevDepmsg);
+            System.out.println("Elevator_Arr message: " + elevArrmsg);
             switch (msg.getType()) {
-                case TimesUp:
+                case ReceiveOrder:
                     // Store data
                     String[] datas = null;
                     for (int i = 0; i < totalNumberOfElevator; i++) {
@@ -101,11 +100,9 @@ public class Elevator extends AppThread {
                     // Already at src
                     if (idleFloor == src) {
                         this.getMBox().send(new Msg(id, mbox, Msg.Type.Waiting, "Already at source floor!  (mCnt: " + ++mCnt + ")"));
-
                         //Svc_Req Passenger-0001 0 10
                         for (int i = 0; i < totalNumberOfElevator; i++) {
                             if (msg.getSender().equals(Elevator[i])) {
-                                centralControlPanel.setCurrentPassenger(i, 1);
                                 centralControlPanel.addTotalPassenger(1);
                                 centralControlPanel.setCurrentFloor(i, idleFloor);
                                 centralControlPanel.setCurrentDirection(i, "S (Wait)");
@@ -141,7 +138,6 @@ public class Elevator extends AppThread {
                         if (msg.getSender().equals(Elevator[i])) {
                             centralControlPanel.setCurrentFloor(i, idleFloor);
                             centralControlPanel.setCurrentDirection(i, direction);
-                            centralControlPanel.setCurrentPassenger(i, 1);
                             elevDepmsg = "Elev_Dep " + msg.getSender() + " " + idleFloor + " " + direction + " " + src + " " + dest;
                             elevArrmsg = "Elev_Arr " + msg.getSender() + " " + src + " " + tmp + " " + dest;
                             break;
@@ -182,8 +178,7 @@ public class Elevator extends AppThread {
                         if (msg.getSender().equals(Elevator[i])) {
                             centralControlPanel.setCurrentDirection(i, "S (Wait)");
                             centralControlPanel.setCurrentFloor(i, src);
-                            centralControlPanel.setCurrentPassenger(i, 1);
-                            centralControlPanel.addTotalPassenger(1);
+//                            centralControlPanel.addTotalPassenger(1);
                             break;
                         }
                     }
@@ -261,7 +256,6 @@ public class Elevator extends AppThread {
 
                     for (int i = 0; i < totalNumberOfElevator; i++) {
                         if (msg.getSender().equals(Elevator[i])) {
-                            centralControlPanel.setCurrentPassenger(i, -1);
                             centralControlPanel.setCurrentDirection(i, "S Arr(wait)");
                             elevArrmsg = "Elev_Arr " + msg.getSender() + " " + dest + " S " + Integer.MIN_VALUE;
                             break;

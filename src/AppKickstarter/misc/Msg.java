@@ -52,10 +52,10 @@ public class Msg {
         SetTimer,       // Set a timer
         CancelTimer,    // Set a timer
         Tick,           // Timer clock ticks
-        TimesUp,        // Time's up for the timer
         Hello,          // Hello -- a testing msg type
         HiHi,           // HiHi -- a testing msg type
         // Elevator state
+        ReceiveOrder,
         GoToSrc,
         Waiting,
         GoToDest,
