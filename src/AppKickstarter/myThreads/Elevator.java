@@ -56,6 +56,8 @@ public class Elevator extends AppThread {
     private float doorClose;
     private float doorWait;
 
+    private float simulationTime;
+
     private CentralControlPanel centralControlPanel;
 
     public Floor[] GetFloorsClone()
@@ -91,6 +93,7 @@ public class Elevator extends AppThread {
         doorOpen = Float.parseFloat(appKickstarter.getProperty("Elev.Time.DoorOpen"));
         doorClose = Float.parseFloat(appKickstarter.getProperty("Elev.Time.DoorClose"));
         doorWait = Float.parseFloat(appKickstarter.getProperty("Elev.Time.DoorWait"));
+        simulationTime = Float.parseFloat(appKickstarter.getProperty("Timer.SimulationSpeed"));
 
         // Update central control panel
         centralControlPanel = appKickstarter.GetCentralControlPanel();
@@ -130,7 +133,7 @@ public class Elevator extends AppThread {
                     try {
                         // Not initial
                         if (msg.getDetails().split(" ")[0].equals("Waiting")) {
-                            Thread.sleep((long) ((doorOpen + doorWait + doorClose) * 1000));
+                            Thread.sleep((long) ((doorOpen + doorWait + doorClose) * simulationTime));
                         }
 
                         boolean idle = false;
@@ -149,24 +152,18 @@ public class Elevator extends AppThread {
                                     if (direction == Direction.Up && floors[current].up)
                                     {
                                         // Send Elev_Arr
-                                        SendElevDep();
-
-                                        Thread.sleep((long) ((doorOpen + doorWait + doorClose) * 1000));
-                                        floors[current].up = false;
-
-                                        // Send Elev_Dep
                                         SendElevArr();
+
+                                        Thread.sleep((long) ((doorOpen + doorWait + doorClose) * simulationTime));
+                                        floors[current].up = false;
                                     }
                                     else if (direction == Direction.Down && floors[current].down)
                                     {
                                         // Send Elev_Arr
-                                        SendElevDep();
-
-                                        Thread.sleep((long) ((doorOpen + doorWait + doorClose) * 1000));
-                                        floors[current].up = false;
-
-                                        // Send Elev_Dep
                                         SendElevArr();
+
+                                        Thread.sleep((long) ((doorOpen + doorWait + doorClose) * simulationTime));
+                                        floors[current].up = false;
                                     }
                                 }
                                 // To moving state
@@ -175,7 +172,7 @@ public class Elevator extends AppThread {
                             } else {
                                 // wait
                                 idle = true;
-                                Thread.sleep(1000);
+                                Thread.sleep((long)simulationTime);
 //                                System.out.println(id + " Waiting");
                             }
                         }
@@ -191,10 +188,10 @@ public class Elevator extends AppThread {
 
                     boolean up = status == Direction.Up;
 
-                    long dccelerationSpeed = up ? (long) (decUp * 1000) : (long) (decDown * 1000);
+                    long dccelerationSpeed = up ? (long) (decUp * simulationTime) : (long) (decDown * simulationTime);
                     int floorChange = up ? 1 : -1;
-                    long accelerationSpeed = up ? (long) (accUp * 1000) : (long) (accDown * 1000);
-                    long constantSpeed = up ? (long) (upOneFloor * 1000) : (long) (downOneFloor * 1000);
+                    long accelerationSpeed = up ? (long) (accUp * simulationTime) : (long) (accDown * simulationTime);
+                    long constantSpeed = up ? (long) (upOneFloor * simulationTime) : (long) (downOneFloor * simulationTime);
 
                     // Send Elev_Arr
                     SendElevDep();
@@ -435,7 +432,7 @@ public class Elevator extends AppThread {
                 if (requestDirection != Direction.Stop) {
                     // Not initial
                     if (!idle) {
-                        time += (long) ((doorOpen + doorWait + doorClose) * 1000);
+                        time += (long) ((doorOpen + doorWait + doorClose) * simulationTime);
                     }
                     // Update status
                     status = requestDirection;
@@ -446,12 +443,12 @@ public class Elevator extends AppThread {
                     {
                         if (direction == Direction.Up && floors[current].up)
                         {
-                            time += (long) ((doorOpen + doorWait + doorClose) * 1000);
+                            time += (long) ((doorOpen + doorWait + doorClose) * simulationTime);
                             floors[current].up = false;
                         }
                         else if (direction == Direction.Down && floors[current].down)
                         {
-                            time += (long) ((doorOpen + doorWait + doorClose) * 1000);
+                            time += (long) ((doorOpen + doorWait + doorClose) * simulationTime);
                             floors[current].up = false;
                         }
                     }
@@ -468,10 +465,10 @@ public class Elevator extends AppThread {
 
                 boolean up = status == Direction.Up;
 
-                long dccelerationSpeed = up ? (long) (decUp * 1000) : (long) (decDown * 1000);
+                long dccelerationSpeed = up ? (long) (decUp * simulationTime) : (long) (decDown * simulationTime);
                 int floorChange = up ? 1 : -1;
-                long accelerationSpeed = up ? (long) (accUp * 1000) : (long) (accDown * 1000);
-                long constantSpeed = up ? (long) (upOneFloor * 1000) : (long) (downOneFloor * 1000);
+                long accelerationSpeed = up ? (long) (accUp * simulationTime) : (long) (accDown * simulationTime);
+                long constantSpeed = up ? (long) (upOneFloor * simulationTime) : (long) (downOneFloor * simulationTime);
 
                 while (status != Direction.Stop) {
                     boolean nextFloorStop = up ? floors[current + floorChange].up : floors[current + floorChange].down;
@@ -530,7 +527,7 @@ public class Elevator extends AppThread {
     {
         ArrayList<Integer> schedule = new ArrayList<Integer>();
         // Up to upper
-        for (int upperFloor = current; upperFloor <= maxFloor; upperFloor++) {
+        for (int upperFloor = current + 1; upperFloor <= maxFloor; upperFloor++) {
             if (floors[upperFloor].up) {
                 schedule.add(upperFloor);
             }
@@ -541,7 +538,7 @@ public class Elevator extends AppThread {
     private ArrayList<Integer> GetLowerSchedule() {
         ArrayList<Integer> schedule = new ArrayList<Integer>();
         // Down to lower
-        for (int lowerFloor = current; lowerFloor >= minFloor; lowerFloor--) {
+        for (int lowerFloor = current - 1; lowerFloor >= minFloor; lowerFloor--) {
             if (floors[lowerFloor].down) {
                 schedule.add(lowerFloor);
             }
@@ -603,7 +600,7 @@ public class Elevator extends AppThread {
         }
         else
         {
-            reply += " -3.14";
+            reply += " -2147483648";
         }
         log.info("Elev_Arr: " + reply);
 
