@@ -1,1071 +1,266 @@
-181202-17:04:58 [INFO] -- 
-181202-17:04:58 [INFO] -- 
-181202-17:04:58 [INFO] -- ============================================================
-181202-17:04:58 [INFO] -- AppKickstarter: Application Starting...
-181202-17:04:58 [INFO] -- timer: starting...
-181202-17:04:58 [INFO] -- NetHandler: starting...
-181202-17:04:58 [INFO] -- NetHandler: 127.0.0.1, 54321
-181202-17:04:58 [INFO] -- NetIncoming: starting...
-181202-17:04:58 [INFO] -- NetOutgoing: starting...
-181202-17:04:58 [INFO] -- NetHandler: connection trial #1 succeeded!
-181202-17:04:58 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181202-17:04:58 [INFO] -- NetIncoming: receiving link up from NetHandler
-181202-17:05:03 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181202-17:05:03 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181202-17:05:03 [INFO] -- NetHandler: connection trial #1 link down from NetIncoming
-181202-17:05:03 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181202-17:05:03 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181202-17:05:04 [INFO] -- NetHandler: Connection trial #2: Exception encountered while making connection to server: Connection refused: connect
-181202-17:05:04 [INFO] -- NetHandler: Connection trial #2 failed!
-181202-17:05:09 [INFO] -- NetHandler: connection trial #3 succeeded!
-181202-17:05:09 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181202-17:05:09 [INFO] -- NetIncoming: receiving link up from NetHandler
-181202-17:05:11 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:09:22 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181202-17:09:22 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181202-17:09:22 [INFO] -- NetHandler: connection trial #3 link down from NetIncoming
-181202-17:09:22 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181202-17:09:22 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181202-17:09:23 [INFO] -- NetHandler: Connection trial #4: Exception encountered while making connection to server: Connection refused: connect
-181202-17:09:23 [INFO] -- NetHandler: Connection trial #4 failed!
-181202-17:09:28 [INFO] -- NetHandler: connection trial #5 succeeded!
-181202-17:09:28 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181202-17:09:28 [INFO] -- NetIncoming: receiving link up from NetHandler
-181202-17:09:29 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:09:43 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181202-17:09:43 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181202-17:09:43 [INFO] -- NetHandler: connection trial #5 link down from NetIncoming
-181202-17:09:43 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181202-17:09:43 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181202-17:09:44 [INFO] -- NetHandler: Connection trial #6: Exception encountered while making connection to server: Connection refused: connect
-181202-17:09:44 [INFO] -- NetHandler: Connection trial #6 failed!
-181202-17:09:49 [INFO] -- NetHandler: connection trial #7 succeeded!
-181202-17:09:49 [INFO] -- NetIncoming: receiving link up from NetHandler
-181202-17:09:49 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181202-17:09:57 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181202-17:09:57 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181202-17:09:57 [INFO] -- NetHandler: connection trial #7 link down from NetIncoming
-181202-17:09:57 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181202-17:09:57 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181202-17:09:58 [INFO] -- NetHandler: Connection trial #8: Exception encountered while making connection to server: Connection refused: connect
-181202-17:09:58 [INFO] -- NetHandler: Connection trial #8 failed!
-181202-17:10:03 [INFO] -- NetHandler: connection trial #9 succeeded!
-181202-17:10:03 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181202-17:10:03 [INFO] -- NetIncoming: receiving link up from NetHandler
-181202-17:11:10 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181202-17:11:10 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181202-17:11:10 [INFO] -- NetHandler: connection trial #9 link down from NetIncoming
-181202-17:11:10 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181202-17:11:10 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181202-17:11:11 [INFO] -- NetHandler: Connection trial #10: Exception encountered while making connection to server: Connection refused: connect
-181202-17:11:11 [INFO] -- NetHandler: Connection trial #10 failed!
-181202-17:11:16 [INFO] -- NetHandler: connection trial #11 succeeded!
-181202-17:11:16 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181202-17:11:16 [INFO] -- NetIncoming: receiving link up from NetHandler
-181202-17:11:17 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:11:38 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181202-17:11:38 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181202-17:11:38 [INFO] -- NetHandler: connection trial #11 link down from NetIncoming
-181202-17:11:38 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181202-17:11:38 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181202-17:11:39 [INFO] -- NetHandler: Connection trial #12: Exception encountered while making connection to server: Connection refused: connect
-181202-17:11:39 [INFO] -- NetHandler: Connection trial #12 failed!
-181202-17:11:44 [INFO] -- NetHandler: connection trial #13 succeeded!
-181202-17:11:44 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181202-17:11:44 [INFO] -- NetIncoming: receiving link up from NetHandler
-181202-17:11:45 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:11:52 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181202-17:11:52 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181202-17:11:52 [INFO] -- NetHandler: connection trial #13 link down from NetIncoming
-181202-17:11:52 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181202-17:11:52 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181202-17:11:53 [INFO] -- NetHandler: Connection trial #14: Exception encountered while making connection to server: Connection refused: connect
-181202-17:11:53 [INFO] -- NetHandler: Connection trial #14 failed!
-181202-17:11:58 [INFO] -- NetHandler: connection trial #15 succeeded!
-181202-17:11:58 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181202-17:11:58 [INFO] -- NetIncoming: receiving link up from NetHandler
-181202-17:12:13 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181202-17:12:13 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181202-17:12:13 [INFO] -- NetHandler: connection trial #15 link down from NetIncoming
-181202-17:12:13 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181202-17:12:13 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181202-17:12:14 [INFO] -- NetHandler: Connection trial #16: Exception encountered while making connection to server: Connection refused: connect
-181202-17:12:14 [INFO] -- NetHandler: Connection trial #16 failed!
-181202-17:12:19 [INFO] -- NetHandler: connection trial #17 succeeded!
-181202-17:12:19 [INFO] -- NetIncoming: receiving link up from NetHandler
-181202-17:12:19 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181202-17:12:23 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:12:33 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:12:41 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:12:47 [INFO] -- Sending: [Svc_Req Passenger-0001 1 2]
-181202-17:12:52 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181202-17:12:52 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181202-17:12:52 [INFO] -- NetHandler: connection trial #17 link down from NetIncoming
-181202-17:12:52 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181202-17:12:52 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181202-17:12:53 [INFO] -- NetHandler: Connection trial #18: Exception encountered while making connection to server: Connection refused: connect
-181202-17:12:53 [INFO] -- NetHandler: Connection trial #18 failed!
-181202-17:12:59 [INFO] -- NetHandler: Connection trial #19: Exception encountered while making connection to server: Connection refused: connect
-181202-17:12:59 [INFO] -- NetHandler: Connection trial #19 failed!
-181202-17:13:04 [INFO] -- NetHandler: connection trial #20 succeeded!
-181202-17:13:04 [INFO] -- NetIncoming: receiving link up from NetHandler
-181202-17:13:04 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181202-17:13:04 [INFO] -- Sending: [Svc_Req Passenger-0001 0 5]
-181202-17:13:16 [INFO] -- Sending: [Svc_Req Passenger-0001 0 5]
-181202-17:14:08 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181202-17:14:08 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181202-17:14:08 [INFO] -- NetHandler: connection trial #20 link down from NetIncoming
-181202-17:14:08 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181202-17:14:08 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181202-17:14:09 [INFO] -- NetHandler: Connection trial #21: Exception encountered while making connection to server: Connection refused: connect
-181202-17:14:09 [INFO] -- NetHandler: Connection trial #21 failed!
-181202-17:14:14 [INFO] -- NetHandler: connection trial #22 succeeded!
-181202-17:14:14 [INFO] -- NetIncoming: receiving link up from NetHandler
-181202-17:14:14 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181202-17:14:18 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181202-17:14:18 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181202-17:14:18 [INFO] -- NetHandler: connection trial #22 link down from NetIncoming
-181202-17:14:18 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181202-17:14:18 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181202-17:14:19 [INFO] -- NetHandler: Connection trial #23: Exception encountered while making connection to server: Connection refused: connect
-181202-17:14:19 [INFO] -- NetHandler: Connection trial #23 failed!
-181202-17:14:24 [INFO] -- NetHandler: connection trial #24 succeeded!
-181202-17:14:24 [INFO] -- NetIncoming: receiving link up from NetHandler
-181202-17:14:24 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181202-17:14:26 [INFO] -- Sending: [Svc_Req Passenger-0001 0 5]
-181202-17:14:36 [INFO] -- Sending: [Svc_Req Passenger-0001 0 5]
-181202-17:14:42 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181202-17:14:42 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181202-17:14:42 [INFO] -- NetHandler: connection trial #24 link down from NetIncoming
-181202-17:14:42 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181202-17:14:42 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181202-17:14:43 [INFO] -- NetHandler: Connection trial #25: Exception encountered while making connection to server: Connection refused: connect
-181202-17:14:43 [INFO] -- NetHandler: Connection trial #25 failed!
-181202-17:14:48 [INFO] -- NetHandler: connection trial #26 succeeded!
-181202-17:14:48 [INFO] -- NetIncoming: receiving link up from NetHandler
-181202-17:14:48 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181202-17:14:54 [INFO] -- Sending: [Svc_Req Passenger-0001 0 5]
-181202-17:15:07 [INFO] -- Sending: [Svc_Req Passenger-0001 0 2]
-181202-17:15:27 [INFO] -- Sending: [Svc_Req Passenger-0001 1 5]
-181202-17:15:36 [INFO] -- Sending: [Svc_Req Passenger-0001 3 4]
-181202-17:15:44 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181202-17:15:44 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181202-17:15:44 [INFO] -- NetHandler: connection trial #26 link down from NetIncoming
-181202-17:15:44 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181202-17:15:44 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181202-17:15:45 [INFO] -- NetHandler: Connection trial #27: Exception encountered while making connection to server: Connection refused: connect
-181202-17:15:45 [INFO] -- NetHandler: Connection trial #27 failed!
-181202-17:15:51 [INFO] -- NetHandler: Connection trial #28: Exception encountered while making connection to server: Connection refused: connect
-181202-17:15:51 [INFO] -- NetHandler: Connection trial #28 failed!
-181202-17:15:57 [INFO] -- NetHandler: Connection trial #29: Exception encountered while making connection to server: Connection refused: connect
-181202-17:15:57 [INFO] -- NetHandler: Connection trial #29 failed!
-181202-17:16:02 [INFO] -- NetHandler: connection trial #30 succeeded!
-181202-17:16:02 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181202-17:16:02 [INFO] -- NetIncoming: receiving link up from NetHandler
-181202-17:16:06 [INFO] -- Sending: [Svc_Req Passenger-0001 5 8]
-181202-17:16:12 [INFO] -- Sending: [Svc_Req Passenger-0001 6 4]
-181202-17:16:15 [INFO] -- Sending: [Svc_Req Passenger-0001 9 3]
-181202-17:17:44 [INFO] -- Sending: [Svc_Req Passenger-0001 3 0]
-181202-17:19:47 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181202-17:19:47 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181202-17:19:47 [INFO] -- NetHandler: connection trial #30 link down from NetIncoming
-181202-17:19:47 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181202-17:19:47 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181202-17:19:48 [INFO] -- NetHandler: Connection trial #31: Exception encountered while making connection to server: Connection refused: connect
-181202-17:19:48 [INFO] -- NetHandler: Connection trial #31 failed!
-181202-17:19:55 [INFO] -- NetHandler: Connection trial #32: Exception encountered while making connection to server: Connection refused: connect
-181202-17:19:55 [INFO] -- NetHandler: Connection trial #32 failed!
-181202-17:20:01 [INFO] -- NetHandler: Connection trial #33: Exception encountered while making connection to server: Connection refused: connect
-181202-17:20:01 [INFO] -- NetHandler: Connection trial #33 failed!
-181202-17:20:07 [INFO] -- NetHandler: Connection trial #34: Exception encountered while making connection to server: Connection refused: connect
-181202-17:20:07 [INFO] -- NetHandler: Connection trial #34 failed!
-181202-17:20:13 [INFO] -- NetHandler: Connection trial #35: Exception encountered while making connection to server: Connection refused: connect
-181202-17:20:13 [INFO] -- NetHandler: Connection trial #35 failed!
-181202-17:20:19 [INFO] -- NetHandler: Connection trial #36: Exception encountered while making connection to server: Connection refused: connect
-181202-17:20:19 [INFO] -- NetHandler: Connection trial #36 failed!
-181202-17:20:25 [INFO] -- NetHandler: Connection trial #37: Exception encountered while making connection to server: Connection refused: connect
-181202-17:20:25 [INFO] -- NetHandler: Connection trial #37 failed!
-181202-17:20:31 [INFO] -- NetHandler: Connection trial #38: Exception encountered while making connection to server: Connection refused: connect
-181202-17:20:31 [INFO] -- NetHandler: Connection trial #38 failed!
-181202-17:20:37 [INFO] -- NetHandler: Connection trial #39: Exception encountered while making connection to server: Connection refused: connect
-181202-17:20:37 [INFO] -- NetHandler: Connection trial #39 failed!
-181202-17:20:43 [INFO] -- NetHandler: Connection trial #40: Exception encountered while making connection to server: Connection refused: connect
-181202-17:20:43 [INFO] -- NetHandler: Connection trial #40 failed!
-181202-17:20:49 [INFO] -- NetHandler: Connection trial #41: Exception encountered while making connection to server: Connection refused: connect
-181202-17:20:49 [INFO] -- NetHandler: Connection trial #41 failed!
-181202-17:20:55 [INFO] -- NetHandler: Connection trial #42: Exception encountered while making connection to server: Connection refused: connect
-181202-17:20:55 [INFO] -- NetHandler: Connection trial #42 failed!
-181202-17:21:01 [INFO] -- NetHandler: Connection trial #43: Exception encountered while making connection to server: Connection refused: connect
-181202-17:21:01 [INFO] -- NetHandler: Connection trial #43 failed!
-181202-17:21:07 [INFO] -- NetHandler: Connection trial #44: Exception encountered while making connection to server: Connection refused: connect
-181202-17:21:07 [INFO] -- NetHandler: Connection trial #44 failed!
-181202-17:21:13 [INFO] -- NetHandler: Connection trial #45: Exception encountered while making connection to server: Connection refused: connect
-181202-17:21:13 [INFO] -- NetHandler: Connection trial #45 failed!
-181202-17:21:19 [INFO] -- NetHandler: Connection trial #46: Exception encountered while making connection to server: Connection refused: connect
-181202-17:21:19 [INFO] -- NetHandler: Connection trial #46 failed!
-181202-17:21:25 [INFO] -- NetHandler: Connection trial #47: Exception encountered while making connection to server: Connection refused: connect
-181202-17:21:25 [INFO] -- NetHandler: Connection trial #47 failed!
-181202-17:21:31 [INFO] -- NetHandler: Connection trial #48: Exception encountered while making connection to server: Connection refused: connect
-181202-17:21:31 [INFO] -- NetHandler: Connection trial #48 failed!
-181202-17:21:37 [INFO] -- NetHandler: Connection trial #49: Exception encountered while making connection to server: Connection refused: connect
-181202-17:21:37 [INFO] -- NetHandler: Connection trial #49 failed!
-181202-17:21:43 [INFO] -- NetHandler: Connection trial #50: Exception encountered while making connection to server: Connection refused: connect
-181202-17:21:43 [INFO] -- NetHandler: Connection trial #50 failed!
-181202-17:21:49 [INFO] -- NetHandler: Connection trial #51: Exception encountered while making connection to server: Connection refused: connect
-181202-17:21:49 [INFO] -- NetHandler: Connection trial #51 failed!
-181202-17:21:55 [INFO] -- NetHandler: Connection trial #52: Exception encountered while making connection to server: Connection refused: connect
-181202-17:21:55 [INFO] -- NetHandler: Connection trial #52 failed!
-181202-17:22:01 [INFO] -- NetHandler: Connection trial #53: Exception encountered while making connection to server: Connection refused: connect
-181202-17:22:01 [INFO] -- NetHandler: Connection trial #53 failed!
-181202-17:22:07 [INFO] -- NetHandler: Connection trial #54: Exception encountered while making connection to server: Connection refused: connect
-181202-17:22:07 [INFO] -- NetHandler: Connection trial #54 failed!
-181202-17:22:13 [INFO] -- NetHandler: Connection trial #55: Exception encountered while making connection to server: Connection refused: connect
-181202-17:22:13 [INFO] -- NetHandler: Connection trial #55 failed!
-181202-17:22:19 [INFO] -- NetHandler: Connection trial #56: Exception encountered while making connection to server: Connection refused: connect
-181202-17:22:19 [INFO] -- NetHandler: Connection trial #56 failed!
-181202-17:22:25 [INFO] -- NetHandler: Connection trial #57: Exception encountered while making connection to server: Connection refused: connect
-181202-17:22:25 [INFO] -- NetHandler: Connection trial #57 failed!
-181202-17:22:31 [INFO] -- NetHandler: Connection trial #58: Exception encountered while making connection to server: Connection refused: connect
-181202-17:22:31 [INFO] -- NetHandler: Connection trial #58 failed!
-181202-17:22:37 [INFO] -- NetHandler: Connection trial #59: Exception encountered while making connection to server: Connection refused: connect
-181202-17:22:37 [INFO] -- NetHandler: Connection trial #59 failed!
-181202-17:22:43 [INFO] -- NetHandler: Connection trial #60: Exception encountered while making connection to server: Connection refused: connect
-181202-17:22:43 [INFO] -- NetHandler: Connection trial #60 failed!
-181202-17:22:49 [INFO] -- NetHandler: Connection trial #61: Exception encountered while making connection to server: Connection refused: connect
-181202-17:22:49 [INFO] -- NetHandler: Connection trial #61 failed!
-181202-17:22:55 [INFO] -- NetHandler: Connection trial #62: Exception encountered while making connection to server: Connection refused: connect
-181202-17:22:55 [INFO] -- NetHandler: Connection trial #62 failed!
-181202-17:23:01 [INFO] -- NetHandler: Connection trial #63: Exception encountered while making connection to server: Connection refused: connect
-181202-17:23:01 [INFO] -- NetHandler: Connection trial #63 failed!
-181202-17:23:07 [INFO] -- NetHandler: Connection trial #64: Exception encountered while making connection to server: Connection refused: connect
-181202-17:23:07 [INFO] -- NetHandler: Connection trial #64 failed!
-181202-17:23:13 [INFO] -- NetHandler: Connection trial #65: Exception encountered while making connection to server: Connection refused: connect
-181202-17:23:13 [INFO] -- NetHandler: Connection trial #65 failed!
-181202-17:23:19 [INFO] -- NetHandler: Connection trial #66: Exception encountered while making connection to server: Connection refused: connect
-181202-17:23:19 [INFO] -- NetHandler: Connection trial #66 failed!
-181202-17:23:25 [INFO] -- NetHandler: Connection trial #67: Exception encountered while making connection to server: Connection refused: connect
-181202-17:23:25 [INFO] -- NetHandler: Connection trial #67 failed!
-181202-17:23:31 [INFO] -- NetHandler: Connection trial #68: Exception encountered while making connection to server: Connection refused: connect
-181202-17:23:31 [INFO] -- NetHandler: Connection trial #68 failed!
-181202-17:23:37 [INFO] -- NetHandler: Connection trial #69: Exception encountered while making connection to server: Connection refused: connect
-181202-17:23:37 [INFO] -- NetHandler: Connection trial #69 failed!
-181202-17:23:43 [INFO] -- NetHandler: Connection trial #70: Exception encountered while making connection to server: Connection refused: connect
-181202-17:23:43 [INFO] -- NetHandler: Connection trial #70 failed!
-181202-17:23:49 [INFO] -- NetHandler: Connection trial #71: Exception encountered while making connection to server: Connection refused: connect
-181202-17:23:49 [INFO] -- NetHandler: Connection trial #71 failed!
-181202-17:23:55 [INFO] -- NetHandler: Connection trial #72: Exception encountered while making connection to server: Connection refused: connect
-181202-17:23:55 [INFO] -- NetHandler: Connection trial #72 failed!
-181202-17:24:01 [INFO] -- NetHandler: Connection trial #73: Exception encountered while making connection to server: Connection refused: connect
-181202-17:24:01 [INFO] -- NetHandler: Connection trial #73 failed!
-181202-17:24:07 [INFO] -- NetHandler: Connection trial #74: Exception encountered while making connection to server: Connection refused: connect
-181202-17:24:07 [INFO] -- NetHandler: Connection trial #74 failed!
-181202-17:24:13 [INFO] -- NetHandler: Connection trial #75: Exception encountered while making connection to server: Connection refused: connect
-181202-17:24:13 [INFO] -- NetHandler: Connection trial #75 failed!
-181202-17:24:19 [INFO] -- NetHandler: Connection trial #76: Exception encountered while making connection to server: Connection refused: connect
-181202-17:24:19 [INFO] -- NetHandler: Connection trial #76 failed!
-181202-17:24:25 [INFO] -- NetHandler: Connection trial #77: Exception encountered while making connection to server: Connection refused: connect
-181202-17:24:25 [INFO] -- NetHandler: Connection trial #77 failed!
-181202-17:24:31 [INFO] -- NetHandler: Connection trial #78: Exception encountered while making connection to server: Connection refused: connect
-181202-17:24:31 [INFO] -- NetHandler: Connection trial #78 failed!
-181202-17:24:37 [INFO] -- NetHandler: Connection trial #79: Exception encountered while making connection to server: Connection refused: connect
-181202-17:24:37 [INFO] -- NetHandler: Connection trial #79 failed!
-181202-17:24:43 [INFO] -- NetHandler: Connection trial #80: Exception encountered while making connection to server: Connection refused: connect
-181202-17:24:43 [INFO] -- NetHandler: Connection trial #80 failed!
-181202-17:24:49 [INFO] -- NetHandler: Connection trial #81: Exception encountered while making connection to server: Connection refused: connect
-181202-17:24:49 [INFO] -- NetHandler: Connection trial #81 failed!
-181202-17:24:55 [INFO] -- NetHandler: Connection trial #82: Exception encountered while making connection to server: Connection refused: connect
-181202-17:24:55 [INFO] -- NetHandler: Connection trial #82 failed!
-181202-17:25:01 [INFO] -- NetHandler: Connection trial #83: Exception encountered while making connection to server: Connection refused: connect
-181202-17:25:01 [INFO] -- NetHandler: Connection trial #83 failed!
-181202-17:25:07 [INFO] -- NetHandler: Connection trial #84: Exception encountered while making connection to server: Connection refused: connect
-181202-17:25:07 [INFO] -- NetHandler: Connection trial #84 failed!
-181202-17:25:13 [INFO] -- NetHandler: Connection trial #85: Exception encountered while making connection to server: Connection refused: connect
-181202-17:25:13 [INFO] -- NetHandler: Connection trial #85 failed!
-181202-17:25:19 [INFO] -- NetHandler: Connection trial #86: Exception encountered while making connection to server: Connection refused: connect
-181202-17:25:19 [INFO] -- NetHandler: Connection trial #86 failed!
-181202-17:25:25 [INFO] -- NetHandler: Connection trial #87: Exception encountered while making connection to server: Connection refused: connect
-181202-17:25:25 [INFO] -- NetHandler: Connection trial #87 failed!
-181202-17:25:31 [INFO] -- NetHandler: Connection trial #88: Exception encountered while making connection to server: Connection refused: connect
-181202-17:25:31 [INFO] -- NetHandler: Connection trial #88 failed!
-181202-17:25:37 [INFO] -- NetHandler: Connection trial #89: Exception encountered while making connection to server: Connection refused: connect
-181202-17:25:37 [INFO] -- NetHandler: Connection trial #89 failed!
-181202-17:25:43 [INFO] -- NetHandler: Connection trial #90: Exception encountered while making connection to server: Connection refused: connect
-181202-17:25:43 [INFO] -- NetHandler: Connection trial #90 failed!
-181202-17:25:49 [INFO] -- NetHandler: Connection trial #91: Exception encountered while making connection to server: Connection refused: connect
-181202-17:25:49 [INFO] -- NetHandler: Connection trial #91 failed!
-181202-17:25:55 [INFO] -- NetHandler: Connection trial #92: Exception encountered while making connection to server: Connection refused: connect
-181202-17:25:55 [INFO] -- NetHandler: Connection trial #92 failed!
-181202-17:26:01 [INFO] -- NetHandler: Connection trial #93: Exception encountered while making connection to server: Connection refused: connect
-181202-17:26:01 [INFO] -- NetHandler: Connection trial #93 failed!
-181202-17:26:07 [INFO] -- NetHandler: Connection trial #94: Exception encountered while making connection to server: Connection refused: connect
-181202-17:26:07 [INFO] -- NetHandler: Connection trial #94 failed!
-181202-17:26:13 [INFO] -- NetHandler: Connection trial #95: Exception encountered while making connection to server: Connection refused: connect
-181202-17:26:13 [INFO] -- NetHandler: Connection trial #95 failed!
-181202-17:26:19 [INFO] -- NetHandler: Connection trial #96: Exception encountered while making connection to server: Connection refused: connect
-181202-17:26:19 [INFO] -- NetHandler: Connection trial #96 failed!
-181202-17:26:25 [INFO] -- NetHandler: Connection trial #97: Exception encountered while making connection to server: Connection refused: connect
-181202-17:26:25 [INFO] -- NetHandler: Connection trial #97 failed!
-181202-17:26:31 [INFO] -- NetHandler: Connection trial #98: Exception encountered while making connection to server: Connection refused: connect
-181202-17:26:31 [INFO] -- NetHandler: Connection trial #98 failed!
-181202-17:26:37 [INFO] -- NetHandler: Connection trial #99: Exception encountered while making connection to server: Connection refused: connect
-181202-17:26:37 [INFO] -- NetHandler: Connection trial #99 failed!
-181202-17:26:43 [INFO] -- NetHandler: Connection trial #100: Exception encountered while making connection to server: Connection refused: connect
-181202-17:26:43 [INFO] -- NetHandler: Connection trial #100 failed!
-181202-17:26:49 [INFO] -- NetHandler: Connection trial #101: Exception encountered while making connection to server: Connection refused: connect
-181202-17:26:49 [INFO] -- NetHandler: Connection trial #101 failed!
-181202-17:26:55 [INFO] -- NetHandler: Connection trial #102: Exception encountered while making connection to server: Connection refused: connect
-181202-17:26:55 [INFO] -- NetHandler: Connection trial #102 failed!
-181202-17:27:01 [INFO] -- NetHandler: Connection trial #103: Exception encountered while making connection to server: Connection refused: connect
-181202-17:27:01 [INFO] -- NetHandler: Connection trial #103 failed!
-181202-17:27:07 [INFO] -- NetHandler: Connection trial #104: Exception encountered while making connection to server: Connection refused: connect
-181202-17:27:07 [INFO] -- NetHandler: Connection trial #104 failed!
-181202-17:27:13 [INFO] -- NetHandler: Connection trial #105: Exception encountered while making connection to server: Connection refused: connect
-181202-17:27:13 [INFO] -- NetHandler: Connection trial #105 failed!
-181202-17:27:19 [INFO] -- NetHandler: Connection trial #106: Exception encountered while making connection to server: Connection refused: connect
-181202-17:27:19 [INFO] -- NetHandler: Connection trial #106 failed!
-181202-17:27:25 [INFO] -- NetHandler: Connection trial #107: Exception encountered while making connection to server: Connection refused: connect
-181202-17:27:25 [INFO] -- NetHandler: Connection trial #107 failed!
-181202-17:27:31 [INFO] -- NetHandler: Connection trial #108: Exception encountered while making connection to server: Connection refused: connect
-181202-17:27:31 [INFO] -- NetHandler: Connection trial #108 failed!
-181202-17:27:37 [INFO] -- NetHandler: Connection trial #109: Exception encountered while making connection to server: Connection refused: connect
-181202-17:27:37 [INFO] -- NetHandler: Connection trial #109 failed!
-181202-17:27:43 [INFO] -- NetHandler: Connection trial #110: Exception encountered while making connection to server: Connection refused: connect
-181202-17:27:43 [INFO] -- NetHandler: Connection trial #110 failed!
-181202-17:27:49 [INFO] -- NetHandler: Connection trial #111: Exception encountered while making connection to server: Connection refused: connect
-181202-17:27:49 [INFO] -- NetHandler: Connection trial #111 failed!
-181202-17:27:55 [INFO] -- NetHandler: Connection trial #112: Exception encountered while making connection to server: Connection refused: connect
-181202-17:27:55 [INFO] -- NetHandler: Connection trial #112 failed!
-181202-17:28:01 [INFO] -- NetHandler: Connection trial #113: Exception encountered while making connection to server: Connection refused: connect
-181202-17:28:01 [INFO] -- NetHandler: Connection trial #113 failed!
-181202-17:28:07 [INFO] -- NetHandler: Connection trial #114: Exception encountered while making connection to server: Connection refused: connect
-181202-17:28:07 [INFO] -- NetHandler: Connection trial #114 failed!
-181202-17:28:13 [INFO] -- NetHandler: Connection trial #115: Exception encountered while making connection to server: Connection refused: connect
-181202-17:28:13 [INFO] -- NetHandler: Connection trial #115 failed!
-181202-17:28:19 [INFO] -- NetHandler: Connection trial #116: Exception encountered while making connection to server: Connection refused: connect
-181202-17:28:19 [INFO] -- NetHandler: Connection trial #116 failed!
-181202-17:28:25 [INFO] -- NetHandler: Connection trial #117: Exception encountered while making connection to server: Connection refused: connect
-181202-17:28:25 [INFO] -- NetHandler: Connection trial #117 failed!
-181202-17:28:31 [INFO] -- NetHandler: Connection trial #118: Exception encountered while making connection to server: Connection refused: connect
-181202-17:28:31 [INFO] -- NetHandler: Connection trial #118 failed!
-181202-17:28:37 [INFO] -- NetHandler: Connection trial #119: Exception encountered while making connection to server: Connection refused: connect
-181202-17:28:37 [INFO] -- NetHandler: Connection trial #119 failed!
-181202-17:28:43 [INFO] -- NetHandler: Connection trial #120: Exception encountered while making connection to server: Connection refused: connect
-181202-17:28:43 [INFO] -- NetHandler: Connection trial #120 failed!
-181202-17:28:49 [INFO] -- NetHandler: Connection trial #121: Exception encountered while making connection to server: Connection refused: connect
-181202-17:28:49 [INFO] -- NetHandler: Connection trial #121 failed!
-181202-17:28:55 [INFO] -- NetHandler: Connection trial #122: Exception encountered while making connection to server: Connection refused: connect
-181202-17:28:55 [INFO] -- NetHandler: Connection trial #122 failed!
-181202-17:29:01 [INFO] -- NetHandler: Connection trial #123: Exception encountered while making connection to server: Connection refused: connect
-181202-17:29:01 [INFO] -- NetHandler: Connection trial #123 failed!
-181202-17:29:07 [INFO] -- NetHandler: Connection trial #124: Exception encountered while making connection to server: Connection refused: connect
-181202-17:29:07 [INFO] -- NetHandler: Connection trial #124 failed!
-181202-17:29:13 [INFO] -- NetHandler: Connection trial #125: Exception encountered while making connection to server: Connection refused: connect
-181202-17:29:13 [INFO] -- NetHandler: Connection trial #125 failed!
-181202-17:29:19 [INFO] -- NetHandler: Connection trial #126: Exception encountered while making connection to server: Connection refused: connect
-181202-17:29:19 [INFO] -- NetHandler: Connection trial #126 failed!
-181202-17:29:25 [INFO] -- NetHandler: Connection trial #127: Exception encountered while making connection to server: Connection refused: connect
-181202-17:29:25 [INFO] -- NetHandler: Connection trial #127 failed!
-181202-17:29:31 [INFO] -- NetHandler: Connection trial #128: Exception encountered while making connection to server: Connection refused: connect
-181202-17:29:31 [INFO] -- NetHandler: Connection trial #128 failed!
-181202-17:29:37 [INFO] -- NetHandler: Connection trial #129: Exception encountered while making connection to server: Connection refused: connect
-181202-17:29:37 [INFO] -- NetHandler: Connection trial #129 failed!
-181202-17:29:43 [INFO] -- NetHandler: Connection trial #130: Exception encountered while making connection to server: Connection refused: connect
-181202-17:29:43 [INFO] -- NetHandler: Connection trial #130 failed!
-181202-17:29:49 [INFO] -- NetHandler: Connection trial #131: Exception encountered while making connection to server: Connection refused: connect
-181202-17:29:49 [INFO] -- NetHandler: Connection trial #131 failed!
-181202-17:29:55 [INFO] -- NetHandler: Connection trial #132: Exception encountered while making connection to server: Connection refused: connect
-181202-17:29:55 [INFO] -- NetHandler: Connection trial #132 failed!
-181202-17:30:01 [INFO] -- NetHandler: Connection trial #133: Exception encountered while making connection to server: Connection refused: connect
-181202-17:30:01 [INFO] -- NetHandler: Connection trial #133 failed!
-181202-17:30:07 [INFO] -- NetHandler: Connection trial #134: Exception encountered while making connection to server: Connection refused: connect
-181202-17:30:07 [INFO] -- NetHandler: Connection trial #134 failed!
-181202-17:30:13 [INFO] -- NetHandler: Connection trial #135: Exception encountered while making connection to server: Connection refused: connect
-181202-17:30:13 [INFO] -- NetHandler: Connection trial #135 failed!
-181202-17:30:19 [INFO] -- NetHandler: Connection trial #136: Exception encountered while making connection to server: Connection refused: connect
-181202-17:30:19 [INFO] -- NetHandler: Connection trial #136 failed!
-181202-17:30:25 [INFO] -- NetHandler: Connection trial #137: Exception encountered while making connection to server: Connection refused: connect
-181202-17:30:25 [INFO] -- NetHandler: Connection trial #137 failed!
-181202-17:30:31 [INFO] -- NetHandler: Connection trial #138: Exception encountered while making connection to server: Connection refused: connect
-181202-17:30:31 [INFO] -- NetHandler: Connection trial #138 failed!
-181202-17:30:37 [INFO] -- NetHandler: Connection trial #139: Exception encountered while making connection to server: Connection refused: connect
-181202-17:30:37 [INFO] -- NetHandler: Connection trial #139 failed!
-181202-17:30:43 [INFO] -- NetHandler: Connection trial #140: Exception encountered while making connection to server: Connection refused: connect
-181202-17:30:43 [INFO] -- NetHandler: Connection trial #140 failed!
-181202-17:30:49 [INFO] -- NetHandler: Connection trial #141: Exception encountered while making connection to server: Connection refused: connect
-181202-17:30:49 [INFO] -- NetHandler: Connection trial #141 failed!
-181202-17:30:55 [INFO] -- NetHandler: Connection trial #142: Exception encountered while making connection to server: Connection refused: connect
-181202-17:30:55 [INFO] -- NetHandler: Connection trial #142 failed!
-181202-17:31:01 [INFO] -- NetHandler: Connection trial #143: Exception encountered while making connection to server: Connection refused: connect
-181202-17:31:01 [INFO] -- NetHandler: Connection trial #143 failed!
-181202-17:31:07 [INFO] -- NetHandler: Connection trial #144: Exception encountered while making connection to server: Connection refused: connect
-181202-17:31:07 [INFO] -- NetHandler: Connection trial #144 failed!
-181202-17:31:13 [INFO] -- NetHandler: Connection trial #145: Exception encountered while making connection to server: Connection refused: connect
-181202-17:31:13 [INFO] -- NetHandler: Connection trial #145 failed!
-181202-17:31:19 [INFO] -- NetHandler: Connection trial #146: Exception encountered while making connection to server: Connection refused: connect
-181202-17:31:19 [INFO] -- NetHandler: Connection trial #146 failed!
-181202-17:31:25 [INFO] -- NetHandler: Connection trial #147: Exception encountered while making connection to server: Connection refused: connect
-181202-17:31:25 [INFO] -- NetHandler: Connection trial #147 failed!
-181202-17:31:31 [INFO] -- NetHandler: Connection trial #148: Exception encountered while making connection to server: Connection refused: connect
-181202-17:31:31 [INFO] -- NetHandler: Connection trial #148 failed!
-181202-17:31:37 [INFO] -- NetHandler: Connection trial #149: Exception encountered while making connection to server: Connection refused: connect
-181202-17:31:37 [INFO] -- NetHandler: Connection trial #149 failed!
-181202-17:31:43 [INFO] -- NetHandler: Connection trial #150: Exception encountered while making connection to server: Connection refused: connect
-181202-17:31:43 [INFO] -- NetHandler: Connection trial #150 failed!
-181202-17:31:49 [INFO] -- NetHandler: Connection trial #151: Exception encountered while making connection to server: Connection refused: connect
-181202-17:31:49 [INFO] -- NetHandler: Connection trial #151 failed!
-181202-17:31:55 [INFO] -- NetHandler: Connection trial #152: Exception encountered while making connection to server: Connection refused: connect
-181202-17:31:55 [INFO] -- NetHandler: Connection trial #152 failed!
-181202-17:32:00 [INFO] -- NetHandler: connection trial #153 succeeded!
-181202-17:32:00 [INFO] -- NetIncoming: receiving link up from NetHandler
-181202-17:32:00 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181202-17:32:08 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:32:18 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:32:26 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:32:40 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181202-17:32:41 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181202-17:32:41 [INFO] -- NetHandler: connection trial #153 link down from NetIncoming
-181202-17:32:41 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181202-17:32:41 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181202-17:32:42 [INFO] -- NetHandler: Connection trial #154: Exception encountered while making connection to server: Connection refused: connect
-181202-17:32:42 [INFO] -- NetHandler: Connection trial #154 failed!
-181202-17:32:47 [INFO] -- NetHandler: connection trial #155 succeeded!
-181202-17:32:47 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181202-17:32:47 [INFO] -- NetIncoming: receiving link up from NetHandler
-181202-17:32:48 [INFO] -- Sending: [Svc_Req Passenger-0001 0 10]
-181202-17:32:51 [INFO] -- Sending: [Svc_Req Passenger-0001 0 10]
-181202-17:35:17 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181202-17:35:17 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181202-17:35:17 [INFO] -- NetHandler: connection trial #155 link down from NetIncoming
-181202-17:35:17 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181202-17:35:17 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181202-17:35:18 [INFO] -- NetHandler: Connection trial #156: Exception encountered while making connection to server: Connection refused: connect
-181202-17:35:18 [INFO] -- NetHandler: Connection trial #156 failed!
-181202-17:35:24 [INFO] -- NetHandler: Connection trial #157: Exception encountered while making connection to server: Connection refused: connect
-181202-17:35:24 [INFO] -- NetHandler: Connection trial #157 failed!
-181202-17:35:30 [INFO] -- NetHandler: Connection trial #158: Exception encountered while making connection to server: Connection refused: connect
-181202-17:35:30 [INFO] -- NetHandler: Connection trial #158 failed!
-181202-17:35:36 [INFO] -- NetHandler: Connection trial #159: Exception encountered while making connection to server: Connection refused: connect
-181202-17:35:36 [INFO] -- NetHandler: Connection trial #159 failed!
-181202-17:35:42 [INFO] -- NetHandler: Connection trial #160: Exception encountered while making connection to server: Connection refused: connect
-181202-17:35:42 [INFO] -- NetHandler: Connection trial #160 failed!
-181202-17:35:48 [INFO] -- NetHandler: Connection trial #161: Exception encountered while making connection to server: Connection refused: connect
-181202-17:35:48 [INFO] -- NetHandler: Connection trial #161 failed!
-181202-17:35:54 [INFO] -- NetHandler: Connection trial #162: Exception encountered while making connection to server: Connection refused: connect
-181202-17:35:54 [INFO] -- NetHandler: Connection trial #162 failed!
-181202-17:36:00 [INFO] -- NetHandler: Connection trial #163: Exception encountered while making connection to server: Connection refused: connect
-181202-17:36:00 [INFO] -- NetHandler: Connection trial #163 failed!
-181202-17:36:06 [INFO] -- NetHandler: Connection trial #164: Exception encountered while making connection to server: Connection refused: connect
-181202-17:36:06 [INFO] -- NetHandler: Connection trial #164 failed!
-181202-17:36:12 [INFO] -- NetHandler: Connection trial #165: Exception encountered while making connection to server: Connection refused: connect
-181202-17:36:12 [INFO] -- NetHandler: Connection trial #165 failed!
-181202-17:36:18 [INFO] -- NetHandler: Connection trial #166: Exception encountered while making connection to server: Connection refused: connect
-181202-17:36:18 [INFO] -- NetHandler: Connection trial #166 failed!
-181202-17:36:24 [INFO] -- NetHandler: Connection trial #167: Exception encountered while making connection to server: Connection refused: connect
-181202-17:36:24 [INFO] -- NetHandler: Connection trial #167 failed!
-181202-17:36:30 [INFO] -- NetHandler: Connection trial #168: Exception encountered while making connection to server: Connection refused: connect
-181202-17:36:30 [INFO] -- NetHandler: Connection trial #168 failed!
-181202-17:36:36 [INFO] -- NetHandler: Connection trial #169: Exception encountered while making connection to server: Connection refused: connect
-181202-17:36:36 [INFO] -- NetHandler: Connection trial #169 failed!
-181202-17:36:42 [INFO] -- NetHandler: Connection trial #170: Exception encountered while making connection to server: Connection refused: connect
-181202-17:36:42 [INFO] -- NetHandler: Connection trial #170 failed!
-181202-17:36:48 [INFO] -- NetHandler: Connection trial #171: Exception encountered while making connection to server: Connection refused: connect
-181202-17:36:48 [INFO] -- NetHandler: Connection trial #171 failed!
-181202-17:36:54 [INFO] -- NetHandler: Connection trial #172: Exception encountered while making connection to server: Connection refused: connect
-181202-17:36:54 [INFO] -- NetHandler: Connection trial #172 failed!
-181202-17:37:00 [INFO] -- NetHandler: Connection trial #173: Exception encountered while making connection to server: Connection refused: connect
-181202-17:37:00 [INFO] -- NetHandler: Connection trial #173 failed!
-181202-17:37:06 [INFO] -- NetHandler: Connection trial #174: Exception encountered while making connection to server: Connection refused: connect
-181202-17:37:06 [INFO] -- NetHandler: Connection trial #174 failed!
-181202-17:37:12 [INFO] -- NetHandler: Connection trial #175: Exception encountered while making connection to server: Connection refused: connect
-181202-17:37:12 [INFO] -- NetHandler: Connection trial #175 failed!
-181202-17:37:18 [INFO] -- NetHandler: Connection trial #176: Exception encountered while making connection to server: Connection refused: connect
-181202-17:37:18 [INFO] -- NetHandler: Connection trial #176 failed!
-181202-17:37:24 [INFO] -- NetHandler: Connection trial #177: Exception encountered while making connection to server: Connection refused: connect
-181202-17:37:24 [INFO] -- NetHandler: Connection trial #177 failed!
-181202-17:37:30 [INFO] -- NetHandler: Connection trial #178: Exception encountered while making connection to server: Connection refused: connect
-181202-17:37:30 [INFO] -- NetHandler: Connection trial #178 failed!
-181202-17:37:36 [INFO] -- NetHandler: Connection trial #179: Exception encountered while making connection to server: Connection refused: connect
-181202-17:37:36 [INFO] -- NetHandler: Connection trial #179 failed!
-181202-17:37:42 [INFO] -- NetHandler: Connection trial #180: Exception encountered while making connection to server: Connection refused: connect
-181202-17:37:42 [INFO] -- NetHandler: Connection trial #180 failed!
-181202-17:37:48 [INFO] -- NetHandler: Connection trial #181: Exception encountered while making connection to server: Connection refused: connect
-181202-17:37:48 [INFO] -- NetHandler: Connection trial #181 failed!
-181202-17:37:54 [INFO] -- NetHandler: Connection trial #182: Exception encountered while making connection to server: Connection refused: connect
-181202-17:37:54 [INFO] -- NetHandler: Connection trial #182 failed!
-181202-17:38:00 [INFO] -- NetHandler: Connection trial #183: Exception encountered while making connection to server: Connection refused: connect
-181202-17:38:00 [INFO] -- NetHandler: Connection trial #183 failed!
-181202-17:38:06 [INFO] -- NetHandler: Connection trial #184: Exception encountered while making connection to server: Connection refused: connect
-181202-17:38:06 [INFO] -- NetHandler: Connection trial #184 failed!
-181202-17:38:13 [INFO] -- NetHandler: Connection trial #185: Exception encountered while making connection to server: Connection refused: connect
-181202-17:38:13 [INFO] -- NetHandler: Connection trial #185 failed!
-181202-17:38:19 [INFO] -- NetHandler: Connection trial #186: Exception encountered while making connection to server: Connection refused: connect
-181202-17:38:19 [INFO] -- NetHandler: Connection trial #186 failed!
-181202-17:38:25 [INFO] -- NetHandler: Connection trial #187: Exception encountered while making connection to server: Connection refused: connect
-181202-17:38:25 [INFO] -- NetHandler: Connection trial #187 failed!
-181202-17:38:31 [INFO] -- NetHandler: Connection trial #188: Exception encountered while making connection to server: Connection refused: connect
-181202-17:38:31 [INFO] -- NetHandler: Connection trial #188 failed!
-181202-17:38:37 [INFO] -- NetHandler: Connection trial #189: Exception encountered while making connection to server: Connection refused: connect
-181202-17:38:37 [INFO] -- NetHandler: Connection trial #189 failed!
-181202-17:38:43 [INFO] -- NetHandler: Connection trial #190: Exception encountered while making connection to server: Connection refused: connect
-181202-17:38:43 [INFO] -- NetHandler: Connection trial #190 failed!
-181202-17:38:49 [INFO] -- NetHandler: Connection trial #191: Exception encountered while making connection to server: Connection refused: connect
-181202-17:38:49 [INFO] -- NetHandler: Connection trial #191 failed!
-181202-17:38:55 [INFO] -- NetHandler: Connection trial #192: Exception encountered while making connection to server: Connection refused: connect
-181202-17:38:55 [INFO] -- NetHandler: Connection trial #192 failed!
-181202-17:39:01 [INFO] -- NetHandler: Connection trial #193: Exception encountered while making connection to server: Connection refused: connect
-181202-17:39:01 [INFO] -- NetHandler: Connection trial #193 failed!
-181202-17:39:07 [INFO] -- NetHandler: Connection trial #194: Exception encountered while making connection to server: Connection refused: connect
-181202-17:39:07 [INFO] -- NetHandler: Connection trial #194 failed!
-181202-17:39:13 [INFO] -- NetHandler: Connection trial #195: Exception encountered while making connection to server: Connection refused: connect
-181202-17:39:13 [INFO] -- NetHandler: Connection trial #195 failed!
-181202-17:39:19 [INFO] -- NetHandler: Connection trial #196: Exception encountered while making connection to server: Connection refused: connect
-181202-17:39:19 [INFO] -- NetHandler: Connection trial #196 failed!
-181202-17:39:25 [INFO] -- NetHandler: Connection trial #197: Exception encountered while making connection to server: Connection refused: connect
-181202-17:39:25 [INFO] -- NetHandler: Connection trial #197 failed!
-181202-17:39:31 [INFO] -- NetHandler: Connection trial #198: Exception encountered while making connection to server: Connection refused: connect
-181202-17:39:31 [INFO] -- NetHandler: Connection trial #198 failed!
-181202-17:39:37 [INFO] -- NetHandler: Connection trial #199: Exception encountered while making connection to server: Connection refused: connect
-181202-17:39:37 [INFO] -- NetHandler: Connection trial #199 failed!
-181202-17:39:43 [INFO] -- NetHandler: Connection trial #200: Exception encountered while making connection to server: Connection refused: connect
-181202-17:39:43 [INFO] -- NetHandler: Connection trial #200 failed!
-181202-17:39:49 [INFO] -- NetHandler: Connection trial #201: Exception encountered while making connection to server: Connection refused: connect
-181202-17:39:49 [INFO] -- NetHandler: Connection trial #201 failed!
-181202-17:39:54 [INFO] -- NetHandler: connection trial #202 succeeded!
-181202-17:39:54 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181202-17:39:54 [INFO] -- NetIncoming: receiving link up from NetHandler
-181202-17:39:55 [INFO] -- Sending: [Svc_Req Passenger-0001 0 10]
-181202-17:40:03 [INFO] -- Sending: [Svc_Req Passenger-0001 6 4]
-181202-17:40:11 [INFO] -- Sending: [Svc_Req Passenger-0001 6 4]
-181202-17:40:18 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181202-17:40:18 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181202-17:40:18 [INFO] -- NetHandler: connection trial #202 link down from NetIncoming
-181202-17:40:18 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181202-17:40:18 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181202-17:40:19 [INFO] -- NetHandler: Connection trial #203: Exception encountered while making connection to server: Connection refused: connect
-181202-17:40:19 [INFO] -- NetHandler: Connection trial #203 failed!
-181202-17:40:25 [INFO] -- NetHandler: Connection trial #204: Exception encountered while making connection to server: Connection refused: connect
-181202-17:40:25 [INFO] -- NetHandler: Connection trial #204 failed!
-181202-17:40:31 [INFO] -- NetHandler: Connection trial #205: Exception encountered while making connection to server: Connection refused: connect
-181202-17:40:31 [INFO] -- NetHandler: Connection trial #205 failed!
-181202-17:40:36 [INFO] -- NetHandler: connection trial #206 succeeded!
-181202-17:40:36 [INFO] -- NetIncoming: receiving link up from NetHandler
-181202-17:40:36 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181202-17:40:39 [INFO] -- Sending: [Svc_Req Passenger-0001 0 10]
-181202-17:40:44 [INFO] -- Sending: [Svc_Req Passenger-0001 5 6]
-181202-17:41:40 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181202-17:41:40 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181202-17:41:40 [INFO] -- NetHandler: connection trial #206 link down from NetIncoming
-181202-17:41:40 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181202-17:41:40 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181202-17:41:41 [INFO] -- NetHandler: Connection trial #207: Exception encountered while making connection to server: Connection refused: connect
-181202-17:41:41 [INFO] -- NetHandler: Connection trial #207 failed!
-181202-17:41:47 [INFO] -- NetHandler: connection trial #208 succeeded!
-181202-17:41:47 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181202-17:41:47 [INFO] -- NetIncoming: receiving link up from NetHandler
-181202-17:41:47 [INFO] -- Sending: [Svc_Req Passenger-0001 5 6]
-181202-17:41:50 [INFO] -- Sending: [Svc_Req Passenger-0001 5 6]
-181202-17:41:51 [INFO] -- Sending: [Svc_Req Passenger-0001 5 6]
-181202-17:41:52 [INFO] -- Sending: [Svc_Req Passenger-0001 5 6]
-181202-17:41:52 [INFO] -- Sending: [Svc_Req Passenger-0001 5 6]
-181202-17:41:53 [INFO] -- Sending: [Svc_Req Passenger-0001 5 6]
-181202-17:41:56 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181202-17:41:56 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181202-17:41:56 [INFO] -- NetHandler: connection trial #208 link down from NetIncoming
-181202-17:41:56 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181202-17:41:56 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181202-17:41:57 [INFO] -- NetHandler: Connection trial #209: Exception encountered while making connection to server: Connection refused: connect
-181202-17:41:57 [INFO] -- NetHandler: Connection trial #209 failed!
-181202-17:42:02 [INFO] -- NetHandler: connection trial #210 succeeded!
-181202-17:42:02 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181202-17:42:02 [INFO] -- NetIncoming: receiving link up from NetHandler
-181202-17:42:03 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:42:04 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:42:05 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:42:06 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:42:07 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:42:07 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:42:08 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:42:08 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:42:08 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:42:09 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:42:09 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:42:09 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:42:09 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:42:09 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:42:10 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:42:10 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:42:10 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:42:11 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:42:11 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:42:12 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:42:12 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:42:12 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:42:13 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:42:13 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:42:13 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:42:14 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:42:14 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:42:15 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:42:15 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:42:16 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:42:16 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:42:18 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:42:24 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181202-17:42:24 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181202-17:42:24 [INFO] -- NetHandler: connection trial #210 link down from NetIncoming
-181202-17:42:24 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181202-17:42:24 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181202-17:42:25 [INFO] -- NetHandler: Connection trial #211: Exception encountered while making connection to server: Connection refused: connect
-181202-17:42:25 [INFO] -- NetHandler: Connection trial #211 failed!
-181202-17:42:31 [INFO] -- NetHandler: Connection trial #212: Exception encountered while making connection to server: Connection refused: connect
-181202-17:42:31 [INFO] -- NetHandler: Connection trial #212 failed!
-181202-17:42:36 [INFO] -- NetHandler: connection trial #213 succeeded!
-181202-17:42:36 [INFO] -- NetIncoming: receiving link up from NetHandler
-181202-17:42:36 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181202-17:42:59 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181202-17:42:59 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181202-17:42:59 [INFO] -- NetHandler: connection trial #213 link down from NetIncoming
-181202-17:42:59 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181202-17:42:59 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181202-17:43:00 [INFO] -- NetHandler: Connection trial #214: Exception encountered while making connection to server: Connection refused: connect
-181202-17:43:00 [INFO] -- NetHandler: Connection trial #214 failed!
-181202-17:43:05 [INFO] -- NetHandler: connection trial #215 succeeded!
-181202-17:43:05 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181202-17:43:05 [INFO] -- NetIncoming: receiving link up from NetHandler
-181202-17:43:07 [INFO] -- Sending: [Svc_Req Passenger-0001 0 10]
-181202-17:43:17 [INFO] -- Sending: [Svc_Req Passenger-0001 10 15]
-181202-17:43:26 [INFO] -- Sending: [Svc_Req Passenger-0001 17 16]
-181202-17:43:30 [INFO] -- Sending: [Svc_Req Passenger-0001 18 19]
-181202-17:43:34 [INFO] -- Sending: [Svc_Req Passenger-0001 5 6]
-181202-17:43:39 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181202-17:43:39 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181202-17:43:39 [INFO] -- NetHandler: connection trial #215 link down from NetIncoming
-181202-17:43:39 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181202-17:43:39 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181202-17:43:40 [INFO] -- NetHandler: Connection trial #216: Exception encountered while making connection to server: Connection refused: connect
-181202-17:43:40 [INFO] -- NetHandler: Connection trial #216 failed!
-181202-17:43:45 [INFO] -- NetHandler: connection trial #217 succeeded!
-181202-17:43:45 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181202-17:43:45 [INFO] -- NetIncoming: receiving link up from NetHandler
-181202-17:43:46 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:43:53 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181202-17:43:53 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181202-17:43:53 [INFO] -- NetHandler: connection trial #217 link down from NetIncoming
-181202-17:43:53 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181202-17:43:53 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181202-17:43:54 [INFO] -- NetHandler: Connection trial #218: Exception encountered while making connection to server: Connection refused: connect
-181202-17:43:54 [INFO] -- NetHandler: Connection trial #218 failed!
-181202-17:43:59 [INFO] -- NetHandler: connection trial #219 succeeded!
-181202-17:43:59 [INFO] -- NetIncoming: receiving link up from NetHandler
-181202-17:43:59 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181202-17:44:03 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:44:11 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181202-17:44:11 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181202-17:44:11 [INFO] -- NetHandler: connection trial #219 link down from NetIncoming
-181202-17:44:11 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181202-17:44:11 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181202-17:44:13 [INFO] -- NetHandler: Connection trial #220: Exception encountered while making connection to server: Connection refused: connect
-181202-17:44:13 [INFO] -- NetHandler: Connection trial #220 failed!
-181202-17:44:18 [INFO] -- NetHandler: connection trial #221 succeeded!
-181202-17:44:18 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181202-17:44:18 [INFO] -- NetIncoming: receiving link up from NetHandler
-181202-17:44:19 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:44:27 [INFO] -- Sending: [Svc_Req Passenger-0001 1 0]
-181202-17:44:34 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:44:42 [INFO] -- Sending: [Svc_Req Passenger-0001 5 6]
-181202-17:45:01 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181202-17:45:01 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181202-17:45:01 [INFO] -- NetHandler: connection trial #221 link down from NetIncoming
-181202-17:45:01 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181202-17:45:01 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181202-17:45:02 [INFO] -- NetHandler: Connection trial #222: Exception encountered while making connection to server: Connection refused: connect
-181202-17:45:02 [INFO] -- NetHandler: Connection trial #222 failed!
-181202-17:45:07 [INFO] -- NetHandler: connection trial #223 succeeded!
-181202-17:45:07 [INFO] -- NetIncoming: receiving link up from NetHandler
-181202-17:45:07 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181202-17:45:08 [INFO] -- Sending: [Svc_Req Passenger-0001 5 6]
-181202-17:45:49 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181202-17:45:49 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181202-17:45:49 [INFO] -- NetHandler: connection trial #223 link down from NetIncoming
-181202-17:45:49 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181202-17:45:49 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181202-17:45:50 [INFO] -- NetHandler: Connection trial #224: Exception encountered while making connection to server: Connection refused: connect
-181202-17:45:50 [INFO] -- NetHandler: Connection trial #224 failed!
-181202-17:45:56 [INFO] -- NetHandler: Connection trial #225: Exception encountered while making connection to server: Connection refused: connect
-181202-17:45:56 [INFO] -- NetHandler: Connection trial #225 failed!
-181202-17:46:02 [INFO] -- NetHandler: Connection trial #226: Exception encountered while making connection to server: Connection refused: connect
-181202-17:46:02 [INFO] -- NetHandler: Connection trial #226 failed!
-181202-17:46:07 [INFO] -- NetHandler: connection trial #227 succeeded!
-181202-17:46:07 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181202-17:46:07 [INFO] -- NetIncoming: receiving link up from NetHandler
-181202-17:46:11 [INFO] -- Sending: [Svc_Req Passenger-0001 1 0]
-181202-17:46:27 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:46:31 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181202-17:46:31 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181202-17:46:31 [INFO] -- NetHandler: connection trial #227 link down from NetIncoming
-181202-17:46:31 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181202-17:46:31 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181202-17:46:32 [INFO] -- NetHandler: Connection trial #228: Exception encountered while making connection to server: Connection refused: connect
-181202-17:46:32 [INFO] -- NetHandler: Connection trial #228 failed!
-181202-17:46:37 [INFO] -- NetHandler: connection trial #229 succeeded!
-181202-17:46:37 [INFO] -- NetIncoming: receiving link up from NetHandler
-181202-17:46:37 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181202-17:48:45 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181202-17:48:45 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181202-17:48:45 [INFO] -- NetHandler: connection trial #229 link down from NetIncoming
-181202-17:48:45 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181202-17:48:45 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181202-17:48:46 [INFO] -- NetHandler: Connection trial #230: Exception encountered while making connection to server: Connection refused: connect
-181202-17:48:46 [INFO] -- NetHandler: Connection trial #230 failed!
-181202-17:48:51 [INFO] -- NetHandler: connection trial #231 succeeded!
-181202-17:48:51 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181202-17:48:51 [INFO] -- NetIncoming: receiving link up from NetHandler
-181202-17:48:52 [INFO] -- Sending: [Svc_Req Passenger-0001 1 2]
-181202-17:49:06 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181202-17:49:06 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181202-17:49:06 [INFO] -- NetHandler: connection trial #231 link down from NetIncoming
-181202-17:49:06 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181202-17:49:06 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181202-17:49:07 [INFO] -- NetHandler: Connection trial #232: Exception encountered while making connection to server: Connection refused: connect
-181202-17:49:07 [INFO] -- NetHandler: Connection trial #232 failed!
-181202-17:49:12 [INFO] -- NetHandler: connection trial #233 succeeded!
-181202-17:49:12 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181202-17:49:12 [INFO] -- NetIncoming: receiving link up from NetHandler
-181202-17:49:13 [INFO] -- Sending: [Svc_Req Passenger-0001 3 4]
-181202-17:50:15 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181202-17:50:15 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181202-17:50:15 [INFO] -- NetHandler: connection trial #233 link down from NetIncoming
-181202-17:50:15 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181202-17:50:15 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181202-17:50:16 [INFO] -- NetHandler: Connection trial #234: Exception encountered while making connection to server: Connection refused: connect
-181202-17:50:16 [INFO] -- NetHandler: Connection trial #234 failed!
-181202-17:50:21 [INFO] -- NetHandler: connection trial #235 succeeded!
-181202-17:50:21 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181202-17:50:21 [INFO] -- NetIncoming: receiving link up from NetHandler
-181202-17:50:23 [INFO] -- Sending: [Svc_Req Passenger-0001 1 0]
-181202-17:50:35 [INFO] -- Sending: [Svc_Req Passenger-0001 10 15]
-181202-17:50:44 [INFO] -- Sending: [Svc_Req Passenger-0001 10 15]
-181202-17:50:45 [INFO] -- Sending: [Svc_Req Passenger-0001 10 15]
-181202-17:50:45 [INFO] -- Sending: [Svc_Req Passenger-0001 10 15]
-181202-17:50:46 [INFO] -- Sending: [Svc_Req Passenger-0001 10 15]
-181202-17:50:46 [INFO] -- Sending: [Svc_Req Passenger-0001 10 15]
-181202-17:50:46 [INFO] -- Sending: [Svc_Req Passenger-0001 10 15]
-181202-17:50:46 [INFO] -- Sending: [Svc_Req Passenger-0001 10 15]
-181202-17:50:47 [INFO] -- Sending: [Svc_Req Passenger-0001 10 15]
-181202-17:50:47 [INFO] -- Sending: [Svc_Req Passenger-0001 10 15]
-181202-17:50:47 [INFO] -- Sending: [Svc_Req Passenger-0001 10 15]
-181202-17:50:47 [INFO] -- Sending: [Svc_Req Passenger-0001 10 15]
-181202-17:50:48 [INFO] -- Sending: [Svc_Req Passenger-0001 10 15]
-181202-17:50:48 [INFO] -- Sending: [Svc_Req Passenger-0001 10 15]
-181202-17:50:48 [INFO] -- Sending: [Svc_Req Passenger-0001 10 15]
-181202-17:50:48 [INFO] -- Sending: [Svc_Req Passenger-0001 10 15]
-181202-17:50:48 [INFO] -- Sending: [Svc_Req Passenger-0001 10 15]
-181202-17:50:58 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:50:59 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:00 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:00 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:01 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:01 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:01 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:01 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:02 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:02 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:02 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:02 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:02 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:03 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:03 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:03 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:03 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:03 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:04 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:04 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:04 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:04 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:04 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:05 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:05 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:05 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:05 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:05 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:06 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:06 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:06 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:06 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:06 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:06 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:07 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:07 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:07 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:07 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:07 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:08 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:08 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:08 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:08 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:08 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:09 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:09 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:09 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:09 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:09 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:10 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:10 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:10 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:10 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:10 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:11 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:11 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:11 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:15 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:15 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:16 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:19 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:19 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:20 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:20 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:20 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:20 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:21 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:21 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:21 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:21 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:22 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:22 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:22 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:22 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:22 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:23 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:23 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:23 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:23 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:24 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:24 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:24 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:24 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:24 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:25 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:25 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:25 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:25 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:25 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:26 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:26 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:26 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:26 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:26 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:27 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:27 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:30 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:31 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:32 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:33 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181202-17:51:44 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181202-17:51:44 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181202-17:51:44 [INFO] -- NetHandler: connection trial #235 link down from NetIncoming
-181202-17:51:44 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181202-17:51:44 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181202-17:51:45 [INFO] -- NetHandler: Connection trial #236: Exception encountered while making connection to server: Connection refused: connect
-181202-17:51:45 [INFO] -- NetHandler: Connection trial #236 failed!
-181202-17:51:51 [INFO] -- NetHandler: Connection trial #237: Exception encountered while making connection to server: Connection refused: connect
-181202-17:51:51 [INFO] -- NetHandler: Connection trial #237 failed!
-181202-17:51:57 [INFO] -- NetHandler: Connection trial #238: Exception encountered while making connection to server: Connection refused: connect
-181202-17:51:57 [INFO] -- NetHandler: Connection trial #238 failed!
-181202-17:52:03 [INFO] -- NetHandler: Connection trial #239: Exception encountered while making connection to server: Connection refused: connect
-181202-17:52:03 [INFO] -- NetHandler: Connection trial #239 failed!
-181202-17:52:09 [INFO] -- NetHandler: Connection trial #240: Exception encountered while making connection to server: Connection refused: connect
-181202-17:52:09 [INFO] -- NetHandler: Connection trial #240 failed!
-181202-17:52:15 [INFO] -- NetHandler: Connection trial #241: Exception encountered while making connection to server: Connection refused: connect
-181202-17:52:15 [INFO] -- NetHandler: Connection trial #241 failed!
-181202-17:52:21 [INFO] -- NetHandler: Connection trial #242: Exception encountered while making connection to server: Connection refused: connect
-181202-17:52:21 [INFO] -- NetHandler: Connection trial #242 failed!
-181202-17:52:27 [INFO] -- NetHandler: Connection trial #243: Exception encountered while making connection to server: Connection refused: connect
-181202-17:52:27 [INFO] -- NetHandler: Connection trial #243 failed!
-181202-17:52:33 [INFO] -- NetHandler: Connection trial #244: Exception encountered while making connection to server: Connection refused: connect
-181202-17:52:33 [INFO] -- NetHandler: Connection trial #244 failed!
-181202-17:52:39 [INFO] -- NetHandler: Connection trial #245: Exception encountered while making connection to server: Connection refused: connect
-181202-17:52:39 [INFO] -- NetHandler: Connection trial #245 failed!
-181202-17:52:45 [INFO] -- NetHandler: Connection trial #246: Exception encountered while making connection to server: Connection refused: connect
-181202-17:52:45 [INFO] -- NetHandler: Connection trial #246 failed!
-181202-17:52:52 [INFO] -- NetHandler: Connection trial #247: Exception encountered while making connection to server: Connection refused: connect
-181202-17:52:52 [INFO] -- NetHandler: Connection trial #247 failed!
-181202-17:52:58 [INFO] -- NetHandler: Connection trial #248: Exception encountered while making connection to server: Connection refused: connect
-181202-17:52:58 [INFO] -- NetHandler: Connection trial #248 failed!
-181202-17:53:04 [INFO] -- NetHandler: Connection trial #249: Exception encountered while making connection to server: Connection refused: connect
-181202-17:53:04 [INFO] -- NetHandler: Connection trial #249 failed!
-181202-17:53:10 [INFO] -- NetHandler: Connection trial #250: Exception encountered while making connection to server: Connection refused: connect
-181202-17:53:10 [INFO] -- NetHandler: Connection trial #250 failed!
-181202-17:53:16 [INFO] -- NetHandler: Connection trial #251: Exception encountered while making connection to server: Connection refused: connect
-181202-17:53:16 [INFO] -- NetHandler: Connection trial #251 failed!
-181202-17:53:22 [INFO] -- NetHandler: Connection trial #252: Exception encountered while making connection to server: Connection refused: connect
-181202-17:53:22 [INFO] -- NetHandler: Connection trial #252 failed!
-181202-17:53:28 [INFO] -- NetHandler: Connection trial #253: Exception encountered while making connection to server: Connection refused: connect
-181202-17:53:28 [INFO] -- NetHandler: Connection trial #253 failed!
-181202-17:53:34 [INFO] -- NetHandler: Connection trial #254: Exception encountered while making connection to server: Connection refused: connect
-181202-17:53:34 [INFO] -- NetHandler: Connection trial #254 failed!
-181202-17:53:40 [INFO] -- NetHandler: Connection trial #255: Exception encountered while making connection to server: Connection refused: connect
-181202-17:53:40 [INFO] -- NetHandler: Connection trial #255 failed!
-181202-17:53:46 [INFO] -- NetHandler: Connection trial #256: Exception encountered while making connection to server: Connection refused: connect
-181202-17:53:46 [INFO] -- NetHandler: Connection trial #256 failed!
-181202-17:53:52 [INFO] -- NetHandler: Connection trial #257: Exception encountered while making connection to server: Connection refused: connect
-181202-17:53:52 [INFO] -- NetHandler: Connection trial #257 failed!
-181202-17:53:58 [INFO] -- NetHandler: Connection trial #258: Exception encountered while making connection to server: Connection refused: connect
-181202-17:53:58 [INFO] -- NetHandler: Connection trial #258 failed!
-181202-17:54:04 [INFO] -- NetHandler: Connection trial #259: Exception encountered while making connection to server: Connection refused: connect
-181202-17:54:04 [INFO] -- NetHandler: Connection trial #259 failed!
-181202-17:54:10 [INFO] -- NetHandler: Connection trial #260: Exception encountered while making connection to server: Connection refused: connect
-181202-17:54:10 [INFO] -- NetHandler: Connection trial #260 failed!
-181202-17:54:16 [INFO] -- NetHandler: Connection trial #261: Exception encountered while making connection to server: Connection refused: connect
-181202-17:54:16 [INFO] -- NetHandler: Connection trial #261 failed!
-181202-17:54:22 [INFO] -- NetHandler: Connection trial #262: Exception encountered while making connection to server: Connection refused: connect
-181202-17:54:22 [INFO] -- NetHandler: Connection trial #262 failed!
-181202-17:54:28 [INFO] -- NetHandler: Connection trial #263: Exception encountered while making connection to server: Connection refused: connect
-181202-17:54:28 [INFO] -- NetHandler: Connection trial #263 failed!
-181202-17:54:34 [INFO] -- NetHandler: Connection trial #264: Exception encountered while making connection to server: Connection refused: connect
-181202-17:54:34 [INFO] -- NetHandler: Connection trial #264 failed!
-181202-17:54:40 [INFO] -- NetHandler: Connection trial #265: Exception encountered while making connection to server: Connection refused: connect
-181202-17:54:40 [INFO] -- NetHandler: Connection trial #265 failed!
-181202-17:54:46 [INFO] -- NetHandler: Connection trial #266: Exception encountered while making connection to server: Connection refused: connect
-181202-17:54:46 [INFO] -- NetHandler: Connection trial #266 failed!
-181202-17:54:52 [INFO] -- NetHandler: Connection trial #267: Exception encountered while making connection to server: Connection refused: connect
-181202-17:54:52 [INFO] -- NetHandler: Connection trial #267 failed!
-181202-17:54:58 [INFO] -- NetHandler: Connection trial #268: Exception encountered while making connection to server: Connection refused: connect
-181202-17:54:58 [INFO] -- NetHandler: Connection trial #268 failed!
-181202-17:55:04 [INFO] -- NetHandler: Connection trial #269: Exception encountered while making connection to server: Connection refused: connect
-181202-17:55:04 [INFO] -- NetHandler: Connection trial #269 failed!
-181202-17:55:10 [INFO] -- NetHandler: Connection trial #270: Exception encountered while making connection to server: Connection refused: connect
-181202-17:55:10 [INFO] -- NetHandler: Connection trial #270 failed!
-181202-17:55:16 [INFO] -- NetHandler: Connection trial #271: Exception encountered while making connection to server: Connection refused: connect
-181202-17:55:16 [INFO] -- NetHandler: Connection trial #271 failed!
-181202-17:55:21 [INFO] -- NetHandler: connection trial #272 succeeded!
-181202-17:55:21 [INFO] -- NetIncoming: receiving link up from NetHandler
-181202-17:55:21 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181202-17:55:28 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:55:36 [INFO] -- Sending: [Svc_Req Passenger-0001 15 14]
-181202-17:55:42 [INFO] -- Sending: [Svc_Req Passenger-0001 2 3]
-181202-17:55:55 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:55:58 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181202-17:55:58 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181202-17:55:58 [INFO] -- NetHandler: connection trial #272 link down from NetIncoming
-181202-17:55:58 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181202-17:55:58 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181202-17:55:59 [INFO] -- NetHandler: Connection trial #273: Exception encountered while making connection to server: Connection refused: connect
-181202-17:55:59 [INFO] -- NetHandler: Connection trial #273 failed!
-181202-17:56:05 [INFO] -- NetHandler: Connection trial #274: Exception encountered while making connection to server: Connection refused: connect
-181202-17:56:05 [INFO] -- NetHandler: Connection trial #274 failed!
-181202-17:56:11 [INFO] -- NetHandler: Connection trial #275: Exception encountered while making connection to server: Connection refused: connect
-181202-17:56:11 [INFO] -- NetHandler: Connection trial #275 failed!
-181202-17:56:17 [INFO] -- NetHandler: Connection trial #276: Exception encountered while making connection to server: Connection refused: connect
-181202-17:56:17 [INFO] -- NetHandler: Connection trial #276 failed!
-181202-17:56:23 [INFO] -- NetHandler: Connection trial #277: Exception encountered while making connection to server: Connection refused: connect
-181202-17:56:23 [INFO] -- NetHandler: Connection trial #277 failed!
-181202-17:56:29 [INFO] -- NetHandler: Connection trial #278: Exception encountered while making connection to server: Connection refused: connect
-181202-17:56:29 [INFO] -- NetHandler: Connection trial #278 failed!
-181202-17:56:35 [INFO] -- NetHandler: Connection trial #279: Exception encountered while making connection to server: Connection refused: connect
-181202-17:56:35 [INFO] -- NetHandler: Connection trial #279 failed!
-181202-17:56:41 [INFO] -- NetHandler: Connection trial #280: Exception encountered while making connection to server: Connection refused: connect
-181202-17:56:41 [INFO] -- NetHandler: Connection trial #280 failed!
-181202-17:56:46 [INFO] -- NetHandler: connection trial #281 succeeded!
-181202-17:56:46 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181202-17:56:46 [INFO] -- NetIncoming: receiving link up from NetHandler
-181202-17:56:49 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:56:53 [INFO] -- Sending: [Svc_Req Passenger-0001 1 2]
-181202-17:56:56 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:57:00 [INFO] -- Sending: [Svc_Req Passenger-0001 0 15]
-181202-17:57:03 [INFO] -- Sending: [Svc_Req Passenger-0001 18 20]
-181202-17:57:06 [INFO] -- Sending: [Svc_Req Passenger-0001 0 5]
-181202-17:57:09 [INFO] -- Sending: [Svc_Req Passenger-0001 1 8]
-181202-17:57:15 [INFO] -- Sending: [Svc_Req Passenger-0001 1 9]
-181202-17:57:23 [INFO] -- Sending: [Svc_Req Passenger-0001 2 15]
-181202-17:57:41 [INFO] -- Sending: [Svc_Req Passenger-0001 20 0]
-181202-17:57:52 [INFO] -- Sending: [Svc_Req Passenger-0001 8 7]
-181202-17:58:01 [INFO] -- Sending: [Svc_Req Passenger-0001 20 0]
-181202-17:58:12 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
-181202-17:58:16 [INFO] -- Sending: [Svc_Req Passenger-0001 5 6]
-181202-17:58:19 [INFO] -- Sending: [Svc_Req Passenger-0001 7 6]
-181202-17:58:23 [INFO] -- Sending: [Svc_Req Passenger-0001 20 19]
-181202-17:58:32 [INFO] -- Sending: [Svc_Req Passenger-0001 6 0]
-181202-17:58:40 [INFO] -- Sending: [Svc_Req Passenger-0001 9 5]
-181202-17:58:43 [INFO] -- Sending: [Svc_Req Passenger-0001 19 0]
-181202-17:58:54 [INFO] -- Sending: [Svc_Req Passenger-0001 6 0]
-181202-17:59:20 [INFO] -- Sending: [Svc_Req Passenger-0001 0 5]
-181202-17:59:24 [INFO] -- Sending: [Svc_Req Passenger-0001 0 10]
-181202-17:59:41 [INFO] -- Sending: [Svc_Req Passenger-0001 0 9]
-181202-18:00:03 [INFO] -- Sending: [Svc_Req Passenger-0001 10 0]
-181202-18:00:11 [INFO] -- Sending: [Svc_Req Passenger-0001 6 0]
-181202-18:01:36 [INFO] -- Sending: [Svc_Req Passenger-0001 9 5]
-181202-18:02:13 [INFO] -- Sending: [Svc_Req Passenger-0001 6 0]
-181202-18:02:24 [INFO] -- Sending: [Svc_Req Passenger-0001 0 5]
-181202-18:02:37 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181202-18:02:37 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181202-18:02:37 [INFO] -- NetHandler: connection trial #281 link down from NetIncoming
-181202-18:02:37 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181202-18:02:37 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181202-18:02:38 [INFO] -- NetHandler: Connection trial #282: Exception encountered while making connection to server: Connection refused: connect
-181202-18:02:38 [INFO] -- NetHandler: Connection trial #282 failed!
-181202-18:02:43 [INFO] -- NetHandler: connection trial #283 succeeded!
-181202-18:02:43 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181202-18:02:43 [INFO] -- NetIncoming: receiving link up from NetHandler
-181202-18:03:15 [INFO] -- Sending: [Svc_Req Passenger-0001 0 5]
-181202-18:03:17 [INFO] -- Sending: [Svc_Req Passenger-0001 0 6]
-181202-18:03:31 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181202-18:03:31 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181202-18:03:31 [INFO] -- NetHandler: connection trial #283 link down from NetIncoming
-181202-18:03:31 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181202-18:03:31 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181202-18:03:32 [INFO] -- NetHandler: Connection trial #284: Exception encountered while making connection to server: Connection refused: connect
-181202-18:03:32 [INFO] -- NetHandler: Connection trial #284 failed!
-181202-18:03:36 [INFO] -- Sending: [Svc_Req Passenger-0001 0 6]
-181202-18:03:36 [WARNING] -- NetOutgoing: receiving sendreq from null while link is down.  The msg: "Svc_Req Passenger-0001 0 6"
-181202-18:03:37 [INFO] -- NetHandler: connection trial #285 succeeded!
-181202-18:03:37 [INFO] -- NetIncoming: receiving link up from NetHandler
-181202-18:03:37 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181202-18:03:38 [INFO] -- Sending: [Svc_Req Passenger-0001 0 6]
-181202-18:03:39 [INFO] -- Sending: [Svc_Req Passenger-0001 0 5]
-181202-18:03:54 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181202-18:03:54 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181202-18:03:54 [INFO] -- NetHandler: connection trial #285 link down from NetIncoming
-181202-18:03:54 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181202-18:03:54 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181202-18:03:55 [INFO] -- NetHandler: Connection trial #286: Exception encountered while making connection to server: Connection refused: connect
-181202-18:03:55 [INFO] -- NetHandler: Connection trial #286 failed!
-181202-18:04:00 [INFO] -- NetHandler: connection trial #287 succeeded!
-181202-18:04:00 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181202-18:04:00 [INFO] -- NetIncoming: receiving link up from NetHandler
-181202-18:04:01 [INFO] -- Sending: [Svc_Req Passenger-0001 0 5]
-181202-18:04:02 [INFO] -- Sending: [Svc_Req Passenger-0001 0 6]
-181202-18:04:26 [INFO] -- Sending: [Svc_Req Passenger-0001 6 0]
-181202-18:04:42 [INFO] -- Sending: [Svc_Req Passenger-0001 0 6]
-181202-18:04:51 [INFO] -- Sending: [Svc_Req Passenger-0001 6 0]
-181202-18:06:11 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181202-18:06:11 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181202-18:06:11 [INFO] -- NetHandler: connection trial #287 link down from NetIncoming
-181202-18:06:11 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181202-18:06:11 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181202-18:06:12 [INFO] -- NetHandler: Connection trial #288: Exception encountered while making connection to server: Connection refused: connect
-181202-18:06:12 [INFO] -- NetHandler: Connection trial #288 failed!
-181202-18:06:17 [INFO] -- NetHandler: connection trial #289 succeeded!
-181202-18:06:17 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181202-18:06:17 [INFO] -- NetIncoming: receiving link up from NetHandler
-181202-18:06:19 [INFO] -- Sending: [Svc_Req Passenger-0001 0 30]
-181202-18:06:21 [INFO] -- Sending: [Svc_Req Passenger-0001 0 12]
-181202-18:06:22 [INFO] -- Sending: [Svc_Req Passenger-0001 0 24]
-181202-18:06:25 [INFO] -- Sending: [Svc_Req Passenger-0001 0 5]
-181202-18:06:28 [INFO] -- Sending: [Svc_Req Passenger-0001 0 16]
-181202-18:06:32 [INFO] -- Sending: [Svc_Req Passenger-0001 0 2]
-181202-18:06:37 [INFO] -- Sending: [Svc_Req Passenger-0001 20 5]
-181202-18:06:43 [INFO] -- Sending: [Svc_Req Passenger-0001 20 30]
-181202-18:06:46 [INFO] -- Sending: [Svc_Req Passenger-0001 20 9]
-181202-18:06:49 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181202-18:06:49 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181202-18:06:49 [INFO] -- NetHandler: connection trial #289 link down from NetIncoming
-181202-18:06:49 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181202-18:06:49 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181202-18:06:50 [INFO] -- NetHandler: Connection trial #290: Exception encountered while making connection to server: Connection refused: connect
-181202-18:06:50 [INFO] -- NetHandler: Connection trial #290 failed!
-181202-18:06:56 [INFO] -- NetHandler: Connection trial #291: Exception encountered while making connection to server: Connection refused: connect
-181202-18:06:56 [INFO] -- NetHandler: Connection trial #291 failed!
-181202-18:07:02 [INFO] -- NetHandler: Connection trial #292: Exception encountered while making connection to server: Connection refused: connect
-181202-18:07:02 [INFO] -- NetHandler: Connection trial #292 failed!
-181202-18:07:08 [INFO] -- NetHandler: Connection trial #293: Exception encountered while making connection to server: Connection refused: connect
-181202-18:07:08 [INFO] -- NetHandler: Connection trial #293 failed!
+181203-17:34:58 [INFO] -- 
+181203-17:34:58 [INFO] -- 
+181203-17:34:58 [INFO] -- ============================================================
+181203-17:34:58 [INFO] -- AppKickstarter: Application Starting...
+181203-17:34:58 [INFO] -- timer: starting...
+181203-17:34:58 [INFO] -- NetHandler: starting...
+181203-17:34:58 [INFO] -- NetIncoming: starting...
+181203-17:34:58 [INFO] -- NetOutgoing: starting...
+181203-17:34:58 [INFO] -- NetHandler: 127.0.0.1, 54321
+181203-17:34:58 [INFO] -- NetHandler: connection trial #1 succeeded!
+181203-17:34:58 [INFO] -- NetIncoming: receiving link up from NetHandler
+181203-17:34:58 [INFO] -- NetOutgoing: receiving link up from NetHandler
+181203-17:34:59 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
+181203-17:34:59 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
+181203-17:34:59 [INFO] -- NetHandler: connection trial #1 link down from NetIncoming
+181203-17:34:59 [INFO] -- NetIncoming: Receiving link down from NetHandler.
+181203-17:34:59 [INFO] -- NetOutgoing: receiving link down from NetHandler
+181203-17:35:00 [INFO] -- NetHandler: Connection trial #2: Exception encountered while making connection to server: Connection refused: connect
+181203-17:35:00 [INFO] -- NetHandler: Connection trial #2 failed!
+181203-17:35:05 [INFO] -- NetHandler: connection trial #3 succeeded!
+181203-17:35:05 [INFO] -- NetIncoming: receiving link up from NetHandler
+181203-17:35:05 [INFO] -- NetOutgoing: receiving link up from NetHandler
+181203-17:35:07 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
+181203-17:35:26 [INFO] -- Sending: [Svc_Req Passenger-0001 1 10]
+181203-17:35:29 [INFO] -- Sending: [Svc_Req Passenger-0001 2 3]
+181203-17:35:43 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
+181203-17:35:43 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
+181203-17:35:43 [INFO] -- NetHandler: connection trial #3 link down from NetIncoming
+181203-17:35:43 [INFO] -- NetIncoming: Receiving link down from NetHandler.
+181203-17:35:43 [INFO] -- NetOutgoing: receiving link down from NetHandler
+181203-17:35:44 [INFO] -- NetHandler: Connection trial #4: Exception encountered while making connection to server: Connection refused: connect
+181203-17:35:44 [INFO] -- NetHandler: Connection trial #4 failed!
+181203-17:35:49 [INFO] -- NetHandler: connection trial #5 succeeded!
+181203-17:35:49 [INFO] -- NetOutgoing: receiving link up from NetHandler
+181203-17:35:49 [INFO] -- NetIncoming: receiving link up from NetHandler
+181203-17:35:50 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
+181203-17:36:03 [INFO] -- Sending: [Svc_Req Passenger-0001 1 2]
+181203-17:36:22 [INFO] -- Sending: [Svc_Req Passenger-0001 2 3]
+181203-17:36:39 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
+181203-17:36:39 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
+181203-17:36:39 [INFO] -- NetHandler: connection trial #5 link down from NetIncoming
+181203-17:36:39 [INFO] -- NetIncoming: Receiving link down from NetHandler.
+181203-17:36:39 [INFO] -- NetOutgoing: receiving link down from NetHandler
+181203-17:36:40 [INFO] -- NetHandler: Connection trial #6: Exception encountered while making connection to server: Connection refused: connect
+181203-17:36:40 [INFO] -- NetHandler: Connection trial #6 failed!
+181203-17:36:45 [INFO] -- NetHandler: connection trial #7 succeeded!
+181203-17:36:45 [INFO] -- NetIncoming: receiving link up from NetHandler
+181203-17:36:45 [INFO] -- NetOutgoing: receiving link up from NetHandler
+181203-17:36:46 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
+181203-17:36:52 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
+181203-17:36:52 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
+181203-17:36:52 [INFO] -- NetHandler: connection trial #7 link down from NetIncoming
+181203-17:36:52 [INFO] -- NetOutgoing: receiving link down from NetHandler
+181203-17:36:52 [INFO] -- NetIncoming: Receiving link down from NetHandler.
+181203-17:36:53 [INFO] -- NetHandler: Connection trial #8: Exception encountered while making connection to server: Connection refused: connect
+181203-17:36:53 [INFO] -- NetHandler: Connection trial #8 failed!
+181203-17:36:58 [INFO] -- NetHandler: connection trial #9 succeeded!
+181203-17:36:58 [INFO] -- NetOutgoing: receiving link up from NetHandler
+181203-17:36:58 [INFO] -- NetIncoming: receiving link up from NetHandler
+181203-17:37:02 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
+181203-17:37:16 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
+181203-17:37:16 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
+181203-17:37:16 [INFO] -- NetHandler: connection trial #9 link down from NetIncoming
+181203-17:37:16 [INFO] -- NetIncoming: Receiving link down from NetHandler.
+181203-17:37:16 [INFO] -- NetOutgoing: receiving link down from NetHandler
+181203-17:37:17 [INFO] -- NetHandler: Connection trial #10: Exception encountered while making connection to server: Connection refused: connect
+181203-17:37:17 [INFO] -- NetHandler: Connection trial #10 failed!
+181203-17:37:23 [INFO] -- NetHandler: Connection trial #11: Exception encountered while making connection to server: Connection refused: connect
+181203-17:37:23 [INFO] -- NetHandler: Connection trial #11 failed!
+181203-17:37:29 [INFO] -- NetHandler: Connection trial #12: Exception encountered while making connection to server: Connection refused: connect
+181203-17:37:29 [INFO] -- NetHandler: Connection trial #12 failed!
+181203-17:37:35 [INFO] -- NetHandler: Connection trial #13: Exception encountered while making connection to server: Connection refused: connect
+181203-17:37:35 [INFO] -- NetHandler: Connection trial #13 failed!
+181203-17:37:41 [INFO] -- NetHandler: Connection trial #14: Exception encountered while making connection to server: Connection refused: connect
+181203-17:37:41 [INFO] -- NetHandler: Connection trial #14 failed!
+181203-17:37:47 [INFO] -- NetHandler: Connection trial #15: Exception encountered while making connection to server: Connection refused: connect
+181203-17:37:47 [INFO] -- NetHandler: Connection trial #15 failed!
+181203-17:37:53 [INFO] -- NetHandler: Connection trial #16: Exception encountered while making connection to server: Connection refused: connect
+181203-17:37:53 [INFO] -- NetHandler: Connection trial #16 failed!
+181203-17:37:59 [INFO] -- NetHandler: Connection trial #17: Exception encountered while making connection to server: Connection refused: connect
+181203-17:37:59 [INFO] -- NetHandler: Connection trial #17 failed!
+181203-17:38:05 [INFO] -- NetHandler: Connection trial #18: Exception encountered while making connection to server: Connection refused: connect
+181203-17:38:05 [INFO] -- NetHandler: Connection trial #18 failed!
+181203-17:38:11 [INFO] -- NetHandler: Connection trial #19: Exception encountered while making connection to server: Connection refused: connect
+181203-17:38:11 [INFO] -- NetHandler: Connection trial #19 failed!
+181203-17:38:17 [INFO] -- NetHandler: Connection trial #20: Exception encountered while making connection to server: Connection refused: connect
+181203-17:38:17 [INFO] -- NetHandler: Connection trial #20 failed!
+181203-17:38:23 [INFO] -- NetHandler: Connection trial #21: Exception encountered while making connection to server: Connection refused: connect
+181203-17:38:23 [INFO] -- NetHandler: Connection trial #21 failed!
+181203-17:38:29 [INFO] -- NetHandler: Connection trial #22: Exception encountered while making connection to server: Connection refused: connect
+181203-17:38:29 [INFO] -- NetHandler: Connection trial #22 failed!
+181203-17:38:35 [INFO] -- NetHandler: Connection trial #23: Exception encountered while making connection to server: Connection refused: connect
+181203-17:38:35 [INFO] -- NetHandler: Connection trial #23 failed!
+181203-17:38:40 [INFO] -- NetHandler: connection trial #24 succeeded!
+181203-17:38:40 [INFO] -- NetIncoming: receiving link up from NetHandler
+181203-17:38:40 [INFO] -- NetOutgoing: receiving link up from NetHandler
+181203-17:38:44 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
+181203-17:38:49 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
+181203-17:38:49 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
+181203-17:38:49 [INFO] -- NetHandler: connection trial #24 link down from NetIncoming
+181203-17:38:49 [INFO] -- NetIncoming: Receiving link down from NetHandler.
+181203-17:38:49 [INFO] -- NetOutgoing: receiving link down from NetHandler
+181203-17:38:50 [INFO] -- NetHandler: Connection trial #25: Exception encountered while making connection to server: Connection refused: connect
+181203-17:38:50 [INFO] -- NetHandler: Connection trial #25 failed!
+181203-17:38:56 [INFO] -- NetHandler: Connection trial #26: Exception encountered while making connection to server: Connection refused: connect
+181203-17:38:56 [INFO] -- NetHandler: Connection trial #26 failed!
+181203-17:39:01 [INFO] -- NetHandler: connection trial #27 succeeded!
+181203-17:39:01 [INFO] -- NetOutgoing: receiving link up from NetHandler
+181203-17:39:01 [INFO] -- NetIncoming: receiving link up from NetHandler
+181203-17:39:03 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
+181203-17:39:09 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
+181203-17:39:09 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
+181203-17:39:09 [INFO] -- NetHandler: connection trial #27 link down from NetIncoming
+181203-17:39:09 [INFO] -- NetOutgoing: receiving link down from NetHandler
+181203-17:39:09 [INFO] -- NetIncoming: Receiving link down from NetHandler.
+181203-17:39:10 [INFO] -- NetHandler: Connection trial #28: Exception encountered while making connection to server: Connection refused: connect
+181203-17:39:10 [INFO] -- NetHandler: Connection trial #28 failed!
+181203-17:39:16 [INFO] -- NetHandler: Connection trial #29: Exception encountered while making connection to server: Connection refused: connect
+181203-17:39:16 [INFO] -- NetHandler: Connection trial #29 failed!
+181203-17:39:22 [INFO] -- NetHandler: Connection trial #30: Exception encountered while making connection to server: Connection refused: connect
+181203-17:39:22 [INFO] -- NetHandler: Connection trial #30 failed!
+181203-17:39:28 [INFO] -- NetHandler: Connection trial #31: Exception encountered while making connection to server: Connection refused: connect
+181203-17:39:28 [INFO] -- NetHandler: Connection trial #31 failed!
+181203-17:39:34 [INFO] -- NetHandler: Connection trial #32: Exception encountered while making connection to server: Connection refused: connect
+181203-17:39:34 [INFO] -- NetHandler: Connection trial #32 failed!
+181203-17:39:40 [INFO] -- NetHandler: Connection trial #33: Exception encountered while making connection to server: Connection refused: connect
+181203-17:39:40 [INFO] -- NetHandler: Connection trial #33 failed!
+181203-17:39:46 [INFO] -- NetHandler: Connection trial #34: Exception encountered while making connection to server: Connection refused: connect
+181203-17:39:46 [INFO] -- NetHandler: Connection trial #34 failed!
+181203-17:39:52 [INFO] -- NetHandler: Connection trial #35: Exception encountered while making connection to server: Connection refused: connect
+181203-17:39:52 [INFO] -- NetHandler: Connection trial #35 failed!
+181203-17:39:58 [INFO] -- NetHandler: Connection trial #36: Exception encountered while making connection to server: Connection refused: connect
+181203-17:39:58 [INFO] -- NetHandler: Connection trial #36 failed!
+181203-17:40:04 [INFO] -- NetHandler: Connection trial #37: Exception encountered while making connection to server: Connection refused: connect
+181203-17:40:04 [INFO] -- NetHandler: Connection trial #37 failed!
+181203-17:40:10 [INFO] -- NetHandler: Connection trial #38: Exception encountered while making connection to server: Connection refused: connect
+181203-17:40:10 [INFO] -- NetHandler: Connection trial #38 failed!
+181203-17:40:16 [INFO] -- NetHandler: Connection trial #39: Exception encountered while making connection to server: Connection refused: connect
+181203-17:40:16 [INFO] -- NetHandler: Connection trial #39 failed!
+181203-17:40:22 [INFO] -- NetHandler: Connection trial #40: Exception encountered while making connection to server: Connection refused: connect
+181203-17:40:22 [INFO] -- NetHandler: Connection trial #40 failed!
+181203-17:40:27 [INFO] -- NetHandler: connection trial #41 succeeded!
+181203-17:40:27 [INFO] -- NetOutgoing: receiving link up from NetHandler
+181203-17:40:27 [INFO] -- NetIncoming: receiving link up from NetHandler
+181203-17:40:30 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
+181203-17:40:46 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
+181203-17:40:46 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
+181203-17:40:46 [INFO] -- NetHandler: connection trial #41 link down from NetIncoming
+181203-17:40:46 [INFO] -- NetIncoming: Receiving link down from NetHandler.
+181203-17:40:46 [INFO] -- NetOutgoing: receiving link down from NetHandler
+181203-17:40:47 [INFO] -- NetHandler: Connection trial #42: Exception encountered while making connection to server: Connection refused: connect
+181203-17:40:47 [INFO] -- NetHandler: Connection trial #42 failed!
+181203-17:40:53 [INFO] -- NetHandler: Connection trial #43: Exception encountered while making connection to server: Connection refused: connect
+181203-17:40:53 [INFO] -- NetHandler: Connection trial #43 failed!
+181203-17:40:59 [INFO] -- NetHandler: Connection trial #44: Exception encountered while making connection to server: Connection refused: connect
+181203-17:40:59 [INFO] -- NetHandler: Connection trial #44 failed!
+181203-17:41:05 [INFO] -- NetHandler: Connection trial #45: Exception encountered while making connection to server: Connection refused: connect
+181203-17:41:05 [INFO] -- NetHandler: Connection trial #45 failed!
+181203-17:41:11 [INFO] -- NetHandler: Connection trial #46: Exception encountered while making connection to server: Connection refused: connect
+181203-17:41:11 [INFO] -- NetHandler: Connection trial #46 failed!
+181203-17:41:16 [INFO] -- NetHandler: connection trial #47 succeeded!
+181203-17:41:16 [INFO] -- NetOutgoing: receiving link up from NetHandler
+181203-17:41:16 [INFO] -- NetIncoming: receiving link up from NetHandler
+181203-17:41:21 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
+181203-17:41:33 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
+181203-17:41:33 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
+181203-17:41:33 [INFO] -- NetHandler: connection trial #47 link down from NetIncoming
+181203-17:41:33 [INFO] -- NetOutgoing: receiving link down from NetHandler
+181203-17:41:33 [INFO] -- NetIncoming: Receiving link down from NetHandler.
+181203-17:41:34 [INFO] -- NetHandler: Connection trial #48: Exception encountered while making connection to server: Connection refused: connect
+181203-17:41:34 [INFO] -- NetHandler: Connection trial #48 failed!
+181203-17:41:40 [INFO] -- NetHandler: Connection trial #49: Exception encountered while making connection to server: Connection refused: connect
+181203-17:41:40 [INFO] -- NetHandler: Connection trial #49 failed!
+181203-17:41:45 [INFO] -- NetHandler: connection trial #50 succeeded!
+181203-17:41:45 [INFO] -- NetOutgoing: receiving link up from NetHandler
+181203-17:41:45 [INFO] -- NetIncoming: receiving link up from NetHandler
+181203-17:41:56 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
+181203-17:43:06 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
+181203-17:43:06 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
+181203-17:43:06 [INFO] -- NetHandler: connection trial #50 link down from NetIncoming
+181203-17:43:06 [INFO] -- NetIncoming: Receiving link down from NetHandler.
+181203-17:43:06 [INFO] -- NetOutgoing: receiving link down from NetHandler
+181203-17:43:07 [INFO] -- NetHandler: Connection trial #51: Exception encountered while making connection to server: Connection refused: connect
+181203-17:43:07 [INFO] -- NetHandler: Connection trial #51 failed!
+181203-17:43:12 [INFO] -- NetHandler: connection trial #52 succeeded!
+181203-17:43:12 [INFO] -- NetOutgoing: receiving link up from NetHandler
+181203-17:43:12 [INFO] -- NetIncoming: receiving link up from NetHandler
+181203-17:43:14 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
+181203-17:43:21 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
+181203-17:43:21 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
+181203-17:43:21 [INFO] -- NetHandler: connection trial #52 link down from NetIncoming
+181203-17:43:21 [INFO] -- NetIncoming: Receiving link down from NetHandler.
+181203-17:43:21 [INFO] -- NetOutgoing: receiving link down from NetHandler
+181203-17:43:22 [INFO] -- NetHandler: Connection trial #53: Exception encountered while making connection to server: Connection refused: connect
+181203-17:43:22 [INFO] -- NetHandler: Connection trial #53 failed!
+181203-17:43:28 [INFO] -- NetHandler: Connection trial #54: Exception encountered while making connection to server: Connection refused: connect
+181203-17:43:28 [INFO] -- NetHandler: Connection trial #54 failed!
+181203-17:43:34 [INFO] -- NetHandler: Connection trial #55: Exception encountered while making connection to server: Connection refused: connect
+181203-17:43:34 [INFO] -- NetHandler: Connection trial #55 failed!
+181203-17:43:40 [INFO] -- NetHandler: Connection trial #56: Exception encountered while making connection to server: Connection refused: connect
+181203-17:43:40 [INFO] -- NetHandler: Connection trial #56 failed!
+181203-17:43:45 [INFO] -- NetHandler: connection trial #57 succeeded!
+181203-17:43:45 [INFO] -- NetOutgoing: receiving link up from NetHandler
+181203-17:43:45 [INFO] -- NetIncoming: receiving link up from NetHandler
+181203-17:43:46 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
+181203-17:45:26 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
+181203-17:45:26 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
+181203-17:45:26 [INFO] -- NetHandler: connection trial #57 link down from NetIncoming
+181203-17:45:26 [INFO] -- NetIncoming: Receiving link down from NetHandler.
+181203-17:45:26 [INFO] -- NetOutgoing: receiving link down from NetHandler
+181203-17:45:27 [INFO] -- NetHandler: Connection trial #58: Exception encountered while making connection to server: Connection refused: connect
+181203-17:45:27 [INFO] -- NetHandler: Connection trial #58 failed!
+181203-17:45:32 [INFO] -- NetHandler: connection trial #59 succeeded!
+181203-17:45:32 [INFO] -- NetOutgoing: receiving link up from NetHandler
+181203-17:45:32 [INFO] -- NetIncoming: receiving link up from NetHandler
+181203-17:45:33 [INFO] -- Sending: [Svc_Req Passenger-0001 1 2]
+181203-17:45:48 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
+181203-17:45:48 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
+181203-17:45:48 [INFO] -- NetHandler: connection trial #59 link down from NetIncoming
+181203-17:45:48 [INFO] -- NetIncoming: Receiving link down from NetHandler.
+181203-17:45:48 [INFO] -- NetOutgoing: receiving link down from NetHandler
+181203-17:45:49 [INFO] -- NetHandler: Connection trial #60: Exception encountered while making connection to server: Connection refused: connect
+181203-17:45:49 [INFO] -- NetHandler: Connection trial #60 failed!
+181203-17:45:55 [INFO] -- NetHandler: Connection trial #61: Exception encountered while making connection to server: Connection refused: connect
+181203-17:45:55 [INFO] -- NetHandler: Connection trial #61 failed!
+181203-17:46:01 [INFO] -- NetHandler: Connection trial #62: Exception encountered while making connection to server: Connection refused: connect
+181203-17:46:01 [INFO] -- NetHandler: Connection trial #62 failed!
+181203-17:46:07 [INFO] -- NetHandler: Connection trial #63: Exception encountered while making connection to server: Connection refused: connect
+181203-17:46:07 [INFO] -- NetHandler: Connection trial #63 failed!
+181203-17:46:13 [INFO] -- NetHandler: Connection trial #64: Exception encountered while making connection to server: Connection refused: connect
+181203-17:46:13 [INFO] -- NetHandler: Connection trial #64 failed!
+181203-17:46:19 [INFO] -- NetHandler: Connection trial #65: Exception encountered while making connection to server: Connection refused: connect
+181203-17:46:19 [INFO] -- NetHandler: Connection trial #65 failed!
+181203-17:46:25 [INFO] -- NetHandler: Connection trial #66: Exception encountered while making connection to server: Connection refused: connect
+181203-17:46:25 [INFO] -- NetHandler: Connection trial #66 failed!
+181203-17:46:31 [INFO] -- NetHandler: Connection trial #67: Exception encountered while making connection to server: Connection refused: connect
+181203-17:46:31 [INFO] -- NetHandler: Connection trial #67 failed!
+181203-17:46:37 [INFO] -- NetHandler: Connection trial #68: Exception encountered while making connection to server: Connection refused: connect
+181203-17:46:37 [INFO] -- NetHandler: Connection trial #68 failed!
+181203-17:46:43 [INFO] -- NetHandler: Connection trial #69: Exception encountered while making connection to server: Connection refused: connect
+181203-17:46:43 [INFO] -- NetHandler: Connection trial #69 failed!
+181203-17:46:49 [INFO] -- NetHandler: Connection trial #70: Exception encountered while making connection to server: Connection refused: connect
+181203-17:46:49 [INFO] -- NetHandler: Connection trial #70 failed!
+181203-17:46:55 [INFO] -- NetHandler: Connection trial #71: Exception encountered while making connection to server: Connection refused: connect
+181203-17:46:55 [INFO] -- NetHandler: Connection trial #71 failed!
+181203-17:47:01 [INFO] -- NetHandler: Connection trial #72: Exception encountered while making connection to server: Connection refused: connect
+181203-17:47:01 [INFO] -- NetHandler: Connection trial #72 failed!
+181203-17:47:07 [INFO] -- NetHandler: Connection trial #73: Exception encountered while making connection to server: Connection refused: connect
+181203-17:47:07 [INFO] -- NetHandler: Connection trial #73 failed!
+181203-17:47:12 [INFO] -- NetHandler: connection trial #74 succeeded!
+181203-17:47:12 [INFO] -- NetIncoming: receiving link up from NetHandler
+181203-17:47:12 [INFO] -- NetOutgoing: receiving link up from NetHandler
+181203-17:47:14 [INFO] -- Sending: [Svc_Req Passenger-0001 0 1]
+181203-17:47:59 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
+181203-17:47:59 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
+181203-17:47:59 [INFO] -- NetHandler: connection trial #74 link down from NetIncoming
+181203-17:47:59 [INFO] -- NetOutgoing: receiving link down from NetHandler
+181203-17:47:59 [INFO] -- NetIncoming: Receiving link down from NetHandler.
+181203-17:48:00 [INFO] -- NetHandler: Connection trial #75: Exception encountered while making connection to server: Connection refused: connect
+181203-17:48:00 [INFO] -- NetHandler: Connection trial #75 failed!
+181203-17:48:06 [INFO] -- NetHandler: Connection trial #76: Exception encountered while making connection to server: Connection refused: connect
+181203-17:48:06 [INFO] -- NetHandler: Connection trial #76 failed!
+181203-17:48:12 [INFO] -- NetHandler: Connection trial #77: Exception encountered while making connection to server: Connection refused: connect
+181203-17:48:12 [INFO] -- NetHandler: Connection trial #77 failed!
+181203-17:48:18 [INFO] -- NetHandler: Connection trial #78: Exception encountered while making connection to server: Connection refused: connect
+181203-17:48:18 [INFO] -- NetHandler: Connection trial #78 failed!

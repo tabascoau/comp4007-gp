@@ -561,12 +561,16 @@ public class Elevator extends AppThread {
             schedule = GetLowerSchedule();
         }
 
-        String reply = "Elev_Arr " + elevatorId + " "  + direction;
-        for (Integer floor: schedule)
+        String reply = "Elev_Dep " + elevatorId + " "  + direction;
+        // May no request
+        if (direction != Direction.Stop)
         {
-            reply += " " + floor;
+            for (Integer floor : schedule)
+            {
+                reply += " " + floor;
+            }
         }
-        log.info("Elev_Arr: " + reply);
+        log.info("Elev_Dep: " + reply);
 
         // Send
     }
