@@ -696,3 +696,174 @@
 181203-18:18:17 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 0 8 A]
 181203-18:18:18 [INFO] -- NetIncoming: receiving [Elev_Dep A 0 U 0 8]
 181203-18:18:24 [INFO] -- NetIncoming: receiving [Elev_Arr A 8 S -3.14]
+181203-18:20:54 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
+181203-18:20:54 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
+181203-18:20:54 [INFO] -- NetHandler: connection trial #210 link down from NetIncoming
+181203-18:20:54 [INFO] -- NetIncoming: Receiving link down from NetHandler.
+181203-18:20:54 [INFO] -- NetOutgoing: receiving link down from NetHandler
+181203-18:20:55 [INFO] -- NetHandler: Connection trial #211: Exception encountered while making connection to server: Connection refused: connect
+181203-18:20:55 [INFO] -- NetHandler: Connection trial #211 failed!
+181203-18:21:00 [INFO] -- NetHandler: connection trial #212 succeeded!
+181203-18:21:00 [INFO] -- NetOutgoing: receiving link up from NetHandler
+181203-18:21:00 [INFO] -- NetIncoming: receiving link up from NetHandler
+181203-18:23:14 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
+181203-18:23:14 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
+181203-18:23:14 [INFO] -- NetHandler: connection trial #212 link down from NetIncoming
+181203-18:23:14 [INFO] -- NetIncoming: Receiving link down from NetHandler.
+181203-18:23:14 [INFO] -- NetOutgoing: receiving link down from NetHandler
+181203-18:23:15 [INFO] -- NetHandler: Connection trial #213: Exception encountered while making connection to server: Connection refused: connect
+181203-18:23:15 [INFO] -- NetHandler: Connection trial #213 failed!
+181203-18:23:20 [INFO] -- NetHandler: connection trial #214 succeeded!
+181203-18:23:20 [INFO] -- NetOutgoing: receiving link up from NetHandler
+181203-18:23:20 [INFO] -- NetIncoming: receiving link up from NetHandler
+181203-18:25:04 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
+181203-18:25:04 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
+181203-18:25:04 [INFO] -- NetHandler: connection trial #214 link down from NetIncoming
+181203-18:25:04 [INFO] -- NetOutgoing: receiving link down from NetHandler
+181203-18:25:04 [INFO] -- NetIncoming: Receiving link down from NetHandler.
+181203-18:25:05 [INFO] -- NetHandler: Connection trial #215: Exception encountered while making connection to server: Connection refused: connect
+181203-18:25:05 [INFO] -- NetHandler: Connection trial #215 failed!
+181203-18:25:10 [INFO] -- NetHandler: connection trial #216 succeeded!
+181203-18:25:10 [INFO] -- NetOutgoing: receiving link up from NetHandler
+181203-18:25:10 [INFO] -- NetIncoming: receiving link up from NetHandler
+181203-18:25:26 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
+181203-18:25:26 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
+181203-18:25:26 [INFO] -- NetHandler: connection trial #216 link down from NetIncoming
+181203-18:25:26 [INFO] -- NetIncoming: Receiving link down from NetHandler.
+181203-18:25:26 [INFO] -- NetOutgoing: receiving link down from NetHandler
+181203-18:25:27 [INFO] -- NetHandler: Connection trial #217: Exception encountered while making connection to server: Connection refused: connect
+181203-18:25:27 [INFO] -- NetHandler: Connection trial #217 failed!
+181203-18:25:32 [INFO] -- NetHandler: connection trial #218 succeeded!
+181203-18:25:32 [INFO] -- NetIncoming: receiving link up from NetHandler
+181203-18:25:32 [INFO] -- NetOutgoing: receiving link up from NetHandler
+181203-18:25:40 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
+181203-18:25:40 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
+181203-18:25:40 [INFO] -- NetHandler: connection trial #218 link down from NetIncoming
+181203-18:25:40 [INFO] -- NetIncoming: Receiving link down from NetHandler.
+181203-18:25:40 [INFO] -- NetOutgoing: receiving link down from NetHandler
+181203-18:25:41 [INFO] -- NetHandler: Connection trial #219: Exception encountered while making connection to server: Connection refused: connect
+181203-18:25:41 [INFO] -- NetHandler: Connection trial #219 failed!
+181203-18:25:47 [INFO] -- NetHandler: Connection trial #220: Exception encountered while making connection to server: Connection refused: connect
+181203-18:25:47 [INFO] -- NetHandler: Connection trial #220 failed!
+181203-18:25:53 [INFO] -- NetHandler: Connection trial #221: Exception encountered while making connection to server: Connection refused: connect
+181203-18:25:53 [INFO] -- NetHandler: Connection trial #221 failed!
+181203-18:25:59 [INFO] -- NetHandler: Connection trial #222: Exception encountered while making connection to server: Connection refused: connect
+181203-18:25:59 [INFO] -- NetHandler: Connection trial #222 failed!
+181203-18:26:04 [INFO] -- NetHandler: connection trial #223 succeeded!
+181203-18:26:04 [INFO] -- NetIncoming: receiving link up from NetHandler
+181203-18:26:04 [INFO] -- NetOutgoing: receiving link up from NetHandler
+181203-18:26:33 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
+181203-18:26:33 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
+181203-18:26:33 [INFO] -- NetHandler: connection trial #223 link down from NetIncoming
+181203-18:26:33 [INFO] -- NetIncoming: Receiving link down from NetHandler.
+181203-18:26:33 [INFO] -- NetOutgoing: receiving link down from NetHandler
+181203-18:26:34 [INFO] -- NetHandler: Connection trial #224: Exception encountered while making connection to server: Connection refused: connect
+181203-18:26:34 [INFO] -- NetHandler: Connection trial #224 failed!
+181203-18:26:40 [INFO] -- NetHandler: Connection trial #225: Exception encountered while making connection to server: Connection refused: connect
+181203-18:26:40 [INFO] -- NetHandler: Connection trial #225 failed!
+181203-18:26:46 [INFO] -- NetHandler: Connection trial #226: Exception encountered while making connection to server: Connection refused: connect
+181203-18:26:46 [INFO] -- NetHandler: Connection trial #226 failed!
+181203-18:26:52 [INFO] -- NetHandler: Connection trial #227: Exception encountered while making connection to server: Connection refused: connect
+181203-18:26:52 [INFO] -- NetHandler: Connection trial #227 failed!
+181203-18:26:58 [INFO] -- NetHandler: Connection trial #228: Exception encountered while making connection to server: Connection refused: connect
+181203-18:26:58 [INFO] -- NetHandler: Connection trial #228 failed!
+181203-18:27:04 [INFO] -- NetHandler: Connection trial #229: Exception encountered while making connection to server: Connection refused: connect
+181203-18:27:04 [INFO] -- NetHandler: Connection trial #229 failed!
+181203-18:27:10 [INFO] -- NetHandler: Connection trial #230: Exception encountered while making connection to server: Connection refused: connect
+181203-18:27:10 [INFO] -- NetHandler: Connection trial #230 failed!
+181203-18:27:16 [INFO] -- NetHandler: Connection trial #231: Exception encountered while making connection to server: Connection refused: connect
+181203-18:27:16 [INFO] -- NetHandler: Connection trial #231 failed!
+181203-18:27:22 [INFO] -- NetHandler: Connection trial #232: Exception encountered while making connection to server: Connection refused: connect
+181203-18:27:22 [INFO] -- NetHandler: Connection trial #232 failed!
+181203-18:27:28 [INFO] -- NetHandler: Connection trial #233: Exception encountered while making connection to server: Connection refused: connect
+181203-18:27:28 [INFO] -- NetHandler: Connection trial #233 failed!
+181203-18:27:34 [INFO] -- NetHandler: Connection trial #234: Exception encountered while making connection to server: Connection refused: connect
+181203-18:27:34 [INFO] -- NetHandler: Connection trial #234 failed!
+181203-18:27:40 [INFO] -- NetHandler: Connection trial #235: Exception encountered while making connection to server: Connection refused: connect
+181203-18:27:40 [INFO] -- NetHandler: Connection trial #235 failed!
+181203-18:27:46 [INFO] -- NetHandler: Connection trial #236: Exception encountered while making connection to server: Connection refused: connect
+181203-18:27:46 [INFO] -- NetHandler: Connection trial #236 failed!
+181203-18:27:52 [INFO] -- NetHandler: Connection trial #237: Exception encountered while making connection to server: Connection refused: connect
+181203-18:27:52 [INFO] -- NetHandler: Connection trial #237 failed!
+181203-18:27:58 [INFO] -- NetHandler: Connection trial #238: Exception encountered while making connection to server: Connection refused: connect
+181203-18:27:58 [INFO] -- NetHandler: Connection trial #238 failed!
+181203-18:28:04 [INFO] -- NetHandler: Connection trial #239: Exception encountered while making connection to server: Connection refused: connect
+181203-18:28:04 [INFO] -- NetHandler: Connection trial #239 failed!
+181203-18:28:10 [INFO] -- NetHandler: Connection trial #240: Exception encountered while making connection to server: Connection refused: connect
+181203-18:28:10 [INFO] -- NetHandler: Connection trial #240 failed!
+181203-18:28:16 [INFO] -- NetHandler: Connection trial #241: Exception encountered while making connection to server: Connection refused: connect
+181203-18:28:16 [INFO] -- NetHandler: Connection trial #241 failed!
+181203-18:28:22 [INFO] -- NetHandler: Connection trial #242: Exception encountered while making connection to server: Connection refused: connect
+181203-18:28:22 [INFO] -- NetHandler: Connection trial #242 failed!
+181203-18:28:28 [INFO] -- NetHandler: Connection trial #243: Exception encountered while making connection to server: Connection refused: connect
+181203-18:28:28 [INFO] -- NetHandler: Connection trial #243 failed!
+181203-18:28:34 [INFO] -- NetHandler: Connection trial #244: Exception encountered while making connection to server: Connection refused: connect
+181203-18:28:34 [INFO] -- NetHandler: Connection trial #244 failed!
+181203-18:28:40 [INFO] -- NetHandler: Connection trial #245: Exception encountered while making connection to server: Connection refused: connect
+181203-18:28:40 [INFO] -- NetHandler: Connection trial #245 failed!
+181203-18:28:46 [INFO] -- NetHandler: Connection trial #246: Exception encountered while making connection to server: Connection refused: connect
+181203-18:28:46 [INFO] -- NetHandler: Connection trial #246 failed!
+181203-18:28:52 [INFO] -- NetHandler: Connection trial #247: Exception encountered while making connection to server: Connection refused: connect
+181203-18:28:52 [INFO] -- NetHandler: Connection trial #247 failed!
+181203-18:28:58 [INFO] -- NetHandler: Connection trial #248: Exception encountered while making connection to server: Connection refused: connect
+181203-18:28:58 [INFO] -- NetHandler: Connection trial #248 failed!
+181203-18:29:04 [INFO] -- NetHandler: Connection trial #249: Exception encountered while making connection to server: Connection refused: connect
+181203-18:29:04 [INFO] -- NetHandler: Connection trial #249 failed!
+181203-18:29:10 [INFO] -- NetHandler: Connection trial #250: Exception encountered while making connection to server: Connection refused: connect
+181203-18:29:10 [INFO] -- NetHandler: Connection trial #250 failed!
+181203-18:29:16 [INFO] -- NetHandler: Connection trial #251: Exception encountered while making connection to server: Connection refused: connect
+181203-18:29:16 [INFO] -- NetHandler: Connection trial #251 failed!
+181203-18:29:22 [INFO] -- NetHandler: Connection trial #252: Exception encountered while making connection to server: Connection refused: connect
+181203-18:29:22 [INFO] -- NetHandler: Connection trial #252 failed!
+181203-18:29:28 [INFO] -- NetHandler: Connection trial #253: Exception encountered while making connection to server: Connection refused: connect
+181203-18:29:28 [INFO] -- NetHandler: Connection trial #253 failed!
+181203-18:29:34 [INFO] -- NetHandler: Connection trial #254: Exception encountered while making connection to server: Connection refused: connect
+181203-18:29:34 [INFO] -- NetHandler: Connection trial #254 failed!
+181203-18:29:40 [INFO] -- NetHandler: Connection trial #255: Exception encountered while making connection to server: Connection refused: connect
+181203-18:29:40 [INFO] -- NetHandler: Connection trial #255 failed!
+181203-18:29:46 [INFO] -- NetHandler: Connection trial #256: Exception encountered while making connection to server: Connection refused: connect
+181203-18:29:46 [INFO] -- NetHandler: Connection trial #256 failed!
+181203-18:29:52 [INFO] -- NetHandler: Connection trial #257: Exception encountered while making connection to server: Connection refused: connect
+181203-18:29:52 [INFO] -- NetHandler: Connection trial #257 failed!
+181203-18:29:58 [INFO] -- NetHandler: Connection trial #258: Exception encountered while making connection to server: Connection refused: connect
+181203-18:29:58 [INFO] -- NetHandler: Connection trial #258 failed!
+181203-18:30:04 [INFO] -- NetHandler: Connection trial #259: Exception encountered while making connection to server: Connection refused: connect
+181203-18:30:04 [INFO] -- NetHandler: Connection trial #259 failed!
+181203-18:30:10 [INFO] -- NetHandler: Connection trial #260: Exception encountered while making connection to server: Connection refused: connect
+181203-18:30:10 [INFO] -- NetHandler: Connection trial #260 failed!
+181203-18:30:16 [INFO] -- NetHandler: Connection trial #261: Exception encountered while making connection to server: Connection refused: connect
+181203-18:30:16 [INFO] -- NetHandler: Connection trial #261 failed!
+181203-18:30:22 [INFO] -- NetHandler: Connection trial #262: Exception encountered while making connection to server: Connection refused: connect
+181203-18:30:22 [INFO] -- NetHandler: Connection trial #262 failed!
+181203-18:30:28 [INFO] -- NetHandler: Connection trial #263: Exception encountered while making connection to server: Connection refused: connect
+181203-18:30:28 [INFO] -- NetHandler: Connection trial #263 failed!
+181203-18:30:34 [INFO] -- NetHandler: Connection trial #264: Exception encountered while making connection to server: Connection refused: connect
+181203-18:30:34 [INFO] -- NetHandler: Connection trial #264 failed!
+181203-18:30:40 [INFO] -- NetHandler: Connection trial #265: Exception encountered while making connection to server: Connection refused: connect
+181203-18:30:40 [INFO] -- NetHandler: Connection trial #265 failed!
+181203-18:30:46 [INFO] -- NetHandler: Connection trial #266: Exception encountered while making connection to server: Connection refused: connect
+181203-18:30:46 [INFO] -- NetHandler: Connection trial #266 failed!
+181203-18:30:52 [INFO] -- NetHandler: Connection trial #267: Exception encountered while making connection to server: Connection refused: connect
+181203-18:30:52 [INFO] -- NetHandler: Connection trial #267 failed!
+181203-18:30:58 [INFO] -- NetHandler: Connection trial #268: Exception encountered while making connection to server: Connection refused: connect
+181203-18:30:58 [INFO] -- NetHandler: Connection trial #268 failed!
+181203-18:31:04 [INFO] -- NetHandler: Connection trial #269: Exception encountered while making connection to server: Connection refused: connect
+181203-18:31:04 [INFO] -- NetHandler: Connection trial #269 failed!
+181203-18:31:10 [INFO] -- NetHandler: Connection trial #270: Exception encountered while making connection to server: Connection refused: connect
+181203-18:31:10 [INFO] -- NetHandler: Connection trial #270 failed!
+181203-18:31:16 [INFO] -- NetHandler: Connection trial #271: Exception encountered while making connection to server: Connection refused: connect
+181203-18:31:16 [INFO] -- NetHandler: Connection trial #271 failed!
+181203-18:31:22 [INFO] -- NetHandler: Connection trial #272: Exception encountered while making connection to server: Connection refused: connect
+181203-18:31:22 [INFO] -- NetHandler: Connection trial #272 failed!
+181203-18:31:28 [INFO] -- NetHandler: Connection trial #273: Exception encountered while making connection to server: Connection refused: connect
+181203-18:31:28 [INFO] -- NetHandler: Connection trial #273 failed!
+181203-18:31:34 [INFO] -- NetHandler: Connection trial #274: Exception encountered while making connection to server: Connection refused: connect
+181203-18:31:34 [INFO] -- NetHandler: Connection trial #274 failed!
+181203-18:31:40 [INFO] -- NetHandler: Connection trial #275: Exception encountered while making connection to server: Connection refused: connect
+181203-18:31:40 [INFO] -- NetHandler: Connection trial #275 failed!
+181203-18:31:46 [INFO] -- NetHandler: Connection trial #276: Exception encountered while making connection to server: Connection refused: connect
+181203-18:31:46 [INFO] -- NetHandler: Connection trial #276 failed!
+181203-18:31:52 [INFO] -- NetHandler: Connection trial #277: Exception encountered while making connection to server: Connection refused: connect
+181203-18:31:52 [INFO] -- NetHandler: Connection trial #277 failed!
+181203-18:31:58 [INFO] -- NetHandler: Connection trial #278: Exception encountered while making connection to server: Connection refused: connect
+181203-18:31:58 [INFO] -- NetHandler: Connection trial #278 failed!

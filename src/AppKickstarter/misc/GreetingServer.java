@@ -34,9 +34,6 @@ public class GreetingServer extends Thread {
                 // Send data
                 str.trim();
                 appKickstarter.ReceiveRequest(str);
-
-                BufferedWriter out = new BufferedWriter(new OutputStreamWriter(clientSocket.getOutputStream()));
-//                out.write(reply);
             }
         } catch (SocketTimeoutException s) {
             System.out.println("Socket timed out!");
@@ -50,9 +47,8 @@ public class GreetingServer extends Thread {
         try
         {
             // Sending Msg
-            String outNetMsg = str;
             PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
-            out.println(outNetMsg);
+            out.println(str);
         }
         catch (Exception e)
         {

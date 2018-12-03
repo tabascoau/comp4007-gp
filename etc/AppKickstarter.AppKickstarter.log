@@ -1,16 +1,538 @@
-181203-18:18:13 [INFO] -- 
-181203-18:18:13 [INFO] -- 
-181203-18:18:13 [INFO] -- ============================================================
-181203-18:18:13 [INFO] -- AppKickstarter: Application Starting...
-181203-18:18:13 [INFO] -- timer: starting...
-181203-18:18:13 [INFO] -- ElevatorF: starting...
-181203-18:18:13 [INFO] -- ElevatorB: starting...
-181203-18:18:13 [INFO] -- ElevatorA: starting...
-181203-18:18:13 [INFO] -- ElevatorD: starting...
-181203-18:18:13 [INFO] -- ElevatorE: starting...
-181203-18:18:13 [INFO] -- ElevatorC: starting...
-181203-18:18:17 [INFO] -- Request: Svc_Req Passenger-0001 0 8
-181203-18:18:17 [INFO] -- Shortest time for ElevatorA is 13500
-181203-18:18:17 [INFO] -- Svc_Reply: Svc_Reply Passenger-0001 0 8 A
-181203-18:18:18 [INFO] -- Elev_Dep: Elev_Dep A 0 U 0 8
-181203-18:18:24 [INFO] -- Elev_Arr: Elev_Arr A 8 S -3.14
+181203-18:56:11 [INFO] -- 
+181203-18:56:11 [INFO] -- 
+181203-18:56:11 [INFO] -- ============================================================
+181203-18:56:11 [INFO] -- AppKickstarter: Application Starting...
+181203-18:56:11 [INFO] -- timer: starting...
+181203-18:56:11 [INFO] -- ElevatorB: starting...
+181203-18:56:11 [INFO] -- ElevatorC: starting...
+181203-18:56:11 [INFO] -- ElevatorA: starting...
+181203-18:56:11 [INFO] -- ElevatorE: starting...
+181203-18:56:11 [INFO] -- ElevatorD: starting...
+181203-18:56:11 [INFO] -- ElevatorF: starting...
+181203-18:56:15 [INFO] -- Request: Svc_Req Passenger-0009 37 22
+181203-18:56:15 [INFO] -- Shortest time for ElevatorA is 39400
+181203-18:56:15 [INFO] -- Svc_Reply: Svc_Reply Passenger-0009 37 22 A
+181203-18:56:16 [INFO] -- Request: Svc_Req Passenger-0010 33 50
+181203-18:56:16 [INFO] -- Shortest time for ElevatorB is 39900
+181203-18:56:16 [INFO] -- Svc_Reply: Svc_Reply Passenger-0010 33 50 B
+181203-18:56:16 [INFO] -- Request: Svc_Req Passenger-0011 7 48
+181203-18:56:16 [INFO] -- Shortest time for ElevatorC is 38700
+181203-18:56:16 [INFO] -- Svc_Reply: Svc_Reply Passenger-0011 7 48 C
+181203-18:56:16 [INFO] -- Elev_Dep: Elev_Dep B 0 U 33 50
+181203-18:56:16 [INFO] -- Elev_Dep: Elev_Dep C 0 U 7 48
+181203-18:56:16 [INFO] -- Elev_Dep: Elev_Dep A 0 U 37
+181203-18:56:17 [INFO] -- Request: Svc_Req Passenger-0012 15 51
+181203-18:56:17 [INFO] -- Shortest time for ElevatorD is 40500
+181203-18:56:17 [INFO] -- Svc_Reply: Svc_Reply Passenger-0012 15 51 D
+181203-18:56:17 [INFO] -- Request: Svc_Req Passenger-0013 8 19
+181203-18:56:17 [INFO] -- Shortest time for ElevatorE is 21300
+181203-18:56:17 [INFO] -- Svc_Reply: Svc_Reply Passenger-0013 8 19 E
+181203-18:56:17 [INFO] -- Elev_Dep: Elev_Dep E 0 U 8 19
+181203-18:56:17 [INFO] -- Elev_Dep: Elev_Dep D 0 U 15 51
+181203-18:56:18 [INFO] -- Request: Svc_Req Passenger-0014 34 10
+181203-18:56:18 [INFO] -- Shortest time for ElevatorF is 42100
+181203-18:56:18 [INFO] -- Svc_Reply: Svc_Reply Passenger-0014 34 10 F
+181203-18:56:18 [INFO] -- Request: Svc_Req Passenger-0015 51 18
+181203-18:56:18 [INFO] -- Shortest time for ElevatorD is 65500
+181203-18:56:18 [INFO] -- Svc_Reply: Svc_Reply Passenger-0015 51 18 D
+181203-18:56:18 [INFO] -- Request: Svc_Req Passenger-0016 51 53
+181203-18:56:18 [INFO] -- Shortest time for ElevatorB is 57300
+181203-18:56:18 [INFO] -- Svc_Reply: Svc_Reply Passenger-0016 51 53 B
+181203-18:56:18 [INFO] -- Elev_Dep: Elev_Dep F 0 U 34
+181203-18:56:18 [INFO] -- Request: Svc_Req Passenger-0017 20 28
+181203-18:56:18 [INFO] -- Shortest time for ElevatorE is 42900
+181203-18:56:18 [INFO] -- Svc_Reply: Svc_Reply Passenger-0017 20 28 E
+181203-18:56:20 [INFO] -- Request: Svc_Req Passenger-0018 16 5
+181203-18:56:20 [INFO] -- Shortest time for ElevatorF is 61000
+181203-18:56:20 [INFO] -- Svc_Reply: Svc_Reply Passenger-0018 16 5 F
+181203-18:56:20 [INFO] -- Request: Svc_Req Passenger-0019 32 17
+181203-18:56:20 [INFO] -- Shortest time for ElevatorA is 55900
+181203-18:56:20 [INFO] -- Svc_Reply: Svc_Reply Passenger-0019 32 17 A
+181203-18:56:21 [INFO] -- Request: Svc_Req Passenger-0020 41 6
+181203-18:56:21 [INFO] -- Shortest time for ElevatorC is 72500
+181203-18:56:21 [INFO] -- Svc_Reply: Svc_Reply Passenger-0020 41 6 C
+181203-18:56:22 [INFO] -- Elev_Arr: Elev_Arr C 7 U 48
+181203-18:56:22 [INFO] -- Request: Svc_Req Passenger-0021 8 32
+181203-18:56:22 [INFO] -- Shortest time for ElevatorE is 51000
+181203-18:56:22 [INFO] -- Svc_Reply: Svc_Reply Passenger-0021 8 32 E
+181203-18:56:22 [INFO] -- Request: Svc_Req Passenger-0022 43 0
+181203-18:56:22 [INFO] -- Shortest time for ElevatorC is 83800
+181203-18:56:22 [INFO] -- Svc_Reply: Svc_Reply Passenger-0022 43 0 C
+181203-18:56:23 [INFO] -- Request: Svc_Req Passenger-0023 34 15
+181203-18:56:23 [INFO] -- Shortest time for ElevatorF is 66000
+181203-18:56:23 [INFO] -- Svc_Reply: Svc_Reply Passenger-0023 34 15 F
+181203-18:56:23 [INFO] -- Request: Svc_Req Passenger-0024 35 37
+181203-18:56:23 [INFO] -- Shortest time for ElevatorA is 62200
+181203-18:56:23 [INFO] -- Svc_Reply: Svc_Reply Passenger-0024 35 37 A
+181203-18:56:23 [INFO] -- Request: Svc_Req Passenger-0025 4 5
+181203-18:56:23 [INFO] -- Shortest time for ElevatorE is 81000
+181203-18:56:23 [INFO] -- Svc_Reply: Svc_Reply Passenger-0025 4 5 E
+181203-18:56:23 [INFO] -- Elev_Arr: Elev_Arr E 8 U 19 20 28 32
+181203-18:56:25 [INFO] -- Request: Svc_Req Passenger-0026 25 11
+181203-18:56:25 [INFO] -- Shortest time for ElevatorD is 79400
+181203-18:56:25 [INFO] -- Svc_Reply: Svc_Reply Passenger-0026 25 11 D
+181203-18:56:25 [INFO] -- Request: Svc_Req Passenger-0027 46 0
+181203-18:56:25 [INFO] -- Shortest time for ElevatorC is 92300
+181203-18:56:25 [INFO] -- Svc_Reply: Svc_Reply Passenger-0027 46 0 C
+181203-18:56:25 [INFO] -- Request: Svc_Req Passenger-0028 27 19
+181203-18:56:25 [INFO] -- Shortest time for ElevatorA is 76800
+181203-18:56:25 [INFO] -- Svc_Reply: Svc_Reply Passenger-0028 27 19 A
+181203-18:56:26 [INFO] -- Request: Svc_Req Passenger-0029 29 4
+181203-18:56:26 [INFO] -- Shortest time for ElevatorF is 80000
+181203-18:56:26 [INFO] -- Svc_Reply: Svc_Reply Passenger-0029 29 4 F
+181203-18:56:26 [INFO] -- Request: Svc_Req Passenger-0030 48 43
+181203-18:56:26 [INFO] -- Shortest time for ElevatorB is 72100
+181203-18:56:26 [INFO] -- Svc_Reply: Svc_Reply Passenger-0030 48 43 B
+181203-18:56:26 [INFO] -- Request: Svc_Req Passenger-0031 2 10
+181203-18:56:26 [INFO] -- Shortest time for ElevatorE is 92300
+181203-18:56:26 [INFO] -- Svc_Reply: Svc_Reply Passenger-0031 2 10 E
+181203-18:56:27 [INFO] -- Request: Svc_Req Passenger-0032 3 52
+181203-18:56:27 [INFO] -- Shortest time for ElevatorD is 106700
+181203-18:56:27 [INFO] -- Svc_Reply: Svc_Reply Passenger-0032 3 52 D
+181203-18:56:27 [INFO] -- Request: Svc_Req Passenger-0033 22 20
+181203-18:56:27 [INFO] -- Shortest time for ElevatorA is 83000
+181203-18:56:27 [INFO] -- Svc_Reply: Svc_Reply Passenger-0033 22 20 A
+181203-18:56:27 [INFO] -- Elev_Arr: Elev_Arr D 15 U 51 52
+181203-18:56:28 [INFO] -- Request: Svc_Req Passenger-0034 19 33
+181203-18:56:28 [INFO] -- Shortest time for ElevatorB is 77800
+181203-18:56:28 [INFO] -- Svc_Reply: Svc_Reply Passenger-0034 19 33 B
+181203-18:56:28 [INFO] -- Request: Svc_Req Passenger-0035 10 46
+181203-18:56:28 [INFO] -- Shortest time for ElevatorF is 108600
+181203-18:56:28 [INFO] -- Svc_Reply: Svc_Reply Passenger-0035 10 46 F
+181203-18:56:28 [INFO] -- Request: Svc_Req Passenger-0036 36 26
+181203-18:56:28 [INFO] -- Shortest time for ElevatorA is 97800
+181203-18:56:28 [INFO] -- Svc_Reply: Svc_Reply Passenger-0036 36 26 A
+181203-18:56:28 [INFO] -- Request: Svc_Req Passenger-0037 54 19
+181203-18:56:28 [INFO] -- Shortest time for ElevatorB is 107500
+181203-18:56:28 [INFO] -- Svc_Reply: Svc_Reply Passenger-0037 54 19 B
+181203-18:56:29 [INFO] -- Request: Svc_Req Passenger-0038 51 15
+181203-18:56:29 [INFO] -- Shortest time for ElevatorD is 106500
+181203-18:56:29 [INFO] -- Svc_Reply: Svc_Reply Passenger-0038 51 15 D
+181203-18:56:29 [INFO] -- Request: Svc_Req Passenger-0039 45 1
+181203-18:56:29 [INFO] -- Shortest time for ElevatorC is 108300
+181203-18:56:29 [INFO] -- Svc_Reply: Svc_Reply Passenger-0039 45 1 C
+181203-18:56:29 [INFO] -- Elev_Dep: Elev_Dep C 7 U 48
+181203-18:56:29 [INFO] -- Request: Svc_Req Passenger-0040 21 1
+181203-18:56:29 [INFO] -- Shortest time for ElevatorE is 109900
+181203-18:56:29 [INFO] -- Svc_Reply: Svc_Reply Passenger-0040 21 1 E
+181203-18:56:29 [INFO] -- Request: Svc_Req Passenger-0041 23 28
+181203-18:56:29 [INFO] -- Shortest time for ElevatorA is 114000
+181203-18:56:29 [INFO] -- Svc_Reply: Svc_Reply Passenger-0041 23 28 A
+181203-18:56:31 [INFO] -- Request: Svc_Req Passenger-0042 27 18
+181203-18:56:31 [INFO] -- Shortest time for ElevatorD is 115000
+181203-18:56:31 [INFO] -- Svc_Reply: Svc_Reply Passenger-0042 27 18 D
+181203-18:56:31 [INFO] -- Elev_Dep: Elev_Dep E 8 U 10 19 20 28 32
+181203-18:56:31 [INFO] -- Elev_Arr: Elev_Arr A 23 U 28 35 37
+181203-18:56:33 [INFO] -- Request: Svc_Req Passenger-0043 49 10
+181203-18:56:33 [INFO] -- Shortest time for ElevatorF is 115800
+181203-18:56:33 [INFO] -- Svc_Reply: Svc_Reply Passenger-0043 49 10 F
+181203-18:56:33 [INFO] -- Request: Svc_Req Passenger-0044 53 4
+181203-18:56:33 [INFO] -- Shortest time for ElevatorC is 128000
+181203-18:56:33 [INFO] -- Svc_Reply: Svc_Reply Passenger-0044 53 4 C
+181203-18:56:33 [INFO] -- Elev_Arr: Elev_Arr E 10 U 19 20 28 32
+181203-18:56:33 [INFO] -- Request: Svc_Req Passenger-0045 53 22
+181203-18:56:33 [INFO] -- Shortest time for ElevatorB is 110500
+181203-18:56:33 [INFO] -- Svc_Reply: Svc_Reply Passenger-0045 53 22 B
+181203-18:56:33 [INFO] -- Request: Svc_Req Passenger-0046 45 47
+181203-18:56:33 [INFO] -- Shortest time for ElevatorB is 127900
+181203-18:56:33 [INFO] -- Svc_Reply: Svc_Reply Passenger-0046 45 47 B
+181203-18:56:34 [INFO] -- Request: Svc_Req Passenger-0047 22 12
+181203-18:56:34 [INFO] -- Shortest time for ElevatorA is 114500
+181203-18:56:34 [INFO] -- Svc_Reply: Svc_Reply Passenger-0047 22 12 A
+181203-18:56:35 [INFO] -- Request: Svc_Req Passenger-0048 26 17
+181203-18:56:35 [INFO] -- Shortest time for ElevatorA is 114500
+181203-18:56:35 [INFO] -- Svc_Reply: Svc_Reply Passenger-0048 26 17 A
+181203-18:56:35 [INFO] -- Request: Svc_Req Passenger-0049 23 46
+181203-18:56:35 [INFO] -- Shortest time for ElevatorF is 121900
+181203-18:56:35 [INFO] -- Svc_Reply: Svc_Reply Passenger-0049 23 46 F
+181203-18:56:35 [INFO] -- Elev_Dep: Elev_Dep D 15 U 51 52
+181203-18:56:35 [INFO] -- Request: Svc_Req Passenger-0050 46 28
+181203-18:56:35 [INFO] -- Shortest time for ElevatorD is 131500
+181203-18:56:35 [INFO] -- Svc_Reply: Svc_Reply Passenger-0050 46 28 D
+181203-18:56:36 [INFO] -- Request: Svc_Req Passenger-0051 32 53
+181203-18:56:36 [INFO] -- Shortest time for ElevatorE is 131800
+181203-18:56:36 [INFO] -- Svc_Reply: Svc_Reply Passenger-0051 32 53 E
+181203-18:56:36 [INFO] -- Request: Svc_Req Passenger-0052 0 6
+181203-18:56:36 [INFO] -- Shortest time for ElevatorC is 137300
+181203-18:56:36 [INFO] -- Svc_Reply: Svc_Reply Passenger-0052 0 6 C
+181203-18:56:36 [INFO] -- Request: Svc_Req Passenger-0053 5 14
+181203-18:56:36 [INFO] -- Shortest time for ElevatorF is 134800
+181203-18:56:36 [INFO] -- Svc_Reply: Svc_Reply Passenger-0053 5 14 F
+181203-18:56:37 [INFO] -- Elev_Arr: Elev_Arr B 33 U 45 47 50 51 53 54
+181203-18:56:38 [INFO] -- Request: Svc_Req Passenger-0054 53 30
+181203-18:56:38 [INFO] -- Shortest time for ElevatorB is 124100
+181203-18:56:38 [INFO] -- Svc_Reply: Svc_Reply Passenger-0054 53 30 B
+181203-18:56:38 [INFO] -- Request: Svc_Req Passenger-0055 25 16
+181203-18:56:38 [INFO] -- Shortest time for ElevatorA is 130500
+181203-18:56:38 [INFO] -- Svc_Reply: Svc_Reply Passenger-0055 25 16 A
+181203-18:56:39 [INFO] -- Elev_Dep: Elev_Dep A 23 U 28 35 37
+181203-18:56:39 [INFO] -- Request: Svc_Req Passenger-0056 42 23
+181203-18:56:39 [INFO] -- Shortest time for ElevatorB is 140100
+181203-18:56:39 [INFO] -- Svc_Reply: Svc_Reply Passenger-0056 42 23 B
+181203-18:56:40 [INFO] -- Elev_Arr: Elev_Arr F 34 U 46 49
+181203-18:56:41 [INFO] -- Elev_Dep: Elev_Dep E 10 U 19 20 28 32 53
+181203-18:56:41 [INFO] -- Request: Svc_Req Passenger-0057 27 24
+181203-18:56:41 [INFO] -- Shortest time for ElevatorD is 134100
+181203-18:56:41 [INFO] -- Svc_Reply: Svc_Reply Passenger-0057 27 24 D
+181203-18:56:43 [INFO] -- Request: Svc_Req Passenger-0058 40 18
+181203-18:56:43 [INFO] -- Shortest time for ElevatorF is 140100
+181203-18:56:43 [INFO] -- Svc_Reply: Svc_Reply Passenger-0058 40 18 F
+181203-18:56:43 [INFO] -- Elev_Arr: Elev_Arr A 28 U 35 37
+181203-18:56:43 [INFO] -- Request: Svc_Req Passenger-0059 45 47
+181203-18:56:43 [INFO] -- Shortest time for ElevatorB is 140100
+181203-18:56:43 [INFO] -- Svc_Reply: Svc_Reply Passenger-0059 45 47 B
+181203-18:56:43 [INFO] -- Request: Svc_Req Passenger-0060 30 49
+181203-18:56:43 [INFO] -- Shortest time for ElevatorC is 146300
+181203-18:56:43 [INFO] -- Svc_Reply: Svc_Reply Passenger-0060 30 49 C
+181203-18:56:43 [INFO] -- Request: Svc_Req Passenger-0061 21 7
+181203-18:56:43 [INFO] -- Shortest time for ElevatorA is 137300
+181203-18:56:43 [INFO] -- Svc_Reply: Svc_Reply Passenger-0061 21 7 A
+181203-18:56:44 [INFO] -- Request: Svc_Req Passenger-0062 18 12
+181203-18:56:44 [INFO] -- Shortest time for ElevatorD is 139700
+181203-18:56:44 [INFO] -- Svc_Reply: Svc_Reply Passenger-0062 18 12 D
+181203-18:56:44 [INFO] -- Request: Svc_Req Passenger-0063 42 52
+181203-18:56:44 [INFO] -- Shortest time for ElevatorE is 146200
+181203-18:56:44 [INFO] -- Svc_Reply: Svc_Reply Passenger-0063 42 52 E
+181203-18:56:44 [INFO] -- Request: Svc_Req Passenger-0064 45 49
+181203-18:56:44 [INFO] -- Shortest time for ElevatorB is 148200
+181203-18:56:44 [INFO] -- Svc_Reply: Svc_Reply Passenger-0064 45 49 B
+181203-18:56:44 [INFO] -- Request: Svc_Req Passenger-0065 21 49
+181203-18:56:44 [INFO] -- Shortest time for ElevatorF is 148600
+181203-18:56:44 [INFO] -- Svc_Reply: Svc_Reply Passenger-0065 21 49 F
+181203-18:56:44 [INFO] -- Request: Svc_Req Passenger-0066 38 18
+181203-18:56:44 [INFO] -- Shortest time for ElevatorD is 147600
+181203-18:56:44 [INFO] -- Svc_Reply: Svc_Reply Passenger-0066 38 18 D
+181203-18:56:44 [INFO] -- Request: Svc_Req Passenger-0067 34 30
+181203-18:56:44 [INFO] -- Shortest time for ElevatorA is 154300
+181203-18:56:44 [INFO] -- Svc_Reply: Svc_Reply Passenger-0067 34 30 A
+181203-18:56:45 [INFO] -- Elev_Dep: Elev_Dep B 33 U 45 47 49 50 51 53 54
+181203-18:56:45 [INFO] -- Request: Svc_Req Passenger-0068 39 19
+181203-18:56:45 [INFO] -- Shortest time for ElevatorB is 156700
+181203-18:56:45 [INFO] -- Svc_Reply: Svc_Reply Passenger-0068 39 19 B
+181203-18:56:45 [INFO] -- Request: Svc_Req Passenger-0069 45 53
+181203-18:56:45 [INFO] -- Shortest time for ElevatorE is 153700
+181203-18:56:45 [INFO] -- Svc_Reply: Svc_Reply Passenger-0069 45 53 E
+181203-18:56:45 [INFO] -- Request: Svc_Req Passenger-0070 26 41
+181203-18:56:45 [INFO] -- Shortest time for ElevatorD is 162600
+181203-18:56:45 [INFO] -- Svc_Reply: Svc_Reply Passenger-0070 26 41 D
+181203-18:56:46 [INFO] -- Request: Svc_Req Passenger-0071 41 35
+181203-18:56:46 [INFO] -- Shortest time for ElevatorF is 164600
+181203-18:56:46 [INFO] -- Svc_Reply: Svc_Reply Passenger-0071 41 35 F
+181203-18:56:47 [INFO] -- Elev_Arr: Elev_Arr E 19 U 20 28 32 42 45 52 53
+181203-18:56:47 [INFO] -- Elev_Dep: Elev_Dep F 34 U 46 49
+181203-18:56:48 [INFO] -- Request: Svc_Req Passenger-0072 15 36
+181203-18:56:48 [INFO] -- Shortest time for ElevatorE is 160400
+181203-18:56:48 [INFO] -- Svc_Reply: Svc_Reply Passenger-0072 15 36 E
+181203-18:56:48 [INFO] -- Request: Svc_Req Passenger-0073 34 38
+181203-18:56:48 [INFO] -- Shortest time for ElevatorB is 170900
+181203-18:56:48 [INFO] -- Svc_Reply: Svc_Reply Passenger-0073 34 38 B
+181203-18:56:48 [INFO] -- Request: Svc_Req Passenger-0074 41 6
+181203-18:56:48 [INFO] -- Shortest time for ElevatorC is 155900
+181203-18:56:48 [INFO] -- Svc_Reply: Svc_Reply Passenger-0074 41 6 C
+181203-18:56:48 [INFO] -- Request: Svc_Req Passenger-0075 8 39
+181203-18:56:48 [INFO] -- Shortest time for ElevatorC is 172500
+181203-18:56:48 [INFO] -- Svc_Reply: Svc_Reply Passenger-0075 8 39 C
+181203-18:56:49 [INFO] -- Request: Svc_Req Passenger-0076 8 3
+181203-18:56:49 [INFO] -- Shortest time for ElevatorD is 167500
+181203-18:56:49 [INFO] -- Svc_Reply: Svc_Reply Passenger-0076 8 3 D
+181203-18:56:49 [INFO] -- Request: Svc_Req Passenger-0077 46 27
+181203-18:56:49 [INFO] -- Shortest time for ElevatorD is 167500
+181203-18:56:49 [INFO] -- Svc_Reply: Svc_Reply Passenger-0077 46 27 D
+181203-18:56:49 [INFO] -- Request: Svc_Req Passenger-0078 6 29
+181203-18:56:49 [INFO] -- Shortest time for ElevatorA is 170900
+181203-18:56:49 [INFO] -- Svc_Reply: Svc_Reply Passenger-0078 6 29 A
+181203-18:56:50 [INFO] -- Request: Svc_Req Passenger-0079 53 44
+181203-18:56:50 [INFO] -- Shortest time for ElevatorE is 168900
+181203-18:56:50 [INFO] -- Svc_Reply: Svc_Reply Passenger-0079 53 44 E
+181203-18:56:50 [INFO] -- Elev_Dep: Elev_Dep A 28 U 29 35 37
+181203-18:56:51 [INFO] -- Request: Svc_Req Passenger-0080 42 29
+181203-18:56:51 [INFO] -- Shortest time for ElevatorF is 170200
+181203-18:56:51 [INFO] -- Svc_Reply: Svc_Reply Passenger-0080 42 29 F
+181203-18:56:51 [INFO] -- Request: Svc_Req Passenger-0081 35 9
+181203-18:56:51 [INFO] -- Shortest time for ElevatorF is 177600
+181203-18:56:51 [INFO] -- Svc_Reply: Svc_Reply Passenger-0081 35 9 F
+181203-18:56:51 [INFO] -- Request: Svc_Req Passenger-0082 10 46
+181203-18:56:51 [INFO] -- Shortest time for ElevatorF is 177600
+181203-18:56:51 [INFO] -- Svc_Reply: Svc_Reply Passenger-0082 10 46 F
+181203-18:56:52 [INFO] -- Elev_Arr: Elev_Arr A 29 U 35 37
+181203-18:56:52 [INFO] -- Elev_Arr: Elev_Arr D 41 U 51 52
+181203-18:56:52 [INFO] -- Request: Svc_Req Passenger-0083 8 27
+181203-18:56:52 [INFO] -- Shortest time for ElevatorD is 179500
+181203-18:56:52 [INFO] -- Svc_Reply: Svc_Reply Passenger-0083 8 27 D
+181203-18:56:53 [INFO] -- Elev_Arr: Elev_Arr B 45 U 47 49 50 51 53 54
+181203-18:56:54 [INFO] -- Request: Svc_Req Passenger-0084 49 18
+181203-18:56:54 [INFO] -- Shortest time for ElevatorF is 175200
+181203-18:56:54 [INFO] -- Svc_Reply: Svc_Reply Passenger-0084 49 18 F
+181203-18:56:55 [INFO] -- Elev_Dep: Elev_Dep E 19 U 20 28 32 36 42 45 52 53
+181203-18:56:55 [INFO] -- Request: Svc_Req Passenger-0085 30 26
+181203-18:56:55 [INFO] -- Shortest time for ElevatorA is 162200
+181203-18:56:55 [INFO] -- Svc_Reply: Svc_Reply Passenger-0085 30 26 A
+181203-18:56:55 [INFO] -- Elev_Arr: Elev_Arr C 48 U 49 53
+181203-18:56:56 [INFO] -- Request: Svc_Req Passenger-0086 50 35
+181203-18:56:56 [INFO] -- Shortest time for ElevatorC is 180800
+181203-18:56:56 [INFO] -- Svc_Reply: Svc_Reply Passenger-0086 50 35 C
+181203-18:56:56 [INFO] -- Elev_Arr: Elev_Arr F 46 U 49
+181203-18:56:56 [INFO] -- Elev_Arr: Elev_Arr E 20 U 28 32 36 42 45 52 53
+181203-18:56:56 [INFO] -- Request: Svc_Req Passenger-0087 47 14
+181203-18:56:56 [INFO] -- Shortest time for ElevatorE is 176700
+181203-18:56:56 [INFO] -- Svc_Reply: Svc_Reply Passenger-0087 47 14 E
+181203-18:56:57 [INFO] -- Request: Svc_Req Passenger-0088 38 33
+181203-18:56:57 [INFO] -- Shortest time for ElevatorA is 179400
+181203-18:56:57 [INFO] -- Svc_Reply: Svc_Reply Passenger-0088 38 33 A
+181203-18:56:57 [INFO] -- Request: Svc_Req Passenger-0089 33 38
+181203-18:56:57 [INFO] -- Shortest time for ElevatorB is 177400
+181203-18:56:57 [INFO] -- Svc_Reply: Svc_Reply Passenger-0089 33 38 B
+181203-18:56:57 [INFO] -- Request: Svc_Req Passenger-0090 4 21
+181203-18:56:57 [INFO] -- Shortest time for ElevatorF is 177600
+181203-18:56:57 [INFO] -- Svc_Reply: Svc_Reply Passenger-0090 4 21 F
+181203-18:56:57 [INFO] -- Request: Svc_Req Passenger-0091 51 3
+181203-18:56:57 [INFO] -- Shortest time for ElevatorD is 179500
+181203-18:56:57 [INFO] -- Svc_Reply: Svc_Reply Passenger-0091 51 3 D
+181203-18:56:57 [INFO] -- Request: Svc_Req Passenger-0092 48 21
+181203-18:56:57 [INFO] -- Shortest time for ElevatorE is 184700
+181203-18:56:57 [INFO] -- Svc_Reply: Svc_Reply Passenger-0092 48 21 E
+181203-18:56:58 [INFO] -- Request: Svc_Req Passenger-0093 11 34
+181203-18:56:58 [INFO] -- Shortest time for ElevatorD is 192400
+181203-18:56:58 [INFO] -- Svc_Reply: Svc_Reply Passenger-0093 11 34 D
+181203-18:56:58 [INFO] -- Request: Svc_Req Passenger-0094 11 54
+181203-18:56:58 [INFO] -- Shortest time for ElevatorC is 198500
+181203-18:56:58 [INFO] -- Svc_Reply: Svc_Reply Passenger-0094 11 54 C
+181203-18:56:58 [INFO] -- Request: Svc_Req Passenger-0095 40 29
+181203-18:56:58 [INFO] -- Shortest time for ElevatorF is 177600
+181203-18:56:58 [INFO] -- Svc_Reply: Svc_Reply Passenger-0095 40 29 F
+181203-18:56:58 [INFO] -- Request: Svc_Req Passenger-0096 35 6
+181203-18:56:58 [INFO] -- Shortest time for ElevatorF is 185600
+181203-18:56:58 [INFO] -- Svc_Reply: Svc_Reply Passenger-0096 35 6 F
+181203-18:56:59 [INFO] -- Request: Svc_Req Passenger-0097 49 18
+181203-18:56:59 [INFO] -- Shortest time for ElevatorF is 185600
+181203-18:56:59 [INFO] -- Svc_Reply: Svc_Reply Passenger-0097 49 18 F
+181203-18:56:59 [INFO] -- Request: Svc_Req Passenger-0098 34 29
+181203-18:56:59 [INFO] -- Shortest time for ElevatorB is 185400
+181203-18:56:59 [INFO] -- Svc_Reply: Svc_Reply Passenger-0098 34 29 B
+181203-18:56:59 [INFO] -- Request: Svc_Req Passenger-0099 13 38
+181203-18:56:59 [INFO] -- Shortest time for ElevatorA is 187400
+181203-18:56:59 [INFO] -- Svc_Reply: Svc_Reply Passenger-0099 13 38 A
+181203-18:56:59 [INFO] -- Request: Svc_Req Passenger-0100 11 13
+181203-18:56:59 [INFO] -- Shortest time for ElevatorD is 201100
+181203-18:56:59 [INFO] -- Svc_Reply: Svc_Reply Passenger-0100 11 13 D
+181203-18:56:59 [INFO] -- Elev_Dep: Elev_Dep A 29 U 35 37 38
+181203-18:56:59 [INFO] -- Elev_Dep: Elev_Dep D 41 U 51 52
+181203-18:57:01 [INFO] -- Elev_Dep: Elev_Dep B 45 U 47 49 50 51 53 54
+181203-18:57:01 [INFO] -- Request: Svc_Req Passenger-0101 41 28
+181203-18:57:01 [INFO] -- Shortest time for ElevatorF is 193600
+181203-18:57:01 [INFO] -- Svc_Reply: Svc_Reply Passenger-0101 41 28 F
+181203-18:57:02 [INFO] -- Request: Svc_Req Passenger-0102 51 38
+181203-18:57:02 [INFO] -- Shortest time for ElevatorD is 199900
+181203-18:57:02 [INFO] -- Svc_Reply: Svc_Reply Passenger-0102 51 38 D
+181203-18:57:02 [INFO] -- Request: Svc_Req Passenger-0103 34 19
+181203-18:57:02 [INFO] -- Shortest time for ElevatorB is 185400
+181203-18:57:02 [INFO] -- Svc_Reply: Svc_Reply Passenger-0103 34 19 B
+181203-18:57:02 [INFO] -- Elev_Dep: Elev_Dep C 48 U 49 53 54
+181203-18:57:03 [INFO] -- Elev_Arr: Elev_Arr B 47 U 49 50 51 53 54
+181203-18:57:03 [INFO] -- Elev_Dep: Elev_Dep F 46 U 49
+181203-18:57:03 [INFO] -- Request: Svc_Req Passenger-0104 9 2
+181203-18:57:03 [INFO] -- Shortest time for ElevatorE is 193200
+181203-18:57:03 [INFO] -- Svc_Reply: Svc_Reply Passenger-0104 9 2 E
+181203-18:57:03 [INFO] -- Elev_Dep: Elev_Dep E 20 U 28 32 36 42 45 52 53
+181203-18:57:04 [INFO] -- Request: Svc_Req Passenger-0105 13 44
+181203-18:57:04 [INFO] -- Shortest time for ElevatorA is 199100
+181203-18:57:04 [INFO] -- Svc_Reply: Svc_Reply Passenger-0105 13 44 A
+181203-18:57:04 [INFO] -- Request: Svc_Req Passenger-0106 49 36
+181203-18:57:04 [INFO] -- Shortest time for ElevatorB is 192000
+181203-18:57:04 [INFO] -- Svc_Reply: Svc_Reply Passenger-0106 49 36 B
+181203-18:57:04 [INFO] -- Elev_Arr: Elev_Arr C 49 U 53 54
+181203-18:57:04 [INFO] -- Elev_Arr: Elev_Arr A 35 U 37 38 44
+181203-18:57:04 [INFO] -- Request: Svc_Req Passenger-0107 50 14
+181203-18:57:04 [INFO] -- Shortest time for ElevatorC is 198300
+181203-18:57:04 [INFO] -- Svc_Reply: Svc_Reply Passenger-0107 50 14 C
+181203-18:57:04 [INFO] -- Request: Svc_Req Passenger-0108 52 33
+181203-18:57:04 [INFO] -- Shortest time for ElevatorB is 200000
+181203-18:57:04 [INFO] -- Svc_Reply: Svc_Reply Passenger-0108 52 33 B
+181203-18:57:05 [INFO] -- Request: Svc_Req Passenger-0109 20 34
+181203-18:57:05 [INFO] -- Shortest time for ElevatorD is 205400
+181203-18:57:05 [INFO] -- Svc_Reply: Svc_Reply Passenger-0109 20 34 D
+181203-18:57:05 [INFO] -- Request: Svc_Req Passenger-0110 29 3
+181203-18:57:05 [INFO] -- Shortest time for ElevatorF is 200900
+181203-18:57:05 [INFO] -- Svc_Reply: Svc_Reply Passenger-0110 29 3 F
+181203-18:57:06 [INFO] -- Request: Svc_Req Passenger-0111 53 27
+181203-18:57:06 [INFO] -- Shortest time for ElevatorE is 199900
+181203-18:57:06 [INFO] -- Svc_Reply: Svc_Reply Passenger-0111 53 27 E
+181203-18:57:06 [INFO] -- Elev_Arr: Elev_Arr F 49 D 49 42 41 40 35 34 29 28 23 21 18 16 15 10 9 6 5 4 3
+181203-18:57:06 [INFO] -- Elev_Arr: Elev_Arr D 51 U 52
+181203-18:57:08 [INFO] -- Request: Svc_Req Passenger-0112 35 9
+181203-18:57:08 [INFO] -- Shortest time for ElevatorF is 199700
+181203-18:57:08 [INFO] -- Svc_Reply: Svc_Reply Passenger-0112 35 9 F
+181203-18:57:09 [INFO] -- Request: Svc_Req Passenger-0113 20 42
+181203-18:57:09 [INFO] -- Shortest time for ElevatorA is 199100
+181203-18:57:09 [INFO] -- Svc_Reply: Svc_Reply Passenger-0113 20 42 A
+181203-18:57:09 [INFO] -- Request: Svc_Req Passenger-0114 19 25
+181203-18:57:09 [INFO] -- Shortest time for ElevatorB is 208700
+181203-18:57:09 [INFO] -- Svc_Reply: Svc_Reply Passenger-0114 19 25 B
+181203-18:57:09 [INFO] -- Elev_Arr: Elev_Arr E 28 U 32 36 42 45 52 53
+181203-18:57:10 [INFO] -- Request: Svc_Req Passenger-0115 52 21
+181203-18:57:10 [INFO] -- Shortest time for ElevatorE is 196200
+181203-18:57:10 [INFO] -- Svc_Reply: Svc_Reply Passenger-0115 52 21 E
+181203-18:57:10 [INFO] -- Request: Svc_Req Passenger-0116 52 33
+181203-18:57:10 [INFO] -- Shortest time for ElevatorD is 203400
+181203-18:57:10 [INFO] -- Svc_Reply: Svc_Reply Passenger-0116 52 33 D
+181203-18:57:10 [INFO] -- Request: Svc_Req Passenger-0117 50 39
+181203-18:57:10 [INFO] -- Shortest time for ElevatorC is 206800
+181203-18:57:10 [INFO] -- Svc_Reply: Svc_Reply Passenger-0117 50 39 C
+181203-18:57:10 [INFO] -- Request: Svc_Req Passenger-0118 25 36
+181203-18:57:10 [INFO] -- Shortest time for ElevatorE is 204700
+181203-18:57:10 [INFO] -- Svc_Reply: Svc_Reply Passenger-0118 25 36 E
+181203-18:57:10 [INFO] -- Request: Svc_Req Passenger-0119 52 50
+181203-18:57:10 [INFO] -- Shortest time for ElevatorD is 211400
+181203-18:57:10 [INFO] -- Svc_Reply: Svc_Reply Passenger-0119 52 50 D
+181203-18:57:10 [INFO] -- Request: Svc_Req Passenger-0120 42 11
+181203-18:57:10 [INFO] -- Shortest time for ElevatorF is 207700
+181203-18:57:10 [INFO] -- Svc_Reply: Svc_Reply Passenger-0120 42 11 F
+181203-18:57:11 [INFO] -- Elev_Dep: Elev_Dep B 47 U 49 50 51 53 54
+181203-18:57:11 [INFO] -- Request: Svc_Req Passenger-0121 21 3
+181203-18:57:11 [INFO] -- Shortest time for ElevatorF is 207700
+181203-18:57:11 [INFO] -- Svc_Reply: Svc_Reply Passenger-0121 21 3 F
+181203-18:57:11 [INFO] -- Elev_Dep: Elev_Dep C 49 U 53 54
+181203-18:57:11 [INFO] -- Elev_Dep: Elev_Dep A 35 U 37 38 42 44
+181203-18:57:13 [INFO] -- Request: Svc_Req Passenger-0122 29 6
+181203-18:57:13 [INFO] -- Shortest time for ElevatorA is 207100
+181203-18:57:13 [INFO] -- Svc_Reply: Svc_Reply Passenger-0122 29 6 A
+181203-18:57:13 [INFO] -- Elev_Arr: Elev_Arr B 49 U 50 51 53 54
+181203-18:57:13 [INFO] -- Request: Svc_Req Passenger-0123 48 27
+181203-18:57:13 [INFO] -- Shortest time for ElevatorE is 204700
+181203-18:57:13 [INFO] -- Svc_Reply: Svc_Reply Passenger-0123 48 27 E
+181203-18:57:13 [INFO] -- Request: Svc_Req Passenger-0124 42 33
+181203-18:57:13 [INFO] -- Shortest time for ElevatorB is 198800
+181203-18:57:13 [INFO] -- Svc_Reply: Svc_Reply Passenger-0124 42 33 B
+181203-18:57:13 [INFO] -- Request: Svc_Req Passenger-0125 37 39
+181203-18:57:13 [INFO] -- Shortest time for ElevatorA is 214000
+181203-18:57:13 [INFO] -- Svc_Reply: Svc_Reply Passenger-0125 37 39 A
+181203-18:57:13 [INFO] -- Request: Svc_Req Passenger-0126 30 34
+181203-18:57:13 [INFO] -- Shortest time for ElevatorB is 207500
+181203-18:57:13 [INFO] -- Svc_Reply: Svc_Reply Passenger-0126 30 34 B
+181203-18:57:14 [INFO] -- Elev_Dep: Elev_Dep F 49 D 49 42 41 40 35 34 29 28 23 21 18 16 15 11 10 9 6 5 4 3
+181203-18:57:14 [INFO] -- Elev_Arr: Elev_Arr A 37 U 38 39 42 44
+181203-18:57:14 [INFO] -- Elev_Dep: Elev_Dep D 51 U 52
+181203-18:57:15 [INFO] -- Elev_Arr: Elev_Arr C 53 U 54
+181203-18:57:15 [INFO] -- Request: Svc_Req Passenger-0127 3 49
+181203-18:57:15 [INFO] -- Shortest time for ElevatorC is 218400
+181203-18:57:15 [INFO] -- Svc_Reply: Svc_Reply Passenger-0127 3 49 C
+181203-18:57:15 [INFO] -- Elev_Arr: Elev_Arr D 52 D 52 51 50 46 38 33 28 27 26 25 24 20 18 15 12 11 8 3
+181203-18:57:16 [INFO] -- Request: Svc_Req Passenger-0128 28 38
+181203-18:57:16 [INFO] -- Shortest time for ElevatorA is 212800
+181203-18:57:16 [INFO] -- Svc_Reply: Svc_Reply Passenger-0128 28 38 A
+181203-18:57:16 [INFO] -- Request: Svc_Req Passenger-0129 0 36
+181203-18:57:16 [INFO] -- Shortest time for ElevatorE is 213800
+181203-18:57:16 [INFO] -- Svc_Reply: Svc_Reply Passenger-0129 0 36 E
+181203-18:57:17 [INFO] -- Elev_Dep: Elev_Dep E 28 U 32 36 42 45 52 53
+181203-18:57:17 [INFO] -- Request: Svc_Req Passenger-0130 8 34
+181203-18:57:17 [INFO] -- Shortest time for ElevatorD is 218900
+181203-18:57:17 [INFO] -- Svc_Reply: Svc_Reply Passenger-0130 8 34 D
+181203-18:57:17 [INFO] -- Request: Svc_Req Passenger-0131 39 52
+181203-18:57:17 [INFO] -- Shortest time for ElevatorB is 215000
+181203-18:57:17 [INFO] -- Svc_Reply: Svc_Reply Passenger-0131 39 52 B
+181203-18:57:18 [INFO] -- Request: Svc_Req Passenger-0132 30 20
+181203-18:57:18 [INFO] -- Shortest time for ElevatorF is 212700
+181203-18:57:18 [INFO] -- Svc_Reply: Svc_Reply Passenger-0132 30 20 F
+181203-18:57:18 [INFO] -- Elev_Arr: Elev_Arr F 42 D 41 40 35 34 30 29 28 23 21 20 18 16 15 11 10 9 6 5 4 3
+181203-18:57:20 [INFO] -- Request: Svc_Req Passenger-0133 4 6
+181203-18:57:20 [INFO] -- Shortest time for ElevatorC is 218400
+181203-18:57:20 [INFO] -- Svc_Reply: Svc_Reply Passenger-0133 4 6 C
+181203-18:57:20 [INFO] -- Request: Svc_Req Passenger-0134 46 4
+181203-18:57:20 [INFO] -- Shortest time for ElevatorC is 218400
+181203-18:57:20 [INFO] -- Svc_Reply: Svc_Reply Passenger-0134 46 4 C
+181203-18:57:20 [INFO] -- Elev_Dep: Elev_Dep B 49 U 50 51 52 53 54
+181203-18:57:21 [INFO] -- Elev_Arr: Elev_Arr E 32 U 36 42 45 52 53
+181203-18:57:21 [INFO] -- Elev_Dep: Elev_Dep A 37 U 38 39 42 44
+181203-18:57:21 [INFO] -- Request: Svc_Req Passenger-0135 43 48
+181203-18:57:21 [INFO] -- Shortest time for ElevatorE is 219500
+181203-18:57:21 [INFO] -- Svc_Reply: Svc_Reply Passenger-0135 43 48 E
+181203-18:57:22 [INFO] -- Elev_Arr: Elev_Arr B 50 U 51 52 53 54
+181203-18:57:22 [INFO] -- Request: Svc_Req Passenger-0136 25 24
+181203-18:57:22 [INFO] -- Shortest time for ElevatorD is 218900
+181203-18:57:22 [INFO] -- Svc_Reply: Svc_Reply Passenger-0136 25 24 D
+181203-18:57:22 [INFO] -- Request: Svc_Req Passenger-0137 19 32
+181203-18:57:22 [INFO] -- Shortest time for ElevatorB is 215000
+181203-18:57:22 [INFO] -- Svc_Reply: Svc_Reply Passenger-0137 19 32 B
+181203-18:57:22 [INFO] -- Elev_Dep: Elev_Dep C 53 U 54
+181203-18:57:23 [INFO] -- Elev_Arr: Elev_Arr A 38 U 39 42 44
+181203-18:57:23 [INFO] -- Elev_Dep: Elev_Dep D 52 D 52 51 50 46 38 33 28 27 26 25 24 20 18 15 12 11 8 3
+181203-18:57:23 [INFO] -- Elev_Arr: Elev_Arr C 54 D 50 46 45 43 41 39 35 14 11 8 6 4 3 1 0
+181203-18:57:24 [INFO] -- Elev_Arr: Elev_Arr D 51 D 50 46 38 33 28 27 26 25 24 20 18 15 12 11 8 3
+181203-18:57:24 [INFO] -- Request: Svc_Req Passenger-0138 43 54
+181203-18:57:24 [INFO] -- Shortest time for ElevatorB is 215000
+181203-18:57:24 [INFO] -- Svc_Reply: Svc_Reply Passenger-0138 43 54 B
+181203-18:57:24 [INFO] -- Request: Svc_Req Passenger-0139 4 0
+181203-18:57:24 [INFO] -- Shortest time for ElevatorC is 209700
+181203-18:57:24 [INFO] -- Svc_Reply: Svc_Reply Passenger-0139 4 0 C
+181203-18:57:25 [INFO] -- Request: Svc_Req Passenger-0140 45 43
+181203-18:57:25 [INFO] -- Shortest time for ElevatorC is 209700
+181203-18:57:25 [INFO] -- Svc_Reply: Svc_Reply Passenger-0140 45 43 C
+181203-18:57:26 [INFO] -- Request: Svc_Req Passenger-0141 9 33
+181203-18:57:26 [INFO] -- Shortest time for ElevatorD is 219100
+181203-18:57:26 [INFO] -- Svc_Reply: Svc_Reply Passenger-0141 9 33 D
+181203-18:57:26 [INFO] -- Elev_Dep: Elev_Dep F 42 D 41 40 35 34 30 29 28 23 21 20 18 16 15 11 10 9 6 5 4 3
+181203-18:57:26 [INFO] -- Request: Svc_Req Passenger-0142 48 7
+181203-18:57:26 [INFO] -- Shortest time for ElevatorA is 217200
+181203-18:57:26 [INFO] -- Svc_Reply: Svc_Reply Passenger-0142 48 7 A
+181203-18:57:27 [INFO] -- Request: Svc_Req Passenger-0143 28 49
+181203-18:57:27 [INFO] -- Shortest time for ElevatorC is 218400
+181203-18:57:27 [INFO] -- Svc_Reply: Svc_Reply Passenger-0143 28 49 C
+181203-18:57:27 [INFO] -- Elev_Arr: Elev_Arr F 41 D 40 35 34 30 29 28 23 21 20 18 16 15 11 10 9 6 5 4 3
+181203-18:57:28 [INFO] -- Request: Svc_Req Passenger-0144 43 16
+181203-18:57:28 [INFO] -- Shortest time for ElevatorF is 217600
+181203-18:57:28 [INFO] -- Svc_Reply: Svc_Reply Passenger-0144 43 16 F
+181203-18:57:28 [INFO] -- Elev_Dep: Elev_Dep E 32 U 36 42 43 45 48 52 53
+181203-18:57:28 [INFO] -- Request: Svc_Req Passenger-0145 50 35
+181203-18:57:28 [INFO] -- Shortest time for ElevatorC is 218400
+181203-18:57:28 [INFO] -- Svc_Reply: Svc_Reply Passenger-0145 50 35 C
+181203-18:57:29 [INFO] -- Elev_Dep: Elev_Dep B 50 U 51 52 53 54
+181203-18:57:30 [INFO] -- Elev_Dep: Elev_Dep A 38 U 39 42 44 48
+181203-18:57:30 [INFO] -- Request: Svc_Req Passenger-0146 29 22
+181203-18:57:30 [INFO] -- Shortest time for ElevatorB is 215000
+181203-18:57:30 [INFO] -- Svc_Reply: Svc_Reply Passenger-0146 29 22 B
+181203-18:57:30 [INFO] -- Elev_Arr: Elev_Arr B 51 U 52 53 54
+181203-18:57:31 [INFO] -- Elev_Dep: Elev_Dep C 54 D 50 46 45 43 41 39 35 14 11 8 6 4 3 1 0
+181203-18:57:31 [INFO] -- Request: Svc_Req Passenger-0147 4 46
+181203-18:57:31 [INFO] -- Shortest time for ElevatorE is 225200
+181203-18:57:31 [INFO] -- Svc_Reply: Svc_Reply Passenger-0147 4 46 E
+181203-18:57:31 [INFO] -- Request: Svc_Req Passenger-0148 46 19
+181203-18:57:31 [INFO] -- Shortest time for ElevatorB is 214800
+181203-18:57:31 [INFO] -- Svc_Reply: Svc_Reply Passenger-0148 46 19 B
+181203-18:57:31 [INFO] -- Elev_Dep: Elev_Dep D 51 D 50 46 38 33 28 27 26 25 24 20 18 15 12 11 8 3
+181203-18:57:31 [INFO] -- Elev_Arr: Elev_Arr A 39 U 42 44 48
+181203-18:57:32 [INFO] -- Elev_Arr: Elev_Arr E 36 U 42 43 45 46 48 52 53
+181203-18:57:32 [INFO] -- Elev_Arr: Elev_Arr D 50 D 46 38 33 28 27 26 25 24 20 18 15 12 11 8 3
+181203-18:57:33 [INFO] -- Request: Svc_Req Passenger-0149 35 52
+181203-18:57:33 [INFO] -- Shortest time for ElevatorB is 222300
+181203-18:57:33 [INFO] -- Svc_Reply: Svc_Reply Passenger-0149 35 52 B
+181203-18:57:34 [INFO] -- Request: Svc_Req Passenger-0150 14 51
+181203-18:57:34 [INFO] -- Shortest time for ElevatorE is 224600
+181203-18:57:34 [INFO] -- Svc_Reply: Svc_Reply Passenger-0150 14 51 E
+181203-18:57:34 [INFO] -- Elev_Arr: Elev_Arr C 50 D 46 45 43 41 39 35 14 11 8 6 4 3 1 0
+181203-18:57:34 [INFO] -- Elev_Dep: Elev_Dep F 41 D 40 35 34 30 29 28 23 21 20 18 16 15 11 10 9 6 5 4 3
+181203-18:57:35 [INFO] -- Request: Svc_Req Passenger-0151 10 20
+181203-18:57:35 [INFO] -- Shortest time for ElevatorC is 225300
+181203-18:57:35 [INFO] -- Svc_Reply: Svc_Reply Passenger-0151 10 20 C
+181203-18:57:35 [INFO] -- Request: Svc_Req Passenger-0152 40 7
+181203-18:57:35 [INFO] -- Shortest time for ElevatorA is 217000
+181203-18:57:35 [INFO] -- Svc_Reply: Svc_Reply Passenger-0152 40 7 A
+181203-18:57:35 [INFO] -- Request: Svc_Req Passenger-0153 41 9
+181203-18:57:35 [INFO] -- Shortest time for ElevatorD is 227100
+181203-18:57:35 [INFO] -- Svc_Reply: Svc_Reply Passenger-0153 41 9 D
+181203-18:57:35 [INFO] -- Elev_Arr: Elev_Arr F 40 D 35 34 30 29 28 23 21 20 18 16 15 11 10 9 6 5 4 3
+181203-18:57:36 [INFO] -- Request: Svc_Req Passenger-0154 38 18
+181203-18:57:36 [INFO] -- Shortest time for ElevatorF is 217600
+181203-18:57:36 [INFO] -- Svc_Reply: Svc_Reply Passenger-0154 38 18 F
+181203-18:57:36 [INFO] -- Request: Svc_Req Passenger-0155 20 24
+181203-18:57:36 [INFO] -- Shortest time for ElevatorC is 234000
+181203-18:57:36 [INFO] -- Svc_Reply: Svc_Reply Passenger-0155 20 24 C
+181203-18:57:36 [INFO] -- Request: Svc_Req Passenger-0156 30 23
+181203-18:57:36 [INFO] -- Shortest time for ElevatorF is 217600
+181203-18:57:36 [INFO] -- Svc_Reply: Svc_Reply Passenger-0156 30 23 F
+181203-18:57:36 [INFO] -- Request: Svc_Req Passenger-0157 33 6
+181203-18:57:36 [INFO] -- Shortest time for ElevatorA is 217000
+181203-18:57:36 [INFO] -- Svc_Reply: Svc_Reply Passenger-0157 33 6 A
+181203-18:57:37 [INFO] -- Request: Svc_Req Passenger-0158 13 39
+181203-18:57:37 [INFO] -- Shortest time for ElevatorA is 224500
+181203-18:57:37 [INFO] -- Svc_Reply: Svc_Reply Passenger-0158 13 39 A
+181203-18:57:38 [INFO] -- Elev_Dep: Elev_Dep B 51 U 52 53 54
