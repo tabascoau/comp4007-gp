@@ -45,5 +45,20 @@ public class GreetingServer extends Thread {
         }
     }
 
+    public static void SendToServer(String str)
+    {
+        try
+        {
+            // Sending Msg
+            String outNetMsg = str;
+            PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
+            out.println(outNetMsg);
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+        }
+    }
+
 }
 

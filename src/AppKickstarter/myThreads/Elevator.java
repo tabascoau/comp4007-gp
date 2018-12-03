@@ -3,6 +3,7 @@ package AppKickstarter.myThreads;
 import AppKickstarter.AppKickstarter;
 import AppKickstarter.gui.CentralControlPanel;
 import AppKickstarter.misc.AppThread;
+import AppKickstarter.misc.GreetingServer;
 import AppKickstarter.misc.MBox;
 import AppKickstarter.misc.Msg;
 import AppKickstarter.timer.Timer;
@@ -17,6 +18,22 @@ public class Elevator extends AppThread {
         Stop,
         Up,
         Down
+    }
+
+    public char GetDirectionChar() {
+        switch (direction)
+        {
+            case Stop: return 'S';
+            case Up: return 'U';
+            case Down: return 'D';
+            default: return 'S';
+        }
+    }
+
+    public char GetIdChar()
+    {
+        String id = getID();
+        return id.charAt(id.length()-1);
     }
 
     private final int sleepTime = 5;
@@ -131,13 +148,25 @@ public class Elevator extends AppThread {
                                 {
                                     if (direction == Direction.Up && floors[current].up)
                                     {
+                                        // Send Elev_Arr
+                                        SendElevDep();
+
                                         Thread.sleep((long) ((doorOpen + doorWait + doorClose) * 1000));
                                         floors[current].up = false;
+
+                                        // Send Elev_Dep
+                                        SendElevArr();
                                     }
                                     else if (direction == Direction.Down && floors[current].down)
                                     {
+                                        // Send Elev_Arr
+                                        SendElevDep();
+
                                         Thread.sleep((long) ((doorOpen + doorWait + doorClose) * 1000));
                                         floors[current].up = false;
+
+                                        // Send Elev_Dep
+                                        SendElevArr();
                                     }
                                 }
                                 // To moving state
@@ -168,7 +197,7 @@ public class Elevator extends AppThread {
                     long constantSpeed = up ? (long) (upOneFloor * 1000) : (long) (downOneFloor * 1000);
 
                     // Send Elev_Arr
-                    SendElevArr();
+                    SendElevDep();
 
                     while (true) {
                         boolean nextFloorStop = up ? floors[current + floorChange].up : floors[current + floorChange].down;
@@ -192,7 +221,7 @@ public class Elevator extends AppThread {
                                 mbox.send(new Msg(id, mbox, Msg.Type.Waiting, "Waiting"));
 
                                 // Send Elev_Dep
-                                SendElevDep();
+                                SendElevArr();
 
                                 break;
                             } catch (Exception e) {
@@ -490,17 +519,18 @@ public class Elevator extends AppThread {
 
         String elevatorId = getID();
 
-        String reply = "Svc_Reply " + passengerId + " " + src + " " + dest + " " + elevatorId;
+        String reply = "Svc_Reply " + passengerId + " " + src + " " + dest + " " + GetIdChar();
         log.info("Svc_Reply: " + reply);
 
         // Send
+        GreetingServer.SendToServer(reply);
     }
 
     private ArrayList<Integer> GetUpperSchedule()
     {
         ArrayList<Integer> schedule = new ArrayList<Integer>();
         // Up to upper
-        for (int upperFloor = current + 1; upperFloor <= maxFloor; upperFloor++) {
+        for (int upperFloor = current; upperFloor <= maxFloor; upperFloor++) {
             if (floors[upperFloor].up) {
                 schedule.add(upperFloor);
             }
@@ -511,38 +541,12 @@ public class Elevator extends AppThread {
     private ArrayList<Integer> GetLowerSchedule() {
         ArrayList<Integer> schedule = new ArrayList<Integer>();
         // Down to lower
-        for (int lowerFloor = current - 1; lowerFloor >= minFloor; lowerFloor--) {
+        for (int lowerFloor = current; lowerFloor >= minFloor; lowerFloor--) {
             if (floors[lowerFloor].down) {
                 schedule.add(lowerFloor);
             }
         }
         return schedule;
-    }
-
-    private void SendElevArr()
-    {
-        String elevatorId = getID();
-
-        // Get schedule
-        ArrayList<Integer> schedule = null;
-
-        if (direction == Direction.Up)
-        {
-            schedule = GetUpperSchedule();
-        }
-        else if (direction == Direction.Down)
-        {
-            schedule = GetLowerSchedule();
-        }
-
-        String reply = "Elev_Arr " + elevatorId + " " + direction;
-        for (Integer floor: schedule)
-        {
-            reply += " " + floor;
-        }
-        log.info("Elev_Arr: " + reply);
-
-        // Send
     }
 
     private void SendElevDep()
@@ -561,7 +565,34 @@ public class Elevator extends AppThread {
             schedule = GetLowerSchedule();
         }
 
-        String reply = "Elev_Dep " + elevatorId + " "  + direction;
+        String reply = "Elev_Dep " + GetIdChar() + " " + current + " " + GetDirectionChar();
+        for (Integer floor: schedule)
+        {
+            reply += " " + floor;
+        }
+        log.info("Elev_Dep: " + reply);
+
+        // Send
+        GreetingServer.SendToServer(reply);
+    }
+
+    private void SendElevArr()
+    {
+        String elevatorId = getID();
+
+        // Get schedule
+        ArrayList<Integer> schedule = null;
+
+        if (direction == Direction.Up)
+        {
+            schedule = GetUpperSchedule();
+        }
+        else if (direction == Direction.Down)
+        {
+            schedule = GetLowerSchedule();
+        }
+
+        String reply = "Elev_Arr " + GetIdChar() + " " + current + " " + GetDirectionChar();
         // May no request
         if (direction != Direction.Stop)
         {
@@ -570,9 +601,14 @@ public class Elevator extends AppThread {
                 reply += " " + floor;
             }
         }
-        log.info("Elev_Dep: " + reply);
+        else
+        {
+            reply += " -3.14";
+        }
+        log.info("Elev_Arr: " + reply);
 
         // Send
+        GreetingServer.SendToServer(reply);
     }
 
 } // ThreadA

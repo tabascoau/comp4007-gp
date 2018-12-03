@@ -283,6 +283,9 @@ public class AppKickstarter {
         String elevatorId = elevators[shortestTimeElevatorIndex].getID();
         log.info("Shortest time for " + elevatorId + " is " + shortestTime);
 
+        // Send
+        GreetingServer.SendToServer(str);
+
         // Send to elevator
         elevators[shortestTimeElevatorIndex].AddRequest(str);
     }
