@@ -252,7 +252,7 @@ public class AppKickstarter {
     } // getSimulationTimeStr
 
     public void ReceiveRequest(String str) {
-        log.info("String: " + str);
+        log.info("Request: " + str);
 
         String message[] = str.split(" ");
 
@@ -280,11 +280,11 @@ public class AppKickstarter {
             }
         }
 
-        log.info("Shortest time for " + elevators[shortestTimeElevatorIndex].getID() + " is " + shortestTime);
+        String elevatorId = elevators[shortestTimeElevatorIndex].getID();
+        log.info("Shortest time for " + elevatorId + " is " + shortestTime);
 
         // Send to elevator
         elevators[shortestTimeElevatorIndex].AddRequest(str);
-//	    elevators[0].getMBox().send(new Msg(id, null, Msg.Type.Waiting, str));
     }
 
 } // AppKickstarter

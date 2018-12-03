@@ -7,6 +7,8 @@ import AppKickstarter.misc.MBox;
 import AppKickstarter.misc.Msg;
 import AppKickstarter.timer.Timer;
 
+import java.util.ArrayList;
+
 
 //======================================================================
 // ThreadA
@@ -165,6 +167,8 @@ public class Elevator extends AppThread {
                     long accelerationSpeed = up ? (long) (accUp * 1000) : (long) (accDown * 1000);
                     long constantSpeed = up ? (long) (upOneFloor * 1000) : (long) (downOneFloor * 1000);
 
+                    // Send Elev_Arr
+                    SendElevArr();
 
                     while (true) {
                         boolean nextFloorStop = up ? floors[current + floorChange].up : floors[current + floorChange].down;
@@ -186,6 +190,10 @@ public class Elevator extends AppThread {
                                 // To waiting state
                                 centralControlPanel.setDirectionA(id, GetDirectionString(status));
                                 mbox.send(new Msg(id, mbox, Msg.Type.Waiting, "Waiting"));
+
+                                // Send Elev_Dep
+                                SendElevDep();
+
                                 break;
                             } catch (Exception e) {
                                 System.out.println(e.getMessage());
@@ -285,10 +293,16 @@ public class Elevator extends AppThread {
         return Direction.Stop;
     }
 
-    public void AddRequest(String str) {
+    // Default
+    public void AddRequest(String str)
+    {
+        // Send data
+        SendSvcReply(str);
+
         AddRequest(floors, current, direction, str);
     }
 
+    // Simulation direct call
     public void AddRequest(Floor[] floors, int current, Direction direction, String str) {
         // Get message
         String message[] = str.split(" ");
@@ -462,6 +476,99 @@ public class Elevator extends AppThread {
         }
 
         return time;
+    }
+
+    // To passenger Stream
+    private void SendSvcReply(String str)
+    {
+        String message[] = str.split(" ");
+
+        // Get message
+        String passengerId = message[1];
+        int src = Integer.parseInt(message[2]);
+        int dest = Integer.parseInt(message[3]);
+
+        String elevatorId = getID();
+
+        String reply = "Svc_Reply " + passengerId + " " + src + " " + dest + " " + elevatorId;
+        log.info("Svc_Reply: " + reply);
+
+        // Send
+    }
+
+    private ArrayList<Integer> GetUpperSchedule()
+    {
+        ArrayList<Integer> schedule = new ArrayList<Integer>();
+        // Up to upper
+        for (int upperFloor = current + 1; upperFloor <= maxFloor; upperFloor++) {
+            if (floors[upperFloor].up) {
+                schedule.add(upperFloor);
+            }
+        }
+        return schedule;
+    }
+
+    private ArrayList<Integer> GetLowerSchedule() {
+        ArrayList<Integer> schedule = new ArrayList<Integer>();
+        // Down to lower
+        for (int lowerFloor = current - 1; lowerFloor >= minFloor; lowerFloor--) {
+            if (floors[lowerFloor].down) {
+                schedule.add(lowerFloor);
+            }
+        }
+        return schedule;
+    }
+
+    private void SendElevArr()
+    {
+        String elevatorId = getID();
+
+        // Get schedule
+        ArrayList<Integer> schedule = null;
+
+        if (direction == Direction.Up)
+        {
+            schedule = GetUpperSchedule();
+        }
+        else if (direction == Direction.Down)
+        {
+            schedule = GetLowerSchedule();
+        }
+
+        String reply = "Elev_Arr " + elevatorId + " " + direction;
+        for (Integer floor: schedule)
+        {
+            reply += " " + floor;
+        }
+        log.info("Elev_Arr: " + reply);
+
+        // Send
+    }
+
+    private void SendElevDep()
+    {
+        String elevatorId = getID();
+
+        // Get schedule
+        ArrayList<Integer> schedule = null;
+
+        if (direction == Direction.Up)
+        {
+            schedule = GetUpperSchedule();
+        }
+        else if (direction == Direction.Down)
+        {
+            schedule = GetLowerSchedule();
+        }
+
+        String reply = "Elev_Arr " + elevatorId + " "  + direction;
+        for (Integer floor: schedule)
+        {
+            reply += " " + floor;
+        }
+        log.info("Elev_Arr: " + reply);
+
+        // Send
     }
 
 } // ThreadA

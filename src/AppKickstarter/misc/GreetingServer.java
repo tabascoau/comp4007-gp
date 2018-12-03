@@ -3,10 +3,7 @@ package AppKickstarter.misc;
 import AppKickstarter.AppKickstarter;
 import AppKickstarter.gui.CentralControlPanel;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketTimeoutException;
@@ -37,6 +34,9 @@ public class GreetingServer extends Thread {
                 // Send data
                 str.trim();
                 appKickstarter.ReceiveRequest(str);
+
+                BufferedWriter out = new BufferedWriter(new OutputStreamWriter(clientSocket.getOutputStream()));
+//                out.write(reply);
             }
         } catch (SocketTimeoutException s) {
             System.out.println("Socket timed out!");
