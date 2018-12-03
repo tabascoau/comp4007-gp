@@ -74,8 +74,8 @@
       <file leaf-file-name="Elevator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AppKickstarter/myThreads/Elevator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="518" column="33" selection-start-line="518" selection-start-column="24" selection-end-line="518" selection-end-column="33" />
+            <state relative-caret-position="318">
+              <caret line="522" column="41" selection-start-line="522" selection-start-column="41" selection-end-line="522" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#18165#18174#0" expanded="true" />
@@ -105,7 +105,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find />
       <find>timesup</find>
       <find>CentralControlPanel.</find>
       <find>gotosrc</find>
@@ -129,12 +128,13 @@
       <find>SendElevDep</find>
       <find>Thread</find>
       <find>schedule</find>
-      <find />
+      <find>Elev_Dep D 0 U 39</find>
       <find>Add</find>
       <find>SendToServer</find>
       <find>Svc_Reply:</find>
       <find>SendSvcReply</find>
       <find>RequestAddRequest</find>
+      <find>GetIdChar</find>
     </findStrings>
     <replaceStrings>
       <replace>1</replace>
@@ -368,13 +368,13 @@
     <layout>
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="bottom" id="TODO" order="5" weight="0.3275488" />
-      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.499375" weight="0.39921466" />
+      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.49875" weight="0.39921466" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" weight="0.32953367" />
       <window_info anchor="right" id="Maven Projects" order="8" />
-      <window_info active="true" anchor="bottom" x="0" y="290" width="1600" height="279" id="Run" order="12" sideWeight="0.68125" side_tool="true" visible="true" weight="0.31282723" />
+      <window_info active="true" anchor="bottom" x="0" y="290" width="1600" height="279" id="Run" order="12" sideWeight="0.50125" side_tool="true" visible="true" weight="0.40183246" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.329718" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.31875" weight="0.31282723" />
       <window_info id="Capture Tool" order="5" />
@@ -385,7 +385,7 @@
       <window_info anchor="right" id="Ant Build" order="9" weight="0.24956217" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="bottom" id="Debug" order="2" weight="0.40197152" />
+      <window_info anchor="bottom" id="Debug" order="2" sideWeight="0.499375" weight="0.40183246" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="right" id="Commander" order="2" weight="0.4" />
@@ -613,8 +613,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppKickstarter/myThreads/Elevator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="518" column="33" selection-start-line="518" selection-start-column="24" selection-end-line="518" selection-end-column="33" />
+        <state relative-caret-position="318">
+          <caret line="522" column="41" selection-start-line="522" selection-start-column="41" selection-end-line="522" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#18165#18174#0" expanded="true" />
