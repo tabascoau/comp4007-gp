@@ -36,6 +36,10 @@ Click the run button on Intellij IDE, DONE.
 
 To close the project, click the exit button on Central Control Panel or Stop button on IDE.
 
+## Program structure
+
+comp4007-gp-test->etc->
+
 ```
 Finished
 ```
