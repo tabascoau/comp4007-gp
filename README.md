@@ -38,6 +38,7 @@ To close the project, click the exit button on Central Control Panel or Stop but
 
 ## Program structure
 
+```bash
 ├── src
 │   ├── AppKickstarter
 │   │   ├──  gui
@@ -69,6 +70,7 @@ To close the project, click the exit button on Central Control Panel or Stop but
         ├── AppKickstarter
         ├── AppKickstarter
         ├── READ.md
+```
 
 ```
 Finished
