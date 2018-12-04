@@ -70,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AppKickstarter/myThreads/Elevator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="210" column="38" lean-forward="true" selection-start-line="210" selection-start-column="38" selection-end-line="212" selection-end-column="91" />
+            <state relative-caret-position="-484">
+              <caret line="487" column="21" selection-start-line="487" selection-start-column="16" selection-end-line="487" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#19162#19171#0" expanded="true" />
@@ -84,11 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppKickstarter/myThreads/Floor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="536">
-              <caret line="53" column="39" lean-forward="true" selection-start-line="53" selection-start-column="39" selection-end-line="53" selection-end-column="39" />
+            <state relative-caret-position="416">
+              <caret line="41" column="33" lean-forward="true" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -97,7 +97,7 @@
         <entry file="file://$PROJECT_DIR$/etc/SmartElevator.cfg">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -113,36 +113,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ALread</find>
-      <find>elevatorArray</find>
-      <find>null</find>
-      <find>System.out.println</find>
-      <find>Elev_Arr</find>
-      <find>SendElevArr</find>
-      <find>set</find>
-      <find>setSimulationTimer</find>
-      <find>setTimer</find>
-      <find>direction</find>
-      <find>-3.14</find>
-      <find>1000</find>
-      <find>SendElevDep</find>
-      <find>Thread</find>
-      <find>schedule</find>
-      <find>Elev_Dep D 0 U 39</find>
       <find>Add</find>
       <find>SendToServer</find>
-      <find>Svc_Reply:</find>
       <find>SendSvcReply</find>
       <find>RequestAddRequest</find>
       <find>GetIdChar</find>
-      <find>AddRe</find>
       <find>hasRequest</find>
       <find>requestDirection</find>
       <find>uppest</find>
       <find>UppestReq</find>
-      <find>UppestRequest</find>
-      <find>GetRequestDirection</find>
+      <find>AddRequest</find>
+      <find>Elev_Dep:</find>
+      <find>Elev_Dep:</find>
+      <find>SendElevDep</find>
+      <find>current + floorChange</find>
+      <find>GetReq</find>
       <find>HasUpperRequest</find>
+      <find>Svc_Reply:</find>
+      <find>direction</find>
+      <find>src &lt; current &lt; de</find>
+      <find>current &lt; src &lt; de</find>
+      <find>destLargetThanCurrent</find>
+      <find>srcDirection</find>
+      <find>curr</find>
+      <find>cu</find>
+      <find>To dest</find>
+      <find>AddReq</find>
+      <find>GetRequestDirection</find>
+      <find>LowestRequest</find>
+      <find>UppestRequest</find>
+      <find>AddRe</find>
     </findStrings>
     <replaceStrings>
       <replace>1</replace>
@@ -150,6 +150,7 @@
       <replace>3</replace>
       <replace>4</replace>
       <replace>5</replace>
+      <replace>next</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -182,8 +183,8 @@
         <option value="$PROJECT_DIR$/src/AppKickstarter/misc/GreetingServer.java" />
         <option value="$PROJECT_DIR$/src/AppKickstarter/AppKickstarter.java" />
         <option value="$PROJECT_DIR$/etc/SmartElevator.cfg" />
-        <option value="$PROJECT_DIR$/src/AppKickstarter/myThreads/Elevator.java" />
         <option value="$PROJECT_DIR$/src/AppKickstarter/myThreads/Floor.java" />
+        <option value="$PROJECT_DIR$/src/AppKickstarter/myThreads/Elevator.java" />
       </list>
     </option>
   </component>
@@ -246,8 +247,8 @@
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="289" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543914733783" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543933706095" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/comp4007-gp-fa347397935b56d01433903aec9a91d50c8e25fe" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -366,7 +367,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.38948995" visible="true" weight="0.1881663" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.38948995" visible="true" weight="0.1881663" />
       <window_info id="Structure" order="1" sideWeight="0.61051005" side_tool="true" weight="0.18550107" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -381,11 +382,11 @@
       <window_info anchor="bottom" id="TODO" order="5" weight="0.3275488" />
       <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" weight="0.32953367" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.329718" />
-      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.49840087" weight="0.39869988" />
+      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.49520257" weight="0.39869988" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.31823027" weight="0.312026" />
-      <window_info active="true" anchor="bottom" x="0" y="290" width="1600" height="279" id="Run" order="12" sideWeight="0.50159913" side_tool="true" visible="true" weight="0.312026" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.31716418" weight="0.312026" />
+      <window_info anchor="bottom" x="0" y="290" width="1600" height="279" id="Run" order="12" sideWeight="0.6828358" side_tool="true" weight="0.312026" />
       <window_info anchor="right" id="Maven" order="0" />
       <window_info anchor="right" id="Database" order="1" weight="0.32978722" />
       <window_info anchor="right" id="Commander" order="2" weight="0.4" />
@@ -544,26 +545,26 @@
     <entry file="file://$PROJECT_DIR$/etc/SmartElevator.cfg">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppKickstarter/myThreads/Elevator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="210" column="38" lean-forward="true" selection-start-line="210" selection-start-column="38" selection-end-line="212" selection-end-column="91" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#19162#19171#0" expanded="true" />
-            <element signature="e#19523#19532#0" expanded="true" />
-          </folding>
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppKickstarter/myThreads/Floor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="53" column="39" lean-forward="true" selection-start-line="53" selection-start-column="39" selection-end-line="53" selection-end-column="39" />
+        <state relative-caret-position="416">
+          <caret line="41" column="33" lean-forward="true" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppKickstarter/myThreads/Elevator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-484">
+          <caret line="487" column="21" selection-start-line="487" selection-start-column="16" selection-end-line="487" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#19162#19171#0" expanded="true" />
+            <element signature="e#19523#19532#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

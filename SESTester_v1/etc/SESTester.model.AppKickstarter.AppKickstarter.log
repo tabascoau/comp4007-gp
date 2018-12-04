@@ -1,492 +1,87 @@
-181204-14:12:07 [INFO] -- 
-181204-14:12:07 [INFO] -- 
-181204-14:12:07 [INFO] -- ============================================================
-181204-14:12:07 [INFO] -- AppKickstarter: Application Starting...
-181204-14:12:07 [INFO] -- timer: starting...
-181204-14:12:07 [INFO] -- NetOutgoing: starting...
-181204-14:12:07 [INFO] -- NetIncoming: starting...
-181204-14:12:07 [INFO] -- NetHandler: starting...
-181204-14:12:07 [INFO] -- NetHandler: 127.0.0.1, 54321
-181204-14:12:08 [INFO] -- NetHandler: Connection trial #1: Exception encountered while making connection to server: Connection refused: connect
-181204-14:12:08 [INFO] -- NetHandler: Connection trial #1 failed!
-181204-14:12:13 [INFO] -- NetHandler: connection trial #2 succeeded!
-181204-14:12:13 [INFO] -- NetIncoming: receiving link up from NetHandler
-181204-14:12:13 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181204-14:12:16 [INFO] -- Sending: [Svc_Req Passenger-0001 4 6]
-181204-14:12:16 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 4 6 A]
-181204-14:12:16 [INFO] -- NetIncoming: receiving [Elev_Dep A 0 U 4 6]
-181204-14:12:17 [INFO] -- NetIncoming: receiving [Elev_Arr A 4 U 6]
-181204-14:12:18 [INFO] -- NetIncoming: receiving [Elev_Dep A 4 U 6]
-181204-14:12:18 [INFO] -- NetIncoming: receiving [Elev_Arr A 6 S -2147483648]
-181204-14:12:21 [INFO] -- Sending: [Svc_Req Passenger-0001 3 5]
-181204-14:12:21 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 3 5 A]
-181204-14:12:21 [INFO] -- NetIncoming: receiving [Elev_Dep A 6 D 3]
-181204-14:12:21 [INFO] -- NetIncoming: receiving [Elev_Arr A 3 U 5]
-181204-14:12:22 [INFO] -- NetIncoming: receiving [Elev_Dep A 3 U 5]
-181204-14:12:22 [INFO] -- NetIncoming: receiving [Elev_Arr A 5 S -2147483648]
-181204-14:12:30 [INFO] -- Sending: [Svc_Req Passenger-0001 0 50]
-181204-14:12:30 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 0 50 B]
-181204-14:12:30 [INFO] -- NetIncoming: receiving [Elev_Arr B 0 U 50]
-181204-14:12:31 [INFO] -- NetIncoming: receiving [Elev_Dep B 0 U 50]
-181204-14:12:34 [INFO] -- NetIncoming: receiving [Elev_Arr B 50 S -2147483648]
-181204-14:12:40 [INFO] -- Sending: [Svc_Req Passenger-0001 0 40]
-181204-14:12:40 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 0 40 C]
-181204-14:12:40 [INFO] -- NetIncoming: receiving [Elev_Arr C 0 U 40]
-181204-14:12:40 [INFO] -- NetIncoming: receiving [Elev_Dep C 0 U 40]
-181204-14:12:42 [INFO] -- Sending: [Svc_Req Passenger-0001 30 44]
-181204-14:12:42 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 30 44 B]
-181204-14:12:42 [INFO] -- NetIncoming: receiving [Elev_Dep B 50 D 30]
-181204-14:12:43 [INFO] -- NetIncoming: receiving [Elev_Arr C 40 S -2147483648]
-181204-14:12:43 [INFO] -- NetIncoming: receiving [Elev_Arr B 30 U 44]
-181204-14:12:44 [INFO] -- NetIncoming: receiving [Elev_Dep B 30 U 44]
-181204-14:12:45 [INFO] -- NetIncoming: receiving [Elev_Arr B 44 S -2147483648]
-181204-14:13:12 [INFO] -- Sending: [Svc_Req Passenger-0001 30 44]
-181204-14:13:12 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 30 44 C]
-181204-14:13:12 [INFO] -- NetIncoming: receiving [Elev_Dep C 40 U 44]
-181204-14:13:12 [INFO] -- NetIncoming: receiving [Elev_Arr C 44 D 30]
-181204-14:13:13 [INFO] -- NetIncoming: receiving [Elev_Dep C 44 D 30]
-181204-14:13:14 [INFO] -- NetIncoming: receiving [Elev_Arr C 30 S -2147483648]
-181204-14:13:17 [INFO] -- Sending: [Svc_Req Passenger-0001 30 44]
-181204-14:13:17 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 30 44 C]
-181204-14:13:17 [INFO] -- NetIncoming: receiving [Elev_Arr C 30 U 44]
-181204-14:13:18 [INFO] -- NetIncoming: receiving [Elev_Dep C 30 U 44]
-181204-14:13:19 [INFO] -- NetIncoming: receiving [Elev_Arr C 44 S -2147483648]
-181204-14:13:21 [INFO] -- Sending: [Svc_Req Passenger-0001 30 44]
-181204-14:13:21 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 30 44 B]
-181204-14:13:21 [INFO] -- NetIncoming: receiving [Elev_Dep B 44 D 30]
-181204-14:13:22 [INFO] -- NetIncoming: receiving [Elev_Arr B 30 U 44]
-181204-14:13:22 [INFO] -- NetIncoming: receiving [Elev_Dep B 30 U 44]
-181204-14:13:23 [INFO] -- NetIncoming: receiving [Elev_Arr B 44 S -2147483648]
-181204-14:13:29 [INFO] -- Sending: [Svc_Req Passenger-0001 30 50]
-181204-14:13:29 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 30 50 B]
-181204-14:13:29 [INFO] -- NetIncoming: receiving [Elev_Dep B 44 U 50]
-181204-14:13:29 [INFO] -- NetIncoming: receiving [Elev_Arr B 50 D 30]
-181204-14:13:30 [INFO] -- NetIncoming: receiving [Elev_Dep B 50 D 30]
-181204-14:13:31 [INFO] -- NetIncoming: receiving [Elev_Arr B 30 S -2147483648]
-181204-14:30:05 [INFO] -- Sending: [Svc_Req Passenger-0001 30 50]
-181204-14:30:05 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 30 50 B]
-181204-14:30:05 [INFO] -- NetIncoming: receiving [Elev_Arr B 30 U 50]
-181204-14:30:06 [INFO] -- NetIncoming: receiving [Elev_Dep B 30 U 50]
-181204-14:30:07 [INFO] -- NetIncoming: receiving [Elev_Arr B 50 S -2147483648]
-181204-16:43:06 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181204-16:43:06 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181204-16:43:06 [INFO] -- NetHandler: connection trial #2 link down from NetIncoming
-181204-16:43:06 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181204-16:43:06 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181204-16:43:08 [INFO] -- NetHandler: Connection trial #3: Exception encountered while making connection to server: Connection refused: connect
-181204-16:43:08 [INFO] -- NetHandler: Connection trial #3 failed!
-181204-16:43:13 [INFO] -- NetHandler: connection trial #4 succeeded!
-181204-16:43:13 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181204-16:43:13 [INFO] -- NetIncoming: receiving link up from NetHandler
-181204-16:43:17 [INFO] -- Sending: [Svc_Req Passenger-0001 30 50]
-181204-16:43:17 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 30 50 A]
-181204-16:43:17 [INFO] -- NetIncoming: receiving [Elev_Dep A 0 U 30 50]
-181204-16:43:19 [INFO] -- NetIncoming: receiving [Elev_Arr A 30 U 50]
-181204-16:43:20 [INFO] -- NetIncoming: receiving [Elev_Dep A 30 U 50]
-181204-16:43:40 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181204-16:43:40 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181204-16:43:40 [INFO] -- NetHandler: connection trial #4 link down from NetIncoming
-181204-16:43:40 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181204-16:43:40 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181204-16:43:41 [INFO] -- NetHandler: Connection trial #5: Exception encountered while making connection to server: Connection refused: connect
-181204-16:43:41 [INFO] -- NetHandler: Connection trial #5 failed!
-181204-16:43:46 [INFO] -- Sending: [Svc_Req Passenger-0001 0 5]
-181204-16:43:46 [WARNING] -- NetOutgoing: receiving sendreq from null while link is down.  The msg: "Svc_Req Passenger-0001 0 5"
-181204-16:43:46 [INFO] -- NetHandler: connection trial #6 succeeded!
-181204-16:43:46 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181204-16:43:46 [INFO] -- NetIncoming: receiving link up from NetHandler
-181204-16:44:01 [INFO] -- Sending: [Svc_Req Passenger-0001 1 5]
-181204-16:44:01 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 1 5 A]
-181204-16:44:01 [INFO] -- NetIncoming: receiving [Elev_Dep A 0 U 1 5]
-181204-16:44:01 [INFO] -- NetIncoming: receiving [Elev_Arr A 1 U 5]
-181204-16:44:02 [INFO] -- NetIncoming: receiving [Elev_Dep A 1 U 5]
-181204-16:44:06 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181204-16:44:06 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181204-16:44:06 [INFO] -- NetHandler: connection trial #6 link down from NetIncoming
-181204-16:44:06 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181204-16:44:06 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181204-16:44:07 [INFO] -- NetHandler: Connection trial #7: Exception encountered while making connection to server: Connection refused: connect
-181204-16:44:07 [INFO] -- NetHandler: Connection trial #7 failed!
-181204-16:44:13 [INFO] -- NetHandler: Connection trial #8: Exception encountered while making connection to server: Connection refused: connect
-181204-16:44:13 [INFO] -- NetHandler: Connection trial #8 failed!
-181204-16:44:19 [INFO] -- NetHandler: Connection trial #9: Exception encountered while making connection to server: Connection refused: connect
-181204-16:44:19 [INFO] -- NetHandler: Connection trial #9 failed!
-181204-16:44:25 [INFO] -- NetHandler: Connection trial #10: Exception encountered while making connection to server: Connection refused: connect
-181204-16:44:25 [INFO] -- NetHandler: Connection trial #10 failed!
-181204-16:44:31 [INFO] -- NetHandler: Connection trial #11: Exception encountered while making connection to server: Connection refused: connect
-181204-16:44:31 [INFO] -- NetHandler: Connection trial #11 failed!
-181204-16:44:37 [INFO] -- NetHandler: Connection trial #12: Exception encountered while making connection to server: Connection refused: connect
-181204-16:44:37 [INFO] -- NetHandler: Connection trial #12 failed!
-181204-16:44:43 [INFO] -- NetHandler: Connection trial #13: Exception encountered while making connection to server: Connection refused: connect
-181204-16:44:43 [INFO] -- NetHandler: Connection trial #13 failed!
-181204-16:44:49 [INFO] -- NetHandler: Connection trial #14: Exception encountered while making connection to server: Connection refused: connect
-181204-16:44:49 [INFO] -- NetHandler: Connection trial #14 failed!
-181204-16:44:55 [INFO] -- NetHandler: Connection trial #15: Exception encountered while making connection to server: Connection refused: connect
-181204-16:44:55 [INFO] -- NetHandler: Connection trial #15 failed!
-181204-16:45:01 [INFO] -- NetHandler: Connection trial #16: Exception encountered while making connection to server: Connection refused: connect
-181204-16:45:01 [INFO] -- NetHandler: Connection trial #16 failed!
-181204-16:45:07 [INFO] -- NetHandler: Connection trial #17: Exception encountered while making connection to server: Connection refused: connect
-181204-16:45:07 [INFO] -- NetHandler: Connection trial #17 failed!
-181204-16:45:13 [INFO] -- NetHandler: Connection trial #18: Exception encountered while making connection to server: Connection refused: connect
-181204-16:45:13 [INFO] -- NetHandler: Connection trial #18 failed!
-181204-16:45:19 [INFO] -- NetHandler: Connection trial #19: Exception encountered while making connection to server: Connection refused: connect
-181204-16:45:19 [INFO] -- NetHandler: Connection trial #19 failed!
-181204-16:45:25 [INFO] -- NetHandler: Connection trial #20: Exception encountered while making connection to server: Connection refused: connect
-181204-16:45:25 [INFO] -- NetHandler: Connection trial #20 failed!
-181204-16:45:31 [INFO] -- NetHandler: Connection trial #21: Exception encountered while making connection to server: Connection refused: connect
-181204-16:45:31 [INFO] -- NetHandler: Connection trial #21 failed!
-181204-16:45:36 [INFO] -- NetHandler: connection trial #22 succeeded!
-181204-16:45:36 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181204-16:45:36 [INFO] -- NetIncoming: receiving link up from NetHandler
-181204-16:45:39 [INFO] -- Sending: [Svc_Req Passenger-0001 1 5]
-181204-16:45:39 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 1 5 A]
-181204-16:45:41 [INFO] -- NetIncoming: receiving [Elev_Dep A 0 U 1 5]
-181204-16:45:42 [INFO] -- NetIncoming: receiving [Elev_Arr A 1 U 5]
-181204-16:45:50 [INFO] -- NetIncoming: receiving [Elev_Dep A 1 U 5]
-181204-16:46:03 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181204-16:46:03 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181204-16:46:03 [INFO] -- NetHandler: connection trial #22 link down from NetIncoming
-181204-16:46:03 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181204-16:46:03 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181204-16:46:04 [INFO] -- NetHandler: connection trial #23 succeeded!
-181204-16:46:04 [INFO] -- NetIncoming: receiving link up from NetHandler
-181204-16:46:04 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181204-16:46:07 [INFO] -- Sending: [Svc_Req Passenger-0001 1 5]
-181204-16:46:07 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 1 5 A]
-181204-16:46:08 [INFO] -- NetIncoming: receiving [Elev_Dep A 0 U 1 5]
-181204-16:46:09 [INFO] -- NetIncoming: receiving [Elev_Arr A 1 U 5]
-181204-16:46:17 [INFO] -- NetIncoming: receiving [Elev_Dep A 1 U 5]
-181204-16:46:24 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181204-16:46:24 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181204-16:46:24 [INFO] -- NetHandler: connection trial #23 link down from NetIncoming
-181204-16:46:24 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181204-16:46:24 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181204-16:46:25 [INFO] -- NetHandler: Connection trial #24: Exception encountered while making connection to server: Connection refused: connect
-181204-16:46:25 [INFO] -- NetHandler: Connection trial #24 failed!
-181204-16:46:31 [INFO] -- NetHandler: Connection trial #25: Exception encountered while making connection to server: Connection refused: connect
-181204-16:46:31 [INFO] -- NetHandler: Connection trial #25 failed!
-181204-16:46:37 [INFO] -- NetHandler: Connection trial #26: Exception encountered while making connection to server: Connection refused: connect
-181204-16:46:37 [INFO] -- NetHandler: Connection trial #26 failed!
-181204-16:46:43 [INFO] -- NetHandler: Connection trial #27: Exception encountered while making connection to server: Connection refused: connect
-181204-16:46:43 [INFO] -- NetHandler: Connection trial #27 failed!
-181204-16:46:49 [INFO] -- NetHandler: Connection trial #28: Exception encountered while making connection to server: Connection refused: connect
-181204-16:46:49 [INFO] -- NetHandler: Connection trial #28 failed!
-181204-16:46:55 [INFO] -- NetHandler: Connection trial #29: Exception encountered while making connection to server: Connection refused: connect
-181204-16:46:55 [INFO] -- NetHandler: Connection trial #29 failed!
-181204-16:47:01 [INFO] -- NetHandler: Connection trial #30: Exception encountered while making connection to server: Connection refused: connect
-181204-16:47:01 [INFO] -- NetHandler: Connection trial #30 failed!
-181204-16:47:07 [INFO] -- NetHandler: Connection trial #31: Exception encountered while making connection to server: Connection refused: connect
-181204-16:47:07 [INFO] -- NetHandler: Connection trial #31 failed!
-181204-16:47:13 [INFO] -- NetHandler: Connection trial #32: Exception encountered while making connection to server: Connection refused: connect
-181204-16:47:13 [INFO] -- NetHandler: Connection trial #32 failed!
-181204-16:47:18 [INFO] -- NetHandler: connection trial #33 succeeded!
-181204-16:47:18 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181204-16:47:18 [INFO] -- NetIncoming: receiving link up from NetHandler
-181204-16:47:20 [INFO] -- Sending: [Svc_Req Passenger-0001 1 5]
-181204-16:47:20 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 1 5 A]
-181204-16:47:20 [INFO] -- NetIncoming: receiving [Elev_Dep A 0 U 1 5]
-181204-16:47:29 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181204-16:47:29 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181204-16:47:29 [INFO] -- NetHandler: connection trial #33 link down from NetIncoming
-181204-16:47:29 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181204-16:47:29 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181204-16:47:30 [INFO] -- NetHandler: Connection trial #34: Exception encountered while making connection to server: Connection refused: connect
-181204-16:47:30 [INFO] -- NetHandler: Connection trial #34 failed!
-181204-16:47:35 [INFO] -- NetHandler: connection trial #35 succeeded!
-181204-16:47:35 [INFO] -- NetIncoming: receiving link up from NetHandler
-181204-16:47:35 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181204-16:47:42 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181204-16:47:42 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181204-16:47:42 [INFO] -- NetHandler: connection trial #35 link down from NetIncoming
-181204-16:47:42 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181204-16:47:42 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181204-16:47:43 [INFO] -- NetHandler: Connection trial #36: Exception encountered while making connection to server: Connection refused: connect
-181204-16:47:43 [INFO] -- NetHandler: Connection trial #36 failed!
-181204-16:47:48 [INFO] -- NetHandler: connection trial #37 succeeded!
-181204-16:47:48 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181204-16:47:48 [INFO] -- NetIncoming: receiving link up from NetHandler
-181204-16:47:51 [INFO] -- Sending: [Svc_Req Passenger-0001 1 5]
-181204-16:47:51 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 1 5 A]
-181204-16:47:52 [INFO] -- NetIncoming: receiving [Elev_Dep A 0 U 1 5]
-181204-16:48:01 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181204-16:48:01 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181204-16:48:01 [INFO] -- NetHandler: connection trial #37 link down from NetIncoming
-181204-16:48:01 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181204-16:48:01 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181204-16:48:02 [INFO] -- NetHandler: Connection trial #38: Exception encountered while making connection to server: Connection refused: connect
-181204-16:48:02 [INFO] -- NetHandler: Connection trial #38 failed!
-181204-16:48:08 [INFO] -- NetHandler: Connection trial #39: Exception encountered while making connection to server: Connection refused: connect
-181204-16:48:08 [INFO] -- NetHandler: Connection trial #39 failed!
-181204-16:48:13 [INFO] -- NetHandler: connection trial #40 succeeded!
-181204-16:48:13 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181204-16:48:13 [INFO] -- NetIncoming: receiving link up from NetHandler
-181204-16:48:15 [INFO] -- Sending: [Svc_Req Passenger-0001 1 5]
-181204-16:48:15 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 1 5 A]
-181204-16:48:15 [INFO] -- NetIncoming: receiving [Elev_Dep A 0 U 1 5]
-181204-16:48:16 [INFO] -- NetIncoming: receiving [Elev_Arr A 1 U 5]
-181204-16:48:24 [INFO] -- NetIncoming: receiving [Elev_Dep A 1 U 5]
-181204-16:48:27 [INFO] -- NetIncoming: receiving [Elev_Arr A 5 S -2147483648]
-181204-16:48:47 [INFO] -- Sending: [Svc_Req Passenger-0001 4 6]
-181204-16:48:47 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 4 6 A]
-181204-16:48:48 [INFO] -- NetIncoming: receiving [Elev_Dep A 5 U 6]
-181204-16:48:49 [INFO] -- NetIncoming: receiving [Elev_Arr A 6 D 4]
-181204-16:48:57 [INFO] -- NetIncoming: receiving [Elev_Dep A 6 D 4]
-181204-16:48:59 [INFO] -- NetIncoming: receiving [Elev_Arr A 4 S -2147483648]
-181204-16:49:06 [INFO] -- Sending: [Svc_Req Passenger-0001 2 5]
-181204-16:49:06 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 2 5 A]
-181204-16:49:06 [INFO] -- NetIncoming: receiving [Elev_Dep A 4 U 5]
-181204-16:49:07 [INFO] -- NetIncoming: receiving [Elev_Arr A 5 D 2]
-181204-16:49:15 [INFO] -- NetIncoming: receiving [Elev_Dep A 5 D 2]
-181204-16:49:17 [INFO] -- NetIncoming: receiving [Elev_Arr A 2 S -2147483648]
-181204-16:49:33 [INFO] -- Sending: [Svc_Req Passenger-0001 6 4]
-181204-16:49:33 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 6 4 A]
-181204-16:49:34 [INFO] -- NetIncoming: receiving [Elev_Dep A 2 U 6]
-181204-16:49:38 [INFO] -- NetIncoming: receiving [Elev_Arr A 6 D 4]
-181204-16:49:45 [INFO] -- NetIncoming: receiving [Elev_Dep A 6 D 4]
-181204-16:49:47 [INFO] -- NetIncoming: receiving [Elev_Arr A 4 S -2147483648]
-181204-16:50:02 [INFO] -- Sending: [Svc_Req Passenger-0001 3 5]
-181204-16:50:02 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 3 5 A]
-181204-16:50:03 [INFO] -- NetIncoming: receiving [Elev_Dep A 4 U 5]
-181204-16:50:04 [INFO] -- NetIncoming: receiving [Elev_Arr A 5 D 3]
-181204-16:50:06 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181204-16:50:06 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181204-16:50:06 [INFO] -- NetHandler: connection trial #40 link down from NetIncoming
-181204-16:50:06 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181204-16:50:06 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181204-16:50:07 [INFO] -- NetHandler: Connection trial #41: Exception encountered while making connection to server: Connection refused: connect
-181204-16:50:07 [INFO] -- NetHandler: Connection trial #41 failed!
-181204-16:50:13 [INFO] -- NetHandler: Connection trial #42: Exception encountered while making connection to server: Connection refused: connect
-181204-16:50:13 [INFO] -- NetHandler: Connection trial #42 failed!
-181204-16:50:19 [INFO] -- NetHandler: Connection trial #43: Exception encountered while making connection to server: Connection refused: connect
-181204-16:50:19 [INFO] -- NetHandler: Connection trial #43 failed!
-181204-16:50:25 [INFO] -- NetHandler: Connection trial #44: Exception encountered while making connection to server: Connection refused: connect
-181204-16:50:25 [INFO] -- NetHandler: Connection trial #44 failed!
-181204-16:50:31 [INFO] -- NetHandler: Connection trial #45: Exception encountered while making connection to server: Connection refused: connect
-181204-16:50:31 [INFO] -- NetHandler: Connection trial #45 failed!
-181204-16:50:37 [INFO] -- NetHandler: Connection trial #46: Exception encountered while making connection to server: Connection refused: connect
-181204-16:50:37 [INFO] -- NetHandler: Connection trial #46 failed!
-181204-16:50:43 [INFO] -- NetHandler: Connection trial #47: Exception encountered while making connection to server: Connection refused: connect
-181204-16:50:43 [INFO] -- NetHandler: Connection trial #47 failed!
-181204-16:50:49 [INFO] -- NetHandler: Connection trial #48: Exception encountered while making connection to server: Connection refused: connect
-181204-16:50:49 [INFO] -- NetHandler: Connection trial #48 failed!
-181204-16:50:55 [INFO] -- NetHandler: Connection trial #49: Exception encountered while making connection to server: Connection refused: connect
-181204-16:50:55 [INFO] -- NetHandler: Connection trial #49 failed!
-181204-16:51:01 [INFO] -- NetHandler: Connection trial #50: Exception encountered while making connection to server: Connection refused: connect
-181204-16:51:01 [INFO] -- NetHandler: Connection trial #50 failed!
-181204-16:51:07 [INFO] -- NetHandler: Connection trial #51: Exception encountered while making connection to server: Connection refused: connect
-181204-16:51:07 [INFO] -- NetHandler: Connection trial #51 failed!
-181204-16:51:13 [INFO] -- NetHandler: Connection trial #52: Exception encountered while making connection to server: Connection refused: connect
-181204-16:51:13 [INFO] -- NetHandler: Connection trial #52 failed!
-181204-16:51:19 [INFO] -- NetHandler: Connection trial #53: Exception encountered while making connection to server: Connection refused: connect
-181204-16:51:19 [INFO] -- NetHandler: Connection trial #53 failed!
-181204-16:51:25 [INFO] -- NetHandler: Connection trial #54: Exception encountered while making connection to server: Connection refused: connect
-181204-16:51:25 [INFO] -- NetHandler: Connection trial #54 failed!
-181204-16:51:31 [INFO] -- NetHandler: Connection trial #55: Exception encountered while making connection to server: Connection refused: connect
-181204-16:51:31 [INFO] -- NetHandler: Connection trial #55 failed!
-181204-16:51:37 [INFO] -- NetHandler: Connection trial #56: Exception encountered while making connection to server: Connection refused: connect
-181204-16:51:37 [INFO] -- NetHandler: Connection trial #56 failed!
-181204-16:51:43 [INFO] -- NetHandler: Connection trial #57: Exception encountered while making connection to server: Connection refused: connect
-181204-16:51:43 [INFO] -- NetHandler: Connection trial #57 failed!
-181204-16:51:49 [INFO] -- NetHandler: Connection trial #58: Exception encountered while making connection to server: Connection refused: connect
-181204-16:51:49 [INFO] -- NetHandler: Connection trial #58 failed!
-181204-16:51:55 [INFO] -- NetHandler: Connection trial #59: Exception encountered while making connection to server: Connection refused: connect
-181204-16:51:55 [INFO] -- NetHandler: Connection trial #59 failed!
-181204-16:52:01 [INFO] -- NetHandler: Connection trial #60: Exception encountered while making connection to server: Connection refused: connect
-181204-16:52:01 [INFO] -- NetHandler: Connection trial #60 failed!
-181204-16:52:07 [INFO] -- NetHandler: Connection trial #61: Exception encountered while making connection to server: Connection refused: connect
-181204-16:52:07 [INFO] -- NetHandler: Connection trial #61 failed!
-181204-16:52:13 [INFO] -- NetHandler: Connection trial #62: Exception encountered while making connection to server: Connection refused: connect
-181204-16:52:13 [INFO] -- NetHandler: Connection trial #62 failed!
-181204-16:52:19 [INFO] -- NetHandler: Connection trial #63: Exception encountered while making connection to server: Connection refused: connect
-181204-16:52:19 [INFO] -- NetHandler: Connection trial #63 failed!
-181204-16:52:25 [INFO] -- NetHandler: Connection trial #64: Exception encountered while making connection to server: Connection refused: connect
-181204-16:52:25 [INFO] -- NetHandler: Connection trial #64 failed!
-181204-16:52:31 [INFO] -- NetHandler: Connection trial #65: Exception encountered while making connection to server: Connection refused: connect
-181204-16:52:31 [INFO] -- NetHandler: Connection trial #65 failed!
-181204-16:52:37 [INFO] -- NetHandler: Connection trial #66: Exception encountered while making connection to server: Connection refused: connect
-181204-16:52:37 [INFO] -- NetHandler: Connection trial #66 failed!
-181204-16:52:42 [INFO] -- NetHandler: connection trial #67 succeeded!
-181204-16:52:42 [INFO] -- NetIncoming: receiving link up from NetHandler
-181204-16:52:42 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181204-16:52:50 [INFO] -- Sending: [Svc_Req Passenger-0001 3 5]
-181204-16:52:50 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 3 5 A]
-181204-16:52:51 [INFO] -- NetIncoming: receiving [Elev_Dep A 0 U 3 5]
-181204-16:52:54 [INFO] -- NetIncoming: receiving [Elev_Arr A 3 S -2147483648]
-181204-16:54:19 [INFO] -- Sending: [Svc_Req Passenger-0001 4 6]
-181204-16:54:19 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 4 6 A]
-181204-16:54:19 [INFO] -- NetIncoming: receiving [Elev_Dep A 3 U 4 5 6]
-181204-16:54:21 [INFO] -- NetIncoming: receiving [Elev_Arr A 4 S -2147483648]
-181204-16:54:33 [INFO] -- Sending: [Svc_Req Passenger-0001 3 6]
-181204-16:54:33 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 3 6 A]
-181204-16:54:33 [INFO] -- NetIncoming: receiving [Elev_Dep A 4 D 3]
-181204-16:54:34 [INFO] -- NetIncoming: receiving [Elev_Arr A 3 S -2147483648]
-181204-16:54:47 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181204-16:54:47 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181204-16:54:47 [INFO] -- NetHandler: connection trial #67 link down from NetIncoming
-181204-16:54:47 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181204-16:54:47 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181204-16:54:48 [INFO] -- NetHandler: Connection trial #68: Exception encountered while making connection to server: Connection refused: connect
-181204-16:54:48 [INFO] -- NetHandler: Connection trial #68 failed!
-181204-16:54:53 [INFO] -- Sending: [Svc_Req Passenger-0001 3 6]
-181204-16:54:53 [WARNING] -- NetOutgoing: receiving sendreq from null while link is down.  The msg: "Svc_Req Passenger-0001 3 6"
-181204-16:54:53 [INFO] -- NetHandler: connection trial #69 succeeded!
-181204-16:54:53 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181204-16:54:53 [INFO] -- NetIncoming: receiving link up from NetHandler
-181204-16:54:55 [INFO] -- Sending: [Svc_Req Passenger-0001 3 6]
-181204-16:54:55 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 3 6 A]
-181204-16:54:56 [INFO] -- NetIncoming: receiving [Elev_Dep A 0 U 3 6]
-181204-16:54:59 [INFO] -- NetIncoming: receiving [Elev_Arr A 3 S -2147483648]
-181204-16:55:19 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181204-16:55:19 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181204-16:55:19 [INFO] -- NetHandler: connection trial #69 link down from NetIncoming
-181204-16:55:19 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181204-16:55:19 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181204-16:55:20 [INFO] -- NetHandler: Connection trial #70: Exception encountered while making connection to server: Connection refused: connect
-181204-16:55:20 [INFO] -- NetHandler: Connection trial #70 failed!
-181204-16:55:25 [INFO] -- NetHandler: connection trial #71 succeeded!
-181204-16:55:25 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181204-16:55:25 [INFO] -- NetIncoming: receiving link up from NetHandler
-181204-16:55:30 [INFO] -- Sending: [Svc_Req Passenger-0001 3 6]
-181204-16:55:30 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 3 6 A]
-181204-16:55:30 [INFO] -- NetIncoming: receiving [Elev_Dep A 0 U 3 6]
-181204-16:55:33 [INFO] -- NetIncoming: receiving [Elev_Arr A 3 S -2147483648]
-181204-16:56:11 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181204-16:56:11 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181204-16:56:11 [INFO] -- NetHandler: connection trial #71 link down from NetIncoming
-181204-16:56:11 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181204-16:56:11 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181204-16:56:12 [INFO] -- NetHandler: Connection trial #72: Exception encountered while making connection to server: Connection refused: connect
-181204-16:56:12 [INFO] -- NetHandler: Connection trial #72 failed!
-181204-16:56:17 [INFO] -- Sending: [Svc_Req Passenger-0001 3 6]
-181204-16:56:17 [WARNING] -- NetOutgoing: receiving sendreq from null while link is down.  The msg: "Svc_Req Passenger-0001 3 6"
-181204-16:56:17 [INFO] -- NetHandler: connection trial #73 succeeded!
-181204-16:56:17 [INFO] -- NetIncoming: receiving link up from NetHandler
-181204-16:56:17 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181204-16:56:18 [INFO] -- Sending: [Svc_Req Passenger-0001 3 6]
-181204-16:56:18 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 3 6 A]
-181204-16:56:19 [INFO] -- NetIncoming: receiving [Elev_Dep A 0 U 3 6]
-181204-16:56:22 [INFO] -- NetIncoming: receiving [Elev_Arr A 3 U 6]
-181204-16:56:29 [INFO] -- NetIncoming: receiving [Elev_Dep A 3 U 6]
-181204-16:56:32 [INFO] -- NetIncoming: receiving [Elev_Arr A 6 S -2147483648]
-181204-16:56:37 [INFO] -- Sending: [Svc_Req Passenger-0001 8 5]
-181204-16:56:37 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 8 5 A]
-181204-16:56:40 [INFO] -- NetIncoming: receiving [Elev_Dep A 6 U 8]
-181204-16:56:42 [INFO] -- NetIncoming: receiving [Elev_Arr A 8 D 5]
-181204-16:56:50 [INFO] -- NetIncoming: receiving [Elev_Dep A 8 D 5]
-181204-16:56:52 [INFO] -- NetIncoming: receiving [Elev_Arr A 5 S -2147483648]
-181204-16:56:59 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181204-16:56:59 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181204-16:56:59 [INFO] -- NetHandler: connection trial #73 link down from NetIncoming
-181204-16:56:59 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181204-16:56:59 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181204-16:57:00 [INFO] -- NetHandler: Connection trial #74: Exception encountered while making connection to server: Connection refused: connect
-181204-16:57:00 [INFO] -- NetHandler: Connection trial #74 failed!
-181204-16:57:05 [INFO] -- NetHandler: connection trial #75 succeeded!
-181204-16:57:05 [INFO] -- NetIncoming: receiving link up from NetHandler
-181204-16:57:05 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181204-16:57:06 [INFO] -- Sending: [Svc_Req Passenger-0001 1 2]
-181204-16:57:06 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 1 2 A]
-181204-16:57:06 [INFO] -- NetIncoming: receiving [Elev_Dep A 0 U 1 2]
-181204-16:57:07 [INFO] -- NetIncoming: receiving [Elev_Arr A 1 U 2]
-181204-16:57:15 [INFO] -- NetIncoming: receiving [Elev_Dep A 1 U 2]
-181204-16:57:16 [INFO] -- NetIncoming: receiving [Elev_Arr A 2 S -2147483648]
-181204-16:57:26 [INFO] -- Sending: [Svc_Req Passenger-0001 3 4]
-181204-16:57:26 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 3 4 A]
-181204-16:57:26 [INFO] -- NetIncoming: receiving [Elev_Dep A 2 U 3 4]
-181204-16:57:27 [INFO] -- NetIncoming: receiving [Elev_Arr A 3 U 4]
-181204-16:57:28 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181204-16:57:28 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181204-16:57:28 [INFO] -- NetHandler: connection trial #75 link down from NetIncoming
-181204-16:57:28 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181204-16:57:28 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181204-16:57:29 [INFO] -- NetHandler: Connection trial #76: Exception encountered while making connection to server: Connection refused: connect
-181204-16:57:29 [INFO] -- NetHandler: Connection trial #76 failed!
-181204-16:57:34 [INFO] -- NetHandler: connection trial #77 succeeded!
-181204-16:57:34 [INFO] -- NetIncoming: receiving link up from NetHandler
-181204-16:57:34 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181204-16:57:35 [INFO] -- Sending: [Svc_Req Passenger-0001 1 2]
-181204-16:57:35 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 1 2 A]
-181204-16:57:35 [INFO] -- NetIncoming: receiving [Elev_Dep A 0 U 1 2]
-181204-16:57:35 [INFO] -- NetIncoming: receiving [Elev_Arr A 1 U 2]
-181204-16:57:36 [INFO] -- NetIncoming: receiving [Elev_Dep A 1 U 2]
-181204-16:57:36 [INFO] -- NetIncoming: receiving [Elev_Arr A 2 S -2147483648]
-181204-16:57:38 [INFO] -- Sending: [Svc_Req Passenger-0001 3 4]
-181204-16:57:38 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 3 4 A]
-181204-16:57:38 [INFO] -- NetIncoming: receiving [Elev_Dep A 2 U 3 4]
-181204-16:57:39 [INFO] -- NetIncoming: receiving [Elev_Arr A 3 U 4]
-181204-16:57:39 [INFO] -- NetIncoming: receiving [Elev_Dep A 3 U 4]
-181204-16:57:39 [INFO] -- NetIncoming: receiving [Elev_Arr A 4 S -2147483648]
-181204-16:57:44 [INFO] -- Sending: [Svc_Req Passenger-0001 8 6]
-181204-16:57:44 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 8 6 A]
-181204-16:57:45 [INFO] -- NetIncoming: receiving [Elev_Dep A 4 U 8]
-181204-16:57:45 [INFO] -- NetIncoming: receiving [Elev_Arr A 8 D 6]
-181204-16:57:46 [INFO] -- NetIncoming: receiving [Elev_Dep A 8 D 6]
-181204-16:57:46 [INFO] -- NetIncoming: receiving [Elev_Arr A 6 S -2147483648]
-181204-16:58:01 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181204-16:58:01 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181204-16:58:01 [INFO] -- NetHandler: connection trial #77 link down from NetIncoming
-181204-16:58:01 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181204-16:58:01 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181204-16:58:02 [INFO] -- NetHandler: Connection trial #78: Exception encountered while making connection to server: Connection refused: connect
-181204-16:58:02 [INFO] -- NetHandler: Connection trial #78 failed!
-181204-16:58:07 [INFO] -- NetHandler: connection trial #79 succeeded!
-181204-16:58:07 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181204-16:58:07 [INFO] -- NetIncoming: receiving link up from NetHandler
-181204-16:58:08 [INFO] -- Sending: [Svc_Req Passenger-0001 3 1]
-181204-16:58:08 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 3 1 A]
-181204-16:58:08 [INFO] -- NetIncoming: receiving [Elev_Dep A 0 U 3]
-181204-16:58:11 [INFO] -- NetIncoming: receiving [Elev_Arr A 3 D 1]
-181204-16:58:19 [INFO] -- NetIncoming: receiving [Elev_Dep A 3 D 1]
-181204-16:58:21 [INFO] -- NetIncoming: receiving [Elev_Arr A 1 S -2147483648]
-181204-16:58:26 [INFO] -- Sending: [Svc_Req Passenger-0001 0 4]
-181204-16:58:26 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 0 4 B]
-181204-16:58:27 [INFO] -- NetIncoming: receiving [Elev_Arr B 0 U 4]
-181204-16:58:35 [INFO] -- NetIncoming: receiving [Elev_Dep B 0 U 4]
-181204-16:58:38 [INFO] -- NetIncoming: receiving [Elev_Arr B 4 S -2147483648]
-181204-16:58:48 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
-181204-16:58:48 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
-181204-16:58:48 [INFO] -- NetHandler: connection trial #79 link down from NetIncoming
-181204-16:58:48 [INFO] -- NetIncoming: Receiving link down from NetHandler.
-181204-16:58:48 [INFO] -- NetOutgoing: receiving link down from NetHandler
-181204-16:58:49 [INFO] -- NetHandler: Connection trial #80: Exception encountered while making connection to server: Connection refused: connect
-181204-16:58:49 [INFO] -- NetHandler: Connection trial #80 failed!
-181204-16:58:53 [INFO] -- Sending: [Svc_Req Passenger-0001 0 4]
-181204-16:58:53 [WARNING] -- NetOutgoing: receiving sendreq from null while link is down.  The msg: "Svc_Req Passenger-0001 0 4"
-181204-16:58:54 [INFO] -- NetHandler: connection trial #81 succeeded!
-181204-16:58:54 [INFO] -- NetOutgoing: receiving link up from NetHandler
-181204-16:58:54 [INFO] -- NetIncoming: receiving link up from NetHandler
-181204-16:58:54 [INFO] -- Sending: [Svc_Req Passenger-0001 0 4]
-181204-16:58:54 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 0 4 A]
-181204-16:58:55 [INFO] -- NetIncoming: receiving [Elev_Arr A 0 U 4]
-181204-16:58:55 [INFO] -- NetIncoming: receiving [Elev_Dep A 0 U 4]
-181204-16:58:56 [INFO] -- NetIncoming: receiving [Elev_Arr A 4 S -2147483648]
-181204-16:58:59 [INFO] -- Sending: [Svc_Req Passenger-0001 5 6]
-181204-16:58:59 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 5 6 A]
-181204-16:58:59 [INFO] -- NetIncoming: receiving [Elev_Dep A 4 U 5 6]
-181204-16:59:00 [INFO] -- NetIncoming: receiving [Elev_Arr A 5 U 6]
-181204-16:59:00 [INFO] -- NetIncoming: receiving [Elev_Dep A 5 U 6]
-181204-16:59:00 [INFO] -- NetIncoming: receiving [Elev_Arr A 6 S -2147483648]
-181204-16:59:08 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181204-16:59:08 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 15 10 A]
-181204-16:59:08 [INFO] -- NetIncoming: receiving [Elev_Dep A 6 U 15]
-181204-16:59:09 [INFO] -- NetIncoming: receiving [Elev_Arr A 15 D 10]
-181204-16:59:09 [INFO] -- NetIncoming: receiving [Elev_Dep A 15 D 10]
-181204-16:59:10 [INFO] -- NetIncoming: receiving [Elev_Arr A 10 S -2147483648]
-181204-16:59:15 [INFO] -- Sending: [Svc_Req Passenger-0001 15 5]
-181204-16:59:15 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 15 5 A]
-181204-16:59:15 [INFO] -- NetIncoming: receiving [Elev_Dep A 10 U 15]
-181204-16:59:16 [INFO] -- NetIncoming: receiving [Elev_Arr A 15 D 5]
-181204-16:59:17 [INFO] -- NetIncoming: receiving [Elev_Dep A 15 D 5]
-181204-16:59:17 [INFO] -- NetIncoming: receiving [Elev_Arr A 5 S -2147483648]
-181204-16:59:25 [INFO] -- Sending: [Svc_Req Passenger-0001 15 10]
-181204-16:59:25 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 15 10 A]
-181204-16:59:25 [INFO] -- NetIncoming: receiving [Elev_Dep A 5 U 15]
-181204-16:59:26 [INFO] -- NetIncoming: receiving [Elev_Arr A 15 D 10]
-181204-16:59:27 [INFO] -- NetIncoming: receiving [Elev_Dep A 15 D 10]
-181204-16:59:27 [INFO] -- NetIncoming: receiving [Elev_Arr A 10 S -2147483648]
-181204-16:59:36 [INFO] -- Sending: [Svc_Req Passenger-0001 8 15]
-181204-16:59:36 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0001 8 15 A]
-181204-16:59:36 [INFO] -- NetIncoming: receiving [Elev_Dep A 10 U 15]
-181204-16:59:36 [INFO] -- NetIncoming: receiving [Elev_Arr A 15 D 8]
-181204-16:59:37 [INFO] -- NetIncoming: receiving [Elev_Dep A 15 D 8]
-181204-16:59:37 [INFO] -- NetIncoming: receiving [Elev_Arr A 8 S -2147483648]
+181204-18:47:58 [INFO] -- 
+181204-18:47:58 [INFO] -- 
+181204-18:47:58 [INFO] -- ============================================================
+181204-18:47:58 [INFO] -- AppKickstarter: Application Starting...
+181204-18:47:58 [INFO] -- timer: starting...
+181204-18:47:58 [INFO] -- NetIncoming: starting...
+181204-18:47:58 [INFO] -- NetOutgoing: starting...
+181204-18:47:58 [INFO] -- NetHandler: starting...
+181204-18:47:58 [INFO] -- NetHandler: 127.0.0.1, 54321
+181204-18:47:59 [INFO] -- NetHandler: Connection trial #1: Exception encountered while making connection to server: Connection refused: connect
+181204-18:47:59 [INFO] -- NetHandler: Connection trial #1 failed!
+181204-18:48:04 [INFO] -- NetHandler: connection trial #2 succeeded!
+181204-18:48:04 [INFO] -- NetIncoming: receiving link up from NetHandler
+181204-18:48:04 [INFO] -- NetOutgoing: receiving link up from NetHandler
+181204-18:48:06 [INFO] -- Sending: [Svc_Req Passenger-0000 2 3]
+181204-18:48:06 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0000 2 3 A]
+181204-18:48:06 [INFO] -- NetIncoming: receiving [Elev_Dep A 0 U 2 3]
+181204-18:48:06 [INFO] -- NetIncoming: receiving [Elev_Arr A 2 U 3]
+181204-18:48:07 [INFO] -- NetIncoming: receiving [Elev_Dep A 2 U 3]
+181204-18:48:07 [INFO] -- NetIncoming: receiving [Elev_Arr A 3 S -2147483648]
+181204-18:48:11 [INFO] -- Sending: [Svc_Req Passenger-0000 2 1]
+181204-18:48:11 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0000 2 1 F]
+181204-18:48:14 [INFO] -- Sending: [Svc_Req Passenger-0000 5 6]
+181204-18:48:14 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0000 5 6 A]
+181204-18:48:14 [INFO] -- NetIncoming: receiving [Elev_Dep A 3 U 5 6]
+181204-18:48:14 [INFO] -- NetIncoming: receiving [Elev_Arr A 5 U 6]
+181204-18:48:15 [INFO] -- NetIncoming: receiving [Elev_Dep A 5 U 6]
+181204-18:48:15 [INFO] -- NetIncoming: receiving [Elev_Arr A 6 S -2147483648]
+181204-18:48:20 [INFO] -- Sending: [Svc_Req Passenger-0000 5 4]
+181204-18:48:20 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0000 5 4 F]
+181204-18:48:22 [INFO] -- Sending: [Svc_Req Passenger-0000 5 6]
+181204-18:48:22 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0000 5 6 B]
+181204-18:48:22 [INFO] -- NetIncoming: receiving [Elev_Dep B 0 U 5 6]
+181204-18:48:23 [INFO] -- NetIncoming: receiving [Elev_Arr B 5 U 6]
+181204-18:48:24 [INFO] -- NetIncoming: receiving [Elev_Dep B 5 U 6]
+181204-18:48:24 [INFO] -- NetIncoming: receiving [Elev_Arr B 6 S -2147483648]
+181204-18:48:25 [INFO] -- Sending: [Svc_Req Passenger-0000 5 6]
+181204-18:48:25 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0000 5 6 C]
+181204-18:48:25 [INFO] -- NetIncoming: receiving [Elev_Dep C 0 U 5 6]
+181204-18:48:26 [INFO] -- NetIncoming: receiving [Elev_Arr C 5 U 6]
+181204-18:48:27 [INFO] -- NetIncoming: receiving [Elev_Dep C 5 U 6]
+181204-18:48:27 [INFO] -- NetIncoming: receiving [Elev_Arr C 6 S -2147483648]
+181204-18:48:27 [INFO] -- Sending: [Svc_Req Passenger-0000 5 6]
+181204-18:48:27 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0000 5 6 D]
+181204-18:48:27 [INFO] -- NetIncoming: receiving [Elev_Dep D 0 U 5 6]
+181204-18:48:28 [INFO] -- NetIncoming: receiving [Elev_Arr D 5 U 6]
+181204-18:48:28 [INFO] -- Sending: [Svc_Req Passenger-0000 5 6]
+181204-18:48:28 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0000 5 6 E]
+181204-18:48:28 [INFO] -- NetIncoming: receiving [Elev_Dep E 0 U 5 6]
+181204-18:48:28 [INFO] -- NetIncoming: receiving [Elev_Arr E 5 U 6]
+181204-18:48:28 [INFO] -- Sending: [Svc_Req Passenger-0000 5 6]
+181204-18:48:28 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0000 5 6 F]
+181204-18:48:28 [INFO] -- NetIncoming: receiving [Elev_Dep D 5 U 6]
+181204-18:48:28 [INFO] -- NetIncoming: receiving [Elev_Dep F 0 U 2 5 6]
+181204-18:48:29 [INFO] -- NetIncoming: receiving [Elev_Arr D 6 S -2147483648]
+181204-18:48:29 [INFO] -- NetIncoming: receiving [Elev_Arr F 5 U 6]
+181204-18:48:29 [INFO] -- NetIncoming: receiving [Elev_Dep E 5 U 6]
+181204-18:48:29 [INFO] -- Sending: [Svc_Req Passenger-0000 5 6]
+181204-18:48:29 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0000 5 6 F]
+181204-18:48:29 [INFO] -- NetIncoming: receiving [Elev_Arr E 6 S -2147483648]
+181204-18:48:30 [INFO] -- NetIncoming: receiving [Elev_Dep F 5 U 6]
+181204-18:48:30 [INFO] -- NetIncoming: receiving [Elev_Arr F 6 D 5 4 2 1]
+181204-18:48:31 [INFO] -- NetIncoming: receiving [Elev_Dep F 6 D 5 4 2 1]
+181204-18:48:31 [INFO] -- NetIncoming: receiving [Elev_Arr F 5 D 4 2 1]
+181204-18:48:31 [INFO] -- NetIncoming: receiving [Elev_Dep F 5 D 4 2 1]
+181204-18:48:32 [INFO] -- NetIncoming: receiving [Elev_Arr F 2 D 1]
+181204-18:48:32 [INFO] -- NetIncoming: receiving [Elev_Dep F 2 D 1]
+181204-18:48:32 [INFO] -- NetIncoming: receiving [Elev_Arr F 1 S -2147483648]
+181204-18:48:34 [INFO] -- Sending: [Svc_Req Passenger-0000 5 6]
+181204-18:48:34 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0000 5 6 F]
+181204-18:48:34 [INFO] -- NetIncoming: receiving [Elev_Dep F 1 U 4 5 6]
+181204-18:48:34 [INFO] -- NetIncoming: receiving [Elev_Arr F 5 U 6]
+181204-18:48:35 [INFO] -- NetIncoming: receiving [Elev_Dep F 5 U 6]
+181204-18:48:35 [INFO] -- NetIncoming: receiving [Elev_Arr F 6 S -2147483648]
+181204-18:48:37 [INFO] -- Sending: [Svc_Req Passenger-0000 5 6]
+181204-18:48:37 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0000 5 6 F]
+181204-18:48:39 [INFO] -- Sending: [Svc_Req Passenger-0000 5 6]
+181204-18:48:39 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0000 5 6 F]
+181204-18:48:40 [INFO] -- Sending: [Svc_Req Passenger-0000 5 6]
+181204-18:48:40 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0000 5 6 F]
+181204-18:48:41 [INFO] -- Sending: [Svc_Req Passenger-0000 5 6]
+181204-18:48:41 [INFO] -- NetIncoming: receiving [Svc_Reply Passenger-0000 5 6 F]
+181204-18:50:02 [SEVERE] -- NetIncoming: IO Exception encountered -- class java.net.SocketException: Connection reset
+181204-18:50:02 [INFO] -- NetIncoming: netMsg is null, inform NetHandler that the link is going down!
+181204-18:50:02 [INFO] -- NetHandler: connection trial #2 link down from NetIncoming
+181204-18:50:02 [INFO] -- NetIncoming: Receiving link down from NetHandler.
+181204-18:50:02 [INFO] -- NetOutgoing: receiving link down from NetHandler

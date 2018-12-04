@@ -193,24 +193,59 @@ public class Elevator extends AppThread {
                     SendElevDep();
 
                     while (true) {
-                        boolean hasSignal = up ? floors[current + floorChange].up : floors[current + floorChange].down;
-                        boolean nextFloorStop = up ? floors[current + floorChange].up && (floors[current + floorChange].upUserDirection == Direction.Up || floors[current + floorChange].upUserDirection == null) :
-                                floors[current + floorChange].down && (floors[current + floorChange].downUserDirection == Direction.Down || floors[current + floorChange].downUserDirection == null);
+                        int next = current + floorChange;
+
+                        boolean hasSignal = up ? floors[next].up : floors[next].down;
+                        // Sure arrive src/dest
+                        boolean nextFloorStop = up ?
+                                floors[next].up &&
+                                        (floors[next].upUserDirection == Direction.Up ||
+                                                (floors[next].upUserDirection == null && floors[next].srcArrived)) :
+                                floors[next].down &&
+                                        (floors[next].downUserDirection == Direction.Down ||
+                                                (floors[next].downUserDirection == null && floors[next].srcArrived));
                         // Three case: no signal, has signal and same Direction, has signal but different Direction
                         // has signal and same Direction = stop
                         if (nextFloorStop) {
+                            System.out.println("Same");
                             // decelerate and stop
                             try {
                                 // Decelerate
                                 Thread.sleep(dccelerationSpeed);
                                 // Update floor
                                 if (up) {
-                                    floors[current + floorChange].up = false;
-                                    floors[current + floorChange].upUserDirection = null;
+                                    // Go to src
+                                    if (floors[next].up && floors[next].upUserDirection != null)
+                                    {
+                                        floors[next].up = false;
+                                        floors[next].upUserDirection = null;
+                                        floors[floors[next].dest].srcArrived = true;
+                                        System.out.println("To src");
+                                    }
+                                    // Go to dest
+                                    else
+                                    {
+                                        floors[next].up = false;
+                                        floors[next].srcArrived = false;
+                                        System.out.println("To dest");
+                                    }
                                 }
                                 else {
-                                    floors[current + floorChange].down = false;
-                                    floors[current + floorChange].downUserDirection = null;
+                                    // Go to src
+                                    if (floors[next].down && floors[next].downUserDirection != null)
+                                    {
+                                        floors[next].down = false;
+                                        floors[next].downUserDirection = null;
+                                        floors[floors[next].dest].srcArrived = true;
+                                        System.out.println("To src");
+                                    }
+                                    // Go to dest
+                                    else
+                                    {
+                                        floors[next].down = false;
+                                        floors[next].srcArrived = false;
+                                        System.out.println("To dest");
+                                    }
                                 }
                                 current += floorChange;
                                 centralControlPanel.setFloorA(id, current);
@@ -237,7 +272,7 @@ public class Elevator extends AppThread {
                             if (hasSignal)
                             {
                                 // Is uppest request -> decelerate and stop
-                                if (floorIndex == current)
+                                if (floorIndex == next)
                                 {
                                     // decelerate and stop
                                     try {
@@ -245,12 +280,38 @@ public class Elevator extends AppThread {
                                         Thread.sleep(dccelerationSpeed);
                                         // Update floor
                                         if (up) {
-                                            floors[current + floorChange].up = false;
-                                            floors[current + floorChange].upUserDirection = null;
+                                            // Go to src
+                                            if (floors[next].up && floors[next].upUserDirection != null)
+                                            {
+                                                floors[next].up = false;
+                                                floors[next].upUserDirection = null;
+                                                floors[floors[next].dest].srcArrived = true;
+                                                System.out.println("To src");
+                                            }
+                                            // Go to dest
+                                            else
+                                            {
+                                                floors[next].up = false;
+                                                floors[next].srcArrived = false;
+                                                System.out.println("To dest");
+                                            }
                                         }
                                         else {
-                                            floors[current + floorChange].down = false;
-                                            floors[current + floorChange].downUserDirection = null;
+                                            // Go to src
+                                            if (floors[next].down && floors[next].downUserDirection != null)
+                                            {
+                                                floors[next].down = false;
+                                                floors[next].downUserDirection = null;
+                                                floors[floors[next].dest].srcArrived = true;
+                                                System.out.println("To src");
+                                            }
+                                            // Go to dest
+                                            else
+                                            {
+                                                floors[next].down = false;
+                                                floors[next].srcArrived = false;
+                                                System.out.println("To dest");
+                                            }
                                         }
                                         current += floorChange;
                                         centralControlPanel.setFloorA(id, current);
@@ -334,7 +395,9 @@ public class Elevator extends AppThread {
     private boolean HasUpperRequest(Floor[] floors, int current) {
         // Up to upper
         for (int upperFloor = current + 1; upperFloor <= maxFloor; upperFloor++) {
-            if (floors[upperFloor].up) {
+            if (floors[upperFloor].up &&
+                    (floors[upperFloor].upUserDirection == Direction.Up ||
+                            (floors[upperFloor].upUserDirection == null && floors[upperFloor].srcArrived))) {
                 return true;
             }
         }
@@ -344,7 +407,29 @@ public class Elevator extends AppThread {
     private boolean HasLowerRequest(Floor[] floors, int current) {
         // Down to lower
         for (int lowerFloor = current - 1; lowerFloor >= minFloor; lowerFloor--) {
-            if (floors[lowerFloor].down) {
+            if (floors[lowerFloor].down &&
+                    (floors[lowerFloor].downUserDirection == Direction.Down ||
+                            (floors[lowerFloor].downUserDirection == null && floors[lowerFloor].srcArrived))) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private boolean HasUpperReverseRequest(Floor[] floors, int current) {
+        // Up to upper
+        for (int upperFloor = current + 1; upperFloor <= maxFloor; upperFloor++) {
+            if (floors[upperFloor].up && floors[upperFloor].upUserDirection == Direction.Down) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private boolean HasLowerReverseRequest(Floor[] floors, int current) {
+        // Down to lower
+        for (int lowerFloor = current - 1; lowerFloor >= minFloor; lowerFloor--) {
+            if (floors[lowerFloor].down && floors[lowerFloor].downUserDirection == Direction.Up) {
                 return true;
             }
         }
@@ -379,11 +464,19 @@ public class Elevator extends AppThread {
                 return Direction.Up;
             } else if (HasLowerRequest(floors, current)) {
                 return Direction.Down;
+            } else if (HasUpperReverseRequest(floors, current)) {
+                return Direction.Up;
+            } else if (HasLowerReverseRequest(floors, current)) {
+                return Direction.Down;
             }
         } else if (direction == Direction.Down) {
             if (HasLowerRequest(floors, current)) {
                 return Direction.Down;
             } else if (HasUpperRequest(floors, current)) {
+                return Direction.Up;
+            } else if (HasLowerReverseRequest(floors, current)) {
+                return Direction.Down;
+            } else if (HasUpperReverseRequest(floors, current)) {
                 return Direction.Up;
             }
         }
@@ -416,13 +509,17 @@ public class Elevator extends AppThread {
 
         Direction srcDirection;
 
-        if ((src - current) > 0)
+        if ((dest - src) > 0)
         {
             srcDirection = Direction.Up;
         }
-        else
+        else if ((dest - src) < 0)
         {
             srcDirection = Direction.Down;
+        }
+        else
+        {
+            srcDirection = null;
         }
 
         // Direction
@@ -436,6 +533,7 @@ public class Elevator extends AppThread {
                     floors[src].up = true;
                     floors[dest].up = true;
                     floors[src].upUserDirection = srcDirection;
+                    floors[src].dest = dest;
                 }
                 // current < src and dest < src
                 else
@@ -446,6 +544,7 @@ public class Elevator extends AppThread {
                         floors[src].up = true;
                         floors[dest].down = true;
                         floors[src].downUserDirection = srcDirection;
+                        floors[src].dest = dest;
                     }
                     // dest < current < src
                     else
@@ -453,6 +552,7 @@ public class Elevator extends AppThread {
                         floors[src].up = true;
                         floors[dest].down = true;
                         floors[src].downUserDirection = srcDirection;
+                        floors[src].dest = dest;
                     }
                 }
             }
@@ -467,6 +567,7 @@ public class Elevator extends AppThread {
                         floors[src].down = true;
                         floors[dest].up = true;
                         floors[src].upUserDirection = srcDirection;
+                        floors[src].dest = dest;
                     }
                     // src < dest < current
                     else
@@ -474,6 +575,7 @@ public class Elevator extends AppThread {
                         floors[src].down = true;
                         floors[dest].up = true;
                         floors[src].upUserDirection = srcDirection;
+                        floors[src].dest = dest;
                     }
                 }
                 // dest < src < current
@@ -482,6 +584,7 @@ public class Elevator extends AppThread {
                     floors[src].down = true;
                     floors[dest].down = true;
                     floors[src].downUserDirection = srcDirection;
+                    floors[src].dest = dest;
                 }
             }
             // Same floor with current
@@ -490,10 +593,12 @@ public class Elevator extends AppThread {
                     floors[src].up = true;
                     floors[dest].up = true;
                     floors[src].upUserDirection = srcDirection;
+                    floors[src].dest = dest;
                 } else {
                     floors[src].down = true;
                     floors[dest].down = true;
                     floors[src].downUserDirection = srcDirection;
+                    floors[src].dest = dest;
                 }
             }
         }
@@ -506,6 +611,7 @@ public class Elevator extends AppThread {
                     floors[src].up = true;
                     floors[dest].up = true;
                     floors[src].upUserDirection = srcDirection;
+                    floors[src].dest = dest;
                 }
                 // up, current < src and dest < src
                 else {
@@ -514,12 +620,14 @@ public class Elevator extends AppThread {
                         floors[src].up = true;
                         floors[dest].down = true;
                         floors[src].downUserDirection = srcDirection;
+                        floors[src].dest = dest;
                     }
                     // up, dest < current < src
                     else {
                         floors[src].up = true;
                         floors[dest].down = true;
                         floors[src].downUserDirection = srcDirection;
+                        floors[src].dest = dest;
                     }
                 }
             }
@@ -532,12 +640,14 @@ public class Elevator extends AppThread {
                         floors[src].down = true;
                         floors[dest].up = true;
                         floors[src].upUserDirection = srcDirection;
+                        floors[src].dest = dest;
                     }
                     // up, src < dest < current
                     else {
                         floors[src].down = true;
                         floors[dest].up = true;
                         floors[src].upUserDirection = srcDirection;
+                        floors[src].dest = dest;
                     }
                 }
                 // up, dest < src < current
@@ -545,6 +655,7 @@ public class Elevator extends AppThread {
                     floors[src].down = true;
                     floors[dest].down = true;
                     floors[src].downUserDirection = srcDirection;
+                    floors[src].dest = dest;
                 }
             }
         }
