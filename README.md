@@ -1,6 +1,6 @@
 # COMP4007 Term Project - Smart Elevator System (SES)
 
-This project implement the server of the Smart Elevator System (SES)
+This project using java to implement the server of the Smart Elevator System (SES)
 
 ## Getting Started
 
@@ -19,11 +19,10 @@ https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.
 Website to download IntelliJ IDE:
 ```
 https://www.jetbrains.com/idea/
-
 ```
 ## Installing
 
-A step by step approach to help you compiling, start and shopping our system.
+### A step by step approach to help you compiling, start and shopping our system.
 
 After you installed all prerequisites. and downloaded our source code file. -> Upzip it
 
