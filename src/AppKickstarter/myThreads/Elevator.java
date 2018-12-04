@@ -21,19 +21,21 @@ public class Elevator extends AppThread {
     }
 
     public char GetDirectionChar() {
-        switch (direction)
-        {
-            case Stop: return 'S';
-            case Up: return 'U';
-            case Down: return 'D';
-            default: return 'S';
+        switch (direction) {
+            case Stop:
+                return 'S';
+            case Up:
+                return 'U';
+            case Down:
+                return 'D';
+            default:
+                return 'S';
         }
     }
 
-    public char GetIdChar()
-    {
+    public char GetIdChar() {
         String id = getID();
-        return id.charAt(id.length()-1);
+        return id.charAt(id.length() - 1);
     }
 
     private final int sleepTime = 5;
@@ -60,11 +62,9 @@ public class Elevator extends AppThread {
 
     private CentralControlPanel centralControlPanel;
 
-    public Floor[] GetFloorsClone()
-    {
+    public Floor[] GetFloorsClone() {
         Floor[] floors = new Floor[this.floors.length];
-        for (int index = 0; index < this.floors.length; index++)
-        {
+        for (int index = 0; index < this.floors.length; index++) {
             floors[index] = new Floor(this.floors[index]);
         }
         return floors;
@@ -147,18 +147,14 @@ public class Elevator extends AppThread {
                                 status = requestDirection;
                                 direction = status;
                                 // Idle
-                                if (idle)
-                                {
-                                    if (direction == Direction.Up && floors[current].up)
-                                    {
+                                if (idle) {
+                                    if (direction == Direction.Up && floors[current].up) {
                                         // Send Elev_Arr
                                         SendElevArr();
 
                                         Thread.sleep((long) ((doorOpen + doorWait + doorClose) * simulationTime));
                                         floors[current].up = false;
-                                    }
-                                    else if (direction == Direction.Down && floors[current].down)
-                                    {
+                                    } else if (direction == Direction.Down && floors[current].down) {
                                         // Send Elev_Arr
                                         SendElevArr();
 
@@ -172,7 +168,7 @@ public class Elevator extends AppThread {
                             } else {
                                 // wait
                                 idle = true;
-                                Thread.sleep((long)simulationTime);
+                                Thread.sleep((long) simulationTime);
 //                                System.out.println(id + " Waiting");
                             }
                         }
@@ -197,16 +193,25 @@ public class Elevator extends AppThread {
                     SendElevDep();
 
                     while (true) {
-                        boolean nextFloorStop = up ? floors[current + floorChange].up : floors[current + floorChange].down;
+                        boolean hasSignal = up ? floors[current + floorChange].up : floors[current + floorChange].down;
+                        boolean nextFloorStop = up ? floors[current + floorChange].up && (floors[current + floorChange].upUserDirection == Direction.Up || floors[current + floorChange].upUserDirection == null) :
+                                floors[current + floorChange].down && (floors[current + floorChange].downUserDirection == Direction.Down || floors[current + floorChange].downUserDirection == null);
+                        // Three case: no signal, has signal and same Direction, has signal but different Direction
+                        // has signal and same Direction = stop
                         if (nextFloorStop) {
+                            // decelerate and stop
                             try {
                                 // Decelerate
                                 Thread.sleep(dccelerationSpeed);
                                 // Update floor
-                                if (up)
+                                if (up) {
                                     floors[current + floorChange].up = false;
-                                else
+                                    floors[current + floorChange].upUserDirection = null;
+                                }
+                                else {
                                     floors[current + floorChange].down = false;
+                                    floors[current + floorChange].downUserDirection = null;
+                                }
                                 current += floorChange;
                                 centralControlPanel.setFloorA(id, current);
                                 // Update status
@@ -224,21 +229,88 @@ public class Elevator extends AppThread {
                             } catch (Exception e) {
                                 System.out.println(e.getMessage());
                             }
-                        } else {
-                            try {
-                                if (firstRun) {
-                                    // acceleration speed
-                                    Thread.sleep(accelerationSpeed);
-                                    firstRun = false;
-                                } else {
-                                    // Constant speed
-                                    Thread.sleep(constantSpeed);
+                        }
+                        // no signal + has signal but different Direction(Ignore+change)
+                        else {
+                            int floorIndex = up ? UppestRequest(floors, current) : LowestRequest(floors, current);
+
+                            if (hasSignal)
+                            {
+                                // Is uppest request -> decelerate and stop
+                                if (floorIndex == current)
+                                {
+                                    // decelerate and stop
+                                    try {
+                                        // Decelerate
+                                        Thread.sleep(dccelerationSpeed);
+                                        // Update floor
+                                        if (up) {
+                                            floors[current + floorChange].up = false;
+                                            floors[current + floorChange].upUserDirection = null;
+                                        }
+                                        else {
+                                            floors[current + floorChange].down = false;
+                                            floors[current + floorChange].downUserDirection = null;
+                                        }
+                                        current += floorChange;
+                                        centralControlPanel.setFloorA(id, current);
+                                        // Update status
+                                        Direction requestDirection = GetRequestDirection(floors, current, direction);
+                                        direction = requestDirection;
+                                        status = Direction.Stop;
+                                        // To waiting state
+                                        centralControlPanel.setDirectionA(id, GetDirectionString(status));
+                                        mbox.send(new Msg(id, mbox, Msg.Type.Waiting, "Waiting"));
+
+                                        // Send Elev_Dep
+                                        SendElevArr();
+
+                                        break;
+                                    } catch (Exception e) {
+                                        System.out.println(e.getMessage());
+                                    }
                                 }
-                                // Update floor
-                                current += floorChange;
-                                centralControlPanel.setFloorA(id, current);
-                            } catch (Exception e) {
-                                System.out.println(e.getMessage());
+                                // Not uppest request -> change direction and pass
+                                else
+                                {
+                                    // Pass
+                                    try {
+                                        if (firstRun) {
+                                            // acceleration speed
+                                            Thread.sleep(accelerationSpeed);
+                                            firstRun = false;
+                                        } else {
+                                            // Constant speed
+                                            Thread.sleep(constantSpeed);
+                                        }
+                                        // Update floor
+                                        current += floorChange;
+                                        centralControlPanel.setFloorA(id, current);
+
+                                        // Change direction
+                                        floors[current].InvertDirection();
+                                    } catch (Exception e) {
+                                        System.out.println(e.getMessage());
+                                    }
+                                }
+                            }
+                            else {
+                                // Pass
+                                try {
+                                    if (firstRun) {
+                                        // acceleration speed
+                                        Thread.sleep(accelerationSpeed);
+                                        firstRun = false;
+                                    } else {
+                                        // Constant speed
+                                        Thread.sleep(constantSpeed);
+                                    }
+                                    // Update floor
+                                    current += floorChange;
+                                    centralControlPanel.setFloorA(id, current);
+                                } catch (Exception e) {
+                                    System.out.println(e.getMessage());
+                                }
                             }
                         }
                     }
@@ -320,8 +392,7 @@ public class Elevator extends AppThread {
     }
 
     // Default
-    public void AddRequest(String str)
-    {
+    public void AddRequest(String str) {
         // Send data
         SendSvcReply(str);
 
@@ -341,78 +412,145 @@ public class Elevator extends AppThread {
         // Set data
         boolean srcLargerThanCurrent = (src - current) > 0;
         boolean destLargerThanSrc = (dest - src) > 0;
+        boolean destLargetThanCurrent = (dest - current) > 0;
 
-        if (destLargerThanSrc)
+        Direction srcDirection;
+
+        if ((src - current) > 0)
         {
-            floors[dest].up = true;
+            srcDirection = Direction.Up;
         }
         else
         {
-            floors[dest].down = true;
+            srcDirection = Direction.Down;
         }
 
-        // User status
+        // Direction
+        // Stop
         if (direction == Direction.Stop) {
+            // current < src
             if ((src - current) > 0) {
-                floors[src].up = true;
-            } else if ((src - current) < 0) {
-                floors[src].down = true;
-            } else {
+                // current < src < dest
                 if (destLargerThanSrc)
                 {
                     floors[src].up = true;
+                    floors[dest].up = true;
+                    floors[src].upUserDirection = srcDirection;
                 }
+                // current < src and dest < src
                 else
                 {
-                    floors[src].down = true;
-                }
-            }
-        } else if (direction == Direction.Up) {
-            if (srcLargerThanCurrent) {
-                if (destLargerThanSrc)
-                {
-                    floors[src].up = true;
-                }
-                else
-                {
-                    if (src > UppestRequest(floors, current))
+                    // current < dest < src
+                    if (destLargetThanCurrent)
                     {
                         floors[src].up = true;
+                        floors[dest].down = true;
+                        floors[src].downUserDirection = srcDirection;
                     }
-                    else
-                    {
-                        floors[src].down = true;
-                    }
-                }
-            } else {
-                floors[src].down = true;
-            }
-        } else {
-            if (srcLargerThanCurrent) {
-                floors[src].up = true;
-            } else {
-                if (destLargerThanSrc)
-                {
-                    if (src < LowestRequest(floors, current))
-                    {
-                        floors[src].down = true;
-                    }
+                    // dest < current < src
                     else
                     {
                         floors[src].up = true;
+                        floors[dest].down = true;
+                        floors[src].downUserDirection = srcDirection;
                     }
-                    floors[src].up = true;
                 }
+            }
+            // src < current
+            else if ((src - current) < 0) {
+                // src < current and src < dest
+                if (destLargerThanSrc)
+                {
+                    // src < current < dest
+                    if (destLargetThanCurrent)
+                    {
+                        floors[src].down = true;
+                        floors[dest].up = true;
+                        floors[src].upUserDirection = srcDirection;
+                    }
+                    // src < dest < current
+                    else
+                    {
+                        floors[src].down = true;
+                        floors[dest].up = true;
+                        floors[src].upUserDirection = srcDirection;
+                    }
+                }
+                // dest < src < current
                 else
                 {
                     floors[src].down = true;
+                    floors[dest].down = true;
+                    floors[src].downUserDirection = srcDirection;
+                }
+            }
+            // Same floor with current
+            else {
+                if (destLargerThanSrc) {
+                    floors[src].up = true;
+                    floors[dest].up = true;
+                    floors[src].upUserDirection = srcDirection;
+                } else {
+                    floors[src].down = true;
+                    floors[dest].down = true;
+                    floors[src].downUserDirection = srcDirection;
+                }
+            }
+        }
+        // Up, Down
+        else {
+            // up, current < src
+            if (srcLargerThanCurrent) {
+                // up, current < src < dest
+                if (destLargerThanSrc) {
+                    floors[src].up = true;
+                    floors[dest].up = true;
+                    floors[src].upUserDirection = srcDirection;
+                }
+                // up, current < src and dest < src
+                else {
+                    // up, current < dest < src
+                    if (destLargetThanCurrent) {
+                        floors[src].up = true;
+                        floors[dest].down = true;
+                        floors[src].downUserDirection = srcDirection;
+                    }
+                    // up, dest < current < src
+                    else {
+                        floors[src].up = true;
+                        floors[dest].down = true;
+                        floors[src].downUserDirection = srcDirection;
+                    }
+                }
+            }
+            // up, src < current
+            else {
+                // up, src < current and src < dest
+                if (destLargerThanSrc) {
+                    // up, src < current < dest
+                    if (destLargetThanCurrent) {
+                        floors[src].down = true;
+                        floors[dest].up = true;
+                        floors[src].upUserDirection = srcDirection;
+                    }
+                    // up, src < dest < current
+                    else {
+                        floors[src].down = true;
+                        floors[dest].up = true;
+                        floors[src].upUserDirection = srcDirection;
+                    }
+                }
+                // up, dest < src < current
+                else {
+                    floors[src].down = true;
+                    floors[dest].down = true;
+                    floors[src].downUserDirection = srcDirection;
                 }
             }
         }
     }
 
-    public long GetSimulationTime(String str)
-    {
+    public long GetSimulationTime(String str) {
         long time = 0;
 
         Floor[] floors = GetFloorsClone();
@@ -426,8 +564,7 @@ public class Elevator extends AppThread {
         AddRequest(floors, current, direction, str);
 
         while (!finish) {
-            if (status == Direction.Stop)
-            {
+            if (status == Direction.Stop) {
                 Direction requestDirection = GetRequestDirection(floors, current, direction);
                 if (requestDirection != Direction.Stop) {
                     // Not initial
@@ -439,15 +576,11 @@ public class Elevator extends AppThread {
                     direction = status;
 
                     // Idle
-                    if (idle)
-                    {
-                        if (direction == Direction.Up && floors[current].up)
-                        {
+                    if (idle) {
+                        if (direction == Direction.Up && floors[current].up) {
                             time += (long) ((doorOpen + doorWait + doorClose) * simulationTime);
                             floors[current].up = false;
-                        }
-                        else if (direction == Direction.Down && floors[current].down)
-                        {
+                        } else if (direction == Direction.Down && floors[current].down) {
                             time += (long) ((doorOpen + doorWait + doorClose) * simulationTime);
                             floors[current].up = false;
                         }
@@ -456,9 +589,7 @@ public class Elevator extends AppThread {
                     // wait
                     finish = true;
                 }
-            }
-            else
-            {
+            } else {
                 idle = false;
 
                 boolean firstRun = true;
@@ -505,8 +636,7 @@ public class Elevator extends AppThread {
     }
 
     // To passenger Stream
-    private void SendSvcReply(String str)
-    {
+    private void SendSvcReply(String str) {
         String message[] = str.split(" ");
 
         // Get message
@@ -523,8 +653,7 @@ public class Elevator extends AppThread {
         GreetingServer.SendToServer(reply);
     }
 
-    private ArrayList<Integer> GetUpperSchedule()
-    {
+    private ArrayList<Integer> GetUpperSchedule() {
         ArrayList<Integer> schedule = new ArrayList<Integer>();
         // Up to upper
         for (int upperFloor = current + 1; upperFloor <= maxFloor; upperFloor++) {
@@ -546,25 +675,20 @@ public class Elevator extends AppThread {
         return schedule;
     }
 
-    private void SendElevDep()
-    {
+    private void SendElevDep() {
         String elevatorId = getID();
 
         // Get schedule
         ArrayList<Integer> schedule = null;
 
-        if (direction == Direction.Up)
-        {
+        if (direction == Direction.Up) {
             schedule = GetUpperSchedule();
-        }
-        else if (direction == Direction.Down)
-        {
+        } else if (direction == Direction.Down) {
             schedule = GetLowerSchedule();
         }
 
         String reply = "Elev_Dep " + GetIdChar() + " " + current + " " + GetDirectionChar();
-        for (Integer floor: schedule)
-        {
+        for (Integer floor : schedule) {
             reply += " " + floor;
         }
         log.info("Elev_Dep: " + reply);
@@ -573,33 +697,25 @@ public class Elevator extends AppThread {
         GreetingServer.SendToServer(reply);
     }
 
-    private void SendElevArr()
-    {
+    private void SendElevArr() {
         String elevatorId = getID();
 
         // Get schedule
         ArrayList<Integer> schedule = null;
 
-        if (direction == Direction.Up)
-        {
+        if (direction == Direction.Up) {
             schedule = GetUpperSchedule();
-        }
-        else if (direction == Direction.Down)
-        {
+        } else if (direction == Direction.Down) {
             schedule = GetLowerSchedule();
         }
 
         String reply = "Elev_Arr " + GetIdChar() + " " + current + " " + GetDirectionChar();
         // May no request
-        if (direction != Direction.Stop)
-        {
-            for (Integer floor : schedule)
-            {
+        if (direction != Direction.Stop) {
+            for (Integer floor : schedule) {
                 reply += " " + floor;
             }
-        }
-        else
-        {
+        } else {
             reply += " -2147483648";
         }
         log.info("Elev_Arr: " + reply);
