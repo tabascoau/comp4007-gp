@@ -8,7 +8,7 @@ These README file will show you the structure of location of the directories and
 Instructions for compiling, starting and stopping of our system.
 Additional information.
 
-### Prerequisites
+## Prerequisites
 
 Java JDK, IntelliJ IDE
 
@@ -21,19 +21,28 @@ Website to download IntelliJ IDE:
 https://www.jetbrains.com/idea/
 
 ```
-### Installing
+## Installing
 
-A step by step series of examples that tell you how to get a development env running
+###A step by step approach to help you compiling, start and shopping our system.
 
-Say what the step will be
+After you installed all prerequisites. and downloaded our source code file. -> Upzip it
 
+Open Intellij IDE and open the project. 
 
+Open Command Prompt and change current directory to comp4007-gp/PassengerStream_v3/
 
-And repeat
+Input the command java -jar PSKickstarter.jar PassengerStream.ejb 
+
+Click the run button on Intellij IDE, DONE.
+
+To close the project, click the exit button on Central Control Panel or Stop button on IDE.
 
 ```
-until finished
+Finished
 ```
+
+
+
 
 End with an example of getting some data out of the system or using it for a little demo
 
